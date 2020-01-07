@@ -1,0 +1,147 @@
+Domain Code,Domain,Area Code,Area,Element Code,Element,Item Code,Item,Year Code,Year,Unit,Value,Flag,Flag Description
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2511,Wheat and products,2010,2010,1000 tonnes,669,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2513,Barley and products,2010,2010,1000 tonnes,1223,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2515,Rye and products,2010,2010,1000 tonnes,0,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2516,Oats,2010,2010,1000 tonnes,148,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2520,"Cereals, Other",2010,2010,1000 tonnes,3,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2531,Potatoes and products,2010,2010,1000 tonnes,420,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2537,Sugar beet,2010,2010,1000 tonnes,0,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2542,Sugar (Raw Equivalent),2010,2010,1000 tonnes,0,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2543,"Sweeteners, Other",2010,2010,1000 tonnes,8,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2745,Honey,2010,2010,1000 tonnes,0,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2546,Beans,2010,2010,1000 tonnes,18,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2547,Peas,2010,2010,1000 tonnes,8,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2558,Rape and Mustardseed,2010,2010,1000 tonnes,28,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2571,Soyabean Oil,2010,2010,1000 tonnes,1,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2572,Groundnut Oil,2010,2010,1000 tonnes,0,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2574,Rape and Mustard Oil,2010,2010,1000 tonnes,9,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2575,Cottonseed Oil,2010,2010,1000 tonnes,0,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2576,Palmkernel Oil,2010,2010,1000 tonnes,0,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2578,Coconut Oil,2010,2010,1000 tonnes,0,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2586,"Oilcrops Oil, Other",2010,2010,1000 tonnes,0,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2601,Tomatoes and products,2010,2010,1000 tonnes,5,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2602,Onions,2010,2010,1000 tonnes,10,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2605,"Vegetables, Other",2010,2010,1000 tonnes,189,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2617,Apples and products,2010,2010,1000 tonnes,50,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2625,"Fruits, Other",2010,2010,1000 tonnes,12,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2656,Beer,2010,2010,1000 tonnes,825,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2657,"Beverages, Fermented",2010,2010,1000 tonnes,60,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2658,"Beverages, Alcoholic",2010,2010,1000 tonnes,99,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2731,Bovine Meat,2010,2010,1000 tonnes,558,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2732,Mutton & Goat Meat,2010,2010,1000 tonnes,48,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2733,Pigmeat,2010,2010,1000 tonnes,215,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2734,Poultry Meat,2010,2010,1000 tonnes,115,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2735,"Meat, Other",2010,2010,1000 tonnes,3,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2736,"Offals, Edible",2010,2010,1000 tonnes,76,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2740,"Butter, Ghee",2010,2010,1000 tonnes,135,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2743,Cream,2010,2010,1000 tonnes,21,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2737,"Fats, Animals, Raw",2010,2010,1000 tonnes,127,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2781,"Fish, Body Oil",2010,2010,1000 tonnes,4,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2782,"Fish, Liver Oil",2010,2010,1000 tonnes,0,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2744,Eggs,2010,2010,1000 tonnes,45,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2848,Milk - Excluding Butter,2010,2010,1000 tonnes,5327,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2761,Freshwater Fish,2010,2010,1000 tonnes,17,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2762,Demersal Fish,2010,2010,1000 tonnes,121,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2763,Pelagic Fish,2010,2010,1000 tonnes,167,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2764,"Marine Fish, Other",2010,2010,1000 tonnes,0,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2765,Crustaceans,2010,2010,1000 tonnes,17,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2766,Cephalopods,2010,2010,1000 tonnes,0,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2767,"Molluscs, Other",2010,2010,1000 tonnes,42,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2769,"Aquatic Animals, Others",2010,2010,1000 tonnes,1,S,Standardized data
+FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2775,Aquatic Plants,2010,2010,1000 tonnes,30,S,Standardized data
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2511,Wheat and products,2010,2010,1000 tonnes,646386,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2805,Rice (Milled Equivalent),2010,2010,1000 tonnes,467515,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2513,Barley and products,2010,2010,1000 tonnes,122830,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2514,Maize and products,2010,2010,1000 tonnes,849455,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2515,Rye and products,2010,2010,1000 tonnes,11955,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2516,Oats,2010,2010,1000 tonnes,19719,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2517,Millet and products,2010,2010,1000 tonnes,32531,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2518,Sorghum and products,2010,2010,1000 tonnes,59693,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2520,"Cereals, Other",2010,2010,1000 tonnes,25022,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2532,Cassava and products,2010,2010,1000 tonnes,224732,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2531,Potatoes and products,2010,2010,1000 tonnes,332028,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2533,Sweet potatoes,2010,2010,1000 tonnes,100452,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2535,Yams,2010,2010,1000 tonnes,53187,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2534,"Roots, Other",2010,2010,1000 tonnes,17031,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2536,Sugar cane,2010,2010,1000 tonnes,1688083,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2537,Sugar beet,2010,2010,1000 tonnes,227091,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2541,Sugar non-centrifugal,2010,2010,1000 tonnes,11128,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2542,Sugar (Raw Equivalent),2010,2010,1000 tonnes,154929,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2543,"Sweeteners, Other",2010,2010,1000 tonnes,24559,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2745,Honey,2010,2010,1000 tonnes,1536,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2546,Beans,2010,2010,1000 tonnes,24159,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2547,Peas,2010,2010,1000 tonnes,10343,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2549,"Pulses, Other and products",2010,2010,1000 tonnes,35736,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2551,Nuts and products,2010,2010,1000 tonnes,15363,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2555,Soyabeans,2010,2010,1000 tonnes,264403,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2556,Groundnuts (Shelled Eq),2010,2010,1000 tonnes,29633,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2557,Sunflower seed,2010,2010,1000 tonnes,31498,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2558,Rape and Mustardseed,2010,2010,1000 tonnes,60720,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2559,Cottonseed,2010,2010,1000 tonnes,42986,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2560,Coconuts - Incl Copra,2010,2010,1000 tonnes,58598,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2561,Sesame seed,2010,2010,1000 tonnes,4260,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2562,Palm kernels,2010,2010,1000 tonnes,12328,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2563,Olives (including preserved),2010,2010,1000 tonnes,18408,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2570,"Oilcrops, Other",2010,2010,1000 tonnes,10521,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2571,Soyabean Oil,2010,2010,1000 tonnes,40610,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2572,Groundnut Oil,2010,2010,1000 tonnes,5603,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2573,Sunflowerseed Oil,2010,2010,1000 tonnes,12579,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2574,Rape and Mustard Oil,2010,2010,1000 tonnes,22913,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2575,Cottonseed Oil,2010,2010,1000 tonnes,4793,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2576,Palmkernel Oil,2010,2010,1000 tonnes,5510,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2577,Palm Oil,2010,2010,1000 tonnes,45078,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2578,Coconut Oil,2010,2010,1000 tonnes,3788,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2579,Sesameseed Oil,2010,2010,1000 tonnes,1056,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2580,Olive Oil,2010,2010,1000 tonnes,3177,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2581,Ricebran Oil,2010,2010,1000 tonnes,1106,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2582,Maize Germ Oil,2010,2010,1000 tonnes,2290,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2586,"Oilcrops Oil, Other",2010,2010,1000 tonnes,4042,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2601,Tomatoes and products,2010,2010,1000 tonnes,150211,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2602,Onions,2010,2010,1000 tonnes,78542,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2605,"Vegetables, Other",2010,2010,1000 tonnes,817470,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2611,"Oranges, Mandarines",2010,2010,1000 tonnes,92070,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2612,"Lemons, Limes and products",2010,2010,1000 tonnes,14808,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2613,Grapefruit and products,2010,2010,1000 tonnes,7478,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2614,"Citrus, Other",2010,2010,1000 tonnes,12087,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2615,Bananas,2010,2010,1000 tonnes,104804,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2616,Plantains,2010,2010,1000 tonnes,27281,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2617,Apples and products,2010,2010,1000 tonnes,70121,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2618,Pineapples and products,2010,2010,1000 tonnes,20768,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2619,Dates,2010,2010,1000 tonnes,7340,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2620,Grapes and products (excl wine),2010,2010,1000 tonnes,67111,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2625,"Fruits, Other",2010,2010,1000 tonnes,180620,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2630,Coffee and products,2010,2010,1000 tonnes,8321,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2633,Cocoa Beans and products,2010,2010,1000 tonnes,4295,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2635,Tea (including mate),2010,2010,1000 tonnes,5316,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2640,Pepper,2010,2010,1000 tonnes,449,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2641,Pimento,2010,2010,1000 tonnes,3079,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2642,Cloves,2010,2010,1000 tonnes,125,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2645,"Spices, Other",2010,2010,1000 tonnes,4709,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2655,Wine,2010,2010,1000 tonnes,27025,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2656,Beer,2010,2010,1000 tonnes,177931,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2657,"Beverages, Fermented",2010,2010,1000 tonnes,30145,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2658,"Beverages, Alcoholic",2010,2010,1000 tonnes,24546,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2659,"Alcohol, Non-Food",2010,2010,1000 tonnes,19679,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2731,Bovine Meat,2010,2010,1000 tonnes,66399,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2732,Mutton & Goat Meat,2010,2010,1000 tonnes,13053,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2733,Pigmeat,2010,2010,1000 tonnes,107263,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2734,Poultry Meat,2010,2010,1000 tonnes,98828,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2735,"Meat, Other",2010,2010,1000 tonnes,5906,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2736,"Offals, Edible",2010,2010,1000 tonnes,18098,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2740,"Butter, Ghee",2010,2010,1000 tonnes,9000,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2743,Cream,2010,2010,1000 tonnes,3272,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2737,"Fats, Animals, Raw",2010,2010,1000 tonnes,22788,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2781,"Fish, Body Oil",2010,2010,1000 tonnes,998,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2782,"Fish, Liver Oil",2010,2010,1000 tonnes,14,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2744,Eggs,2010,2010,1000 tonnes,69147,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2848,Milk - Excluding Butter,2010,2010,1000 tonnes,714854,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2761,Freshwater Fish,2010,2010,1000 tonnes,47730,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2762,Demersal Fish,2010,2010,1000 tonnes,20289,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2763,Pelagic Fish,2010,2010,1000 tonnes,33958,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2764,"Marine Fish, Other",2010,2010,1000 tonnes,10718,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2765,Crustaceans,2010,2010,1000 tonnes,11649,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2766,Cephalopods,2010,2010,1000 tonnes,3602,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2767,"Molluscs, Other",2010,2010,1000 tonnes,17164,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2768,"Meat, Aquatic Mammals",2010,2010,1000 tonnes,0,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2769,"Aquatic Animals, Others",2010,2010,1000 tonnes,1261,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2775,Aquatic Plants,2010,2010,1000 tonnes,20082,A,"Aggregate, may include official, semi-official, estimated or calculated data"

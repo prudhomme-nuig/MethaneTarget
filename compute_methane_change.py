@@ -40,6 +40,5 @@ import matplotlib.pyplot as plt
 boxplot = CH4_index_df.boxplot(column=['2050', '2100'])
 plt.ylabel('Methane emissions compared to 2010 level')
 plt.xlabel('Years')
-plt.show()
 plt.savefig('Figs/methane_index_bar_plot.pdf')
 plt.savefig('Figs/methane_index_bar_plot.png')

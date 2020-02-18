@@ -1,0 +1,193 @@
+Domain Code,Domain,Area Code,Area,Element Code,Element,Item Code,Item,Year Code,Year,Unit,Value
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2511,Wheat and products,2010,2010,kg,65.72
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2511,Wheat and products,2010,2010,g/capita/day,15.99
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2805,Rice (Milled Equivalent),2010,2010,kg,54.01
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2805,Rice (Milled Equivalent),2010,2010,g/capita/day,10.24
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2513,Barley and products,2010,2010,kg,0.95
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2513,Barley and products,2010,2010,g/capita/day,0.19
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2514,Maize and products,2010,2010,kg,17.38
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2514,Maize and products,2010,2010,g/capita/day,3.46
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2515,Rye and products,2010,2010,kg,0.83
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2515,Rye and products,2010,2010,g/capita/day,0.17
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2516,Oats,2010,2010,kg,0.59
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2516,Oats,2010,2010,g/capita/day,0.13
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2517,Millet and products,2010,2010,kg,3.5
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2517,Millet and products,2010,2010,g/capita/day,0.76
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2518,Sorghum and products,2010,2010,kg,3.65
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2518,Sorghum and products,2010,2010,g/capita/day,0.9
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2520,"Cereals, Other",2010,2010,kg,0.77
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2520,"Cereals, Other",2010,2010,g/capita/day,0.18
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2532,Cassava and products,2010,2010,kg,13.86
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2532,Cassava and products,2010,2010,g/capita/day,0.24
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2531,Potatoes and products,2010,2010,kg,33.7
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2531,Potatoes and products,2010,2010,g/capita/day,1.48
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2533,Sweet potatoes,2010,2010,kg,7.94
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2533,Sweet potatoes,2010,2010,g/capita/day,0.23
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2535,Yams,2010,2010,kg,4.18
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2535,Yams,2010,2010,g/capita/day,0.18
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2534,"Roots, Other",2010,2010,kg,1.87
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2534,"Roots, Other",2010,2010,g/capita/day,0.08
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2536,Sugar cane,2010,2010,kg,4.34
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2536,Sugar cane,2010,2010,g/capita/day,0.02
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2537,Sugar beet,2010,2010,kg,0.01
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2537,Sugar beet,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2541,Sugar non-centrifugal,2010,2010,kg,1.09
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2541,Sugar non-centrifugal,2010,2010,g/capita/day,0.03
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2542,Sugar (Raw Equivalent),2010,2010,kg,19.77
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2543,"Sweeteners, Other",2010,2010,kg,2.92
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2543,"Sweeteners, Other",2010,2010,g/capita/day,0.01
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2745,Honey,2010,2010,kg,0.23
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2745,Honey,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2546,Beans,2010,2010,kg,2.64
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2546,Beans,2010,2010,g/capita/day,1.56
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2547,Peas,2010,2010,kg,0.77
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2547,Peas,2010,2010,g/capita/day,0.47
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2549,"Pulses, Other and products",2010,2010,kg,3.4
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2549,"Pulses, Other and products",2010,2010,g/capita/day,1.98
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2551,Nuts and products,2010,2010,kg,2.2
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2551,Nuts and products,2010,2010,g/capita/day,0.4
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2555,Soyabeans,2010,2010,kg,1.46
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2555,Soyabeans,2010,2010,g/capita/day,1.29
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2556,Groundnuts (Shelled Eq),2010,2010,kg,1.63
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2556,Groundnuts (Shelled Eq),2010,2010,g/capita/day,1.03
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2557,Sunflower seed,2010,2010,kg,0.08
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2557,Sunflower seed,2010,2010,g/capita/day,0.02
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2558,Rape and Mustardseed,2010,2010,kg,0
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2558,Rape and Mustardseed,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2559,Cottonseed,2010,2010,kg,0
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2559,Cottonseed,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2560,Coconuts - Incl Copra,2010,2010,kg,3.09
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2560,Coconuts - Incl Copra,2010,2010,g/capita/day,0.12
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2561,Sesame seed,2010,2010,kg,0.23
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2561,Sesame seed,2010,2010,g/capita/day,0.11
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2562,Palm kernels,2010,2010,kg,0
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2562,Palm kernels,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2563,Olives (including preserved),2010,2010,kg,0.38
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2563,Olives (including preserved),2010,2010,g/capita/day,0.01
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2570,"Oilcrops, Other",2010,2010,kg,0.12
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2570,"Oilcrops, Other",2010,2010,g/capita/day,0.07
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2571,Soyabean Oil,2010,2010,kg,3.49
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2571,Soyabean Oil,2010,2010,g/capita/day,0.01
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2572,Groundnut Oil,2010,2010,kg,0.65
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2572,Groundnut Oil,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2573,Sunflowerseed Oil,2010,2010,kg,1.37
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2573,Sunflowerseed Oil,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2574,Rape and Mustard Oil,2010,2010,kg,1.47
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2574,Rape and Mustard Oil,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2575,Cottonseed Oil,2010,2010,kg,0.53
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2575,Cottonseed Oil,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2576,Palmkernel Oil,2010,2010,kg,0.28
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2576,Palmkernel Oil,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2577,Palm Oil,2010,2010,kg,2.06
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2577,Palm Oil,2010,2010,g/capita/day,0.01
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2578,Coconut Oil,2010,2010,kg,0.37
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2578,Coconut Oil,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2579,Sesameseed Oil,2010,2010,kg,0.1
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2579,Sesameseed Oil,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2580,Olive Oil,2010,2010,kg,0.4
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2580,Olive Oil,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2581,Ricebran Oil,2010,2010,kg,0.12
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2581,Ricebran Oil,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2582,Maize Germ Oil,2010,2010,kg,0.31
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2582,Maize Germ Oil,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2586,"Oilcrops Oil, Other",2010,2010,kg,0.24
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2586,"Oilcrops Oil, Other",2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2601,Tomatoes and products,2010,2010,kg,19.72
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2601,Tomatoes and products,2010,2010,g/capita/day,0.52
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2602,Onions,2010,2010,kg,10.53
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2602,Onions,2010,2010,g/capita/day,0.4
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2605,"Vegetables, Other",2010,2010,kg,103.54
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2605,"Vegetables, Other",2010,2010,g/capita/day,3.79
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2611,"Oranges, Mandarines",2010,2010,kg,12.48
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2611,"Oranges, Mandarines",2010,2010,g/capita/day,0.17
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2612,"Lemons, Limes and products",2010,2010,kg,1.92
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2612,"Lemons, Limes and products",2010,2010,g/capita/day,0.02
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2613,Grapefruit and products,2010,2010,kg,1.06
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2613,Grapefruit and products,2010,2010,g/capita/day,0.01
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2614,"Citrus, Other",2010,2010,kg,1.73
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2614,"Citrus, Other",2010,2010,g/capita/day,0.02
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2615,Bananas,2010,2010,kg,12.38
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2615,Bananas,2010,2010,g/capita/day,0.28
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2616,Plantains,2010,2010,kg,3.18
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2616,Plantains,2010,2010,g/capita/day,0.06
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2617,Apples and products,2010,2010,kg,9.14
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2617,Apples and products,2010,2010,g/capita/day,0.06
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2618,Pineapples and products,2010,2010,kg,2.75
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2618,Pineapples and products,2010,2010,g/capita/day,0.02
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2619,Dates,2010,2010,kg,0.86
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2619,Dates,2010,2010,g/capita/day,0.04
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2620,Grapes and products (excl wine),2010,2010,kg,3.9
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2620,Grapes and products (excl wine),2010,2010,g/capita/day,0.06
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2625,"Fruits, Other",2010,2010,kg,24.08
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2625,"Fruits, Other",2010,2010,g/capita/day,0.34
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2630,Coffee and products,2010,2010,kg,1.14
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2630,Coffee and products,2010,2010,g/capita/day,0.17
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2633,Cocoa Beans and products,2010,2010,kg,0.61
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2633,Cocoa Beans and products,2010,2010,g/capita/day,0.12
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2635,Tea (including mate),2010,2010,kg,0.73
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2635,Tea (including mate),2010,2010,g/capita/day,0.2
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2640,Pepper,2010,2010,kg,0.06
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2640,Pepper,2010,2010,g/capita/day,0.02
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2641,Pimento,2010,2010,kg,0.43
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2641,Pimento,2010,2010,g/capita/day,0.14
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2642,Cloves,2010,2010,kg,0.01
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2642,Cloves,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2645,"Spices, Other",2010,2010,kg,0.66
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2645,"Spices, Other",2010,2010,g/capita/day,0.19
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2655,Wine,2010,2010,kg,3.29
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2655,Wine,2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2656,Beer,2010,2010,kg,26.13
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2656,Beer,2010,2010,g/capita/day,0.31
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2657,"Beverages, Fermented",2010,2010,kg,4.24
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2657,"Beverages, Fermented",2010,2010,g/capita/day,0.05
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2658,"Beverages, Alcoholic",2010,2010,kg,3.02
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2658,"Beverages, Alcoholic",2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2731,Bovine Meat,2010,2010,kg,9.53
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2731,Bovine Meat,2010,2010,g/capita/day,3.61
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2732,Mutton & Goat Meat,2010,2010,kg,1.89
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2732,Mutton & Goat Meat,2010,2010,g/capita/day,0.71
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2733,Pigmeat,2010,2010,kg,15.61
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2733,Pigmeat,2010,2010,g/capita/day,4.53
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2734,Poultry Meat,2010,2010,kg,14.14
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2734,Poultry Meat,2010,2010,g/capita/day,4.87
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2735,"Meat, Other",2010,2010,kg,0.94
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2735,"Meat, Other",2010,2010,g/capita/day,0.45
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2736,"Offals, Edible",2010,2010,kg,2.27
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2736,"Offals, Edible",2010,2010,g/capita/day,1.11
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2740,"Butter, Ghee",2010,2010,kg,1.31
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2740,"Butter, Ghee",2010,2010,g/capita/day,0.02
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2743,Cream,2010,2010,kg,0.45
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2743,Cream,2010,2010,g/capita/day,0.03
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2737,"Fats, Animals, Raw",2010,2010,kg,1.52
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2737,"Fats, Animals, Raw",2010,2010,g/capita/day,0.03
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2781,"Fish, Body Oil",2010,2010,kg,0.01
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2781,"Fish, Body Oil",2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2782,"Fish, Liver Oil",2010,2010,kg,0
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2782,"Fish, Liver Oil",2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2744,Eggs,2010,2010,kg,8.92
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2744,Eggs,2010,2010,g/capita/day,2.71
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2848,Milk - Excluding Butter,2010,2010,kg,88.82
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2848,Milk - Excluding Butter,2010,2010,g/capita/day,8.1
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2761,Freshwater Fish,2010,2010,kg,6.72
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2761,Freshwater Fish,2010,2010,g/capita/day,1.98
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2762,Demersal Fish,2010,2010,kg,2.87
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2762,Demersal Fish,2010,2010,g/capita/day,0.85
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2763,Pelagic Fish,2010,2010,kg,3.23
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2763,Pelagic Fish,2010,2010,g/capita/day,1.18
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2764,"Marine Fish, Other",2010,2010,kg,1.32
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2764,"Marine Fish, Other",2010,2010,g/capita/day,0.4
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2765,Crustaceans,2010,2010,kg,1.74
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2765,Crustaceans,2010,2010,g/capita/day,0.42
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2766,Cephalopods,2010,2010,kg,0.48
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2766,Cephalopods,2010,2010,g/capita/day,0.19
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2767,"Molluscs, Other",2010,2010,kg,2.41
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2767,"Molluscs, Other",2010,2010,g/capita/day,0.16
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2768,"Meat, Aquatic Mammals",2010,2010,kg,0
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2768,"Meat, Aquatic Mammals",2010,2010,g/capita/day,0
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2769,"Aquatic Animals, Others",2010,2010,kg,0.2
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2769,"Aquatic Animals, Others",2010,2010,g/capita/day,0.02
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2775,Aquatic Plants,2010,2010,kg,1.84
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2775,Aquatic Plants,2010,2010,g/capita/day,0.14
+FBSH,Food Balances (old methodology and population),5000,World,645,Food supply quantity (kg/capita/yr),2680,Infant food,2010,2010,kg,0.08
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2680,Infant food,2010,2010,g/capita/day,0.04
+FBSH,Food Balances (old methodology and population),5000,World,674,Protein supply quantity (g/capita/day),2899,Miscellaneous,2010,2010,g/capita/day,0.04

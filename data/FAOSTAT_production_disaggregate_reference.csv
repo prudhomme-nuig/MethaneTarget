@@ -1,147 +1,687 @@
-Domain Code,Domain,Area Code,Area,Element Code,Element,Item Code,Item,Year Code,Year,Unit,Value,Flag,Flag Description
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2511,Wheat and products,2010,2010,1000 tonnes,669,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2513,Barley and products,2010,2010,1000 tonnes,1223,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2515,Rye and products,2010,2010,1000 tonnes,0,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2516,Oats,2010,2010,1000 tonnes,148,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2520,"Cereals, Other",2010,2010,1000 tonnes,3,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2531,Potatoes and products,2010,2010,1000 tonnes,420,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2537,Sugar beet,2010,2010,1000 tonnes,0,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2542,Sugar (Raw Equivalent),2010,2010,1000 tonnes,0,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2543,"Sweeteners, Other",2010,2010,1000 tonnes,8,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2745,Honey,2010,2010,1000 tonnes,0,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2546,Beans,2010,2010,1000 tonnes,18,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2547,Peas,2010,2010,1000 tonnes,8,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2558,Rape and Mustardseed,2010,2010,1000 tonnes,28,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2571,Soyabean Oil,2010,2010,1000 tonnes,1,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2572,Groundnut Oil,2010,2010,1000 tonnes,0,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2574,Rape and Mustard Oil,2010,2010,1000 tonnes,9,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2575,Cottonseed Oil,2010,2010,1000 tonnes,0,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2576,Palmkernel Oil,2010,2010,1000 tonnes,0,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2578,Coconut Oil,2010,2010,1000 tonnes,0,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2586,"Oilcrops Oil, Other",2010,2010,1000 tonnes,0,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2601,Tomatoes and products,2010,2010,1000 tonnes,5,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2602,Onions,2010,2010,1000 tonnes,10,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2605,"Vegetables, Other",2010,2010,1000 tonnes,189,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2617,Apples and products,2010,2010,1000 tonnes,50,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2625,"Fruits, Other",2010,2010,1000 tonnes,12,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2656,Beer,2010,2010,1000 tonnes,825,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2657,"Beverages, Fermented",2010,2010,1000 tonnes,60,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2658,"Beverages, Alcoholic",2010,2010,1000 tonnes,99,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2731,Bovine Meat,2010,2010,1000 tonnes,558,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2732,Mutton & Goat Meat,2010,2010,1000 tonnes,48,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2733,Pigmeat,2010,2010,1000 tonnes,215,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2734,Poultry Meat,2010,2010,1000 tonnes,115,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2735,"Meat, Other",2010,2010,1000 tonnes,3,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2736,"Offals, Edible",2010,2010,1000 tonnes,76,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2740,"Butter, Ghee",2010,2010,1000 tonnes,135,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2743,Cream,2010,2010,1000 tonnes,21,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2737,"Fats, Animals, Raw",2010,2010,1000 tonnes,127,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2781,"Fish, Body Oil",2010,2010,1000 tonnes,4,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2782,"Fish, Liver Oil",2010,2010,1000 tonnes,0,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2744,Eggs,2010,2010,1000 tonnes,45,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2848,Milk - Excluding Butter,2010,2010,1000 tonnes,5327,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2761,Freshwater Fish,2010,2010,1000 tonnes,17,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2762,Demersal Fish,2010,2010,1000 tonnes,121,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2763,Pelagic Fish,2010,2010,1000 tonnes,167,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2764,"Marine Fish, Other",2010,2010,1000 tonnes,0,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2765,Crustaceans,2010,2010,1000 tonnes,17,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2766,Cephalopods,2010,2010,1000 tonnes,0,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2767,"Molluscs, Other",2010,2010,1000 tonnes,42,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2769,"Aquatic Animals, Others",2010,2010,1000 tonnes,1,S,Standardized data
-FBSH,Food Balances (old methodology and population),104,Ireland,5511,Production,2775,Aquatic Plants,2010,2010,1000 tonnes,30,S,Standardized data
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2511,Wheat and products,2010,2010,1000 tonnes,646386,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2805,Rice (Milled Equivalent),2010,2010,1000 tonnes,467515,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2513,Barley and products,2010,2010,1000 tonnes,122830,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2514,Maize and products,2010,2010,1000 tonnes,849455,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2515,Rye and products,2010,2010,1000 tonnes,11955,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2516,Oats,2010,2010,1000 tonnes,19719,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2517,Millet and products,2010,2010,1000 tonnes,32531,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2518,Sorghum and products,2010,2010,1000 tonnes,59693,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2520,"Cereals, Other",2010,2010,1000 tonnes,25022,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2532,Cassava and products,2010,2010,1000 tonnes,224732,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2531,Potatoes and products,2010,2010,1000 tonnes,332028,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2533,Sweet potatoes,2010,2010,1000 tonnes,100452,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2535,Yams,2010,2010,1000 tonnes,53187,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2534,"Roots, Other",2010,2010,1000 tonnes,17031,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2536,Sugar cane,2010,2010,1000 tonnes,1688083,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2537,Sugar beet,2010,2010,1000 tonnes,227091,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2541,Sugar non-centrifugal,2010,2010,1000 tonnes,11128,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2542,Sugar (Raw Equivalent),2010,2010,1000 tonnes,154929,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2543,"Sweeteners, Other",2010,2010,1000 tonnes,24559,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2745,Honey,2010,2010,1000 tonnes,1536,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2546,Beans,2010,2010,1000 tonnes,24159,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2547,Peas,2010,2010,1000 tonnes,10343,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2549,"Pulses, Other and products",2010,2010,1000 tonnes,35736,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2551,Nuts and products,2010,2010,1000 tonnes,15363,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2555,Soyabeans,2010,2010,1000 tonnes,264403,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2556,Groundnuts (Shelled Eq),2010,2010,1000 tonnes,29633,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2557,Sunflower seed,2010,2010,1000 tonnes,31498,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2558,Rape and Mustardseed,2010,2010,1000 tonnes,60720,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2559,Cottonseed,2010,2010,1000 tonnes,42986,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2560,Coconuts - Incl Copra,2010,2010,1000 tonnes,58598,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2561,Sesame seed,2010,2010,1000 tonnes,4260,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2562,Palm kernels,2010,2010,1000 tonnes,12328,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2563,Olives (including preserved),2010,2010,1000 tonnes,18408,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2570,"Oilcrops, Other",2010,2010,1000 tonnes,10521,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2571,Soyabean Oil,2010,2010,1000 tonnes,40610,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2572,Groundnut Oil,2010,2010,1000 tonnes,5603,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2573,Sunflowerseed Oil,2010,2010,1000 tonnes,12579,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2574,Rape and Mustard Oil,2010,2010,1000 tonnes,22913,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2575,Cottonseed Oil,2010,2010,1000 tonnes,4793,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2576,Palmkernel Oil,2010,2010,1000 tonnes,5510,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2577,Palm Oil,2010,2010,1000 tonnes,45078,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2578,Coconut Oil,2010,2010,1000 tonnes,3788,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2579,Sesameseed Oil,2010,2010,1000 tonnes,1056,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2580,Olive Oil,2010,2010,1000 tonnes,3177,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2581,Ricebran Oil,2010,2010,1000 tonnes,1106,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2582,Maize Germ Oil,2010,2010,1000 tonnes,2290,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2586,"Oilcrops Oil, Other",2010,2010,1000 tonnes,4042,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2601,Tomatoes and products,2010,2010,1000 tonnes,150211,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2602,Onions,2010,2010,1000 tonnes,78542,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2605,"Vegetables, Other",2010,2010,1000 tonnes,817470,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2611,"Oranges, Mandarines",2010,2010,1000 tonnes,92070,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2612,"Lemons, Limes and products",2010,2010,1000 tonnes,14808,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2613,Grapefruit and products,2010,2010,1000 tonnes,7478,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2614,"Citrus, Other",2010,2010,1000 tonnes,12087,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2615,Bananas,2010,2010,1000 tonnes,104804,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2616,Plantains,2010,2010,1000 tonnes,27281,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2617,Apples and products,2010,2010,1000 tonnes,70121,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2618,Pineapples and products,2010,2010,1000 tonnes,20768,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2619,Dates,2010,2010,1000 tonnes,7340,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2620,Grapes and products (excl wine),2010,2010,1000 tonnes,67111,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2625,"Fruits, Other",2010,2010,1000 tonnes,180620,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2630,Coffee and products,2010,2010,1000 tonnes,8321,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2633,Cocoa Beans and products,2010,2010,1000 tonnes,4295,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2635,Tea (including mate),2010,2010,1000 tonnes,5316,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2640,Pepper,2010,2010,1000 tonnes,449,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2641,Pimento,2010,2010,1000 tonnes,3079,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2642,Cloves,2010,2010,1000 tonnes,125,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2645,"Spices, Other",2010,2010,1000 tonnes,4709,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2655,Wine,2010,2010,1000 tonnes,27025,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2656,Beer,2010,2010,1000 tonnes,177931,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2657,"Beverages, Fermented",2010,2010,1000 tonnes,30145,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2658,"Beverages, Alcoholic",2010,2010,1000 tonnes,24546,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2659,"Alcohol, Non-Food",2010,2010,1000 tonnes,19679,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2731,Bovine Meat,2010,2010,1000 tonnes,66399,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2732,Mutton & Goat Meat,2010,2010,1000 tonnes,13053,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2733,Pigmeat,2010,2010,1000 tonnes,107263,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2734,Poultry Meat,2010,2010,1000 tonnes,98828,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2735,"Meat, Other",2010,2010,1000 tonnes,5906,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2736,"Offals, Edible",2010,2010,1000 tonnes,18098,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2740,"Butter, Ghee",2010,2010,1000 tonnes,9000,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2743,Cream,2010,2010,1000 tonnes,3272,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2737,"Fats, Animals, Raw",2010,2010,1000 tonnes,22788,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2781,"Fish, Body Oil",2010,2010,1000 tonnes,998,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2782,"Fish, Liver Oil",2010,2010,1000 tonnes,14,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2744,Eggs,2010,2010,1000 tonnes,69147,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2848,Milk - Excluding Butter,2010,2010,1000 tonnes,714854,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2761,Freshwater Fish,2010,2010,1000 tonnes,47730,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2762,Demersal Fish,2010,2010,1000 tonnes,20289,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2763,Pelagic Fish,2010,2010,1000 tonnes,33958,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2764,"Marine Fish, Other",2010,2010,1000 tonnes,10718,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2765,Crustaceans,2010,2010,1000 tonnes,11649,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2766,Cephalopods,2010,2010,1000 tonnes,3602,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2767,"Molluscs, Other",2010,2010,1000 tonnes,17164,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2768,"Meat, Aquatic Mammals",2010,2010,1000 tonnes,0,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2769,"Aquatic Animals, Others",2010,2010,1000 tonnes,1261,A,"Aggregate, may include official, semi-official, estimated or calculated data"
-FBSH,Food Balances (old methodology and population),5000,World,5511,Production,2775,Aquatic Plants,2010,2010,1000 tonnes,20082,A,"Aggregate, may include official, semi-official, estimated or calculated data"
+Domain,Area,Element,Item,Year,Unit,Value
+Food Balances (old methodology and population),Brazil,Production,Wheat and products,2010,1000 tonnes,6171
+Food Balances (old methodology and population),Brazil,Production,Rice (Milled Equivalent),2010,1000 tonnes,7494
+Food Balances (old methodology and population),Brazil,Production,Barley and products,2010,1000 tonnes,279
+Food Balances (old methodology and population),Brazil,Production,Maize and products,2010,1000 tonnes,55364
+Food Balances (old methodology and population),Brazil,Production,Rye and products,2010,1000 tonnes,3
+Food Balances (old methodology and population),Brazil,Production,Oats,2010,1000 tonnes,395
+Food Balances (old methodology and population),Brazil,Production,Millet and products,2010,,00
+Food Balances (old methodology and population),Brazil,Production,Sorghum and products,2010,1000 tonnes,1532
+Food Balances (old methodology and population),Brazil,Production,"Cereals, Other",2010,1000 tonnes,181
+Food Balances (old methodology and population),Brazil,Production,Cassava and products,2010,1000 tonnes,24967
+Food Balances (old methodology and population),Brazil,Production,Potatoes and products,2010,1000 tonnes,3548
+Food Balances (old methodology and population),Brazil,Production,Sweet potatoes,2010,1000 tonnes,495
+Food Balances (old methodology and population),Brazil,Production,Yams,2010,1000 tonnes,233
+Food Balances (old methodology and population),Brazil,Production,"Roots, Other",2010,,00
+Food Balances (old methodology and population),Brazil,Production,Sugar cane,2010,1000 tonnes,717464
+Food Balances (old methodology and population),Brazil,Production,Sugar beet,2010,,00
+Food Balances (old methodology and population),Brazil,Production,Sugar non-centrifugal,2010,1000 tonnes,462
+Food Balances (old methodology and population),Brazil,Production,Sugar (Raw Equivalent),2010,1000 tonnes,39872
+Food Balances (old methodology and population),Brazil,Production,"Sweeteners, Other",2010,1000 tonnes,82
+Food Balances (old methodology and population),Brazil,Production,Honey,2010,1000 tonnes,38
+Food Balances (old methodology and population),Brazil,Production,Beans,2010,1000 tonnes,3159
+Food Balances (old methodology and population),Brazil,Production,Peas,2010,1000 tonnes,6
+Food Balances (old methodology and population),Brazil,Production,"Pulses, Other and products",2010,1000 tonnes,7
+Food Balances (old methodology and population),Brazil,Production,Nuts and products,2010,1000 tonnes,153
+Food Balances (old methodology and population),Brazil,Production,Soyabeans,2010,1000 tonnes,68756
+Food Balances (old methodology and population),Brazil,Production,Groundnuts (Shelled Eq),2010,1000 tonnes,183
+Food Balances (old methodology and population),Brazil,Production,Sunflower seed,2010,1000 tonnes,87
+Food Balances (old methodology and population),Brazil,Production,Rape and Mustardseed,2010,1000 tonnes,70
+Food Balances (old methodology and population),Brazil,Production,Cottonseed,2010,1000 tonnes,1858
+Food Balances (old methodology and population),Brazil,Production,Coconuts - Incl Copra,2010,1000 tonnes,2843
+Food Balances (old methodology and population),Brazil,Production,Sesame seed,2010,1000 tonnes,5
+Food Balances (old methodology and population),Brazil,Production,Palm kernels,2010,1000 tonnes,209
+Food Balances (old methodology and population),Brazil,Production,Olives (including preserved),2010,1000 tonnes,0
+Food Balances (old methodology and population),Brazil,Production,"Oilcrops, Other",2010,1000 tonnes,134
+Food Balances (old methodology and population),Brazil,Production,Soyabean Oil,2010,1000 tonnes,6928
+Food Balances (old methodology and population),Brazil,Production,Groundnut Oil,2010,1000 tonnes,24
+Food Balances (old methodology and population),Brazil,Production,Sunflowerseed Oil,2010,1000 tonnes,33
+Food Balances (old methodology and population),Brazil,Production,Rape and Mustard Oil,2010,1000 tonnes,35
+Food Balances (old methodology and population),Brazil,Production,Cottonseed Oil,2010,1000 tonnes,242
+Food Balances (old methodology and population),Brazil,Production,Palmkernel Oil,2010,1000 tonnes,117
+Food Balances (old methodology and population),Brazil,Production,Palm Oil,2010,1000 tonnes,250
+Food Balances (old methodology and population),Brazil,Production,Coconut Oil,2010,1000 tonnes,2
+Food Balances (old methodology and population),Brazil,Production,Sesameseed Oil,2010,,00
+Food Balances (old methodology and population),Brazil,Production,Olive Oil,2010,,00
+Food Balances (old methodology and population),Brazil,Production,Ricebran Oil,2010,1000 tonnes,15
+Food Balances (old methodology and population),Brazil,Production,Maize Germ Oil,2010,1000 tonnes,80
+Food Balances (old methodology and population),Brazil,Production,"Oilcrops Oil, Other",2010,1000 tonnes,144
+Food Balances (old methodology and population),Brazil,Production,Tomatoes and products,2010,1000 tonnes,4107
+Food Balances (old methodology and population),Brazil,Production,Onions,2010,1000 tonnes,1753
+Food Balances (old methodology and population),Brazil,Production,"Vegetables, Other",2010,1000 tonnes,5373
+Food Balances (old methodology and population),Brazil,Production,"Oranges, Mandarines",2010,1000 tonnes,19625
+Food Balances (old methodology and population),Brazil,Production,"Lemons, Limes and products",2010,1000 tonnes,1021
+Food Balances (old methodology and population),Brazil,Production,Grapefruit and products,2010,1000 tonnes,71
+Food Balances (old methodology and population),Brazil,Production,"Citrus, Other",2010,,00
+Food Balances (old methodology and population),Brazil,Production,Bananas,2010,1000 tonnes,6969
+Food Balances (old methodology and population),Brazil,Production,Plantains,2010,,00
+Food Balances (old methodology and population),Brazil,Production,Apples and products,2010,1000 tonnes,1279
+Food Balances (old methodology and population),Brazil,Production,Pineapples and products,2010,1000 tonnes,2206
+Food Balances (old methodology and population),Brazil,Production,Dates,2010,,00
+Food Balances (old methodology and population),Brazil,Production,Grapes and products (excl wine),2010,1000 tonnes,1355
+Food Balances (old methodology and population),Brazil,Production,"Fruits, Other",2010,1000 tonnes,6267
+Food Balances (old methodology and population),Brazil,Production,Coffee and products,2010,1000 tonnes,2907
+Food Balances (old methodology and population),Brazil,Production,Cocoa Beans and products,2010,1000 tonnes,235
+Food Balances (old methodology and population),Brazil,Production,Tea (including mate),2010,1000 tonnes,435
+Food Balances (old methodology and population),Brazil,Production,Pepper,2010,1000 tonnes,52
+Food Balances (old methodology and population),Brazil,Production,Pimento,2010,,00
+Food Balances (old methodology and population),Brazil,Production,Cloves,2010,,00
+Food Balances (old methodology and population),Brazil,Production,"Spices, Other",2010,,00
+Food Balances (old methodology and population),Brazil,Production,Wine,2010,1000 tonnes,246
+Food Balances (old methodology and population),Brazil,Production,Beer,2010,1000 tonnes,12870
+Food Balances (old methodology and population),Brazil,Production,"Beverages, Fermented",2010,,00
+Food Balances (old methodology and population),Brazil,Production,"Beverages, Alcoholic",2010,1000 tonnes,701
+Food Balances (old methodology and population),Brazil,Production,"Alcohol, Non-Food",2010,1000 tonnes,12830
+Food Balances (old methodology and population),Brazil,Production,Bovine Meat,2010,1000 tonnes,9115
+Food Balances (old methodology and population),Brazil,Production,Mutton & Goat Meat,2010,1000 tonnes,111
+Food Balances (old methodology and population),Brazil,Production,Pigmeat,2010,1000 tonnes,3195
+Food Balances (old methodology and population),Brazil,Production,Poultry Meat,2010,1000 tonnes,11185
+Food Balances (old methodology and population),Brazil,Production,"Meat, Other",2010,1000 tonnes,24
+Food Balances (old methodology and population),Brazil,Production,"Offals, Edible",2010,1000 tonnes,1162
+Food Balances (old methodology and population),Brazil,Production,"Butter, Ghee",2010,1000 tonnes,92
+Food Balances (old methodology and population),Brazil,Production,Cream,2010,1000 tonnes,9
+Food Balances (old methodology and population),Brazil,Production,"Fats, Animals, Raw",2010,1000 tonnes,1301
+Food Balances (old methodology and population),Brazil,Production,"Fish, Body Oil",2010,1000 tonnes,4
+Food Balances (old methodology and population),Brazil,Production,"Fish, Liver Oil",2010,,00
+Food Balances (old methodology and population),Brazil,Production,Eggs,2010,1000 tonnes,2087
+Food Balances (old methodology and population),Brazil,Production,Milk - Excluding Butter,2010,1000 tonnes,30864
+Food Balances (old methodology and population),Brazil,Production,Freshwater Fish,2010,1000 tonnes,636
+Food Balances (old methodology and population),Brazil,Production,Demersal Fish,2010,1000 tonnes,245
+Food Balances (old methodology and population),Brazil,Production,Pelagic Fish,2010,1000 tonnes,181
+Food Balances (old methodology and population),Brazil,Production,"Marine Fish, Other",2010,1000 tonnes,40
+Food Balances (old methodology and population),Brazil,Production,Crustaceans,2010,1000 tonnes,132
+Food Balances (old methodology and population),Brazil,Production,Cephalopods,2010,1000 tonnes,4
+Food Balances (old methodology and population),Brazil,Production,"Molluscs, Other",2010,1000 tonnes,26
+Food Balances (old methodology and population),Brazil,Production,"Meat, Aquatic Mammals",2010,,00
+Food Balances (old methodology and population),Brazil,Production,"Aquatic Animals, Others",2010,1000 tonnes,1
+Food Balances (old methodology and population),Brazil,Production,Aquatic Plants,2010,1000 tonnes,1
+Food Balances (old methodology and population),Brazil,Production,Infant food,2010,,00
+Food Balances (old methodology and population),Brazil,Production,Miscellaneous,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Wheat and products,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Rice (Milled Equivalent),2010,1000 tonnes,179
+Food Balances (old methodology and population),Costa Rica,Production,Barley and products,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Maize and products,2010,1000 tonnes,19
+Food Balances (old methodology and population),Costa Rica,Production,Rye and products,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Oats,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Millet and products,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Sorghum and products,2010,1000 tonnes,0
+Food Balances (old methodology and population),Costa Rica,Production,"Cereals, Other",2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Cassava and products,2010,1000 tonnes,130
+Food Balances (old methodology and population),Costa Rica,Production,Potatoes and products,2010,1000 tonnes,56
+Food Balances (old methodology and population),Costa Rica,Production,Sweet potatoes,2010,1000 tonnes,1
+Food Balances (old methodology and population),Costa Rica,Production,Yams,2010,1000 tonnes,30
+Food Balances (old methodology and population),Costa Rica,Production,"Roots, Other",2010,1000 tonnes,39
+Food Balances (old methodology and population),Costa Rica,Production,Sugar cane,2010,1000 tonnes,4150
+Food Balances (old methodology and population),Costa Rica,Production,Sugar beet,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Sugar non-centrifugal,2010,1000 tonnes,11
+Food Balances (old methodology and population),Costa Rica,Production,Sugar (Raw Equivalent),2010,1000 tonnes,361
+Food Balances (old methodology and population),Costa Rica,Production,"Sweeteners, Other",2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Honey,2010,1000 tonnes,1
+Food Balances (old methodology and population),Costa Rica,Production,Beans,2010,1000 tonnes,13
+Food Balances (old methodology and population),Costa Rica,Production,Peas,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,"Pulses, Other and products",2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Nuts and products,2010,1000 tonnes,1
+Food Balances (old methodology and population),Costa Rica,Production,Soyabeans,2010,1000 tonnes,0
+Food Balances (old methodology and population),Costa Rica,Production,Groundnuts (Shelled Eq),2010,1000 tonnes,0
+Food Balances (old methodology and population),Costa Rica,Production,Sunflower seed,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Rape and Mustardseed,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Cottonseed,2010,1000 tonnes,0
+Food Balances (old methodology and population),Costa Rica,Production,Coconuts - Incl Copra,2010,1000 tonnes,30
+Food Balances (old methodology and population),Costa Rica,Production,Sesame seed,2010,1000 tonnes,0
+Food Balances (old methodology and population),Costa Rica,Production,Palm kernels,2010,1000 tonnes,39
+Food Balances (old methodology and population),Costa Rica,Production,Olives (including preserved),2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,"Oilcrops, Other",2010,1000 tonnes,18
+Food Balances (old methodology and population),Costa Rica,Production,Soyabean Oil,2010,1000 tonnes,43
+Food Balances (old methodology and population),Costa Rica,Production,Groundnut Oil,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Sunflowerseed Oil,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Rape and Mustard Oil,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Cottonseed Oil,2010,1000 tonnes,0
+Food Balances (old methodology and population),Costa Rica,Production,Palmkernel Oil,2010,1000 tonnes,16
+Food Balances (old methodology and population),Costa Rica,Production,Palm Oil,2010,1000 tonnes,227
+Food Balances (old methodology and population),Costa Rica,Production,Coconut Oil,2010,1000 tonnes,0
+Food Balances (old methodology and population),Costa Rica,Production,Sesameseed Oil,2010,1000 tonnes,0
+Food Balances (old methodology and population),Costa Rica,Production,Olive Oil,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Ricebran Oil,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Maize Germ Oil,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,"Oilcrops Oil, Other",2010,1000 tonnes,1
+Food Balances (old methodology and population),Costa Rica,Production,Tomatoes and products,2010,1000 tonnes,52
+Food Balances (old methodology and population),Costa Rica,Production,Onions,2010,1000 tonnes,35
+Food Balances (old methodology and population),Costa Rica,Production,"Vegetables, Other",2010,1000 tonnes,349
+Food Balances (old methodology and population),Costa Rica,Production,"Oranges, Mandarines",2010,1000 tonnes,252
+Food Balances (old methodology and population),Costa Rica,Production,"Lemons, Limes and products",2010,1000 tonnes,26
+Food Balances (old methodology and population),Costa Rica,Production,Grapefruit and products,2010,1000 tonnes,18
+Food Balances (old methodology and population),Costa Rica,Production,"Citrus, Other",2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Bananas,2010,1000 tonnes,2020
+Food Balances (old methodology and population),Costa Rica,Production,Plantains,2010,1000 tonnes,90
+Food Balances (old methodology and population),Costa Rica,Production,Apples and products,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Pineapples and products,2010,1000 tonnes,2313
+Food Balances (old methodology and population),Costa Rica,Production,Dates,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Grapes and products (excl wine),2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,"Fruits, Other",2010,1000 tonnes,350
+Food Balances (old methodology and population),Costa Rica,Production,Coffee and products,2010,1000 tonnes,97
+Food Balances (old methodology and population),Costa Rica,Production,Cocoa Beans and products,2010,1000 tonnes,1
+Food Balances (old methodology and population),Costa Rica,Production,Tea (including mate),2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Pepper,2010,1000 tonnes,1
+Food Balances (old methodology and population),Costa Rica,Production,Pimento,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Cloves,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,"Spices, Other",2010,1000 tonnes,2
+Food Balances (old methodology and population),Costa Rica,Production,Wine,2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,Beer,2010,1000 tonnes,62
+Food Balances (old methodology and population),Costa Rica,Production,"Beverages, Fermented",2010,,00
+Food Balances (old methodology and population),Costa Rica,Production,"Beverages, Alcoholic",2010,1000 tonnes,38
+Food Balances (old methodology and population),Costa Rica,Production,"Alcohol, Non-Food",2010,,0
+Food Balances (old methodology and population),Costa Rica,Production,Bovine Meat,2010,1000 tonnes,97
+Food Balances (old methodology and population),Costa Rica,Production,Mutton & Goat Meat,2010,1000 tonnes,0
+Food Balances (old methodology and population),Costa Rica,Production,Pigmeat,2010,1000 tonnes,47
+Food Balances (old methodology and population),Costa Rica,Production,Poultry Meat,2010,1000 tonnes,105
+Food Balances (old methodology and population),Costa Rica,Production,"Meat, Other",2010,,0
+Food Balances (old methodology and population),Costa Rica,Production,"Offals, Edible",2010,1000 tonnes,11
+Food Balances (old methodology and population),Costa Rica,Production,"Butter, Ghee",2010,1000 tonnes,7
+Food Balances (old methodology and population),Costa Rica,Production,Cream,2010,,0
+Food Balances (old methodology and population),Costa Rica,Production,"Fats, Animals, Raw",2010,1000 tonnes,26
+Food Balances (old methodology and population),Costa Rica,Production,"Fish, Body Oil",2010,1000 tonnes,0
+Food Balances (old methodology and population),Costa Rica,Production,"Fish, Liver Oil",2010,1000 tonnes,0
+Food Balances (old methodology and population),Costa Rica,Production,Eggs,2010,1000 tonnes,54
+Food Balances (old methodology and population),Costa Rica,Production,Milk - Excluding Butter,2010,1000 tonnes,952
+Food Balances (old methodology and population),Costa Rica,Production,Freshwater Fish,2010,1000 tonnes,25
+Food Balances (old methodology and population),Costa Rica,Production,Demersal Fish,2010,1000 tonnes,7
+Food Balances (old methodology and population),Costa Rica,Production,Pelagic Fish,2010,1000 tonnes,6
+Food Balances (old methodology and population),Costa Rica,Production,"Marine Fish, Other",2010,1000 tonnes,3
+Food Balances (old methodology and population),Costa Rica,Production,Crustaceans,2010,1000 tonnes,5
+Food Balances (old methodology and population),Costa Rica,Production,Cephalopods,2010,1000 tonnes,0
+Food Balances (old methodology and population),Costa Rica,Production,"Molluscs, Other",2010,1000 tonnes,0
+Food Balances (old methodology and population),Costa Rica,Production,"Meat, Aquatic Mammals",2010,,0
+Food Balances (old methodology and population),Costa Rica,Production,"Aquatic Animals, Others",2010,1000 tonnes,0
+Food Balances (old methodology and population),Costa Rica,Production,Aquatic Plants,2010,,0
+Food Balances (old methodology and population),Costa Rica,Production,Infant food,2010,,0
+Food Balances (old methodology and population),Costa Rica,Production,Miscellaneous,2010,,0
+Food Balances (old methodology and population),France,Production,Wheat and products,2010,1000 tonnes,38207
+Food Balances (old methodology and population),France,Production,Rice (Milled Equivalent),2010,1000 tonnes,76
+Food Balances (old methodology and population),France,Production,Barley and products,2010,1000 tonnes,10102
+Food Balances (old methodology and population),France,Production,Maize and products,2010,1000 tonnes,13975
+Food Balances (old methodology and population),France,Production,Rye and products,2010,1000 tonnes,151
+Food Balances (old methodology and population),France,Production,Oats,2010,1000 tonnes,392
+Food Balances (old methodology and population),France,Production,Millet and products,2010,1000 tonnes,38
+Food Balances (old methodology and population),France,Production,Sorghum and products,2010,1000 tonnes,286
+Food Balances (old methodology and population),France,Production,"Cereals, Other",2010,1000 tonnes,2365
+Food Balances (old methodology and population),France,Production,Cassava and products,2010,,0
+Food Balances (old methodology and population),France,Production,Potatoes and products,2010,1000 tonnes,6731
+Food Balances (old methodology and population),France,Production,Sweet potatoes,2010,,0
+Food Balances (old methodology and population),France,Production,Yams,2010,,0
+Food Balances (old methodology and population),France,Production,"Roots, Other",2010,,0
+Food Balances (old methodology and population),France,Production,Sugar cane,2010,,0
+Food Balances (old methodology and population),France,Production,Sugar beet,2010,1000 tonnes,31875
+Food Balances (old methodology and population),France,Production,Sugar non-centrifugal,2010,,0
+Food Balances (old methodology and population),France,Production,Sugar (Raw Equivalent),2010,1000 tonnes,4149
+Food Balances (old methodology and population),France,Production,"Sweeteners, Other",2010,1000 tonnes,1340
+Food Balances (old methodology and population),France,Production,Honey,2010,1000 tonnes,14
+Food Balances (old methodology and population),France,Production,Beans,2010,1000 tonnes,8
+Food Balances (old methodology and population),France,Production,Peas,2010,1000 tonnes,1073
+Food Balances (old methodology and population),France,Production,"Pulses, Other and products",2010,1000 tonnes,529
+Food Balances (old methodology and population),France,Production,Nuts and products,2010,1000 tonnes,52
+Food Balances (old methodology and population),France,Production,Soyabeans,2010,1000 tonnes,137
+Food Balances (old methodology and population),France,Production,Groundnuts (Shelled Eq),2010,,0
+Food Balances (old methodology and population),France,Production,Sunflower seed,2010,1000 tonnes,1636
+Food Balances (old methodology and population),France,Production,Rape and Mustardseed,2010,1000 tonnes,4827
+Food Balances (old methodology and population),France,Production,Cottonseed,2010,,0
+Food Balances (old methodology and population),France,Production,Coconuts - Incl Copra,2010,,0
+Food Balances (old methodology and population),France,Production,Sesame seed,2010,,0
+Food Balances (old methodology and population),France,Production,Palm kernels,2010,,0
+Food Balances (old methodology and population),France,Production,Olives (including preserved),2010,1000 tonnes,32
+Food Balances (old methodology and population),France,Production,"Oilcrops, Other",2010,1000 tonnes,107
+Food Balances (old methodology and population),France,Production,Soyabean Oil,2010,1000 tonnes,91
+Food Balances (old methodology and population),France,Production,Groundnut Oil,2010,1000 tonnes,0
+Food Balances (old methodology and population),France,Production,Sunflowerseed Oil,2010,1000 tonnes,568
+Food Balances (old methodology and population),France,Production,Rape and Mustard Oil,2010,1000 tonnes,1898
+Food Balances (old methodology and population),France,Production,Cottonseed Oil,2010,1000 tonnes,0
+Food Balances (old methodology and population),France,Production,Palmkernel Oil,2010,1000 tonnes,0
+Food Balances (old methodology and population),France,Production,Palm Oil,2010,,0
+Food Balances (old methodology and population),France,Production,Coconut Oil,2010,1000 tonnes,0
+Food Balances (old methodology and population),France,Production,Sesameseed Oil,2010,1000 tonnes,5
+Food Balances (old methodology and population),France,Production,Olive Oil,2010,1000 tonnes,6
+Food Balances (old methodology and population),France,Production,Ricebran Oil,2010,,0
+Food Balances (old methodology and population),France,Production,Maize Germ Oil,2010,1000 tonnes,51
+Food Balances (old methodology and population),France,Production,"Oilcrops Oil, Other",2010,1000 tonnes,71
+Food Balances (old methodology and population),France,Production,Tomatoes and products,2010,1000 tonnes,645
+Food Balances (old methodology and population),France,Production,Onions,2010,1000 tonnes,329
+Food Balances (old methodology and population),France,Production,"Vegetables, Other",2010,1000 tonnes,4732
+Food Balances (old methodology and population),France,Production,"Oranges, Mandarines",2010,1000 tonnes,34
+Food Balances (old methodology and population),France,Production,"Lemons, Limes and products",2010,1000 tonnes,4
+Food Balances (old methodology and population),France,Production,Grapefruit and products,2010,1000 tonnes,4
+Food Balances (old methodology and population),France,Production,"Citrus, Other",2010,,0
+Food Balances (old methodology and population),France,Production,Bananas,2010,,0
+Food Balances (old methodology and population),France,Production,Plantains,2010,,0
+Food Balances (old methodology and population),France,Production,Apples and products,2010,1000 tonnes,1788
+Food Balances (old methodology and population),France,Production,Pineapples and products,2010,,0
+Food Balances (old methodology and population),France,Production,Dates,2010,,0
+Food Balances (old methodology and population),France,Production,Grapes and products (excl wine),2010,1000 tonnes,5894
+Food Balances (old methodology and population),France,Production,"Fruits, Other",2010,1000 tonnes,1070
+Food Balances (old methodology and population),France,Production,Coffee and products,2010,,0
+Food Balances (old methodology and population),France,Production,Cocoa Beans and products,2010,,0
+Food Balances (old methodology and population),France,Production,Tea (including mate),2010,,0
+Food Balances (old methodology and population),France,Production,Pepper,2010,,0
+Food Balances (old methodology and population),France,Production,Pimento,2010,,0
+Food Balances (old methodology and population),France,Production,Cloves,2010,,0
+Food Balances (old methodology and population),France,Production,"Spices, Other",2010,,0
+Food Balances (old methodology and population),France,Production,Wine,2010,1000 tonnes,4532
+Food Balances (old methodology and population),France,Production,Beer,2010,1000 tonnes,1449
+Food Balances (old methodology and population),France,Production,"Beverages, Fermented",2010,1000 tonnes,525
+Food Balances (old methodology and population),France,Production,"Beverages, Alcoholic",2010,1000 tonnes,840
+Food Balances (old methodology and population),France,Production,"Alcohol, Non-Food",2010,1000 tonnes,705
+Food Balances (old methodology and population),France,Production,Bovine Meat,2010,1000 tonnes,1530
+Food Balances (old methodology and population),France,Production,Mutton & Goat Meat,2010,1000 tonnes,131
+Food Balances (old methodology and population),France,Production,Pigmeat,2010,1000 tonnes,2255
+Food Balances (old methodology and population),France,Production,Poultry Meat,2010,1000 tonnes,1716
+Food Balances (old methodology and population),France,Production,"Meat, Other",2010,1000 tonnes,179
+Food Balances (old methodology and population),France,Production,"Offals, Edible",2010,1000 tonnes,485
+Food Balances (old methodology and population),France,Production,"Butter, Ghee",2010,1000 tonnes,396
+Food Balances (old methodology and population),France,Production,Cream,2010,1000 tonnes,361
+Food Balances (old methodology and population),France,Production,"Fats, Animals, Raw",2010,1000 tonnes,524
+Food Balances (old methodology and population),France,Production,"Fish, Body Oil",2010,1000 tonnes,6
+Food Balances (old methodology and population),France,Production,"Fish, Liver Oil",2010,1000 tonnes,0
+Food Balances (old methodology and population),France,Production,Eggs,2010,1000 tonnes,947
+Food Balances (old methodology and population),France,Production,Milk - Excluding Butter,2010,1000 tonnes,24246
+Food Balances (old methodology and population),France,Production,Freshwater Fish,2010,1000 tonnes,45
+Food Balances (old methodology and population),France,Production,Demersal Fish,2010,1000 tonnes,179
+Food Balances (old methodology and population),France,Production,Pelagic Fish,2010,1000 tonnes,172
+Food Balances (old methodology and population),France,Production,"Marine Fish, Other",2010,1000 tonnes,5
+Food Balances (old methodology and population),France,Production,Crustaceans,2010,1000 tonnes,18
+Food Balances (old methodology and population),France,Production,Cephalopods,2010,1000 tonnes,20
+Food Balances (old methodology and population),France,Production,"Molluscs, Other",2010,1000 tonnes,231
+Food Balances (old methodology and population),France,Production,"Meat, Aquatic Mammals",2010,,0
+Food Balances (old methodology and population),France,Production,"Aquatic Animals, Others",2010,1000 tonnes,0
+Food Balances (old methodology and population),France,Production,Aquatic Plants,2010,1000 tonnes,23
+Food Balances (old methodology and population),France,Production,Infant food,2010,,0
+Food Balances (old methodology and population),France,Production,Miscellaneous,2010,,0
+Food Balances (old methodology and population),India,Production,Wheat and products,2010,1000 tonnes,80804
+Food Balances (old methodology and population),India,Production,Rice (Milled Equivalent),2010,1000 tonnes,96023
+Food Balances (old methodology and population),India,Production,Barley and products,2010,1000 tonnes,1355
+Food Balances (old methodology and population),India,Production,Maize and products,2010,1000 tonnes,21726
+Food Balances (old methodology and population),India,Production,Rye and products,2010,,0
+Food Balances (old methodology and population),India,Production,Oats,2010,,0
+Food Balances (old methodology and population),India,Production,Millet and products,2010,1000 tonnes,13293
+Food Balances (old methodology and population),India,Production,Sorghum and products,2010,1000 tonnes,6698
+Food Balances (old methodology and population),India,Production,"Cereals, Other",2010,,0
+Food Balances (old methodology and population),India,Production,Cassava and products,2010,1000 tonnes,8060
+Food Balances (old methodology and population),India,Production,Potatoes and products,2010,1000 tonnes,36577
+Food Balances (old methodology and population),India,Production,Sweet potatoes,2010,1000 tonnes,1095
+Food Balances (old methodology and population),India,Production,Yams,2010,,0
+Food Balances (old methodology and population),India,Production,"Roots, Other",2010,,0
+Food Balances (old methodology and population),India,Production,Sugar cane,2010,1000 tonnes,292302
+Food Balances (old methodology and population),India,Production,Sugar beet,2010,,0
+Food Balances (old methodology and population),India,Production,Sugar non-centrifugal,2010,1000 tonnes,7004
+Food Balances (old methodology and population),India,Production,Sugar (Raw Equivalent),2010,1000 tonnes,20637
+Food Balances (old methodology and population),India,Production,"Sweeteners, Other",2010,1000 tonnes,277
+Food Balances (old methodology and population),India,Production,Honey,2010,1000 tonnes,60
+Food Balances (old methodology and population),India,Production,Beans,2010,1000 tonnes,4890
+Food Balances (old methodology and population),India,Production,Peas,2010,1000 tonnes,675
+Food Balances (old methodology and population),India,Production,"Pulses, Other and products",2010,1000 tonnes,11672
+Food Balances (old methodology and population),India,Production,Nuts and products,2010,1000 tonnes,1129
+Food Balances (old methodology and population),India,Production,Soyabeans,2010,1000 tonnes,12736
+Food Balances (old methodology and population),India,Production,Groundnuts (Shelled Eq),2010,1000 tonnes,5785
+Food Balances (old methodology and population),India,Production,Sunflower seed,2010,1000 tonnes,651
+Food Balances (old methodology and population),India,Production,Rape and Mustardseed,2010,1000 tonnes,6608
+Food Balances (old methodology and population),India,Production,Cottonseed,2010,1000 tonnes,11544
+Food Balances (old methodology and population),India,Production,Coconuts - Incl Copra,2010,1000 tonnes,10840
+Food Balances (old methodology and population),India,Production,Sesame seed,2010,1000 tonnes,893
+Food Balances (old methodology and population),India,Production,Palm kernels,2010,,0
+Food Balances (old methodology and population),India,Production,Olives (including preserved),2010,,0
+Food Balances (old methodology and population),India,Production,"Oilcrops, Other",2010,1000 tonnes,1791
+Food Balances (old methodology and population),India,Production,Soyabean Oil,2010,1000 tonnes,2038
+Food Balances (old methodology and population),India,Production,Groundnut Oil,2010,1000 tonnes,1901
+Food Balances (old methodology and population),India,Production,Sunflowerseed Oil,2010,1000 tonnes,215
+Food Balances (old methodology and population),India,Production,Rape and Mustard Oil,2010,1000 tonnes,2048
+Food Balances (old methodology and population),India,Production,Cottonseed Oil,2010,1000 tonnes,1089
+Food Balances (old methodology and population),India,Production,Palmkernel Oil,2010,,0
+Food Balances (old methodology and population),India,Production,Palm Oil,2010,,0
+Food Balances (old methodology and population),India,Production,Coconut Oil,2010,1000 tonnes,369
+Food Balances (old methodology and population),India,Production,Sesameseed Oil,2010,1000 tonnes,100
+Food Balances (old methodology and population),India,Production,Olive Oil,2010,,0
+Food Balances (old methodology and population),India,Production,Ricebran Oil,2010,1000 tonnes,720
+Food Balances (old methodology and population),India,Production,Maize Germ Oil,2010,1000 tonnes,5
+Food Balances (old methodology and population),India,Production,"Oilcrops Oil, Other",2010,1000 tonnes,636
+Food Balances (old methodology and population),India,Production,Tomatoes and products,2010,1000 tonnes,12433
+Food Balances (old methodology and population),India,Production,Onions,2010,1000 tonnes,15118
+Food Balances (old methodology and population),India,Production,"Vegetables, Other",2010,1000 tonnes,72853
+Food Balances (old methodology and population),India,Production,"Oranges, Mandarines",2010,1000 tonnes,5966
+Food Balances (old methodology and population),India,Production,"Lemons, Limes and products",2010,1000 tonnes,2629
+Food Balances (old methodology and population),India,Production,Grapefruit and products,2010,1000 tonnes,261
+Food Balances (old methodology and population),India,Production,"Citrus, Other",2010,1000 tonnes,782
+Food Balances (old methodology and population),India,Production,Bananas,2010,1000 tonnes,29780
+Food Balances (old methodology and population),India,Production,Plantains,2010,,0
+Food Balances (old methodology and population),India,Production,Apples and products,2010,1000 tonnes,1777
+Food Balances (old methodology and population),India,Production,Pineapples and products,2010,1000 tonnes,1387
+Food Balances (old methodology and population),India,Production,Dates,2010,,0
+Food Balances (old methodology and population),India,Production,Grapes and products (excl wine),2010,1000 tonnes,881
+Food Balances (old methodology and population),India,Production,"Fruits, Other",2010,1000 tonnes,31658
+Food Balances (old methodology and population),India,Production,Coffee and products,2010,1000 tonnes,290
+Food Balances (old methodology and population),India,Production,Cocoa Beans and products,2010,1000 tonnes,13
+Food Balances (old methodology and population),India,Production,Tea (including mate),2010,1000 tonnes,991
+Food Balances (old methodology and population),India,Production,Pepper,2010,1000 tonnes,51
+Food Balances (old methodology and population),India,Production,Pimento,2010,1000 tonnes,1223
+Food Balances (old methodology and population),India,Production,Cloves,2010,,0
+Food Balances (old methodology and population),India,Production,"Spices, Other",2010,1000 tonnes,2296
+Food Balances (old methodology and population),India,Production,Wine,2010,,0
+Food Balances (old methodology and population),India,Production,Beer,2010,1000 tonnes,529
+Food Balances (old methodology and population),India,Production,"Beverages, Fermented",2010,1000 tonnes,11
+Food Balances (old methodology and population),India,Production,"Beverages, Alcoholic",2010,1000 tonnes,1892
+Food Balances (old methodology and population),India,Production,"Alcohol, Non-Food",2010,1000 tonnes,1982
+Food Balances (old methodology and population),India,Production,Bovine Meat,2010,1000 tonnes,2539
+Food Balances (old methodology and population),India,Production,Mutton & Goat Meat,2010,1000 tonnes,774
+Food Balances (old methodology and population),India,Production,Pigmeat,2010,1000 tonnes,371
+Food Balances (old methodology and population),India,Production,Poultry Meat,2010,1000 tonnes,2226
+Food Balances (old methodology and population),India,Production,"Meat, Other",2010,1000 tonnes,175
+Food Balances (old methodology and population),India,Production,"Offals, Edible",2010,1000 tonnes,531
+Food Balances (old methodology and population),India,Production,"Butter, Ghee",2010,1000 tonnes,3383
+Food Balances (old methodology and population),India,Production,Cream,2010,1000 tonnes,2
+Food Balances (old methodology and population),India,Production,"Fats, Animals, Raw",2010,1000 tonnes,245
+Food Balances (old methodology and population),India,Production,"Fish, Body Oil",2010,1000 tonnes,14
+Food Balances (old methodology and population),India,Production,"Fish, Liver Oil",2010,1000 tonnes,0
+Food Balances (old methodology and population),India,Production,Eggs,2010,1000 tonnes,3378
+Food Balances (old methodology and population),India,Production,Milk - Excluding Butter,2010,1000 tonnes,121847
+Food Balances (old methodology and population),India,Production,Freshwater Fish,2010,1000 tonnes,5074
+Food Balances (old methodology and population),India,Production,Demersal Fish,2010,1000 tonnes,1019
+Food Balances (old methodology and population),India,Production,Pelagic Fish,2010,1000 tonnes,1022
+Food Balances (old methodology and population),India,Production,"Marine Fish, Other",2010,1000 tonnes,721
+Food Balances (old methodology and population),India,Production,Crustaceans,2010,1000 tonnes,503
+Food Balances (old methodology and population),India,Production,Cephalopods,2010,1000 tonnes,110
+Food Balances (old methodology and population),India,Production,"Molluscs, Other",2010,1000 tonnes,23
+Food Balances (old methodology and population),India,Production,"Meat, Aquatic Mammals",2010,,0
+Food Balances (old methodology and population),India,Production,"Aquatic Animals, Others",2010,1000 tonnes,2
+Food Balances (old methodology and population),India,Production,Aquatic Plants,2010,1000 tonnes,4
+Food Balances (old methodology and population),India,Production,Infant food,2010,,0
+Food Balances (old methodology and population),India,Production,Miscellaneous,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Wheat and products,2010,1000 tonnes,669
+Food Balances (old methodology and population),Ireland,Production,Rice (Milled Equivalent),2010,,0
+Food Balances (old methodology and population),Ireland,Production,Barley and products,2010,1000 tonnes,1223
+Food Balances (old methodology and population),Ireland,Production,Maize and products,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Rye and products,2010,1000 tonnes,0
+Food Balances (old methodology and population),Ireland,Production,Oats,2010,1000 tonnes,148
+Food Balances (old methodology and population),Ireland,Production,Millet and products,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Sorghum and products,2010,,0
+Food Balances (old methodology and population),Ireland,Production,"Cereals, Other",2010,1000 tonnes,3
+Food Balances (old methodology and population),Ireland,Production,Cassava and products,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Potatoes and products,2010,1000 tonnes,420
+Food Balances (old methodology and population),Ireland,Production,Sweet potatoes,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Yams,2010,,0
+Food Balances (old methodology and population),Ireland,Production,"Roots, Other",2010,,0
+Food Balances (old methodology and population),Ireland,Production,Sugar cane,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Sugar beet,2010,1000 tonnes,0
+Food Balances (old methodology and population),Ireland,Production,Sugar non-centrifugal,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Sugar (Raw Equivalent),2010,1000 tonnes,0
+Food Balances (old methodology and population),Ireland,Production,"Sweeteners, Other",2010,1000 tonnes,8
+Food Balances (old methodology and population),Ireland,Production,Honey,2010,1000 tonnes,0
+Food Balances (old methodology and population),Ireland,Production,Beans,2010,1000 tonnes,18
+Food Balances (old methodology and population),Ireland,Production,Peas,2010,1000 tonnes,8
+Food Balances (old methodology and population),Ireland,Production,"Pulses, Other and products",2010,,0
+Food Balances (old methodology and population),Ireland,Production,Nuts and products,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Soyabeans,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Groundnuts (Shelled Eq),2010,,0
+Food Balances (old methodology and population),Ireland,Production,Sunflower seed,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Rape and Mustardseed,2010,1000 tonnes,28
+Food Balances (old methodology and population),Ireland,Production,Cottonseed,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Coconuts - Incl Copra,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Sesame seed,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Palm kernels,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Olives (including preserved),2010,,0
+Food Balances (old methodology and population),Ireland,Production,"Oilcrops, Other",2010,,0
+Food Balances (old methodology and population),Ireland,Production,Soyabean Oil,2010,1000 tonnes,1
+Food Balances (old methodology and population),Ireland,Production,Groundnut Oil,2010,1000 tonnes,0
+Food Balances (old methodology and population),Ireland,Production,Sunflowerseed Oil,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Rape and Mustard Oil,2010,1000 tonnes,9
+Food Balances (old methodology and population),Ireland,Production,Cottonseed Oil,2010,1000 tonnes,0
+Food Balances (old methodology and population),Ireland,Production,Palmkernel Oil,2010,1000 tonnes,0
+Food Balances (old methodology and population),Ireland,Production,Palm Oil,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Coconut Oil,2010,1000 tonnes,0
+Food Balances (old methodology and population),Ireland,Production,Sesameseed Oil,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Olive Oil,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Ricebran Oil,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Maize Germ Oil,2010,,0
+Food Balances (old methodology and population),Ireland,Production,"Oilcrops Oil, Other",2010,1000 tonnes,0
+Food Balances (old methodology and population),Ireland,Production,Tomatoes and products,2010,1000 tonnes,5
+Food Balances (old methodology and population),Ireland,Production,Onions,2010,1000 tonnes,10
+Food Balances (old methodology and population),Ireland,Production,"Vegetables, Other",2010,1000 tonnes,189
+Food Balances (old methodology and population),Ireland,Production,"Oranges, Mandarines",2010,,0
+Food Balances (old methodology and population),Ireland,Production,"Lemons, Limes and products",2010,,0
+Food Balances (old methodology and population),Ireland,Production,Grapefruit and products,2010,,0
+Food Balances (old methodology and population),Ireland,Production,"Citrus, Other",2010,,0
+Food Balances (old methodology and population),Ireland,Production,Bananas,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Plantains,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Apples and products,2010,1000 tonnes,50
+Food Balances (old methodology and population),Ireland,Production,Pineapples and products,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Dates,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Grapes and products (excl wine),2010,,0
+Food Balances (old methodology and population),Ireland,Production,"Fruits, Other",2010,1000 tonnes,12
+Food Balances (old methodology and population),Ireland,Production,Coffee and products,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Cocoa Beans and products,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Tea (including mate),2010,,0
+Food Balances (old methodology and population),Ireland,Production,Pepper,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Pimento,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Cloves,2010,,0
+Food Balances (old methodology and population),Ireland,Production,"Spices, Other",2010,,0
+Food Balances (old methodology and population),Ireland,Production,Wine,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Beer,2010,1000 tonnes,825
+Food Balances (old methodology and population),Ireland,Production,"Beverages, Fermented",2010,1000 tonnes,60
+Food Balances (old methodology and population),Ireland,Production,"Beverages, Alcoholic",2010,1000 tonnes,99
+Food Balances (old methodology and population),Ireland,Production,"Alcohol, Non-Food",2010,,0
+Food Balances (old methodology and population),Ireland,Production,Bovine Meat,2010,1000 tonnes,558
+Food Balances (old methodology and population),Ireland,Production,Mutton & Goat Meat,2010,1000 tonnes,48
+Food Balances (old methodology and population),Ireland,Production,Pigmeat,2010,1000 tonnes,215
+Food Balances (old methodology and population),Ireland,Production,Poultry Meat,2010,1000 tonnes,115
+Food Balances (old methodology and population),Ireland,Production,"Meat, Other",2010,1000 tonnes,3
+Food Balances (old methodology and population),Ireland,Production,"Offals, Edible",2010,1000 tonnes,76
+Food Balances (old methodology and population),Ireland,Production,"Butter, Ghee",2010,1000 tonnes,135
+Food Balances (old methodology and population),Ireland,Production,Cream,2010,1000 tonnes,21
+Food Balances (old methodology and population),Ireland,Production,"Fats, Animals, Raw",2010,1000 tonnes,127
+Food Balances (old methodology and population),Ireland,Production,"Fish, Body Oil",2010,1000 tonnes,4
+Food Balances (old methodology and population),Ireland,Production,"Fish, Liver Oil",2010,1000 tonnes,0
+Food Balances (old methodology and population),Ireland,Production,Eggs,2010,1000 tonnes,45
+Food Balances (old methodology and population),Ireland,Production,Milk - Excluding Butter,2010,1000 tonnes,5327
+Food Balances (old methodology and population),Ireland,Production,Freshwater Fish,2010,1000 tonnes,17
+Food Balances (old methodology and population),Ireland,Production,Demersal Fish,2010,1000 tonnes,121
+Food Balances (old methodology and population),Ireland,Production,Pelagic Fish,2010,1000 tonnes,167
+Food Balances (old methodology and population),Ireland,Production,"Marine Fish, Other",2010,1000 tonnes,0
+Food Balances (old methodology and population),Ireland,Production,Crustaceans,2010,1000 tonnes,17
+Food Balances (old methodology and population),Ireland,Production,Cephalopods,2010,1000 tonnes,0
+Food Balances (old methodology and population),Ireland,Production,"Molluscs, Other",2010,1000 tonnes,42
+Food Balances (old methodology and population),Ireland,Production,"Meat, Aquatic Mammals",2010,,0
+Food Balances (old methodology and population),Ireland,Production,"Aquatic Animals, Others",2010,1000 tonnes,1
+Food Balances (old methodology and population),Ireland,Production,Aquatic Plants,2010,1000 tonnes,30
+Food Balances (old methodology and population),Ireland,Production,Infant food,2010,,0
+Food Balances (old methodology and population),Ireland,Production,Miscellaneous,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Wheat and products,2010,1000 tonnes,1370
+Food Balances (old methodology and population),Netherlands,Production,Rice (Milled Equivalent),2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Barley and products,2010,1000 tonnes,204
+Food Balances (old methodology and population),Netherlands,Production,Maize and products,2010,1000 tonnes,197
+Food Balances (old methodology and population),Netherlands,Production,Rye and products,2010,1000 tonnes,10
+Food Balances (old methodology and population),Netherlands,Production,Oats,2010,1000 tonnes,8
+Food Balances (old methodology and population),Netherlands,Production,Millet and products,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Sorghum and products,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,"Cereals, Other",2010,1000 tonnes,14
+Food Balances (old methodology and population),Netherlands,Production,Cassava and products,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Potatoes and products,2010,1000 tonnes,6844
+Food Balances (old methodology and population),Netherlands,Production,Sweet potatoes,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Yams,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,"Roots, Other",2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Sugar cane,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Sugar beet,2010,1000 tonnes,5280
+Food Balances (old methodology and population),Netherlands,Production,Sugar non-centrifugal,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Sugar (Raw Equivalent),2010,1000 tonnes,949
+Food Balances (old methodology and population),Netherlands,Production,"Sweeteners, Other",2010,1000 tonnes,264
+Food Balances (old methodology and population),Netherlands,Production,Honey,2010,1000 tonnes,0
+Food Balances (old methodology and population),Netherlands,Production,Beans,2010,1000 tonnes,6
+Food Balances (old methodology and population),Netherlands,Production,Peas,2010,1000 tonnes,5
+Food Balances (old methodology and population),Netherlands,Production,"Pulses, Other and products",2010,1000 tonnes,2
+Food Balances (old methodology and population),Netherlands,Production,Nuts and products,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Soyabeans,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Groundnuts (Shelled Eq),2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Sunflower seed,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Rape and Mustardseed,2010,1000 tonnes,12
+Food Balances (old methodology and population),Netherlands,Production,Cottonseed,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Coconuts - Incl Copra,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Sesame seed,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Palm kernels,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Olives (including preserved),2010,,0
+Food Balances (old methodology and population),Netherlands,Production,"Oilcrops, Other",2010,1000 tonnes,2
+Food Balances (old methodology and population),Netherlands,Production,Soyabean Oil,2010,1000 tonnes,462
+Food Balances (old methodology and population),Netherlands,Production,Groundnut Oil,2010,1000 tonnes,52
+Food Balances (old methodology and population),Netherlands,Production,Sunflowerseed Oil,2010,1000 tonnes,211
+Food Balances (old methodology and population),Netherlands,Production,Rape and Mustard Oil,2010,1000 tonnes,522
+Food Balances (old methodology and population),Netherlands,Production,Cottonseed Oil,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Palmkernel Oil,2010,1000 tonnes,0
+Food Balances (old methodology and population),Netherlands,Production,Palm Oil,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Coconut Oil,2010,1000 tonnes,0
+Food Balances (old methodology and population),Netherlands,Production,Sesameseed Oil,2010,1000 tonnes,1
+Food Balances (old methodology and population),Netherlands,Production,Olive Oil,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Ricebran Oil,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Maize Germ Oil,2010,1000 tonnes,0
+Food Balances (old methodology and population),Netherlands,Production,"Oilcrops Oil, Other",2010,1000 tonnes,157
+Food Balances (old methodology and population),Netherlands,Production,Tomatoes and products,2010,1000 tonnes,815
+Food Balances (old methodology and population),Netherlands,Production,Onions,2010,1000 tonnes,1302
+Food Balances (old methodology and population),Netherlands,Production,"Vegetables, Other",2010,1000 tonnes,2724
+Food Balances (old methodology and population),Netherlands,Production,"Oranges, Mandarines",2010,,0
+Food Balances (old methodology and population),Netherlands,Production,"Lemons, Limes and products",2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Grapefruit and products,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,"Citrus, Other",2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Bananas,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Plantains,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Apples and products,2010,1000 tonnes,334
+Food Balances (old methodology and population),Netherlands,Production,Pineapples and products,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Dates,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Grapes and products (excl wine),2010,1000 tonnes,1
+Food Balances (old methodology and population),Netherlands,Production,"Fruits, Other",2010,1000 tonnes,333
+Food Balances (old methodology and population),Netherlands,Production,Coffee and products,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Cocoa Beans and products,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Tea (including mate),2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Pepper,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Pimento,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Cloves,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,"Spices, Other",2010,1000 tonnes,0
+Food Balances (old methodology and population),Netherlands,Production,Wine,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Beer,2010,1000 tonnes,2449
+Food Balances (old methodology and population),Netherlands,Production,"Beverages, Fermented",2010,1000 tonnes,40
+Food Balances (old methodology and population),Netherlands,Production,"Beverages, Alcoholic",2010,1000 tonnes,115
+Food Balances (old methodology and population),Netherlands,Production,"Alcohol, Non-Food",2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Bovine Meat,2010,1000 tonnes,389
+Food Balances (old methodology and population),Netherlands,Production,Mutton & Goat Meat,2010,1000 tonnes,15
+Food Balances (old methodology and population),Netherlands,Production,Pigmeat,2010,1000 tonnes,1294
+Food Balances (old methodology and population),Netherlands,Production,Poultry Meat,2010,1000 tonnes,855
+Food Balances (old methodology and population),Netherlands,Production,"Meat, Other",2010,1000 tonnes,2
+Food Balances (old methodology and population),Netherlands,Production,"Offals, Edible",2010,1000 tonnes,237
+Food Balances (old methodology and population),Netherlands,Production,"Butter, Ghee",2010,1000 tonnes,133
+Food Balances (old methodology and population),Netherlands,Production,Cream,2010,1000 tonnes,85
+Food Balances (old methodology and population),Netherlands,Production,"Fats, Animals, Raw",2010,1000 tonnes,286
+Food Balances (old methodology and population),Netherlands,Production,"Fish, Body Oil",2010,1000 tonnes,0
+Food Balances (old methodology and population),Netherlands,Production,"Fish, Liver Oil",2010,1000 tonnes,2
+Food Balances (old methodology and population),Netherlands,Production,Eggs,2010,1000 tonnes,670
+Food Balances (old methodology and population),Netherlands,Production,Milk - Excluding Butter,2010,1000 tonnes,11805
+Food Balances (old methodology and population),Netherlands,Production,Freshwater Fish,2010,1000 tonnes,9
+Food Balances (old methodology and population),Netherlands,Production,Demersal Fish,2010,1000 tonnes,93
+Food Balances (old methodology and population),Netherlands,Production,Pelagic Fish,2010,1000 tonnes,315
+Food Balances (old methodology and population),Netherlands,Production,"Marine Fish, Other",2010,1000 tonnes,0
+Food Balances (old methodology and population),Netherlands,Production,Crustaceans,2010,1000 tonnes,20
+Food Balances (old methodology and population),Netherlands,Production,Cephalopods,2010,1000 tonnes,1
+Food Balances (old methodology and population),Netherlands,Production,"Molluscs, Other",2010,1000 tonnes,63
+Food Balances (old methodology and population),Netherlands,Production,"Meat, Aquatic Mammals",2010,,0
+Food Balances (old methodology and population),Netherlands,Production,"Aquatic Animals, Others",2010,1000 tonnes,0
+Food Balances (old methodology and population),Netherlands,Production,Aquatic Plants,2010,1000 tonnes,0
+Food Balances (old methodology and population),Netherlands,Production,Infant food,2010,,0
+Food Balances (old methodology and population),Netherlands,Production,Miscellaneous,2010,,0
+Food Balances (old methodology and population),World,Production,Wheat and products,2010,1000 tonnes,646386
+Food Balances (old methodology and population),World,Production,Rice (Milled Equivalent),2010,1000 tonnes,467515
+Food Balances (old methodology and population),World,Production,Barley and products,2010,1000 tonnes,122830
+Food Balances (old methodology and population),World,Production,Maize and products,2010,1000 tonnes,849455
+Food Balances (old methodology and population),World,Production,Rye and products,2010,1000 tonnes,11955
+Food Balances (old methodology and population),World,Production,Oats,2010,1000 tonnes,19719
+Food Balances (old methodology and population),World,Production,Millet and products,2010,1000 tonnes,32531
+Food Balances (old methodology and population),World,Production,Sorghum and products,2010,1000 tonnes,59693
+Food Balances (old methodology and population),World,Production,"Cereals, Other",2010,1000 tonnes,25022
+Food Balances (old methodology and population),World,Production,Cassava and products,2010,1000 tonnes,224732
+Food Balances (old methodology and population),World,Production,Potatoes and products,2010,1000 tonnes,332028
+Food Balances (old methodology and population),World,Production,Sweet potatoes,2010,1000 tonnes,100452
+Food Balances (old methodology and population),World,Production,Yams,2010,1000 tonnes,53187
+Food Balances (old methodology and population),World,Production,"Roots, Other",2010,1000 tonnes,17031
+Food Balances (old methodology and population),World,Production,Sugar cane,2010,1000 tonnes,1688083
+Food Balances (old methodology and population),World,Production,Sugar beet,2010,1000 tonnes,227091
+Food Balances (old methodology and population),World,Production,Sugar non-centrifugal,2010,1000 tonnes,11128
+Food Balances (old methodology and population),World,Production,Sugar (Raw Equivalent),2010,1000 tonnes,154929
+Food Balances (old methodology and population),World,Production,"Sweeteners, Other",2010,1000 tonnes,24559
+Food Balances (old methodology and population),World,Production,Honey,2010,1000 tonnes,1536
+Food Balances (old methodology and population),World,Production,Beans,2010,1000 tonnes,24159
+Food Balances (old methodology and population),World,Production,Peas,2010,1000 tonnes,10343
+Food Balances (old methodology and population),World,Production,"Pulses, Other and products",2010,1000 tonnes,35736
+Food Balances (old methodology and population),World,Production,Nuts and products,2010,1000 tonnes,15363
+Food Balances (old methodology and population),World,Production,Soyabeans,2010,1000 tonnes,264403
+Food Balances (old methodology and population),World,Production,Groundnuts (Shelled Eq),2010,1000 tonnes,29633
+Food Balances (old methodology and population),World,Production,Sunflower seed,2010,1000 tonnes,31498
+Food Balances (old methodology and population),World,Production,Rape and Mustardseed,2010,1000 tonnes,60720
+Food Balances (old methodology and population),World,Production,Cottonseed,2010,1000 tonnes,42986
+Food Balances (old methodology and population),World,Production,Coconuts - Incl Copra,2010,1000 tonnes,58598
+Food Balances (old methodology and population),World,Production,Sesame seed,2010,1000 tonnes,4260
+Food Balances (old methodology and population),World,Production,Palm kernels,2010,1000 tonnes,12328
+Food Balances (old methodology and population),World,Production,Olives (including preserved),2010,1000 tonnes,18408
+Food Balances (old methodology and population),World,Production,"Oilcrops, Other",2010,1000 tonnes,10521
+Food Balances (old methodology and population),World,Production,Soyabean Oil,2010,1000 tonnes,40610
+Food Balances (old methodology and population),World,Production,Groundnut Oil,2010,1000 tonnes,5603
+Food Balances (old methodology and population),World,Production,Sunflowerseed Oil,2010,1000 tonnes,12579
+Food Balances (old methodology and population),World,Production,Rape and Mustard Oil,2010,1000 tonnes,22913
+Food Balances (old methodology and population),World,Production,Cottonseed Oil,2010,1000 tonnes,4793
+Food Balances (old methodology and population),World,Production,Palmkernel Oil,2010,1000 tonnes,5510
+Food Balances (old methodology and population),World,Production,Palm Oil,2010,1000 tonnes,45078
+Food Balances (old methodology and population),World,Production,Coconut Oil,2010,1000 tonnes,3788
+Food Balances (old methodology and population),World,Production,Sesameseed Oil,2010,1000 tonnes,1056
+Food Balances (old methodology and population),World,Production,Olive Oil,2010,1000 tonnes,3177
+Food Balances (old methodology and population),World,Production,Ricebran Oil,2010,1000 tonnes,1106
+Food Balances (old methodology and population),World,Production,Maize Germ Oil,2010,1000 tonnes,2290
+Food Balances (old methodology and population),World,Production,"Oilcrops Oil, Other",2010,1000 tonnes,4042
+Food Balances (old methodology and population),World,Production,Tomatoes and products,2010,1000 tonnes,150211
+Food Balances (old methodology and population),World,Production,Onions,2010,1000 tonnes,78542
+Food Balances (old methodology and population),World,Production,"Vegetables, Other",2010,1000 tonnes,817470
+Food Balances (old methodology and population),World,Production,"Oranges, Mandarines",2010,1000 tonnes,92070
+Food Balances (old methodology and population),World,Production,"Lemons, Limes and products",2010,1000 tonnes,14808
+Food Balances (old methodology and population),World,Production,Grapefruit and products,2010,1000 tonnes,7478
+Food Balances (old methodology and population),World,Production,"Citrus, Other",2010,1000 tonnes,12087
+Food Balances (old methodology and population),World,Production,Bananas,2010,1000 tonnes,104804
+Food Balances (old methodology and population),World,Production,Plantains,2010,1000 tonnes,27281
+Food Balances (old methodology and population),World,Production,Apples and products,2010,1000 tonnes,70121
+Food Balances (old methodology and population),World,Production,Pineapples and products,2010,1000 tonnes,20768
+Food Balances (old methodology and population),World,Production,Dates,2010,1000 tonnes,7340
+Food Balances (old methodology and population),World,Production,Grapes and products (excl wine),2010,1000 tonnes,67111
+Food Balances (old methodology and population),World,Production,"Fruits, Other",2010,1000 tonnes,180620
+Food Balances (old methodology and population),World,Production,Coffee and products,2010,1000 tonnes,8321
+Food Balances (old methodology and population),World,Production,Cocoa Beans and products,2010,1000 tonnes,4295
+Food Balances (old methodology and population),World,Production,Tea (including mate),2010,1000 tonnes,5316
+Food Balances (old methodology and population),World,Production,Pepper,2010,1000 tonnes,449
+Food Balances (old methodology and population),World,Production,Pimento,2010,1000 tonnes,3079
+Food Balances (old methodology and population),World,Production,Cloves,2010,1000 tonnes,125
+Food Balances (old methodology and population),World,Production,"Spices, Other",2010,1000 tonnes,4709
+Food Balances (old methodology and population),World,Production,Wine,2010,1000 tonnes,27025
+Food Balances (old methodology and population),World,Production,Beer,2010,1000 tonnes,177931
+Food Balances (old methodology and population),World,Production,"Beverages, Fermented",2010,1000 tonnes,30145
+Food Balances (old methodology and population),World,Production,"Beverages, Alcoholic",2010,1000 tonnes,24546
+Food Balances (old methodology and population),World,Production,"Alcohol, Non-Food",2010,1000 tonnes,19679
+Food Balances (old methodology and population),World,Production,Bovine Meat,2010,1000 tonnes,66399
+Food Balances (old methodology and population),World,Production,Mutton & Goat Meat,2010,1000 tonnes,13053
+Food Balances (old methodology and population),World,Production,Pigmeat,2010,1000 tonnes,107263
+Food Balances (old methodology and population),World,Production,Poultry Meat,2010,1000 tonnes,98828
+Food Balances (old methodology and population),World,Production,"Meat, Other",2010,1000 tonnes,5906
+Food Balances (old methodology and population),World,Production,"Offals, Edible",2010,1000 tonnes,18098
+Food Balances (old methodology and population),World,Production,"Butter, Ghee",2010,1000 tonnes,9000
+Food Balances (old methodology and population),World,Production,Cream,2010,1000 tonnes,3272
+Food Balances (old methodology and population),World,Production,"Fats, Animals, Raw",2010,1000 tonnes,22788
+Food Balances (old methodology and population),World,Production,"Fish, Body Oil",2010,1000 tonnes,998
+Food Balances (old methodology and population),World,Production,"Fish, Liver Oil",2010,1000 tonnes,14
+Food Balances (old methodology and population),World,Production,Eggs,2010,1000 tonnes,69147
+Food Balances (old methodology and population),World,Production,Milk - Excluding Butter,2010,1000 tonnes,714854
+Food Balances (old methodology and population),World,Production,Freshwater Fish,2010,1000 tonnes,47730
+Food Balances (old methodology and population),World,Production,Demersal Fish,2010,1000 tonnes,20289
+Food Balances (old methodology and population),World,Production,Pelagic Fish,2010,1000 tonnes,33958
+Food Balances (old methodology and population),World,Production,"Marine Fish, Other",2010,1000 tonnes,10718
+Food Balances (old methodology and population),World,Production,Crustaceans,2010,1000 tonnes,11649
+Food Balances (old methodology and population),World,Production,Cephalopods,2010,1000 tonnes,3602
+Food Balances (old methodology and population),World,Production,"Molluscs, Other",2010,1000 tonnes,17164
+Food Balances (old methodology and population),World,Production,"Meat, Aquatic Mammals",2010,1000 tonnes,0
+Food Balances (old methodology and population),World,Production,"Aquatic Animals, Others",2010,1000 tonnes,1261
+Food Balances (old methodology and population),World,Production,Aquatic Plants,2010,1000 tonnes,20082
+Food Balances (old methodology and population),World,Production,Infant food,2010,,0
+Food Balances (old methodology and population),World,Production,Miscellaneous,2010,,0

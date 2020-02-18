@@ -1,7 +1,8 @@
-Domain Code,Domain,Area Code,Area,Element Code,Element,Item Code,Item,Year Code,Year,Unit,Value,Flag,Flag Description,Note
-GT,Agriculture Total,21,Brazil,7225,Emissions (CH4),1711,Agriculture total,2010,2010,gigagrams,13472.6521,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-GT,Agriculture Total,351,China,7225,Emissions (CH4),1711,Agriculture total,2010,2010,gigagrams,14367.9969,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-GT,Agriculture Total,100,India,7225,Emissions (CH4),1711,Agriculture total,2010,2010,gigagrams,19369.4528,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-GT,Agriculture Total,104,Ireland,7225,Emissions (CH4),1711,Agriculture total,2010,2010,gigagrams,550.6101,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-GT,Agriculture Total,231,United States of America,7225,Emissions (CH4),1711,Agriculture total,2010,2010,gigagrams,7996.7623,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-GT,Agriculture Total,5000,World,7225,Emissions (CH4),1711,Agriculture total,2010,2010,gigagrams,135301.1351,A,"Aggregate, may include official, semi-official, estimated or calculated data",
+Domain,Area,Element,Item,Year,Unit,Value
+Agriculture Total,Brazil,Emissions (CH4),Agriculture total,2010,gigagrams,13472.6521
+Agriculture Total,Costa Rica,Emissions (CH4),Agriculture total,2010,gigagrams,91.3428
+Agriculture Total,France,Emissions (CH4),Agriculture total,2010,gigagrams,1755.9955
+Agriculture Total,India,Emissions (CH4),Agriculture total,2010,gigagrams,19369.4528
+Agriculture Total,Ireland,Emissions (CH4),Agriculture total,2010,gigagrams,550.6101
+Agriculture Total,Netherlands,Emissions (CH4),Agriculture total,2010,gigagrams,486.6063
+Agriculture Total,World,Emissions (CH4),Agriculture total,2010,gigagrams,135301.1351

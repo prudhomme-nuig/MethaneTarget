@@ -1,0 +1,25 @@
+Domain,Area,Element,Item,Year,Unit,Value
+Rice Cultivation,Brazil,Area harvested,"Rice, paddy",2010,ha,2722459
+Rice Cultivation,Brazil,Implied emission factor for CH4 (Rice cultivation),"Rice, paddy",2010,g CH4/m2,6.496
+Rice Cultivation,Brazil,Emissions (CH4) (Rice cultivation),"Rice, paddy",2010,gigagrams,176.8509
+Rice Cultivation,Costa Rica,Area harvested,"Rice, paddy",2010,ha,79968
+Rice Cultivation,Costa Rica,Implied emission factor for CH4 (Rice cultivation),"Rice, paddy",2010,g CH4/m2,2.8
+Rice Cultivation,Costa Rica,Emissions (CH4) (Rice cultivation),"Rice, paddy",2010,gigagrams,2.2391
+Rice Cultivation,France,Area harvested,"Rice, paddy",2010,ha,23828
+Rice Cultivation,France,Implied emission factor for CH4 (Rice cultivation),"Rice, paddy",2010,g CH4/m2,50.4
+Rice Cultivation,France,Emissions (CH4) (Rice cultivation),"Rice, paddy",2010,gigagrams,12.0093
+Rice Cultivation,India,Area harvested,"Rice, paddy",2010,ha,42862400
+Rice Cultivation,India,Implied emission factor for CH4 (Rice cultivation),"Rice, paddy",2010,g CH4/m2,10.556
+Rice Cultivation,India,Emissions (CH4) (Rice cultivation),"Rice, paddy",2010,gigagrams,4524.5549
+Rice Cultivation,Ireland,Area harvested,"Rice, paddy",2010,,0
+Rice Cultivation,Ireland,Implied emission factor for CH4 (Rice cultivation),"Rice, paddy",2010,,0
+Rice Cultivation,Ireland,Emissions (CH4) (Rice cultivation),"Rice, paddy",2010,,0
+Rice Cultivation,Netherlands,Area harvested,"Rice, paddy",2010,,0
+Rice Cultivation,Netherlands,Implied emission factor for CH4 (Rice cultivation),"Rice, paddy",2010,,0
+Rice Cultivation,Netherlands,Emissions (CH4) (Rice cultivation),"Rice, paddy",2010,,0
+Rice Cultivation,Brazil,Yield,"Rice, paddy",2010,hg/ha,41271
+Rice Cultivation,Costa Rica,Yield,"Rice, paddy",2010,hg/ha,33485
+Rice Cultivation,France,Yield,"Rice, paddy",2010,hg/ha,50432
+Rice Cultivation,India,Yield,"Rice, paddy",2010,hg/ha,33587
+Rice Cultivation,Ireland,Yield,"Rice, paddy",2010,hg/ha,0
+Rice Cultivation,Netherlands,Yield,"Rice, paddy",2010,hg/ha,0

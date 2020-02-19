@@ -24,7 +24,9 @@ N2O_Man_left_df.name="manure left"
 emission_type_list=["manure","rice"]
 item_of_df={"manure application":animal_list,
             "manure management":animal_list,
-            "manure left":animal_list}
+            "manure left":animal_list,
+            "Manure total":animal_list,
+            "fertilizer":['Synthetic Nitrogen fertilizers'],}
 #item_to_product_dict={'Cattle':['Milk, Total','Beef and Buffalo Meat'],'Swine':['Meat, pig'],'Chickens':['Meat, Poultry','Eggs Primary'],'Poultry Birds':['Meat, Poultry'],'Sheep and Goats':['Sheep and Goat Meat']}
 
 def compute_emission_intensity(mitigation_potential_df,df,country,item):
@@ -47,33 +49,45 @@ def compute_activity(mitigation_potential_df,df,country,item):
             activity=df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (df["Element"]=="Stocks"),"Value"].values[0]
     return activity
 
-#Recompute implied emission factor because it is not always computed in FAOSTAT
-for df in [N2O_Man_man_df,N2O_Man_app_df,N2O_Man_left_df]:
-    index=len(df["Area"])
-    for country in country_list:
-        for item in item_of_df[df.name]:
-            value=df.loc[(df["Area"]==country) & (df["Item"]==item) & (["Emissions (N2O)" in list_element for list_element in df["Element"]]),"Value"].values[0]/df.loc[(df["Area"]==country) & (df["Item"]==item) & (["Stock" in list_element for list_element in df["Element"]]),"Value"].values[0]
-            df.loc[index,:]=["",country,"Implied emission factor",item,2010,"tN2O/head",value]
-            index+=1
+#Aggregate manure emission sources and Recompute implied emission factor because it is not always computed in FAOSTAT
+index=0
+aggregate_df=pd.DataFrame(columns=N2O_Man_man_df.columns)
+for country in country_list:
+    for item in animal_list:
+        value_emission=0
+        for df in [N2O_Man_man_df,N2O_Man_app_df,N2O_Man_left_df]:
+            value_emission+=df.loc[(df["Area"]==country) & (df["Item"]==item) & (["Emissions (N2O)" in list_element for list_element in df["Element"]]),"Value"].values[0]
+            value_stock=df.loc[(df["Area"]==country) & (df["Item"]==item) & (["Stock" in list_element for list_element in df["Element"]]),"Value"].values[0]
+        if value_stock>0:
+            value=value_emission/value_stock
+        else:
+            value=0
+        aggregate_df.loc[index,:]=["",country,"Implied emission factor",item,2010,"tN2O/head",value]
+        index+=1
+        aggregate_df.loc[index,:]=["",country,"Emissions (N2O)",item,2010,"tN2O",value_emission]
+        index+=1
+        aggregate_df.loc[index,:]=["",country,"Stocks",item,2010,"head",value_stock]
+        index+=1
+aggregate_df.name='Manure total'
 
 output_df=pd.DataFrame(columns=["Country","Emission","Item","Intensity"])
 output_activity_df=pd.DataFrame(columns=["Country","Emission","Item","Activity"])
 index=0
-for emission_df in [N2O_Man_man_df,N2O_Man_app_df,N2O_Man_left_df]:
+for emission_df in [aggregate_df,N2O_fertilizer_df]:
     for country in country_list:
         for item in item_of_df[emission_df.name]:
-            if emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Emissions (N2O)" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]==0:
-                output_df.loc[index,:]=[country,emission_df.name,item,0]
-            else:
-                if emission_df.name in mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,"Emission"].values:
-                    emission_intensity=compute_emission_intensity(mitigation_potential_df,emission_df,country,item)
-                    output_df.loc[index,:]=[country,emission_df.name,item,emission_intensity]
+            if 'Manure' in emission_df.name:
+                if emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Emissions (N2O)" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]==0:
+                    output_df.loc[index,:]=[country,emission_df.name,item,0]
                 else:
-                    #if emission_df.name in ['manure','enteric']:
                     intensity=emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Emissions (N2O)" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]/emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Stocks" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
                     output_df.loc[index,:]=[country,emission_df.name,item,intensity]
-            activity=compute_activity(mitigation_potential_df,emission_df,country,item)
-            output_activity_df.loc[index,:]=[country,emission_df.name,item,activity]
+            else:
+                if emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Implied" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]==0:
+                    output_df.loc[index,:]=[country,emission_df.name,item,0]
+                else:
+                    intensity=emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Implied" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
+                    output_df.loc[index,:]=[country,emission_df.name,item,intensity]
             index+=1
 output_df.to_csv('output/emission_intensity_N2O.csv',index=False)
 #output_activity_df.to_csv('output/activity_2050.csv',index=False)

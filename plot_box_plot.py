@@ -234,6 +234,22 @@ for country in country_list:
     plot_boxplot_with_sns(df_to_plot,country,"Area index","Allocation rule","Area index (relative to 2010)",'Figs/area_index_bar_plot_'+country.lower().replace(' ','_')+file_name_suffix+'.png',item_column_name='Item',ref_column_name='Area in 2010 (Mha)',reference_df=None,plot_points=True)
 print("Print area index with different metrics...")
 
+#Compute N2O emissions from manure
+df_to_plot=pd.DataFrame(columns=['N2O emissions','Allocation rule','Country','Item'])
+for item in ['manure','feed']:
+    df_to_concat=pd.concat([activity_df[['Country','Pathways','N2O '+item+' index', 'N2O '+item+' 2010',"Allocation rule"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
+    df_to_concat=df_to_concat.rename(columns = {'N2O '+item+' 2010':'N2O emissions in 2010'})
+    df_to_concat=df_to_concat.rename(columns = {'N2O '+item+' index':'N2O index (compared to 2010)'})
+    df_to_plot=pd.concat([df_to_plot,df_to_concat],axis=0,sort='True')
+
+t_to_kt=1E-3
+df_to_plot['N2O emissions in 2010 (ktN2O)']=df_to_plot['N2O emissions in 2010']*t_to_kt
+df_to_plot.loc[df_to_plot['Country']!=df_to_plot['Pathways'],'Pathway']='Improved'
+df_to_plot.loc[df_to_plot['Country']==df_to_plot['Pathways'],'Pathway']='Current'
+for country in country_list:
+    plot_boxplot_with_sns(df_to_plot,country,"N2O index (compared to 2010)","Allocation rule","N2O index (compared to 2010)",'Figs/N2O_index_bar_plot_'+country.lower().replace(' ','_')+file_name_suffix+'.png',item_column_name='Item',ref_column_name='N2O emissions in 2010 (ktN2O)',reference_df=None,plot_points=True)
+print("Print N2O with different metrics...")
+
 #Compute negative emissions of CO2
 df_to_plot=pd.DataFrame(columns=['CO2 offset','Allocation rule','Country','Item'])
 for item in ['Grassland','Feed','Rice','Total']:
@@ -249,6 +265,7 @@ for country in country_list:
 print("Print CO2 offset with different metrics...")
 
 #Compute AFOLU balance
+GWP100_N2O=298
 activity_df.loc[:,'AFOLU balance(MtCO2eq)']=0
 df_pivot=activity_df.pivot(columns="Country")
 df_offset=pd.concat([df_pivot["Total offset"],activity_df["Allocation rule"]],axis=1)
@@ -257,8 +274,9 @@ for country in country_list:
     emission_ref_year=methane_emissions_pd['Value'][methane_emissions_pd['Area']==country].values[0]*kt_2_Mt
     for rule in np.unique(df_to_plot['Allocation rule']):
         country_rule_mak=(methane_quota_df['Allocation rule']==rule) & (~np.isnan(methane_quota_df[country]))
+        N2O_emissions=df_pivot['N2O'].loc[country_rule_mak,country]*t_2_Mt*GWP100_N2O
         CO2_equivalent=compute_CO2_equivalent(methane_quota_df.loc[country_rule_mak,country],rule,emission_ref_year,country,ponderation_in_GWP_star=ponderation_dict[rule])
-        df_to_plot.loc[df_to_plot['Allocation rule']==rule,country]=-df_offset.loc[country_rule_mak,country]*t_to_Mt+CO2_equivalent*t_to_Mt
+        df_to_plot.loc[df_to_plot['Allocation rule']==rule,country]=-df_offset.loc[country_rule_mak,country]*t_to_Mt+CO2_equivalent*t_to_Mt+N2O_emissions
 plot_boxplot(df_to_plot,country_list,"AFOLU balance(MtCO2eq)","Figs/AFOLU_balance_bar_plot_countries"+file_name_suffix+".png")
 #plot_boxplot(df_to_plot,country_list,"Net AFOLU balance (MtCH4)","Figs/CH4_net_bar_plot_countries.pdf")
 print("Print net AFOLU balance with different metrics...")

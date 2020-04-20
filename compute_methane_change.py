@@ -61,7 +61,7 @@ plt.savefig('Figs/methane_index_bar_plot.png')
 plt.close()
 
 boxplot = production_index_df.boxplot(column=['2050', '2100'])
-plt.ylabel('Methane emissions compared to 2010 level')
+plt.ylabel('Production compared to 2010 level')
 plt.xlabel('Years')
 plt.savefig('Figs/production_index_bar_plot.pdf')
 plt.savefig('Figs/production_index_bar_plot.png')

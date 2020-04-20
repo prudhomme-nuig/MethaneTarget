@@ -1,19 +1,56 @@
-# methane
+# The Methane tool to compute the impact of national biogenic methane quota on the AFOLU sector
 
-Here is a description of the modelling:
+This tool support the following scientific article:
+http://www.scientific-article-methane
 
-1. Aggregation of FAOSTAT production in 2010 from FAOSTAT
+A complete documentation of the computation is provide in this article.
+When you use this code, please cite the above mentioned article.
 
-2. Loading of population, methane emissions production and price in 2010 from FAOSTAT
+This tool is mainly built on FAOSTAT data. They area provided in the data folder but can be updated at this adress:
+http://www.fao.org/faostat/en/#home
 
-(3. Recalibration of production and emissions from SR1.5 based on FAOSTAT?)
+This tool will set a quota for methane biogenic emissions from:
+1. Enteric fermentation of cattle, sheep and goats
+2. Manure management of cattle, sheep and goats, swine and poultry
+3. Rice production
 
-4. Share of Irish production, population and methane emissions in 2010 compared to world values
+## User guide
 
-5. Emission intensity per production and capita in 2010 compared to world values
+This tool can be launched from Python3 or an Unix environment
 
-6. World methane reduction in 2050 compared to 2010
+1. Python3
 
-7. Irish methane reduction in 2050 compared to 2010
+This tool can be launched in python. Make sure that the following folders are created in the working directory:
+1. Figs/
+2. output/
 
-End. How biased scenarios extracted from the SR1.5 are?
+Run the following python files in that order:
+1. compute_methane_change.py
+2. compute_methane_debt.py
+3. compute_protein_production_ref.py
+4. compute_methane_quota.py
+5. compute_methane_intensity_2050.py
+6. compute_activity_2050.py
+7. compute_feed_yield.py
+8. compute_grass_yield.py
+9. compute_N2O_intensity_2050.py
+10. compute_impact.py
+11. plot_box_plot.py
+12. print_table_results.py
+
+A description of the purposes of each python file is provided at the beginning of the file and in the paper.
+
+A virtual environment is provided with the requirement.txt to have the version of the package. To install it, please run:
+pip install -r requirements.txt
+
+See documentation for more information about virtual environment:
+https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
+
+## Unix environment
+
+The previous python file can be run in one command line in the shell:
+
+make Figs/AFOLU_balance_bar_plot_countries.png
+
+See Makefile documentation for more information:
+https://fr.wikipedia.org/wiki/Make

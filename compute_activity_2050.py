@@ -7,10 +7,10 @@ from common_data import read_FAOSTAT_df
 
 methane_quota_df=pd.read_csv("output/methane_quota.csv")
 
-pathways_df={"Ireland":["Ireland","Netherlands"],
-            "France":["France","Netherlands"],
-            "India":["India","Brazil"],
-            "Brazil":["Brazil"]}
+pathways_df={"Ireland":["Ireland","Temperate"],
+            "France":["France","Temperate"],
+            "India":["India","Tropical"],
+            "Brazil":["Brazil","Tropical"]}
 
 methane_intensity_df=pd.read_csv("output/emission_intensity_2050.csv")
 methane_all_reference_df=read_FAOSTAT_df("data/FAOSTAT_methane_reference.csv")

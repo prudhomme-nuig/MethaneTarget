@@ -6,7 +6,7 @@ from copy import deepcopy
 from common_data import read_FAOSTAT_df
 
 #Country in this study
-country_list=["France","Ireland","Brazil","India"]
+country_list=["Brazil","France","India","Ireland"]
 
 #Select only 1.5 degres scenarios with low overshoot or below 1.5 and years 2010,2050 and 2100
 methane_df=pd.read_csv('output/methane_1p5_low_overshoot.csv',delimiter=',')
@@ -58,7 +58,10 @@ methane_df.loc[:,'2050']=methane_df.loc[:,'2050']*methane_df.loc[:,'World Emissi
 methane_df.loc[:,'2010']=methane_df.loc[:,'World Emission FAO 2010']
 
 #Load data for allocation rules
-methane_reference_df.name='methane_reference_df'
+methane_debt_df=pd.read_csv('output/FAOSTAT_methane_debt.csv',delimiter=',')
+methane_debt_df.name='debt_methane_df'
+protein_production_df=pd.read_csv('output/FAOSTAT_protein_production.csv',delimiter=',')
+protein_production_df.name='protein_production_df'
 population_reference_df=pd.read_csv('data/WB_population_reference.csv',delimiter=',')
 population_reference_df.name='population_reference_df'
 GDP_reference_df=pd.read_csv('data/WB_GDP_reference.csv',delimiter=',')
@@ -74,16 +77,20 @@ index_list=deepcopy(list(methane_df.index))
 index_new=0
 for country in country_list:
     for index in index_list:
-        for df in [population_reference_df,GDP_reference_df,methane_reference_df]:
+        for df in [population_reference_df,GDP_reference_df,methane_debt_df,protein_production_df]:
             methane_tmp_df.loc[index_new,:]=deepcopy(methane_df.loc[index,:])
             if df.name=="population_reference_df":
                 methane_tmp_df.loc[index_new,'Share']=df.loc[df['Country Name']==country,'2010'].values[0]/df.loc[df['Country Name']=='World','2010'].values[0]
             elif df.name=="GDP_reference_df":
                 methane_tmp_df.loc[index_new,'Share']=df.loc[df['Country Name']==country,'2010'].values[0]/df.loc[df['Country Name']=='World','2010'].values[0]
+            elif df.name=="debt_methane_df":
+                methane_tmp_df.loc[index_new,'Share']=df.loc[0,country]
+            elif df.name:
+                methane_tmp_df.loc[index_new,'Share']=df.loc[0,country]
             else:
                 methane_tmp_df.loc[index_new,'Share']=df.loc[df['Area']==country,'Value'].values[0]/df.loc[df['Area']=='World','Value'].values[0]
             methane_tmp_df.loc[index_new,'Allocation rule']=df.name[:3]
-            if df.name!="GDP_reference_df":
+            if (df.name=="population_reference_df") | (df.name=="protein_production_df"):
                 methane_tmp_df.loc[index_new,'National quota']=methane_tmp_df.loc[index_new,'Share']*methane_tmp_df.loc[index_new,'2050']
             else:
                 methane_tmp_df.loc[index_new,'National quota']=np.maximum(methane_tmp_df.loc[index_new,'Share']*(methane_tmp_df.loc[index_new,'2050']-methane_tmp_df.loc[index_new,'2010'])+methane_reference_df.loc[methane_reference_df['Area']==country,'Value'].values[0],1E-6)
@@ -92,10 +99,12 @@ for country in country_list:
 
 methane_df=deepcopy(methane_tmp_df)
 #Plot global,national methane emissions for 3 allocation rule
-methane_df.loc[methane_df['Allocation rule']=='met','Allocation rule']='Grand-fathering'
+methane_df.loc[methane_df['Allocation rule']=='deb','Allocation rule']='Debt'
+methane_df.loc[methane_df['Allocation rule']=='pro','Allocation rule']='Protein'
+methane_df.loc[methane_df['Allocation rule']=='met','Allocation rule']='Grand-parenting'
 methane_df.loc[methane_df['Allocation rule']=='pop','Allocation rule']='Population'
 methane_df.loc[methane_df['Allocation rule']=='gdp','Allocation rule']='GDP'
 
-rule_list=['Grand-fathering','Population','GDP']
+rule_list=['Debt','Population','GDP','Protein']
 
 methane_df.to_csv('output/methane_quota.csv',index=False)

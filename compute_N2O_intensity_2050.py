@@ -1,5 +1,9 @@
 #! /bin/python
 
+'''
+Compute national nitrous oxyde intensity of manure and fertilization
+'''
+
 import pandas as pd
 import numpy as np
 from common_data import read_FAOSTAT_df

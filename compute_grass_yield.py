@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+'''
+Compute mean grass yield at a national scale based on FAOSTAT data
+'''
+
 import numpy as np
 import pandas as pd
 from common_data import read_FAOSTAT_df

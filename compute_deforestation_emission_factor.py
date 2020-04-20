@@ -1,5 +1,11 @@
 #!/usr/bin/env python
 
+'''
+Compute deforesattion emission factor based on IPCC methodology
+for countries with the highest agricultural exapnsion during these
+last 10 years
+'''
+
 import pandas as pd
 import numpy as np
 from common_data import read_FAOSTAT_df

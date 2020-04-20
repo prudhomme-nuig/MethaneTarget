@@ -1,5 +1,9 @@
 #! /bin/python
 
+'''
+Compute mean feed yield with national yield of every crops used to feed animals
+'''
+
 import numpy as np
 import pandas as pd
 from common_data import convert_unit_dict,read_FAOSTAT_df

@@ -1,5 +1,10 @@
 #! /bin/python
 
+'''
+Description of the 1.5 database.
+Plot global methane and production target in 2050 and 2100 divided by the 2010 methane level.
+'''
+
 import pandas as pd
 import numpy as np
 from copy import deepcopy

@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+'''
+Compute national unit of production compatible with national methane quotas defined in output/methane_quota.csv
+'''
+
 from copy import deepcopy
 import numpy as np
 import pandas as pd

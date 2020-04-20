@@ -1,5 +1,9 @@
 #! /bin/python
 
+'''
+Compute national methane quota for different rules: methane debt, protein production, gdp, population
+'''
+
 import pandas as pd
 import numpy as np
 from copy import deepcopy

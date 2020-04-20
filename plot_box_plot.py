@@ -1,5 +1,9 @@
 #! /bin/python
 
+'''
+PLot boxplot of national AFOLU balance following the national methane quota
+'''
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -20,7 +24,7 @@ if args.sensitivity_analysis is not None:
 else:
     yield_change=0
     file_name_suffix=''
-    
+
 cmap = cm.ScalarMappable(cmap='rainbow')
 rumi_dict={"cattle":"cattle","smallrum":"Sheep and Goats"}
 country_list=["Brazil","France","India","Ireland"]
@@ -108,7 +112,7 @@ def plot_boxplot_with_sns(df_to_plot,country,y_column_name,allocation_column_nam
                         ax.tick_params(axis = 'x', which = 'major', labelsize = 12)
                         ax.spines["top"].set_visible(False)
                         ax.spines["right"].set_visible(False)
- 
+
 
                     #plt.xlabel(item_column_name,fontsize='22')
                     #plt.tight_layout()
@@ -141,7 +145,7 @@ def plot_boxplot_quota_with_sns(df_to_plot,country_list,y_column_name,allocation
         if not y:
                 ax_value.yaxis.label.set_visible(False)
         with sns.axes_style(style='ticks'):
-            sns.catplot(item_column_name, y_column_name, data=df_to_plot[country_mask], kind="box",height=8.27, aspect=11.7/8.27,ax=ax_index)            
+            sns.catplot(item_column_name, y_column_name, data=df_to_plot[country_mask], kind="box",height=8.27, aspect=11.7/8.27,ax=ax_index)
             if not y:
                 ax_index.yaxis.label.set_visible(False)
             ax_index.tick_params(axis = 'x', which = 'major', labelsize = 12)

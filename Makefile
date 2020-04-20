@@ -1,5 +1,5 @@
 #To launch the Makefile:
-#Read the README.txt !
+#Read the README.md
 
 #To be changed depending on the localization of your python folder
 launch_python=/mnt/c/Users/remip/Anaconda3/python.exe
@@ -70,12 +70,12 @@ output/emission_intensity_N2O.csv: output
 #Compute deforesattion emission factor based on IPCC methodology
 # for countries with the highest agricultural exapnsion during these
 # last 10 years
-output/emission_intensity_N2O.csv: output
-				${launch_python} compute_N2O_intensity_2050.py
+output/deforestation_factor.csv: output compute_deforestation_emission_factor.py
+				${launch_python} compute_deforestation_emission_factor.py
 
 #Compute impacts of national methane quotas
 #on land-use change, CO2 and N2O emissions
-output/impact_2050.csv: output compute_impact.py output/feed_yield_aggregate.csv output/activity_2050.csv output/grass_yield.csv output/emission_intensity_N2O.csv
+output/impact_2050.csv: output compute_impact.py output/feed_yield_aggregate.csv output/activity_2050.csv output/grass_yield.csv output/emission_intensity_N2O.csv output/deforestation_factor.csv
 				${launch_python} compute_impact.py
 
 # PLot boxplot of national AFOLU balance following the national

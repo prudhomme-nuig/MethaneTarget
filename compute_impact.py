@@ -1,5 +1,10 @@
 #! /bin/python
 
+'''
+Compute impacts of national methane quotas
+on land-use change, production, CO2 and N2O emissions
+'''
+
 import pandas as pd
 from common_data import read_FAOSTAT_df
 from copy import deepcopy

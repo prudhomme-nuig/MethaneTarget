@@ -1,5 +1,9 @@
 #! /bin/python
 
+'''
+Compute methane intensity per unit of production in 2050 for each intensification pathway, with and without mitigation
+'''
+
 import pandas as pd
 import numpy as np
 from common_data import read_FAOSTAT_df

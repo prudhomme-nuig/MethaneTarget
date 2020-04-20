@@ -1,20 +1,35 @@
-Country,Emission,Measure,Indicator,Mitigation potential,Mitigation cost,Pasture change,Feed change,Production change
-India,enteric,MUB,share,0.11,np.nan,0,0,0
-India,enteric,Concentrate,share,0.15,np.nan,0,0,0
-India,enteric,Ionophore,share,0.22,np.nan,0,0,0
-India,rice,Rice management,mitigation per ha,0.09857142,np.nan,0,0,0
-Brazil,rice,Rice management,share,0.5,np.nan,0,0,0
-Brazil,enteric,Concentrate,mitigation,196428.5714,np.nan,0,0,0
-Brazil,enteric,Additives,mitigation,125000,np.nan,0,0,0
-Brazil,enteric,Breeding,mitigation,171428.571,np.nan,0,0,0
-Ireland,enteric,Improved LG,mitigation,2178.57,np.nan,0,0,0
-Ireland,enteric,Beef MR,mitigation,903.57,np.nan,0,0,0
-Ireland,enteric,Dairy EBI,mitigation,1265,np.nan,0,0,0
-Ireland,enteric,Extended grazing,mitigation,3428.57,np.nan,0,0,0
-Ireland,enteric,Animal health,mitigation,5250,np.nan,0,0,0
-Ireland,enteric,Sex seemed,mitigation,867.85,np.nan,0,0,0
-Ireland,rice,Rice management,share,0.5,np.nan,0,0,0
-France,enteric,Fat acids,share,0.14,np.nan,0,0,0
-France,enteric,Additives,share,0.10,np.nan,0,0,0
-France,rice,Rice management,share,0.5,np.nan,0,0,0
-France,rice,Rice management,share,0.5,np.nan,0,0,0
+Country,Emission,Measure,Indicator,Mitigation potential,Mitigation cost,Pasture change,Feed change,Production change,gaz,Item
+India,enteric,MUB,share,0.11,nan,0,0,0,CH4,Cattle
+India,enteric,Concentrate,share,0.15,nan,0,0,0,CH4,Cattle
+India,enteric,Ionophore,share,0.22,nan,0,0,0,CH4,Cattle
+India,rice,Rice management,mitigation per ha,0.09857142,nan,0,0,0,CH4,Rice
+India,manure,Improved Manure management,mitigation per head,0.03063,nan,0,0,0,both,Cattle
+India,manure,Biogas,mitigation per head,0.50023,nan,0,0,0,both,Cattle
+India,fertilizer,Fertilizer consumption,mitigation per ha,0.00066,nan,0,0,0,N2O,nan
+India,fertilizer,NUE,mitigation per ha,0.017,nan,0,0,0,N2O,nan
+India,fertilizer,Laser land leveling,share,0.28,nan,0,0,0,N2O,nan
+Brazil,rice,Rice management,share,0.5,nan,0,0,0,CH4,Rice
+Brazil,enteric,Concentrate,mitigation,196428.5714,nan,0,0,0,CH4,Cattle
+Brazil,enteric,Additives,mitigation,125000,nan,0,0,0,CH4,Cattle
+Brazil,enteric,Breeding,mitigation,171428.571,nan,0,0,0,CH4,Cattle
+Brazil,manure,manure management,mitigation,16778,nan,0,0,0,both,Cattle
+Ireland,enteric,Improved LG,mitigation,2178.57,nan,0,0,0,CH4,Cattle
+Ireland,enteric,Beef MR,mitigation,903.57,nan,0,0,0,CH4,Cattle
+Ireland,enteric,Dairy EBI,mitigation,1265,nan,0,0,0,CH4,Cattle
+Ireland,enteric,Extended grazing,mitigation,3428.57,nan,0,0,0,CH4,Cattle
+Ireland,enteric,Animal health,mitigation,5250,nan,0,0,0,CH4,Cattle
+Ireland,enteric,Sex seemed,mitigation,867.85,nan,0,0,0,CH4,Cattle
+Ireland,enteric,Fatty Acids,mitigation,1250,nan,0,0,0,CH4,Cattle
+Ireland,rice,Rice management,share,0.5,nan,0,0,0,CH4,Rice
+Ireland,manure,slurry spreading,mitigation,0.117,nan,0,0,0,both,Cattle
+Ireland,manure,slurry amendments,mitigation,307,nan,0,0,0,CH4,Cattle
+Ireland,manure,slurry amendments,mitigation,63,nan,0,0,0,N2O,Cattle
+Ireland,manure,crude proteins,mitigation,168,nan,0,0,0,N2O,Swine
+Ireland,fertilizer,Clover,mitigation,0.069,nan,0,0,0,N2O,nan
+Ireland,fertilizer,Fertiliser type,mitigation,1748,nan,0,0,0,N2O,nan
+Ireland,fertilizer,Mineral soil drainage,mitigation,661,nan,0,0,0,N2O,nan
+France,rice,Rice management,share,0.5,nan,0,0,0,CH4,Rice
+France,enteric,Additives,mitigation,212800,nan,0,0,0,CH4,Cattle
+France,fertilizer,all,mitigation,4277805,nan,0,0,0,N2O,nan
+France,manure,biogas,mitigation,17339982,nan,0,0,0,both,Cattle
+France,manure,pigs N diet,mitigation,484500,nan,0,0,0,N2O,Swine

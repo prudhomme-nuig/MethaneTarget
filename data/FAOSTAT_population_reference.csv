@@ -1,39 +1,184 @@
-Domain Code,Domain,Area Code,Area,Element Code,Element,Item Code,Item,Year Code,Year,Unit,Value,Flag,Flag Description,Note
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2000,2000,1000 persons,3783.103,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2001,2001,1000 persons,3842.245,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2002,2002,1000 persons,3907.998,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2003,2003,1000 persons,3980.076,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2004,2004,1000 persons,4058.13,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2005,2005,1000 persons,4141.223,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2006,2006,1000 persons,4230.623,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2007,2007,1000 persons,4324.641,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2008,2008,1000 persons,4415.872,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2009,2009,1000 persons,4494.576,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2010,2010,1000 persons,4554.321,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2011,2011,1000 persons,4591.105,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2012,2012,1000 persons,4608.198,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2013,2013,1000 persons,4615.422,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2014,2014,1000 persons,4626.844,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2015,2015,1000 persons,4652.425,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2016,2016,1000 persons,4695.779,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2017,2017,1000 persons,4753.279,X,International reliable sources,
-OA,Annual population,104,Ireland,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2018,2018,1000 persons,4818.69,X,International reliable sources,
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2000,2000,1000 persons,6143493.823,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2001,2001,1000 persons,6222626.606,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2002,2002,1000 persons,6301773.188,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2003,2003,1000 persons,6381185.114,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2004,2004,1000 persons,6461159.389,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2005,2005,1000 persons,6541907.027,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2006,2006,1000 persons,6623517.833,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2007,2007,1000 persons,6705946.61,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2008,2008,1000 persons,6789088.686,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2009,2009,1000 persons,6872767.093,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2010,2010,1000 persons,6956823.603,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2011,2011,1000 persons,7041194.301,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2012,2012,1000 persons,7125828.059,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2013,2013,1000 persons,7210581.976,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2014,2014,1000 persons,7295290.765,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2015,2015,1000 persons,7379797.139,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2016,2016,1000 persons,7464022.049,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2017,2017,1000 persons,7547858.925,A,"Aggregate, may include official, semi-official, estimated or calculated data",
-OA,Annual population,5000,World,511,Total Population - Both sexes,3010,Population - Est. & Proj.,2018,2018,1000 persons,7631091.04,A,"Aggregate, may include official, semi-official, estimated or calculated data",
+﻿Domain,Area,Element,Item,Year,Unit,Value
+Food Balances (old methodology and population),Afghanistan,Total Population - Both sexes,Population,2010,1000 persons,28398
+Food Balances (old methodology and population),Albania,Total Population - Both sexes,Population,2010,1000 persons,3150
+Food Balances (old methodology and population),Algeria,Total Population - Both sexes,Population,2010,1000 persons,37063
+Food Balances (old methodology and population),Angola,Total Population - Both sexes,Population,2010,1000 persons,19549
+Food Balances (old methodology and population),Antigua and Barbuda,Total Population - Both sexes,Population,2010,1000 persons,87
+Food Balances (old methodology and population),Argentina,Total Population - Both sexes,Population,2010,1000 persons,40374
+Food Balances (old methodology and population),Armenia,Total Population - Both sexes,Population,2010,1000 persons,2963
+Food Balances (old methodology and population),Australia,Total Population - Both sexes,Population,2010,1000 persons,22404
+Food Balances (old methodology and population),Austria,Total Population - Both sexes,Population,2010,1000 persons,8402
+Food Balances (old methodology and population),Azerbaijan,Total Population - Both sexes,Population,2010,1000 persons,9095
+Food Balances (old methodology and population),Bahamas,Total Population - Both sexes,Population,2010,1000 persons,360
+Food Balances (old methodology and population),Bangladesh,Total Population - Both sexes,Population,2010,1000 persons,151125
+Food Balances (old methodology and population),Barbados,Total Population - Both sexes,Population,2010,1000 persons,280
+Food Balances (old methodology and population),Belarus,Total Population - Both sexes,Population,2010,1000 persons,9491
+Food Balances (old methodology and population),Belgium,Total Population - Both sexes,Population,2010,1000 persons,10941
+Food Balances (old methodology and population),Belgium-Luxembourg,Total Population - Both sexes,Population,2010,1000 persons,0
+Food Balances (old methodology and population),Belize,Total Population - Both sexes,Population,2010,1000 persons,309
+Food Balances (old methodology and population),Benin,Total Population - Both sexes,Population,2010,1000 persons,9510
+Food Balances (old methodology and population),Bermuda,Total Population - Both sexes,Population,2010,1000 persons,65
+Food Balances (old methodology and population),Bolivia (Plurinational State of),Total Population - Both sexes,Population,2010,1000 persons,10157
+Food Balances (old methodology and population),Bosnia and Herzegovina,Total Population - Both sexes,Population,2010,1000 persons,3846
+Food Balances (old methodology and population),Botswana,Total Population - Both sexes,Population,2010,1000 persons,1969
+Food Balances (old methodology and population),Brazil,Total Population - Both sexes,Population,2010,1000 persons,195210
+Food Balances (old methodology and population),Brunei Darussalam,Total Population - Both sexes,Population,2010,1000 persons,401
+Food Balances (old methodology and population),Bulgaria,Total Population - Both sexes,Population,2010,1000 persons,7389
+Food Balances (old methodology and population),Burkina Faso,Total Population - Both sexes,Population,2010,1000 persons,15540
+Food Balances (old methodology and population),Cabo Verde,Total Population - Both sexes,Population,2010,1000 persons,488
+Food Balances (old methodology and population),Cambodia,Total Population - Both sexes,Population,2010,1000 persons,14365
+Food Balances (old methodology and population),Cameroon,Total Population - Both sexes,Population,2010,1000 persons,20624
+Food Balances (old methodology and population),Canada,Total Population - Both sexes,Population,2010,1000 persons,34126
+Food Balances (old methodology and population),Central African Republic,Total Population - Both sexes,Population,2010,1000 persons,4350
+Food Balances (old methodology and population),Chad,Total Population - Both sexes,Population,2010,1000 persons,11721
+Food Balances (old methodology and population),Chile,Total Population - Both sexes,Population,2010,1000 persons,17151
+Food Balances (old methodology and population),China,Total Population - Both sexes,Population,2010,1000 persons,1390552
+Food Balances (old methodology and population),China, Hong Kong SAR,Total Population - Both sexes,Population,2010,1000 persons,7050
+Food Balances (old methodology and population),China, Macao SAR,Total Population - Both sexes,Population,2010,1000 persons,535
+Food Balances (old methodology and population),China, mainland,Total Population - Both sexes,Population,2010,1000 persons,1359821
+Food Balances (old methodology and population),China, Taiwan Province of,Total Population - Both sexes,Population,2010,1000 persons,23146
+Food Balances (old methodology and population),Colombia,Total Population - Both sexes,Population,2010,1000 persons,46445
+Food Balances (old methodology and population),Congo,Total Population - Both sexes,Population,2010,1000 persons,4112
+Food Balances (old methodology and population),Costa Rica,Total Population - Both sexes,Population,2010,1000 persons,4670
+Food Balances (old methodology and population),Côte d'Ivoire,Total Population - Both sexes,Population,2010,1000 persons,18977
+Food Balances (old methodology and population),Croatia,Total Population - Both sexes,Population,2010,1000 persons,4338
+Food Balances (old methodology and population),Cuba,Total Population - Both sexes,Population,2010,1000 persons,11282
+Food Balances (old methodology and population),Cyprus,Total Population - Both sexes,Population,2010,1000 persons,1104
+Food Balances (old methodology and population),Czechia,Total Population - Both sexes,Population,2010,1000 persons,10554
+Food Balances (old methodology and population),Czechoslovakia,Total Population - Both sexes,Population,2010,1000 persons,0
+Food Balances (old methodology and population),Democratic People's Republic of Korea,Total Population - Both sexes,Population,2010,1000 persons,24501
+Food Balances (old methodology and population),Denmark,Total Population - Both sexes,Population,2010,1000 persons,5551
+Food Balances (old methodology and population),Djibouti,Total Population - Both sexes,Population,2010,1000 persons,834
+Food Balances (old methodology and population),Dominica,Total Population - Both sexes,Population,2010,1000 persons,71
+Food Balances (old methodology and population),Dominican Republic,Total Population - Both sexes,Population,2010,1000 persons,10017
+Food Balances (old methodology and population),Ecuador,Total Population - Both sexes,Population,2010,1000 persons,15001
+Food Balances (old methodology and population),Egypt,Total Population - Both sexes,Population,2010,1000 persons,78076
+Food Balances (old methodology and population),El Salvador,Total Population - Both sexes,Population,2010,1000 persons,6218
+Food Balances (old methodology and population),Estonia,Total Population - Both sexes,Population,2010,1000 persons,1299
+Food Balances (old methodology and population),Eswatini,Total Population - Both sexes,Population,2010,1000 persons,1193
+Food Balances (old methodology and population),Ethiopia,Total Population - Both sexes,Population,2010,1000 persons,87095
+Food Balances (old methodology and population),Ethiopia PDR,Total Population - Both sexes,Population,2010,1000 persons,0
+Food Balances (old methodology and population),Fiji,Total Population - Both sexes,Population,2010,1000 persons,861
+Food Balances (old methodology and population),Finland,Total Population - Both sexes,Population,2010,1000 persons,5368
+Food Balances (old methodology and population),France,Total Population - Both sexes,Population,2010,1000 persons,63231
+Food Balances (old methodology and population),French Polynesia,Total Population - Both sexes,Population,2010,1000 persons,268
+Food Balances (old methodology and population),Gabon,Total Population - Both sexes,Population,2010,1000 persons,1556
+Food Balances (old methodology and population),Gambia,Total Population - Both sexes,Population,2010,1000 persons,1681
+Food Balances (old methodology and population),Georgia,Total Population - Both sexes,Population,2010,1000 persons,4389
+Food Balances (old methodology and population),Germany,Total Population - Both sexes,Population,2010,1000 persons,83017
+Food Balances (old methodology and population),Ghana,Total Population - Both sexes,Population,2010,1000 persons,24263
+Food Balances (old methodology and population),Greece,Total Population - Both sexes,Population,2010,1000 persons,11110
+Food Balances (old methodology and population),Grenada,Total Population - Both sexes,Population,2010,1000 persons,105
+Food Balances (old methodology and population),Guatemala,Total Population - Both sexes,Population,2010,1000 persons,14342
+Food Balances (old methodology and population),Guinea,Total Population - Both sexes,Population,2010,1000 persons,10876
+Food Balances (old methodology and population),Guinea-Bissau,Total Population - Both sexes,Population,2010,1000 persons,1587
+Food Balances (old methodology and population),Guyana,Total Population - Both sexes,Population,2010,1000 persons,786
+Food Balances (old methodology and population),Haiti,Total Population - Both sexes,Population,2010,1000 persons,9896
+Food Balances (old methodology and population),Honduras,Total Population - Both sexes,Population,2010,1000 persons,7621
+Food Balances (old methodology and population),Hungary,Total Population - Both sexes,Population,2010,1000 persons,10015
+Food Balances (old methodology and population),Iceland,Total Population - Both sexes,Population,2010,1000 persons,318
+Food Balances (old methodology and population),India,Total Population - Both sexes,Population,2010,1000 persons,1205625
+Food Balances (old methodology and population),Indonesia,Total Population - Both sexes,Population,2010,1000 persons,240676
+Food Balances (old methodology and population),Iran (Islamic Republic of),Total Population - Both sexes,Population,2010,1000 persons,74462
+Food Balances (old methodology and population),Iraq,Total Population - Both sexes,Population,2010,1000 persons,30962
+Food Balances (old methodology and population),Ireland,Total Population - Both sexes,Population,2010,1000 persons,4468
+Food Balances (old methodology and population),Israel,Total Population - Both sexes,Population,2010,1000 persons,7420
+Food Balances (old methodology and population),Italy,Total Population - Both sexes,Population,2010,1000 persons,60509
+Food Balances (old methodology and population),Jamaica,Total Population - Both sexes,Population,2010,1000 persons,2741
+Food Balances (old methodology and population),Japan,Total Population - Both sexes,Population,2010,1000 persons,127353
+Food Balances (old methodology and population),Jordan,Total Population - Both sexes,Population,2010,1000 persons,6455
+Food Balances (old methodology and population),Kazakhstan,Total Population - Both sexes,Population,2010,1000 persons,15921
+Food Balances (old methodology and population),Kenya,Total Population - Both sexes,Population,2010,1000 persons,40909
+Food Balances (old methodology and population),Kiribati,Total Population - Both sexes,Population,2010,1000 persons,98
+Food Balances (old methodology and population),Kuwait,Total Population - Both sexes,Population,2010,1000 persons,2992
+Food Balances (old methodology and population),Kyrgyzstan,Total Population - Both sexes,Population,2010,1000 persons,5334
+Food Balances (old methodology and population),Lao People's Democratic Republic,Total Population - Both sexes,Population,2010,1000 persons,6396
+Food Balances (old methodology and population),Latvia,Total Population - Both sexes,Population,2010,1000 persons,2091
+Food Balances (old methodology and population),Lebanon,Total Population - Both sexes,Population,2010,1000 persons,4341
+Food Balances (old methodology and population),Lesotho,Total Population - Both sexes,Population,2010,1000 persons,2009
+Food Balances (old methodology and population),Liberia,Total Population - Both sexes,Population,2010,1000 persons,3958
+Food Balances (old methodology and population),Lithuania,Total Population - Both sexes,Population,2010,1000 persons,3068
+Food Balances (old methodology and population),Luxembourg,Total Population - Both sexes,Population,2010,1000 persons,508
+Food Balances (old methodology and population),Madagascar,Total Population - Both sexes,Population,2010,1000 persons,21080
+Food Balances (old methodology and population),Malawi,Total Population - Both sexes,Population,2010,1000 persons,15014
+Food Balances (old methodology and population),Malaysia,Total Population - Both sexes,Population,2010,1000 persons,28276
+Food Balances (old methodology and population),Maldives,Total Population - Both sexes,Population,2010,1000 persons,326
+Food Balances (old methodology and population),Mali,Total Population - Both sexes,Population,2010,1000 persons,13986
+Food Balances (old methodology and population),Malta,Total Population - Both sexes,Population,2010,1000 persons,425
+Food Balances (old methodology and population),Mauritania,Total Population - Both sexes,Population,2010,1000 persons,3609
+Food Balances (old methodology and population),Mauritius,Total Population - Both sexes,Population,2010,1000 persons,1231
+Food Balances (old methodology and population),Mexico,Total Population - Both sexes,Population,2010,1000 persons,117886
+Food Balances (old methodology and population),Mongolia,Total Population - Both sexes,Population,2010,1000 persons,2713
+Food Balances (old methodology and population),Montenegro,Total Population - Both sexes,Population,2010,1000 persons,620
+Food Balances (old methodology and population),Morocco,Total Population - Both sexes,Population,2010,1000 persons,31642
+Food Balances (old methodology and population),Mozambique,Total Population - Both sexes,Population,2010,1000 persons,23967
+Food Balances (old methodology and population),Myanmar,Total Population - Both sexes,Population,2010,1000 persons,51931
+Food Balances (old methodology and population),Namibia,Total Population - Both sexes,Population,2010,1000 persons,2179
+Food Balances (old methodology and population),Nepal,Total Population - Both sexes,Population,2010,1000 persons,26846
+Food Balances (old methodology and population),Netherlands,Total Population - Both sexes,Population,2010,1000 persons,16615
+Food Balances (old methodology and population),Netherlands Antilles (former),Total Population - Both sexes,Population,2010,1000 persons,201
+Food Balances (old methodology and population),New Caledonia,Total Population - Both sexes,Population,2010,1000 persons,246
+Food Balances (old methodology and population),New Zealand,Total Population - Both sexes,Population,2010,1000 persons,4368
+Food Balances (old methodology and population),Nicaragua,Total Population - Both sexes,Population,2010,1000 persons,5822
+Food Balances (old methodology and population),Niger,Total Population - Both sexes,Population,2010,1000 persons,15894
+Food Balances (old methodology and population),Nigeria,Total Population - Both sexes,Population,2010,1000 persons,159708
+Food Balances (old methodology and population),North Macedonia,Total Population - Both sexes,Population,2010,1000 persons,2102
+Food Balances (old methodology and population),Norway,Total Population - Both sexes,Population,2010,1000 persons,4891
+Food Balances (old methodology and population),Oman,Total Population - Both sexes,Population,2010,1000 persons,2803
+Food Balances (old methodology and population),Pakistan,Total Population - Both sexes,Population,2010,1000 persons,173149
+Food Balances (old methodology and population),Panama,Total Population - Both sexes,Population,2010,1000 persons,3678
+Food Balances (old methodology and population),Paraguay,Total Population - Both sexes,Population,2010,1000 persons,6460
+Food Balances (old methodology and population),Peru,Total Population - Both sexes,Population,2010,1000 persons,29263
+Food Balances (old methodology and population),Philippines,Total Population - Both sexes,Population,2010,1000 persons,93444
+Food Balances (old methodology and population),Poland,Total Population - Both sexes,Population,2010,1000 persons,38199
+Food Balances (old methodology and population),Portugal,Total Population - Both sexes,Population,2010,1000 persons,10590
+Food Balances (old methodology and population),Republic of Korea,Total Population - Both sexes,Population,2010,1000 persons,48454
+Food Balances (old methodology and population),Republic of Moldova,Total Population - Both sexes,Population,2010,1000 persons,3573
+Food Balances (old methodology and population),Romania,Total Population - Both sexes,Population,2010,1000 persons,21861
+Food Balances (old methodology and population),Russian Federation,Total Population - Both sexes,Population,2010,1000 persons,143618
+Food Balances (old methodology and population),Rwanda,Total Population - Both sexes,Population,2010,1000 persons,10837
+Food Balances (old methodology and population),Saint Kitts and Nevis,Total Population - Both sexes,Population,2010,1000 persons,52
+Food Balances (old methodology and population),Saint Lucia,Total Population - Both sexes,Population,2010,1000 persons,177
+Food Balances (old methodology and population),Saint Vincent and the Grenadines,Total Population - Both sexes,Population,2010,1000 persons,109
+Food Balances (old methodology and population),Samoa,Total Population - Both sexes,Population,2010,1000 persons,186
+Food Balances (old methodology and population),Sao Tome and Principe,Total Population - Both sexes,Population,2010,1000 persons,178
+Food Balances (old methodology and population),Saudi Arabia,Total Population - Both sexes,Population,2010,1000 persons,27258
+Food Balances (old methodology and population),Senegal,Total Population - Both sexes,Population,2010,1000 persons,12951
+Food Balances (old methodology and population),Serbia,Total Population - Both sexes,Population,2010,1000 persons,9647
+Food Balances (old methodology and population),Serbia and Montenegro,Total Population - Both sexes,Population,2010,1000 persons,0
+Food Balances (old methodology and population),Sierra Leone,Total Population - Both sexes,Population,2010,1000 persons,5752
+Food Balances (old methodology and population),Slovakia,Total Population - Both sexes,Population,2010,1000 persons,5433
+Food Balances (old methodology and population),Slovenia,Total Population - Both sexes,Population,2010,1000 persons,2054
+Food Balances (old methodology and population),Solomon Islands,Total Population - Both sexes,Population,2010,1000 persons,526
+Food Balances (old methodology and population),South Africa,Total Population - Both sexes,Population,2010,1000 persons,51452
+Food Balances (old methodology and population),Spain,Total Population - Both sexes,Population,2010,1000 persons,46182
+Food Balances (old methodology and population),Sri Lanka,Total Population - Both sexes,Population,2010,1000 persons,20759
+Food Balances (old methodology and population),Sudan,Total Population - Both sexes,Population,2010,1000 persons,0
+Food Balances (old methodology and population),Sudan (former),Total Population - Both sexes,Population,2010,1000 persons,43552
+Food Balances (old methodology and population),Suriname,Total Population - Both sexes,Population,2010,1000 persons,525
+Food Balances (old methodology and population),Sweden,Total Population - Both sexes,Population,2010,1000 persons,9382
+Food Balances (old methodology and population),Switzerland,Total Population - Both sexes,Population,2010,1000 persons,7831
+Food Balances (old methodology and population),Tajikistan,Total Population - Both sexes,Population,2010,1000 persons,7627
+Food Balances (old methodology and population),Thailand,Total Population - Both sexes,Population,2010,1000 persons,66402
+Food Balances (old methodology and population),Timor-Leste,Total Population - Both sexes,Population,2010,1000 persons,1079
+Food Balances (old methodology and population),Togo,Total Population - Both sexes,Population,2010,1000 persons,6306
+Food Balances (old methodology and population),Trinidad and Tobago,Total Population - Both sexes,Population,2010,1000 persons,1328
+Food Balances (old methodology and population),Tunisia,Total Population - Both sexes,Population,2010,1000 persons,10632
+Food Balances (old methodology and population),Turkey,Total Population - Both sexes,Population,2010,1000 persons,72138
+Food Balances (old methodology and population),Turkmenistan,Total Population - Both sexes,Population,2010,1000 persons,5042
+Food Balances (old methodology and population),Uganda,Total Population - Both sexes,Population,2010,1000 persons,33987
+Food Balances (old methodology and population),Ukraine,Total Population - Both sexes,Population,2010,1000 persons,46050
+Food Balances (old methodology and population),United Arab Emirates,Total Population - Both sexes,Population,2010,1000 persons,8442
+Food Balances (old methodology and population),United Kingdom,Total Population - Both sexes,Population,2010,1000 persons,62310
+Food Balances (old methodology and population),United Republic of Tanzania,Total Population - Both sexes,Population,2010,1000 persons,44973
+Food Balances (old methodology and population),United States of America,Total Population - Both sexes,Population,2010,1000 persons,312247
+Food Balances (old methodology and population),Uruguay,Total Population - Both sexes,Population,2010,1000 persons,3372
+Food Balances (old methodology and population),USSR,Total Population - Both sexes,Population,2010,1000 persons,0
+Food Balances (old methodology and population),Uzbekistan,Total Population - Both sexes,Population,2010,1000 persons,27769
+Food Balances (old methodology and population),Vanuatu,Total Population - Both sexes,Population,2010,1000 persons,236
+Food Balances (old methodology and population),Venezuela (Bolivarian Republic of),Total Population - Both sexes,Population,2010,1000 persons,29043
+Food Balances (old methodology and population),Viet Nam,Total Population - Both sexes,Population,2010,1000 persons,89047
+Food Balances (old methodology and population),Yemen,Total Population - Both sexes,Population,2010,1000 persons,22763
+Food Balances (old methodology and population),Yugoslav SFR,Total Population - Both sexes,Population,2010,1000 persons,0
+Food Balances (old methodology and population),Zambia,Total Population - Both sexes,Population,2010,1000 persons,13217
+Food Balances (old methodology and population),Zimbabwe,Total Population - Both sexes,Population,2010,1000 persons,13077

@@ -18,7 +18,7 @@ This tool will set a quota for methane biogenic emissions from:
 
 This tool can be launched from Python3 or an Unix environment
 
-1. Python3
+### Python3
 
 This tool can be launched in python. Make sure that the following folders are created in the working directory:
 1. Figs/
@@ -46,7 +46,7 @@ pip install -r requirements.txt
 See documentation for more information about virtual environment:
 https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
 
-## Unix environment
+### Unix environment
 
 The previous python file can be run in one command line in the shell:
 

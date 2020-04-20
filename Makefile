@@ -60,6 +60,12 @@ output/grass_yield.csv: output compute_grass_yield.py
 output/emission_intensity_N2O.csv: output
 				${launch_python} compute_N2O_intensity_2050.py
 
+#Compute deforesattion emission factor based on IPCC methodology
+# for countries with the highest agricultural exapnsion during these
+# last 10 years
+output/emission_intensity_N2O.csv: output
+				${launch_python} compute_N2O_intensity_2050.py
+
 #Compute impacts of national methane quotas
 #on land-use change, CO2 and N2O emissions
 output/impact_2050.csv: output compute_impact.py output/feed_yield_aggregate.csv output/activity_2050.csv output/grass_yield.csv output/emission_intensity_N2O.csv

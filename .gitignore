@@ -1,0 +1,6 @@
+Figs
+output
+__pycache__
+data/GLiPHAmaps
+data/NCS
+*.pyc

@@ -43,4 +43,6 @@ for country in agricultural_selection["Area"].values:
     mask=(deforestation_df["Element"]=="Area") & (deforestation_df["Item"]=="Net Forest conversion")
     total_deforestation.extend(deforestation_df.loc[mask & (deforestation_df["Area"]==country),'Value'].values)
     print(deforestation_df.loc[(deforestation_df["Area"]==country) & mask,'Value'].values)
-mean_emission_factor=np.sum(total_emission)/np.sum(total_deforestation)/20
+mean_emission_factor_df=pd.DataFrame(columns=["World"])
+mean_emission_factor_df["World"]=[np.sum(total_emission)/np.sum(total_deforestation)/20]
+mean_emission_factor_df.to_csv("output/deforestation_factor.csv")

@@ -18,7 +18,7 @@ for country in country_list:
         country_grass_mask=(area_df['Area']==country) & (area_df['Item']==grassland_type)
         if grassland_type in list(area_df.loc[area_df['Area']==country,'Item'].values):
             grassland_area_df.loc[0,country]+=area_df.loc[country_grass_mask,'Value'].values[0]
-        
+
 #Load animal number
 animal_number_df=read_FAOSTAT_df("data/FAOSTAT_manure_management.csv",delimiter=",")
 

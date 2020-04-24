@@ -16,6 +16,7 @@ GWP100_N2O=298
 #Mitigation potential and cost
 # fom national MAC curves
 mitigation_potential_df=pd.read_csv("data/national_mitigation_mac.csv",dtype={"Mitigation potential":np.float64})
+#mitigation_potential_df=pd.read_csv("data/no_mitigation.csv",dtype={"Mitigation potential":np.float64})
 
 #Read methane emissions in 2010 from FAOSTAT
 methane_df=read_FAOSTAT_df("data/FAOSTAT_methane.csv",delimiter=",")

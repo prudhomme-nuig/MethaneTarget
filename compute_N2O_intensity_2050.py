@@ -14,6 +14,7 @@ animal_list=["Cattle","Chickens","Mules and Asses","Poultry Birds","Sheep and Go
 #Mitigation potential and cost
 # fom national MAC curves
 mitigation_potential_df=pd.read_csv("data/national_mitigation_mac.csv",dtype={"Mitigation potential":np.float64})
+#mitigation_potential_df=pd.read_csv("data/no_mitigation.csv",dtype={"Mitigation potential":np.float64})
 
 #Read methane emissions in 2010 from FAOSTAT
 N2O_df=read_FAOSTAT_df("data/FAOSTAT_N2O_reference.csv",delimiter=",")

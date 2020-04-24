@@ -1,0 +1,35 @@
+Country,Emission,Measure,Indicator,Mitigation potential,Mitigation cost,Pasture change,Feed change,Production change,gaz,Item
+India,enteric,MUB,share,0,nan,0,0,0,CH4,Cattle
+India,enteric,Concentrate,share,0,nan,0,0,0,CH4,Cattle
+India,enteric,Ionophore,share,0,nan,0,0,0,CH4,Cattle
+India,rice,Rice management,mitigation per ha,0,nan,0,0,0,CH4,Rice
+India,manure,Improved Manure management,mitigation per head,0,nan,0,0,0,both,Cattle
+India,manure,Biogas,mitigation per head,0,nan,0,0,0,both,Cattle
+India,fertilizer,Fertilizer consumption,mitigation per ha,0,nan,0,0,0,N2O,nan
+India,fertilizer,NUE,mitigation per ha,0,nan,0,0,0,N2O,nan
+India,fertilizer,Laser land leveling,share,0,nan,0,0,0,N2O,nan
+Brazil,rice,Rice management,share,0,nan,0,0,0,CH4,Rice
+Brazil,enteric,Concentrate,mitigation,0,nan,0,0,0,CH4,Cattle
+Brazil,enteric,Additives,mitigation,0,nan,0,0,0,CH4,Cattle
+Brazil,enteric,Breeding,mitigation,0,nan,0,0,0,CH4,Cattle
+Brazil,manure,manure management,mitigation,0,nan,0,0,0,both,Cattle
+Ireland,enteric,Improved LG,mitigation,0,nan,0,0,0,CH4,Cattle
+Ireland,enteric,Beef MR,mitigation,0,nan,0,0,0,CH4,Cattle
+Ireland,enteric,Dairy EBI,mitigation,0,nan,0,0,0,CH4,Cattle
+Ireland,enteric,Extended grazing,mitigation,0,nan,0,0,0,CH4,Cattle
+Ireland,enteric,Animal health,mitigation,0,nan,0,0,0,CH4,Cattle
+Ireland,enteric,Sex seemed,mitigation,0,nan,0,0,0,CH4,Cattle
+Ireland,enteric,Fatty Acids,mitigation,0,nan,0,0,0,CH4,Cattle
+Ireland,rice,Rice management,share,0,nan,0,0,0,CH4,Rice
+Ireland,manure,slurry spreading,mitigation,0,nan,0,0,0,both,Cattle
+Ireland,manure,slurry amendments,mitigation,0,nan,0,0,0,CH4,Cattle
+Ireland,manure,slurry amendments,mitigation,0,nan,0,0,0,N2O,Cattle
+Ireland,manure,crude proteins,mitigation,0,nan,0,0,0,N2O,Swine
+Ireland,fertilizer,Clover,mitigation,0,nan,0,0,0,N2O,nan
+Ireland,fertilizer,Fertiliser type,mitigation,0,nan,0,0,0,N2O,nan
+Ireland,fertilizer,Mineral soil drainage,mitigation,0,nan,0,0,0,N2O,nan
+France,rice,Rice management,share,0,nan,0,0,0,CH4,Rice
+France,enteric,Additives,mitigation,0,nan,0,0,0,CH4,Cattle
+France,fertilizer,all,mitigation,0,nan,0,0,0,N2O,nan
+France,manure,biogas,mitigation,0,nan,0,0,0,both,Cattle
+France,manure,pigs N diet,mitigation,0,nan,0,0,0,N2O,Swine

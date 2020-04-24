@@ -1,730 +1,1460 @@
-﻿Domain,Area,Element,Item,Year,Unit,Value
-Rice Cultivation,Afghanistan,Area harvested,Rice, paddy,2010,ha,208000
-Rice Cultivation,Afghanistan,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,14
-Rice Cultivation,Afghanistan,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,29.12
-Rice Cultivation,Albania,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Albania,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Albania,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Algeria,Area harvested,Rice, paddy,2010,ha,203
-Rice Cultivation,Algeria,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Algeria,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.0569
-Rice Cultivation,American Samoa,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,American Samoa,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,American Samoa,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Andorra,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Andorra,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Andorra,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Angola,Area harvested,Rice, paddy,2010,ha,23905
-Rice Cultivation,Angola,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Angola,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,6.6934
-Rice Cultivation,Anguilla,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Anguilla,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Anguilla,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Antigua and Barbuda,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Antigua and Barbuda,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Antigua and Barbuda,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Argentina,Area harvested,Rice, paddy,2010,ha,215670
-Rice Cultivation,Argentina,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Argentina,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,60.3876
-Rice Cultivation,Armenia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Armenia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Armenia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Aruba,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Aruba,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Aruba,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Australia,Area harvested,Rice, paddy,2010,ha,18931
-Rice Cultivation,Australia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,31.5
-Rice Cultivation,Australia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,5.9633
-Rice Cultivation,Austria,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Austria,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Austria,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Azerbaijan,Area harvested,Rice, paddy,2010,ha,1640
-Rice Cultivation,Azerbaijan,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Azerbaijan,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.4592
-Rice Cultivation,Bahamas,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Bahamas,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Bahamas,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Bahrain,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Bahrain,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Bahrain,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Bangladesh,Area harvested,Rice, paddy,2010,ha,11529000
-Rice Cultivation,Bangladesh,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,9.94
-Rice Cultivation,Bangladesh,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,1145.9826
-Rice Cultivation,Barbados,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Barbados,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Barbados,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Belarus,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Belarus,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Belarus,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Belgium,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Belgium,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Belgium,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Belgium-Luxembourg,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Belgium-Luxembourg,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Belgium-Luxembourg,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Belize,Area harvested,Rice, paddy,2010,ha,4608
-Rice Cultivation,Belize,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,2.8
-Rice Cultivation,Belize,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.129
-Rice Cultivation,Benin,Area harvested,Rice, paddy,2010,ha,47058
-Rice Cultivation,Benin,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,2.8
-Rice Cultivation,Benin,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,1.3176
-Rice Cultivation,Bermuda,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Bermuda,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Bermuda,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Bhutan,Area harvested,Rice, paddy,2010,ha,22815
-Rice Cultivation,Bhutan,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,11.508
-Rice Cultivation,Bhutan,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,2.6255
-Rice Cultivation,Bolivia (Plurinational State of),Area harvested,Rice, paddy,2010,ha,194237
-Rice Cultivation,Bolivia (Plurinational State of),Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Bolivia (Plurinational State of),Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,13.5966
-Rice Cultivation,Bosnia and Herzegovina,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Bosnia and Herzegovina,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Bosnia and Herzegovina,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Botswana,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Botswana,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Botswana,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Brazil,Area harvested,Rice, paddy,2010,ha,2722459
-Rice Cultivation,Brazil,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,6.496
-Rice Cultivation,Brazil,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,176.8509
-Rice Cultivation,British Virgin Islands,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,British Virgin Islands,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,British Virgin Islands,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Brunei Darussalam,Area harvested,Rice, paddy,2010,ha,1848
-Rice Cultivation,Brunei Darussalam,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,17.3642
-Rice Cultivation,Brunei Darussalam,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.3209
-Rice Cultivation,Bulgaria,Area harvested,Rice, paddy,2010,ha,11977
-Rice Cultivation,Bulgaria,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Bulgaria,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,3.3536
-Rice Cultivation,Burkina Faso,Area harvested,Rice, paddy,2010,ha,133737
-Rice Cultivation,Burkina Faso,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,24.92
-Rice Cultivation,Burkina Faso,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,33.3273
-Rice Cultivation,Burundi,Area harvested,Rice, paddy,2010,ha,29569
-Rice Cultivation,Burundi,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Burundi,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,2.0698
-Rice Cultivation,Cabo Verde,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Cabo Verde,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Cabo Verde,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Cambodia,Area harvested,Rice, paddy,2010,ha,2776507
-Rice Cultivation,Cambodia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,15.6058
-Rice Cultivation,Cambodia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,433.2961
-Rice Cultivation,Cameroon,Area harvested,Rice, paddy,2010,ha,139976
-Rice Cultivation,Cameroon,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Cameroon,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,9.7983
-Rice Cultivation,Canada,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Canada,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Canada,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Cayman Islands,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Cayman Islands,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Cayman Islands,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Central African Republic,Area harvested,Rice, paddy,2010,ha,16700
-Rice Cultivation,Central African Republic,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Central African Republic,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,1.169
-Rice Cultivation,Chad,Area harvested,Rice, paddy,2010,ha,138740
-Rice Cultivation,Chad,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Chad,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,9.7118
-Rice Cultivation,Channel Islands,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Channel Islands,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Channel Islands,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Chile,Area harvested,Rice, paddy,2010,ha,24527
-Rice Cultivation,Chile,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,22.12
-Rice Cultivation,Chile,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,5.4254
-Rice Cultivation,China,Area harvested,Rice, paddy,2010,ha,30117262
-Rice Cultivation,China,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,17.5682
-Rice Cultivation,China,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,5291.0481
-Rice Cultivation,China, Hong Kong SAR,Area harvested,Rice, paddy,2010,ha,0
-Rice Cultivation,China, Hong Kong SAR,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,18.2
-Rice Cultivation,China, Hong Kong SAR,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0
-Rice Cultivation,China, Macao SAR,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,China, Macao SAR,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,China, Macao SAR,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,China, mainland,Area harvested,Rice, paddy,2010,ha,29873400
-Rice Cultivation,China, mainland,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,17.563
-Rice Cultivation,China, mainland,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,5246.6652
-Rice Cultivation,China, Taiwan Province of,Area harvested,Rice, paddy,2010,ha,243862
-Rice Cultivation,China, Taiwan Province of,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,18.2
-Rice Cultivation,China, Taiwan Province of,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,44.3829
-Rice Cultivation,Colombia,Area harvested,Rice, paddy,2010,ha,482297
-Rice Cultivation,Colombia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,20.72
-Rice Cultivation,Colombia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,99.9319
-Rice Cultivation,Comoros,Area harvested,Rice, paddy,2010,ha,19000
-Rice Cultivation,Comoros,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Comoros,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,5.32
-Rice Cultivation,Congo,Area harvested,Rice, paddy,2010,ha,2390
-Rice Cultivation,Congo,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Congo,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.1673
-Rice Cultivation,Cook Islands,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Cook Islands,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Cook Islands,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Costa Rica,Area harvested,Rice, paddy,2010,ha,79968
-Rice Cultivation,Costa Rica,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,2.8
-Rice Cultivation,Costa Rica,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,2.2391
-Rice Cultivation,Côte d'Ivoire,Area harvested,Rice, paddy,2010,ha,394868
-Rice Cultivation,Côte d'Ivoire,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,3.052
-Rice Cultivation,Côte d'Ivoire,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,12.0514
-Rice Cultivation,Croatia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Croatia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Croatia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Cuba,Area harvested,Rice, paddy,2010,ha,176429
-Rice Cultivation,Cuba,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Cuba,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,49.4001
-Rice Cultivation,Cyprus,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Cyprus,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Cyprus,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Czechia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Czechia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Czechia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Czechoslovakia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Czechoslovakia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Czechoslovakia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Democratic People's Republic of Korea,Area harvested,Rice, paddy,2010,ha,570000
-Rice Cultivation,Democratic People's Republic of Korea,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,17.8038
-Rice Cultivation,Democratic People's Republic of Korea,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,101.4817
-Rice Cultivation,Democratic Republic of the Congo,Area harvested,Rice, paddy,2010,ha,420174
-Rice Cultivation,Democratic Republic of the Congo,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,2.38
-Rice Cultivation,Democratic Republic of the Congo,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,10.0001
-Rice Cultivation,Denmark,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Denmark,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Denmark,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Djibouti,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Djibouti,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Djibouti,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Dominica,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Dominica,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Dominica,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Dominican Republic,Area harvested,Rice, paddy,2010,ha,178430
-Rice Cultivation,Dominican Republic,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,27.44
-Rice Cultivation,Dominican Republic,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,48.9612
-Rice Cultivation,Ecuador,Area harvested,Rice, paddy,2010,ha,393137
-Rice Cultivation,Ecuador,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,21
-Rice Cultivation,Ecuador,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,82.5588
-Rice Cultivation,Egypt,Area harvested,Rice, paddy,2010,ha,459525
-Rice Cultivation,Egypt,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Egypt,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,128.667
-Rice Cultivation,El Salvador,Area harvested,Rice, paddy,2010,ha,4916
-Rice Cultivation,El Salvador,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,2.8
-Rice Cultivation,El Salvador,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.1376
-Rice Cultivation,Equatorial Guinea,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Equatorial Guinea,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Equatorial Guinea,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Eritrea,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Eritrea,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Eritrea,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Estonia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Estonia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Estonia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Eswatini,Area harvested,Rice, paddy,2010,ha,34
-Rice Cultivation,Eswatini,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Eswatini,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.0024
-Rice Cultivation,Ethiopia,Area harvested,Rice, paddy,2010,ha,29866
-Rice Cultivation,Ethiopia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,14
-Rice Cultivation,Ethiopia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,4.1812
-Rice Cultivation,Ethiopia PDR,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Ethiopia PDR,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Ethiopia PDR,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Falkland Islands (Malvinas),Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Falkland Islands (Malvinas),Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Falkland Islands (Malvinas),Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Faroe Islands,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Faroe Islands,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Faroe Islands,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Fiji,Area harvested,Rice, paddy,2010,ha,2540
-Rice Cultivation,Fiji,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,14
-Rice Cultivation,Fiji,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.3556
-Rice Cultivation,Finland,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Finland,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Finland,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,France,Area harvested,Rice, paddy,2010,ha,23828
-Rice Cultivation,France,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,50.4
-Rice Cultivation,France,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,12.0093
-Rice Cultivation,French Guiana,Area harvested,Rice, paddy,2010,ha,2854
-Rice Cultivation,French Guiana,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,26.6
-Rice Cultivation,French Guiana,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.7592
-Rice Cultivation,French Polynesia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,French Polynesia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,French Polynesia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Gabon,Area harvested,Rice, paddy,2010,ha,552
-Rice Cultivation,Gabon,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Gabon,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.0386
-Rice Cultivation,Gambia,Area harvested,Rice, paddy,2010,ha,86150
-Rice Cultivation,Gambia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,25.2
-Rice Cultivation,Gambia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,21.7098
-Rice Cultivation,Georgia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Georgia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Georgia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Germany,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Germany,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Germany,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Ghana,Area harvested,Rice, paddy,2010,ha,181228
-Rice Cultivation,Ghana,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,6.72
-Rice Cultivation,Ghana,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,12.1785
-Rice Cultivation,Gibraltar,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Gibraltar,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Gibraltar,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Greece,Area harvested,Rice, paddy,2010,ha,30052
-Rice Cultivation,Greece,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,50.4
-Rice Cultivation,Greece,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,15.1462
-Rice Cultivation,Greenland,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Greenland,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Greenland,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Grenada,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Grenada,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Grenada,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Guadeloupe,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Guadeloupe,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Guadeloupe,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Guam,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Guam,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Guam,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Guatemala,Area harvested,Rice, paddy,2010,ha,10483
-Rice Cultivation,Guatemala,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,2.8
-Rice Cultivation,Guatemala,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.2935
-Rice Cultivation,Guinea,Area harvested,Rice, paddy,2010,ha,1465953
-Rice Cultivation,Guinea,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,11.06
-Rice Cultivation,Guinea,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,162.1344
-Rice Cultivation,Guinea-Bissau,Area harvested,Rice, paddy,2010,ha,100510
-Rice Cultivation,Guinea-Bissau,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Guinea-Bissau,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,7.0357
-Rice Cultivation,Guyana,Area harvested,Rice, paddy,2010,ha,131400
-Rice Cultivation,Guyana,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,26.6
-Rice Cultivation,Guyana,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,34.9524
-Rice Cultivation,Haiti,Area harvested,Rice, paddy,2010,ha,60702
-Rice Cultivation,Haiti,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,11.2
-Rice Cultivation,Haiti,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,6.7986
-Rice Cultivation,Holy See,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Holy See,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Holy See,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Honduras,Area harvested,Rice, paddy,2010,ha,7364
-Rice Cultivation,Honduras,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,2.8
-Rice Cultivation,Honduras,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.2062
-Rice Cultivation,Hungary,Area harvested,Rice, paddy,2010,ha,2000
-Rice Cultivation,Hungary,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Hungary,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.56
-Rice Cultivation,Iceland,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Iceland,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Iceland,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,India,Area harvested,Rice, paddy,2010,ha,42862400
-Rice Cultivation,India,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,10.556
-Rice Cultivation,India,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,4524.5549
-Rice Cultivation,Indonesia,Area harvested,Rice, paddy,2010,ha,13253450
-Rice Cultivation,Indonesia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,21.1428
-Rice Cultivation,Indonesia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,2802.1504
-Rice Cultivation,Iran (Islamic Republic of),Area harvested,Rice, paddy,2010,ha,563517
-Rice Cultivation,Iran (Islamic Republic of),Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,21.98
-Rice Cultivation,Iran (Islamic Republic of),Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,123.861
-Rice Cultivation,Iraq,Area harvested,Rice, paddy,2010,ha,47974
-Rice Cultivation,Iraq,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Iraq,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,13.4327
-Rice Cultivation,Ireland,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Ireland,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Ireland,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Isle of Man,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Isle of Man,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Isle of Man,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Israel,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Israel,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Israel,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Italy,Area harvested,Rice, paddy,2010,ha,247700
-Rice Cultivation,Italy,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,50.4
-Rice Cultivation,Italy,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,124.8408
-Rice Cultivation,Jamaica,Area harvested,Rice, paddy,2010,ha,56
-Rice Cultivation,Jamaica,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,11.2
-Rice Cultivation,Jamaica,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.0062
-Rice Cultivation,Japan,Area harvested,Rice, paddy,2010,ha,1628000
-Rice Cultivation,Japan,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,20.79
-Rice Cultivation,Japan,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,338.4612
-Rice Cultivation,Jordan,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Jordan,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Jordan,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Kazakhstan,Area harvested,Rice, paddy,2010,ha,94000
-Rice Cultivation,Kazakhstan,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,21.98
-Rice Cultivation,Kazakhstan,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,20.6612
-Rice Cultivation,Kenya,Area harvested,Rice, paddy,2010,ha,20181
-Rice Cultivation,Kenya,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Kenya,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,1.4127
-Rice Cultivation,Kiribati,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Kiribati,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Kiribati,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Kuwait,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Kuwait,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Kuwait,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Kyrgyzstan,Area harvested,Rice, paddy,2010,ha,6334
-Rice Cultivation,Kyrgyzstan,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,21.98
-Rice Cultivation,Kyrgyzstan,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,1.3922
-Rice Cultivation,Lao People's Democratic Republic,Area harvested,Rice, paddy,2010,ha,855114
-Rice Cultivation,Lao People's Democratic Republic,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,9.8251
-Rice Cultivation,Lao People's Democratic Republic,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,84.0155
-Rice Cultivation,Latvia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Latvia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Latvia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Lebanon,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Lebanon,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Lebanon,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Lesotho,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Lesotho,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Lesotho,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Liberia,Area harvested,Rice, paddy,2010,ha,251230
-Rice Cultivation,Liberia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,1.176
-Rice Cultivation,Liberia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,2.9545
-Rice Cultivation,Libya,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Libya,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Libya,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Liechtenstein,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Liechtenstein,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Liechtenstein,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Lithuania,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Lithuania,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Lithuania,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Luxembourg,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Luxembourg,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Luxembourg,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Madagascar,Area harvested,Rice, paddy,2010,ha,1307043
-Rice Cultivation,Madagascar,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,17.696
-Rice Cultivation,Madagascar,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,231.2943
-Rice Cultivation,Malawi,Area harvested,Rice, paddy,2010,ha,59098
-Rice Cultivation,Malawi,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Malawi,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,4.1369
-Rice Cultivation,Malaysia,Area harvested,Rice, paddy,2010,ha,677884
-Rice Cultivation,Malaysia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,17.8917
-Rice Cultivation,Malaysia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,121.2851
-Rice Cultivation,Maldives,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Maldives,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Maldives,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Mali,Area harvested,Rice, paddy,2010,ha,615936
-Rice Cultivation,Mali,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Mali,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,43.1155
-Rice Cultivation,Malta,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Malta,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Malta,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Marshall Islands,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Marshall Islands,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Marshall Islands,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Martinique,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Martinique,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Martinique,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Mauritania,Area harvested,Rice, paddy,2010,ha,25702
-Rice Cultivation,Mauritania,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Mauritania,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,7.1966
-Rice Cultivation,Mauritius,Area harvested,Rice, paddy,2010,ha,55
-Rice Cultivation,Mauritius,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,17.696
-Rice Cultivation,Mauritius,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.0097
-Rice Cultivation,Mayotte,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Mayotte,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Mayotte,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Mexico,Area harvested,Rice, paddy,2010,ha,41748
-Rice Cultivation,Mexico,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,11.48
-Rice Cultivation,Mexico,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,4.7927
-Rice Cultivation,Micronesia (Federated States of),Area harvested,Rice, paddy,2010,ha,91
-Rice Cultivation,Micronesia (Federated States of),Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,23.492
-Rice Cultivation,Micronesia (Federated States of),Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.0215
-Rice Cultivation,Monaco,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Monaco,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Monaco,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Mongolia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Mongolia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Mongolia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Montenegro,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Montenegro,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Montenegro,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Montserrat,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Montserrat,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Montserrat,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Morocco,Area harvested,Rice, paddy,2010,ha,7400
-Rice Cultivation,Morocco,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Morocco,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,2.072
-Rice Cultivation,Mozambique,Area harvested,Rice, paddy,2010,ha,226593
-Rice Cultivation,Mozambique,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Mozambique,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,15.8615
-Rice Cultivation,Myanmar,Area harvested,Rice, paddy,2010,ha,8011164
-Rice Cultivation,Myanmar,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,15.6498
-Rice Cultivation,Myanmar,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,1253.7279
-Rice Cultivation,Namibia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Namibia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Namibia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Nauru,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Nauru,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Nauru,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Nepal,Area harvested,Rice, paddy,2010,ha,1481289
-Rice Cultivation,Nepal,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,10.472
-Rice Cultivation,Nepal,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,155.1206
-Rice Cultivation,Netherlands,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Netherlands,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Netherlands,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Netherlands Antilles (former),Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Netherlands Antilles (former),Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Netherlands Antilles (former),Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,New Caledonia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,New Caledonia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,New Caledonia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,New Zealand,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,New Zealand,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,New Zealand,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Nicaragua,Area harvested,Rice, paddy,2010,ha,88314
-Rice Cultivation,Nicaragua,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,2.8
-Rice Cultivation,Nicaragua,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,2.4728
-Rice Cultivation,Niger,Area harvested,Rice, paddy,2010,ha,33446
-Rice Cultivation,Niger,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,9.8
-Rice Cultivation,Niger,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,3.2777
-Rice Cultivation,Nigeria,Area harvested,Rice, paddy,2010,ha,2432630
-Rice Cultivation,Nigeria,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,10.948
-Rice Cultivation,Nigeria,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,266.3243
-Rice Cultivation,Niue,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Niue,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Niue,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Norfolk Island,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Norfolk Island,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Norfolk Island,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,North Macedonia,Area harvested,Rice, paddy,2010,ha,4125
-Rice Cultivation,North Macedonia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,North Macedonia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,1.155
-Rice Cultivation,Northern Mariana Islands,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Northern Mariana Islands,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Northern Mariana Islands,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Norway,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Norway,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Norway,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Oman,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Oman,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Oman,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Pacific Islands Trust Territory,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Pacific Islands Trust Territory,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Pacific Islands Trust Territory,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Pakistan,Area harvested,Rice, paddy,2010,ha,2365300
-Rice Cultivation,Pakistan,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,14
-Rice Cultivation,Pakistan,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,331.142
-Rice Cultivation,Palau,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Palau,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Palau,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Palestine,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Palestine,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Palestine,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Panama,Area harvested,Rice, paddy,2010,ha,105251
-Rice Cultivation,Panama,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,1.4
-Rice Cultivation,Panama,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,1.4735
-Rice Cultivation,Papua New Guinea,Area harvested,Rice, paddy,2010,ha,410
-Rice Cultivation,Papua New Guinea,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,23.492
-Rice Cultivation,Papua New Guinea,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.0963
-Rice Cultivation,Paraguay,Area harvested,Rice, paddy,2010,ha,59476
-Rice Cultivation,Paraguay,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,14
-Rice Cultivation,Paraguay,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,8.3266
-Rice Cultivation,Peru,Area harvested,Rice, paddy,2010,ha,388659
-Rice Cultivation,Peru,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,23.52
-Rice Cultivation,Peru,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,91.4126
-Rice Cultivation,Philippines,Area harvested,Rice, paddy,2010,ha,4354161
-Rice Cultivation,Philippines,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,33.4565
-Rice Cultivation,Philippines,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,1456.7499
-Rice Cultivation,Pitcairn Islands,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Pitcairn Islands,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Pitcairn Islands,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Poland,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Poland,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Poland,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Portugal,Area harvested,Rice, paddy,2010,ha,29120
-Rice Cultivation,Portugal,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,50.4
-Rice Cultivation,Portugal,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,14.6765
-Rice Cultivation,Puerto Rico,Area harvested,Rice, paddy,2010,ha,21
-Rice Cultivation,Puerto Rico,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,21
-Rice Cultivation,Puerto Rico,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.0043
-Rice Cultivation,Qatar,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Qatar,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Qatar,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Republic of Korea,Area harvested,Rice, paddy,2010,ha,892074
-Rice Cultivation,Republic of Korea,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,21
-Rice Cultivation,Republic of Korea,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,187.3355
-Rice Cultivation,Republic of Moldova,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Republic of Moldova,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Republic of Moldova,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Réunion,Area harvested,Rice, paddy,2010,ha,57
-Rice Cultivation,Réunion,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,17.696
-Rice Cultivation,Réunion,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.0101
-Rice Cultivation,Romania,Area harvested,Rice, paddy,2010,ha,12403
-Rice Cultivation,Romania,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Romania,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,3.4728
-Rice Cultivation,Russian Federation,Area harvested,Rice, paddy,2010,ha,200878
-Rice Cultivation,Russian Federation,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Russian Federation,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,56.2458
-Rice Cultivation,Rwanda,Area harvested,Rice, paddy,2010,ha,12975
-Rice Cultivation,Rwanda,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Rwanda,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.9083
-Rice Cultivation,Saint Helena, Ascension and Tristan da Cunha,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Saint Helena, Ascension and Tristan da Cunha,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Saint Helena, Ascension and Tristan da Cunha,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Saint Kitts and Nevis,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Saint Kitts and Nevis,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Saint Kitts and Nevis,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Saint Lucia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Saint Lucia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Saint Lucia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Saint Pierre and Miquelon,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Saint Pierre and Miquelon,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Saint Pierre and Miquelon,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Saint Vincent and the Grenadines,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Saint Vincent and the Grenadines,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Saint Vincent and the Grenadines,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Samoa,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Samoa,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Samoa,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,San Marino,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,San Marino,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,San Marino,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Sao Tome and Principe,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Sao Tome and Principe,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Sao Tome and Principe,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Saudi Arabia,Area harvested,Rice, paddy,2010,ha,0
-Rice Cultivation,Saudi Arabia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Saudi Arabia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0
-Rice Cultivation,Senegal,Area harvested,Rice, paddy,2010,ha,147208
-Rice Cultivation,Senegal,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Senegal,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,10.3046
-Rice Cultivation,Serbia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Serbia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Serbia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Serbia and Montenegro,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Serbia and Montenegro,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Serbia and Montenegro,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Seychelles,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Seychelles,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Seychelles,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Sierra Leone,Area harvested,Rice, paddy,2010,ha,549022
-Rice Cultivation,Sierra Leone,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,6.552
-Rice Cultivation,Sierra Leone,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,35.9719
-Rice Cultivation,Singapore,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Singapore,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Singapore,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Slovakia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Slovakia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Slovakia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Slovenia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Slovenia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Slovenia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Solomon Islands,Area harvested,Rice, paddy,2010,ha,1251
-Rice Cultivation,Solomon Islands,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,23.492
-Rice Cultivation,Solomon Islands,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.294
-Rice Cultivation,Somalia,Area harvested,Rice, paddy,2010,ha,1650
-Rice Cultivation,Somalia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,14
-Rice Cultivation,Somalia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.231
-Rice Cultivation,South Africa,Area harvested,Rice, paddy,2010,ha,1184
-Rice Cultivation,South Africa,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,South Africa,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.3314
-Rice Cultivation,South Sudan,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,South Sudan,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,South Sudan,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Spain,Area harvested,Rice, paddy,2010,ha,122184
-Rice Cultivation,Spain,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,50.4
-Rice Cultivation,Spain,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,61.5807
-Rice Cultivation,Sri Lanka,Area harvested,Rice, paddy,2010,ha,1060360
-Rice Cultivation,Sri Lanka,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,10.668
-Rice Cultivation,Sri Lanka,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,113.1192
-Rice Cultivation,Sudan,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Sudan,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Sudan,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Sudan (former),Area harvested,Rice, paddy,2010,ha,6400
-Rice Cultivation,Sudan (former),Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,14
-Rice Cultivation,Sudan (former),Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.896
-Rice Cultivation,Suriname,Area harvested,Rice, paddy,2010,ha,53553
-Rice Cultivation,Suriname,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Suriname,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,14.9948
-Rice Cultivation,Svalbard and Jan Mayen Islands,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Svalbard and Jan Mayen Islands,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Svalbard and Jan Mayen Islands,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Sweden,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Sweden,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Sweden,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Switzerland,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Switzerland,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Switzerland,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Syrian Arab Republic,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Syrian Arab Republic,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Syrian Arab Republic,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Tajikistan,Area harvested,Rice, paddy,2010,ha,14854
-Rice Cultivation,Tajikistan,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,21.98
-Rice Cultivation,Tajikistan,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,3.2649
-Rice Cultivation,Thailand,Area harvested,Rice, paddy,2010,ha,11932320
-Rice Cultivation,Thailand,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,15.9936
-Rice Cultivation,Thailand,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,1908.4075
-Rice Cultivation,Timor-Leste,Area harvested,Rice, paddy,2010,ha,36548
-Rice Cultivation,Timor-Leste,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,18.4412
-Rice Cultivation,Timor-Leste,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,6.7399
-Rice Cultivation,Togo,Area harvested,Rice, paddy,2010,ha,47403
-Rice Cultivation,Togo,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,1.12
-Rice Cultivation,Togo,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.5309
-Rice Cultivation,Tokelau,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Tokelau,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Tokelau,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Tonga,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Tonga,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Tonga,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Trinidad and Tobago,Area harvested,Rice, paddy,2010,ha,1982
-Rice Cultivation,Trinidad and Tobago,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,12.6
-Rice Cultivation,Trinidad and Tobago,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.2497
-Rice Cultivation,Tunisia,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Tunisia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Tunisia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Turkey,Area harvested,Rice, paddy,2010,ha,98966
-Rice Cultivation,Turkey,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Turkey,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,27.7105
-Rice Cultivation,Turkmenistan,Area harvested,Rice, paddy,2010,ha,18000
-Rice Cultivation,Turkmenistan,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,21.98
-Rice Cultivation,Turkmenistan,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,3.9564
-Rice Cultivation,Turks and Caicos Islands,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Turks and Caicos Islands,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Turks and Caicos Islands,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Tuvalu,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Tuvalu,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Tuvalu,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Uganda,Area harvested,Rice, paddy,2010,ha,87000
-Rice Cultivation,Uganda,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Uganda,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,6.09
-Rice Cultivation,Ukraine,Area harvested,Rice, paddy,2010,ha,29300
-Rice Cultivation,Ukraine,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Ukraine,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,8.204
-Rice Cultivation,United Arab Emirates,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,United Arab Emirates,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,United Arab Emirates,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,United Kingdom,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,United Kingdom,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,United Kingdom,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,United Republic of Tanzania,Area harvested,Rice, paddy,2010,ha,1136290
-Rice Cultivation,United Republic of Tanzania,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,15.54
-Rice Cultivation,United Republic of Tanzania,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,176.5795
-Rice Cultivation,United States of America,Area harvested,Rice, paddy,2010,ha,1462950
-Rice Cultivation,United States of America,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,35
-Rice Cultivation,United States of America,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,512.0325
-Rice Cultivation,United States Virgin Islands,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,United States Virgin Islands,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,United States Virgin Islands,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Uruguay,Area harvested,Rice, paddy,2010,ha,161900
-Rice Cultivation,Uruguay,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,28
-Rice Cultivation,Uruguay,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,45.332
-Rice Cultivation,USSR,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,USSR,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,USSR,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Uzbekistan,Area harvested,Rice, paddy,2010,ha,69200
-Rice Cultivation,Uzbekistan,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,21.98
-Rice Cultivation,Uzbekistan,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,15.2102
-Rice Cultivation,Vanuatu,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Vanuatu,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Vanuatu,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Venezuela (Bolivarian Republic of),Area harvested,Rice, paddy,2010,ha,180455
-Rice Cultivation,Venezuela (Bolivarian Republic of),Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,25.2
-Rice Cultivation,Venezuela (Bolivarian Republic of),Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,45.4747
-Rice Cultivation,Viet Nam,Area harvested,Rice, paddy,2010,ha,7489400
-Rice Cultivation,Viet Nam,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,17.6499
-Rice Cultivation,Viet Nam,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,1321.8746
-Rice Cultivation,Wallis and Futuna Islands,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Wallis and Futuna Islands,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Wallis and Futuna Islands,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Western Sahara,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Western Sahara,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Western Sahara,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Yemen,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Yemen,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Yemen,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Yugoslav SFR,Area harvested,Rice, paddy,2010,,0
-Rice Cultivation,Yugoslav SFR,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Yugoslav SFR,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,,0
-Rice Cultivation,Zambia,Area harvested,Rice, paddy,2010,ha,30788
-Rice Cultivation,Zambia,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Zambia,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,2.1552
-Rice Cultivation,Zimbabwe,Area harvested,Rice, paddy,2010,ha,292
-Rice Cultivation,Zimbabwe,Implied emission factor for CH4 (Rice cultivation),Rice, paddy,2010,g CH4/m2,7
-Rice Cultivation,Zimbabwe,Emissions (CH4) (Rice cultivation),Rice, paddy,2010,gigagrams,0.0204
+﻿Domain|Area|Element|Item|Year|Unit|Value
+Rice Cultivation|Afghanistan|Area harvested|Rice, paddy|2010|ha|208000
+Rice Cultivation|Afghanistan|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|14
+Rice Cultivation|Afghanistan|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|29.12
+Rice Cultivation|Albania|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Albania|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Albania|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Algeria|Area harvested|Rice, paddy|2010|ha|203
+Rice Cultivation|Algeria|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Algeria|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.0569
+Rice Cultivation|American Samoa|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|American Samoa|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|American Samoa|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Andorra|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Andorra|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Andorra|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Angola|Area harvested|Rice, paddy|2010|ha|23905
+Rice Cultivation|Angola|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Angola|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|6.6934
+Rice Cultivation|Anguilla|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Anguilla|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Anguilla|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Antigua and Barbuda|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Antigua and Barbuda|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Antigua and Barbuda|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Argentina|Area harvested|Rice, paddy|2010|ha|215670
+Rice Cultivation|Argentina|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Argentina|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|60.3876
+Rice Cultivation|Armenia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Armenia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Armenia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Aruba|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Aruba|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Aruba|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Australia|Area harvested|Rice, paddy|2010|ha|18931
+Rice Cultivation|Australia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|31.5
+Rice Cultivation|Australia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|5.9633
+Rice Cultivation|Austria|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Austria|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Austria|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Azerbaijan|Area harvested|Rice, paddy|2010|ha|1640
+Rice Cultivation|Azerbaijan|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Azerbaijan|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.4592
+Rice Cultivation|Bahamas|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Bahamas|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Bahamas|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Bahrain|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Bahrain|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Bahrain|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Bangladesh|Area harvested|Rice, paddy|2010|ha|11529000
+Rice Cultivation|Bangladesh|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|9.94
+Rice Cultivation|Bangladesh|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|1145.9826
+Rice Cultivation|Barbados|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Barbados|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Barbados|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Belarus|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Belarus|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Belarus|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Belgium|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Belgium|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Belgium|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Belgium-Luxembourg|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Belgium-Luxembourg|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Belgium-Luxembourg|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Belize|Area harvested|Rice, paddy|2010|ha|4608
+Rice Cultivation|Belize|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|2.8
+Rice Cultivation|Belize|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.129
+Rice Cultivation|Benin|Area harvested|Rice, paddy|2010|ha|47058
+Rice Cultivation|Benin|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|2.8
+Rice Cultivation|Benin|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|1.3176
+Rice Cultivation|Bermuda|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Bermuda|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Bermuda|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Bhutan|Area harvested|Rice, paddy|2010|ha|22815
+Rice Cultivation|Bhutan|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|11.508
+Rice Cultivation|Bhutan|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|2.6255
+Rice Cultivation|Bolivia (Plurinational State of)|Area harvested|Rice, paddy|2010|ha|194237
+Rice Cultivation|Bolivia (Plurinational State of)|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Bolivia (Plurinational State of)|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|13.5966
+Rice Cultivation|Bosnia and Herzegovina|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Bosnia and Herzegovina|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Bosnia and Herzegovina|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Botswana|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Botswana|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Botswana|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Brazil|Area harvested|Rice, paddy|2010|ha|2722459
+Rice Cultivation|Brazil|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|6.496
+Rice Cultivation|Brazil|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|176.8509
+Rice Cultivation|British Virgin Islands|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|British Virgin Islands|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|British Virgin Islands|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Brunei Darussalam|Area harvested|Rice, paddy|2010|ha|1848
+Rice Cultivation|Brunei Darussalam|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|17.3642
+Rice Cultivation|Brunei Darussalam|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.3209
+Rice Cultivation|Bulgaria|Area harvested|Rice, paddy|2010|ha|11977
+Rice Cultivation|Bulgaria|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Bulgaria|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|3.3536
+Rice Cultivation|Burkina Faso|Area harvested|Rice, paddy|2010|ha|133737
+Rice Cultivation|Burkina Faso|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|24.92
+Rice Cultivation|Burkina Faso|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|33.3273
+Rice Cultivation|Burundi|Area harvested|Rice, paddy|2010|ha|29569
+Rice Cultivation|Burundi|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Burundi|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|2.0698
+Rice Cultivation|Cabo Verde|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Cabo Verde|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Cabo Verde|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Cambodia|Area harvested|Rice, paddy|2010|ha|2776507
+Rice Cultivation|Cambodia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|15.6058
+Rice Cultivation|Cambodia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|433.2961
+Rice Cultivation|Cameroon|Area harvested|Rice, paddy|2010|ha|139976
+Rice Cultivation|Cameroon|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Cameroon|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|9.7983
+Rice Cultivation|Canada|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Canada|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Canada|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Cayman Islands|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Cayman Islands|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Cayman Islands|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Central African Republic|Area harvested|Rice, paddy|2010|ha|16700
+Rice Cultivation|Central African Republic|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Central African Republic|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|1.169
+Rice Cultivation|Chad|Area harvested|Rice, paddy|2010|ha|138740
+Rice Cultivation|Chad|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Chad|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|9.7118
+Rice Cultivation|Channel Islands|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Channel Islands|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Channel Islands|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Chile|Area harvested|Rice, paddy|2010|ha|24527
+Rice Cultivation|Chile|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|22.12
+Rice Cultivation|Chile|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|5.4254
+Rice Cultivation|China|Area harvested|Rice, paddy|2010|ha|30117262
+Rice Cultivation|China|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|17.5682
+Rice Cultivation|China|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|5291.0481
+Rice Cultivation|China, Hong Kong SAR|Area harvested|Rice, paddy|2010|ha|0
+Rice Cultivation|China, Hong Kong SAR|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|18.2
+Rice Cultivation|China, Hong Kong SAR|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0
+Rice Cultivation|China, Macao SAR|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|China, Macao SAR|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|China, Macao SAR|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|China, mainland|Area harvested|Rice, paddy|2010|ha|29873400
+Rice Cultivation|China, mainland|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|17.563
+Rice Cultivation|China, mainland|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|5246.6652
+Rice Cultivation|China, Taiwan Province of|Area harvested|Rice, paddy|2010|ha|243862
+Rice Cultivation|China, Taiwan Province of|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|18.2
+Rice Cultivation|China, Taiwan Province of|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|44.3829
+Rice Cultivation|Colombia|Area harvested|Rice, paddy|2010|ha|482297
+Rice Cultivation|Colombia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|20.72
+Rice Cultivation|Colombia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|99.9319
+Rice Cultivation|Comoros|Area harvested|Rice, paddy|2010|ha|19000
+Rice Cultivation|Comoros|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Comoros|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|5.32
+Rice Cultivation|Congo|Area harvested|Rice, paddy|2010|ha|2390
+Rice Cultivation|Congo|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Congo|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.1673
+Rice Cultivation|Cook Islands|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Cook Islands|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Cook Islands|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Costa Rica|Area harvested|Rice, paddy|2010|ha|79968
+Rice Cultivation|Costa Rica|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|2.8
+Rice Cultivation|Costa Rica|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|2.2391
+Rice Cultivation|Côte d'Ivoire|Area harvested|Rice, paddy|2010|ha|394868
+Rice Cultivation|Côte d'Ivoire|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|3.052
+Rice Cultivation|Côte d'Ivoire|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|12.0514
+Rice Cultivation|Croatia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Croatia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Croatia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Cuba|Area harvested|Rice, paddy|2010|ha|176429
+Rice Cultivation|Cuba|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Cuba|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|49.4001
+Rice Cultivation|Cyprus|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Cyprus|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Cyprus|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Czechia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Czechia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Czechia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Czechoslovakia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Czechoslovakia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Czechoslovakia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Democratic People's Republic of Korea|Area harvested|Rice, paddy|2010|ha|570000
+Rice Cultivation|Democratic People's Republic of Korea|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|17.8038
+Rice Cultivation|Democratic People's Republic of Korea|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|101.4817
+Rice Cultivation|Democratic Republic of the Congo|Area harvested|Rice, paddy|2010|ha|420174
+Rice Cultivation|Democratic Republic of the Congo|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|2.38
+Rice Cultivation|Democratic Republic of the Congo|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|10.0001
+Rice Cultivation|Denmark|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Denmark|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Denmark|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Djibouti|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Djibouti|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Djibouti|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Dominica|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Dominica|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Dominica|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Dominican Republic|Area harvested|Rice, paddy|2010|ha|178430
+Rice Cultivation|Dominican Republic|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|27.44
+Rice Cultivation|Dominican Republic|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|48.9612
+Rice Cultivation|Ecuador|Area harvested|Rice, paddy|2010|ha|393137
+Rice Cultivation|Ecuador|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|21
+Rice Cultivation|Ecuador|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|82.5588
+Rice Cultivation|Egypt|Area harvested|Rice, paddy|2010|ha|459525
+Rice Cultivation|Egypt|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Egypt|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|128.667
+Rice Cultivation|El Salvador|Area harvested|Rice, paddy|2010|ha|4916
+Rice Cultivation|El Salvador|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|2.8
+Rice Cultivation|El Salvador|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.1376
+Rice Cultivation|Equatorial Guinea|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Equatorial Guinea|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Equatorial Guinea|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Eritrea|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Eritrea|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Eritrea|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Estonia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Estonia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Estonia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Eswatini|Area harvested|Rice, paddy|2010|ha|34
+Rice Cultivation|Eswatini|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Eswatini|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.0024
+Rice Cultivation|Ethiopia|Area harvested|Rice, paddy|2010|ha|29866
+Rice Cultivation|Ethiopia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|14
+Rice Cultivation|Ethiopia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|4.1812
+Rice Cultivation|Ethiopia PDR|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Ethiopia PDR|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Ethiopia PDR|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Falkland Islands (Malvinas)|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Falkland Islands (Malvinas)|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Falkland Islands (Malvinas)|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Faroe Islands|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Faroe Islands|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Faroe Islands|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Fiji|Area harvested|Rice, paddy|2010|ha|2540
+Rice Cultivation|Fiji|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|14
+Rice Cultivation|Fiji|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.3556
+Rice Cultivation|Finland|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Finland|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Finland|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|France|Area harvested|Rice, paddy|2010|ha|23828
+Rice Cultivation|France|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|50.4
+Rice Cultivation|France|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|12.0093
+Rice Cultivation|French Guiana|Area harvested|Rice, paddy|2010|ha|2854
+Rice Cultivation|French Guiana|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|26.6
+Rice Cultivation|French Guiana|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.7592
+Rice Cultivation|French Polynesia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|French Polynesia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|French Polynesia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Gabon|Area harvested|Rice, paddy|2010|ha|552
+Rice Cultivation|Gabon|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Gabon|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.0386
+Rice Cultivation|Gambia|Area harvested|Rice, paddy|2010|ha|86150
+Rice Cultivation|Gambia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|25.2
+Rice Cultivation|Gambia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|21.7098
+Rice Cultivation|Georgia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Georgia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Georgia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Germany|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Germany|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Germany|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Ghana|Area harvested|Rice, paddy|2010|ha|181228
+Rice Cultivation|Ghana|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|6.72
+Rice Cultivation|Ghana|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|12.1785
+Rice Cultivation|Gibraltar|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Gibraltar|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Gibraltar|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Greece|Area harvested|Rice, paddy|2010|ha|30052
+Rice Cultivation|Greece|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|50.4
+Rice Cultivation|Greece|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|15.1462
+Rice Cultivation|Greenland|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Greenland|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Greenland|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Grenada|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Grenada|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Grenada|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Guadeloupe|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Guadeloupe|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Guadeloupe|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Guam|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Guam|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Guam|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Guatemala|Area harvested|Rice, paddy|2010|ha|10483
+Rice Cultivation|Guatemala|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|2.8
+Rice Cultivation|Guatemala|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.2935
+Rice Cultivation|Guinea|Area harvested|Rice, paddy|2010|ha|1465953
+Rice Cultivation|Guinea|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|11.06
+Rice Cultivation|Guinea|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|162.1344
+Rice Cultivation|Guinea-Bissau|Area harvested|Rice, paddy|2010|ha|100510
+Rice Cultivation|Guinea-Bissau|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Guinea-Bissau|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|7.0357
+Rice Cultivation|Guyana|Area harvested|Rice, paddy|2010|ha|131400
+Rice Cultivation|Guyana|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|26.6
+Rice Cultivation|Guyana|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|34.9524
+Rice Cultivation|Haiti|Area harvested|Rice, paddy|2010|ha|60702
+Rice Cultivation|Haiti|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|11.2
+Rice Cultivation|Haiti|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|6.7986
+Rice Cultivation|Holy See|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Holy See|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Holy See|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Honduras|Area harvested|Rice, paddy|2010|ha|7364
+Rice Cultivation|Honduras|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|2.8
+Rice Cultivation|Honduras|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.2062
+Rice Cultivation|Hungary|Area harvested|Rice, paddy|2010|ha|2000
+Rice Cultivation|Hungary|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Hungary|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.56
+Rice Cultivation|Iceland|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Iceland|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Iceland|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|India|Area harvested|Rice, paddy|2010|ha|42862400
+Rice Cultivation|India|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|10.556
+Rice Cultivation|India|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|4524.5549
+Rice Cultivation|Indonesia|Area harvested|Rice, paddy|2010|ha|13253450
+Rice Cultivation|Indonesia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|21.1428
+Rice Cultivation|Indonesia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|2802.1504
+Rice Cultivation|Iran (Islamic Republic of)|Area harvested|Rice, paddy|2010|ha|563517
+Rice Cultivation|Iran (Islamic Republic of)|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|21.98
+Rice Cultivation|Iran (Islamic Republic of)|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|123.861
+Rice Cultivation|Iraq|Area harvested|Rice, paddy|2010|ha|47974
+Rice Cultivation|Iraq|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Iraq|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|13.4327
+Rice Cultivation|Ireland|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Ireland|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Ireland|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Isle of Man|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Isle of Man|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Isle of Man|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Israel|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Israel|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Israel|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Italy|Area harvested|Rice, paddy|2010|ha|247700
+Rice Cultivation|Italy|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|50.4
+Rice Cultivation|Italy|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|124.8408
+Rice Cultivation|Jamaica|Area harvested|Rice, paddy|2010|ha|56
+Rice Cultivation|Jamaica|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|11.2
+Rice Cultivation|Jamaica|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.0062
+Rice Cultivation|Japan|Area harvested|Rice, paddy|2010|ha|1628000
+Rice Cultivation|Japan|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|20.79
+Rice Cultivation|Japan|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|338.4612
+Rice Cultivation|Jordan|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Jordan|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Jordan|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Kazakhstan|Area harvested|Rice, paddy|2010|ha|94000
+Rice Cultivation|Kazakhstan|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|21.98
+Rice Cultivation|Kazakhstan|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|20.6612
+Rice Cultivation|Kenya|Area harvested|Rice, paddy|2010|ha|20181
+Rice Cultivation|Kenya|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Kenya|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|1.4127
+Rice Cultivation|Kiribati|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Kiribati|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Kiribati|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Kuwait|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Kuwait|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Kuwait|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Kyrgyzstan|Area harvested|Rice, paddy|2010|ha|6334
+Rice Cultivation|Kyrgyzstan|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|21.98
+Rice Cultivation|Kyrgyzstan|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|1.3922
+Rice Cultivation|Lao People's Democratic Republic|Area harvested|Rice, paddy|2010|ha|855114
+Rice Cultivation|Lao People's Democratic Republic|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|9.8251
+Rice Cultivation|Lao People's Democratic Republic|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|84.0155
+Rice Cultivation|Latvia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Latvia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Latvia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Lebanon|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Lebanon|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Lebanon|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Lesotho|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Lesotho|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Lesotho|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Liberia|Area harvested|Rice, paddy|2010|ha|251230
+Rice Cultivation|Liberia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|1.176
+Rice Cultivation|Liberia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|2.9545
+Rice Cultivation|Libya|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Libya|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Libya|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Liechtenstein|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Liechtenstein|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Liechtenstein|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Lithuania|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Lithuania|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Lithuania|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Luxembourg|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Luxembourg|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Luxembourg|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Madagascar|Area harvested|Rice, paddy|2010|ha|1307043
+Rice Cultivation|Madagascar|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|17.696
+Rice Cultivation|Madagascar|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|231.2943
+Rice Cultivation|Malawi|Area harvested|Rice, paddy|2010|ha|59098
+Rice Cultivation|Malawi|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Malawi|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|4.1369
+Rice Cultivation|Malaysia|Area harvested|Rice, paddy|2010|ha|677884
+Rice Cultivation|Malaysia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|17.8917
+Rice Cultivation|Malaysia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|121.2851
+Rice Cultivation|Maldives|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Maldives|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Maldives|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Mali|Area harvested|Rice, paddy|2010|ha|615936
+Rice Cultivation|Mali|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Mali|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|43.1155
+Rice Cultivation|Malta|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Malta|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Malta|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Marshall Islands|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Marshall Islands|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Marshall Islands|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Martinique|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Martinique|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Martinique|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Mauritania|Area harvested|Rice, paddy|2010|ha|25702
+Rice Cultivation|Mauritania|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Mauritania|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|7.1966
+Rice Cultivation|Mauritius|Area harvested|Rice, paddy|2010|ha|55
+Rice Cultivation|Mauritius|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|17.696
+Rice Cultivation|Mauritius|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.0097
+Rice Cultivation|Mayotte|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Mayotte|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Mayotte|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Mexico|Area harvested|Rice, paddy|2010|ha|41748
+Rice Cultivation|Mexico|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|11.48
+Rice Cultivation|Mexico|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|4.7927
+Rice Cultivation|Micronesia (Federated States of)|Area harvested|Rice, paddy|2010|ha|91
+Rice Cultivation|Micronesia (Federated States of)|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|23.492
+Rice Cultivation|Micronesia (Federated States of)|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.0215
+Rice Cultivation|Monaco|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Monaco|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Monaco|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Mongolia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Mongolia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Mongolia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Montenegro|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Montenegro|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Montenegro|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Montserrat|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Montserrat|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Montserrat|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Morocco|Area harvested|Rice, paddy|2010|ha|7400
+Rice Cultivation|Morocco|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Morocco|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|2.072
+Rice Cultivation|Mozambique|Area harvested|Rice, paddy|2010|ha|226593
+Rice Cultivation|Mozambique|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Mozambique|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|15.8615
+Rice Cultivation|Myanmar|Area harvested|Rice, paddy|2010|ha|8011164
+Rice Cultivation|Myanmar|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|15.6498
+Rice Cultivation|Myanmar|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|1253.7279
+Rice Cultivation|Namibia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Namibia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Namibia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Nauru|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Nauru|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Nauru|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Nepal|Area harvested|Rice, paddy|2010|ha|1481289
+Rice Cultivation|Nepal|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|10.472
+Rice Cultivation|Nepal|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|155.1206
+Rice Cultivation|Netherlands|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Netherlands|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Netherlands|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Netherlands Antilles (former)|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Netherlands Antilles (former)|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Netherlands Antilles (former)|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|New Caledonia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|New Caledonia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|New Caledonia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|New Zealand|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|New Zealand|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|New Zealand|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Nicaragua|Area harvested|Rice, paddy|2010|ha|88314
+Rice Cultivation|Nicaragua|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|2.8
+Rice Cultivation|Nicaragua|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|2.4728
+Rice Cultivation|Niger|Area harvested|Rice, paddy|2010|ha|33446
+Rice Cultivation|Niger|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|9.8
+Rice Cultivation|Niger|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|3.2777
+Rice Cultivation|Nigeria|Area harvested|Rice, paddy|2010|ha|2432630
+Rice Cultivation|Nigeria|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|10.948
+Rice Cultivation|Nigeria|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|266.3243
+Rice Cultivation|Niue|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Niue|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Niue|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Norfolk Island|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Norfolk Island|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Norfolk Island|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|North Macedonia|Area harvested|Rice, paddy|2010|ha|4125
+Rice Cultivation|North Macedonia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|North Macedonia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|1.155
+Rice Cultivation|Northern Mariana Islands|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Northern Mariana Islands|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Northern Mariana Islands|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Norway|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Norway|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Norway|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Oman|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Oman|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Oman|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Pacific Islands Trust Territory|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Pacific Islands Trust Territory|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Pacific Islands Trust Territory|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Pakistan|Area harvested|Rice, paddy|2010|ha|2365300
+Rice Cultivation|Pakistan|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|14
+Rice Cultivation|Pakistan|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|331.142
+Rice Cultivation|Palau|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Palau|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Palau|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Palestine|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Palestine|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Palestine|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Panama|Area harvested|Rice, paddy|2010|ha|105251
+Rice Cultivation|Panama|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|1.4
+Rice Cultivation|Panama|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|1.4735
+Rice Cultivation|Papua New Guinea|Area harvested|Rice, paddy|2010|ha|410
+Rice Cultivation|Papua New Guinea|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|23.492
+Rice Cultivation|Papua New Guinea|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.0963
+Rice Cultivation|Paraguay|Area harvested|Rice, paddy|2010|ha|59476
+Rice Cultivation|Paraguay|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|14
+Rice Cultivation|Paraguay|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|8.3266
+Rice Cultivation|Peru|Area harvested|Rice, paddy|2010|ha|388659
+Rice Cultivation|Peru|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|23.52
+Rice Cultivation|Peru|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|91.4126
+Rice Cultivation|Philippines|Area harvested|Rice, paddy|2010|ha|4354161
+Rice Cultivation|Philippines|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|33.4565
+Rice Cultivation|Philippines|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|1456.7499
+Rice Cultivation|Pitcairn Islands|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Pitcairn Islands|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Pitcairn Islands|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Poland|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Poland|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Poland|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Portugal|Area harvested|Rice, paddy|2010|ha|29120
+Rice Cultivation|Portugal|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|50.4
+Rice Cultivation|Portugal|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|14.6765
+Rice Cultivation|Puerto Rico|Area harvested|Rice, paddy|2010|ha|21
+Rice Cultivation|Puerto Rico|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|21
+Rice Cultivation|Puerto Rico|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.0043
+Rice Cultivation|Qatar|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Qatar|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Qatar|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Republic of Korea|Area harvested|Rice, paddy|2010|ha|892074
+Rice Cultivation|Republic of Korea|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|21
+Rice Cultivation|Republic of Korea|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|187.3355
+Rice Cultivation|Republic of Moldova|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Republic of Moldova|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Republic of Moldova|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Réunion|Area harvested|Rice, paddy|2010|ha|57
+Rice Cultivation|Réunion|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|17.696
+Rice Cultivation|Réunion|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.0101
+Rice Cultivation|Romania|Area harvested|Rice, paddy|2010|ha|12403
+Rice Cultivation|Romania|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Romania|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|3.4728
+Rice Cultivation|Russian Federation|Area harvested|Rice, paddy|2010|ha|200878
+Rice Cultivation|Russian Federation|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Russian Federation|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|56.2458
+Rice Cultivation|Rwanda|Area harvested|Rice, paddy|2010|ha|12975
+Rice Cultivation|Rwanda|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Rwanda|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.9083
+Rice Cultivation|Saint Helena, Ascension and Tristan da Cunha|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Saint Helena, Ascension and Tristan da Cunha|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Saint Helena, Ascension and Tristan da Cunha|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Saint Kitts and Nevis|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Saint Kitts and Nevis|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Saint Kitts and Nevis|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Saint Lucia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Saint Lucia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Saint Lucia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Saint Pierre and Miquelon|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Saint Pierre and Miquelon|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Saint Pierre and Miquelon|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Saint Vincent and the Grenadines|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Saint Vincent and the Grenadines|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Saint Vincent and the Grenadines|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Samoa|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Samoa|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Samoa|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|San Marino|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|San Marino|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|San Marino|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Sao Tome and Principe|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Sao Tome and Principe|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Sao Tome and Principe|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Saudi Arabia|Area harvested|Rice, paddy|2010|ha|0
+Rice Cultivation|Saudi Arabia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Saudi Arabia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0
+Rice Cultivation|Senegal|Area harvested|Rice, paddy|2010|ha|147208
+Rice Cultivation|Senegal|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Senegal|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|10.3046
+Rice Cultivation|Serbia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Serbia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Serbia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Serbia and Montenegro|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Serbia and Montenegro|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Serbia and Montenegro|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Seychelles|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Seychelles|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Seychelles|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Sierra Leone|Area harvested|Rice, paddy|2010|ha|549022
+Rice Cultivation|Sierra Leone|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|6.552
+Rice Cultivation|Sierra Leone|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|35.9719
+Rice Cultivation|Singapore|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Singapore|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Singapore|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Slovakia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Slovakia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Slovakia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Slovenia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Slovenia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Slovenia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Solomon Islands|Area harvested|Rice, paddy|2010|ha|1251
+Rice Cultivation|Solomon Islands|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|23.492
+Rice Cultivation|Solomon Islands|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.294
+Rice Cultivation|Somalia|Area harvested|Rice, paddy|2010|ha|1650
+Rice Cultivation|Somalia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|14
+Rice Cultivation|Somalia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.231
+Rice Cultivation|South Africa|Area harvested|Rice, paddy|2010|ha|1184
+Rice Cultivation|South Africa|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|South Africa|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.3314
+Rice Cultivation|South Sudan|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|South Sudan|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|South Sudan|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Spain|Area harvested|Rice, paddy|2010|ha|122184
+Rice Cultivation|Spain|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|50.4
+Rice Cultivation|Spain|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|61.5807
+Rice Cultivation|Sri Lanka|Area harvested|Rice, paddy|2010|ha|1060360
+Rice Cultivation|Sri Lanka|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|10.668
+Rice Cultivation|Sri Lanka|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|113.1192
+Rice Cultivation|Sudan|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Sudan|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Sudan|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Sudan (former)|Area harvested|Rice, paddy|2010|ha|6400
+Rice Cultivation|Sudan (former)|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|14
+Rice Cultivation|Sudan (former)|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.896
+Rice Cultivation|Suriname|Area harvested|Rice, paddy|2010|ha|53553
+Rice Cultivation|Suriname|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Suriname|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|14.9948
+Rice Cultivation|Svalbard and Jan Mayen Islands|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Svalbard and Jan Mayen Islands|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Svalbard and Jan Mayen Islands|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Sweden|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Sweden|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Sweden|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Switzerland|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Switzerland|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Switzerland|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Syrian Arab Republic|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Syrian Arab Republic|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Syrian Arab Republic|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Tajikistan|Area harvested|Rice, paddy|2010|ha|14854
+Rice Cultivation|Tajikistan|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|21.98
+Rice Cultivation|Tajikistan|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|3.2649
+Rice Cultivation|Thailand|Area harvested|Rice, paddy|2010|ha|11932320
+Rice Cultivation|Thailand|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|15.9936
+Rice Cultivation|Thailand|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|1908.4075
+Rice Cultivation|Timor-Leste|Area harvested|Rice, paddy|2010|ha|36548
+Rice Cultivation|Timor-Leste|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|18.4412
+Rice Cultivation|Timor-Leste|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|6.7399
+Rice Cultivation|Togo|Area harvested|Rice, paddy|2010|ha|47403
+Rice Cultivation|Togo|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|1.12
+Rice Cultivation|Togo|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.5309
+Rice Cultivation|Tokelau|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Tokelau|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Tokelau|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Tonga|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Tonga|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Tonga|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Trinidad and Tobago|Area harvested|Rice, paddy|2010|ha|1982
+Rice Cultivation|Trinidad and Tobago|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|12.6
+Rice Cultivation|Trinidad and Tobago|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.2497
+Rice Cultivation|Tunisia|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Tunisia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Tunisia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Turkey|Area harvested|Rice, paddy|2010|ha|98966
+Rice Cultivation|Turkey|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Turkey|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|27.7105
+Rice Cultivation|Turkmenistan|Area harvested|Rice, paddy|2010|ha|18000
+Rice Cultivation|Turkmenistan|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|21.98
+Rice Cultivation|Turkmenistan|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|3.9564
+Rice Cultivation|Turks and Caicos Islands|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Turks and Caicos Islands|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Turks and Caicos Islands|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Tuvalu|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Tuvalu|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Tuvalu|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Uganda|Area harvested|Rice, paddy|2010|ha|87000
+Rice Cultivation|Uganda|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Uganda|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|6.09
+Rice Cultivation|Ukraine|Area harvested|Rice, paddy|2010|ha|29300
+Rice Cultivation|Ukraine|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Ukraine|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|8.204
+Rice Cultivation|United Arab Emirates|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|United Arab Emirates|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|United Arab Emirates|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|United Kingdom|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|United Kingdom|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|United Kingdom|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|United Republic of Tanzania|Area harvested|Rice, paddy|2010|ha|1136290
+Rice Cultivation|United Republic of Tanzania|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|15.54
+Rice Cultivation|United Republic of Tanzania|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|176.5795
+Rice Cultivation|United States of America|Area harvested|Rice, paddy|2010|ha|1462950
+Rice Cultivation|United States of America|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|35
+Rice Cultivation|United States of America|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|512.0325
+Rice Cultivation|United States Virgin Islands|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|United States Virgin Islands|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|United States Virgin Islands|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Uruguay|Area harvested|Rice, paddy|2010|ha|161900
+Rice Cultivation|Uruguay|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|28
+Rice Cultivation|Uruguay|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|45.332
+Rice Cultivation|USSR|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|USSR|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|USSR|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Uzbekistan|Area harvested|Rice, paddy|2010|ha|69200
+Rice Cultivation|Uzbekistan|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|21.98
+Rice Cultivation|Uzbekistan|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|15.2102
+Rice Cultivation|Vanuatu|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Vanuatu|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Vanuatu|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Venezuela (Bolivarian Republic of)|Area harvested|Rice, paddy|2010|ha|180455
+Rice Cultivation|Venezuela (Bolivarian Republic of)|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|25.2
+Rice Cultivation|Venezuela (Bolivarian Republic of)|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|45.4747
+Rice Cultivation|Viet Nam|Area harvested|Rice, paddy|2010|ha|7489400
+Rice Cultivation|Viet Nam|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|17.6499
+Rice Cultivation|Viet Nam|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|1321.8746
+Rice Cultivation|Wallis and Futuna Islands|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Wallis and Futuna Islands|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Wallis and Futuna Islands|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Western Sahara|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Western Sahara|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Western Sahara|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Yemen|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Yemen|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Yemen|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Yugoslav SFR|Area harvested|Rice, paddy|2010||0
+Rice Cultivation|Yugoslav SFR|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Yugoslav SFR|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010||0
+Rice Cultivation|Zambia|Area harvested|Rice, paddy|2010|ha|30788
+Rice Cultivation|Zambia|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Zambia|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|2.1552
+Rice Cultivation|Zimbabwe|Area harvested|Rice, paddy|2010|ha|292
+Rice Cultivation|Zimbabwe|Implied emission factor for CH4 (Rice cultivation)|Rice, paddy|2010|g CH4/m2|7
+Rice Cultivation|Zimbabwe|Emissions (CH4) (Rice cultivation)|Rice, paddy|2010|gigagrams|0.0204
+
+Crops|Afghanistan|Area harvested|Rice, paddy|2010|ha|208000
+Crops|Afghanistan|Yield|Rice, paddy|2010|hg/ha|32308
+Crops|Afghanistan|Production|Rice, paddy|2010|tonnes|672000
+Crops|Albania|Area harvested|Rice, paddy|2010|ha|
+Crops|Albania|Yield|Rice, paddy|2010||0
+Crops|Albania|Production|Rice, paddy|2010|tonnes|
+Crops|Algeria|Area harvested|Rice, paddy|2010|ha|203
+Crops|Algeria|Yield|Rice, paddy|2010|hg/ha|15320
+Crops|Algeria|Production|Rice, paddy|2010|tonnes|312
+Crops|American Samoa|Area harvested|Rice, paddy|2010||0
+Crops|American Samoa|Yield|Rice, paddy|2010||0
+Crops|American Samoa|Production|Rice, paddy|2010||0
+Crops|Andorra|Area harvested|Rice, paddy|2010||0
+Crops|Andorra|Yield|Rice, paddy|2010||0
+Crops|Andorra|Production|Rice, paddy|2010||0
+Crops|Angola|Area harvested|Rice, paddy|2010|ha|23905
+Crops|Angola|Yield|Rice, paddy|2010|hg/ha|7403
+Crops|Angola|Production|Rice, paddy|2010|tonnes|17697
+Crops|Anguilla|Area harvested|Rice, paddy|2010||0
+Crops|Anguilla|Yield|Rice, paddy|2010||0
+Crops|Anguilla|Production|Rice, paddy|2010||0
+Crops|Antigua and Barbuda|Area harvested|Rice, paddy|2010||0
+Crops|Antigua and Barbuda|Yield|Rice, paddy|2010||0
+Crops|Antigua and Barbuda|Production|Rice, paddy|2010||0
+Crops|Argentina|Area harvested|Rice, paddy|2010|ha|215670
+Crops|Argentina|Yield|Rice, paddy|2010|hg/ha|57646
+Crops|Argentina|Production|Rice, paddy|2010|tonnes|1243259
+Crops|Armenia|Area harvested|Rice, paddy|2010|ha|
+Crops|Armenia|Yield|Rice, paddy|2010||0
+Crops|Armenia|Production|Rice, paddy|2010|tonnes|
+Crops|Aruba|Area harvested|Rice, paddy|2010||0
+Crops|Aruba|Yield|Rice, paddy|2010||0
+Crops|Aruba|Production|Rice, paddy|2010||0
+Crops|Australia|Area harvested|Rice, paddy|2010|ha|18931
+Crops|Australia|Yield|Rice, paddy|2010|hg/ha|103895
+Crops|Australia|Production|Rice, paddy|2010|tonnes|196684
+Crops|Austria|Area harvested|Rice, paddy|2010||0
+Crops|Austria|Yield|Rice, paddy|2010||0
+Crops|Austria|Production|Rice, paddy|2010||0
+Crops|Azerbaijan|Area harvested|Rice, paddy|2010|ha|1640
+Crops|Azerbaijan|Yield|Rice, paddy|2010|hg/ha|23963
+Crops|Azerbaijan|Production|Rice, paddy|2010|tonnes|3930
+Crops|Bahamas|Area harvested|Rice, paddy|2010||0
+Crops|Bahamas|Yield|Rice, paddy|2010||0
+Crops|Bahamas|Production|Rice, paddy|2010||0
+Crops|Bahrain|Area harvested|Rice, paddy|2010||0
+Crops|Bahrain|Yield|Rice, paddy|2010||0
+Crops|Bahrain|Production|Rice, paddy|2010||0
+Crops|Bangladesh|Area harvested|Rice, paddy|2010|ha|11529000
+Crops|Bangladesh|Yield|Rice, paddy|2010|hg/ha|43422
+Crops|Bangladesh|Production|Rice, paddy|2010|tonnes|50061200
+Crops|Barbados|Area harvested|Rice, paddy|2010||0
+Crops|Barbados|Yield|Rice, paddy|2010||0
+Crops|Barbados|Production|Rice, paddy|2010||0
+Crops|Belarus|Area harvested|Rice, paddy|2010||0
+Crops|Belarus|Yield|Rice, paddy|2010||0
+Crops|Belarus|Production|Rice, paddy|2010||0
+Crops|Belgium|Area harvested|Rice, paddy|2010||0
+Crops|Belgium|Yield|Rice, paddy|2010||0
+Crops|Belgium|Production|Rice, paddy|2010||0
+Crops|Belgium-Luxembourg|Area harvested|Rice, paddy|2010||0
+Crops|Belgium-Luxembourg|Yield|Rice, paddy|2010||0
+Crops|Belgium-Luxembourg|Production|Rice, paddy|2010||0
+Crops|Belize|Area harvested|Rice, paddy|2010|ha|4608
+Crops|Belize|Yield|Rice, paddy|2010|hg/ha|44538
+Crops|Belize|Production|Rice, paddy|2010|tonnes|20523
+Crops|Benin|Area harvested|Rice, paddy|2010|ha|47058
+Crops|Benin|Yield|Rice, paddy|2010|hg/ha|26558
+Crops|Benin|Production|Rice, paddy|2010|tonnes|124975
+Crops|Bermuda|Area harvested|Rice, paddy|2010||0
+Crops|Bermuda|Yield|Rice, paddy|2010||0
+Crops|Bermuda|Production|Rice, paddy|2010||0
+Crops|Bhutan|Area harvested|Rice, paddy|2010|ha|22815
+Crops|Bhutan|Yield|Rice, paddy|2010|hg/ha|31400
+Crops|Bhutan|Production|Rice, paddy|2010|tonnes|71637
+Crops|Bolivia (Plurinational State of)|Area harvested|Rice, paddy|2010|ha|194237
+Crops|Bolivia (Plurinational State of)|Yield|Rice, paddy|2010|hg/ha|22757
+Crops|Bolivia (Plurinational State of)|Production|Rice, paddy|2010|tonnes|442017
+Crops|Bosnia and Herzegovina|Area harvested|Rice, paddy|2010||0
+Crops|Bosnia and Herzegovina|Yield|Rice, paddy|2010||0
+Crops|Bosnia and Herzegovina|Production|Rice, paddy|2010||0
+Crops|Botswana|Area harvested|Rice, paddy|2010||0
+Crops|Botswana|Yield|Rice, paddy|2010||0
+Crops|Botswana|Production|Rice, paddy|2010||0
+Crops|Brazil|Area harvested|Rice, paddy|2010|ha|2722459
+Crops|Brazil|Yield|Rice, paddy|2010|hg/ha|41271
+Crops|Brazil|Production|Rice, paddy|2010|tonnes|11235986
+Crops|British Virgin Islands|Area harvested|Rice, paddy|2010||0
+Crops|British Virgin Islands|Yield|Rice, paddy|2010||0
+Crops|British Virgin Islands|Production|Rice, paddy|2010||0
+Crops|Brunei Darussalam|Area harvested|Rice, paddy|2010|ha|1848
+Crops|Brunei Darussalam|Yield|Rice, paddy|2010|hg/ha|5801
+Crops|Brunei Darussalam|Production|Rice, paddy|2010|tonnes|1072
+Crops|Bulgaria|Area harvested|Rice, paddy|2010|ha|11977
+Crops|Bulgaria|Yield|Rice, paddy|2010|hg/ha|47952
+Crops|Bulgaria|Production|Rice, paddy|2010|tonnes|57432
+Crops|Burkina Faso|Area harvested|Rice, paddy|2010|ha|133737
+Crops|Burkina Faso|Yield|Rice, paddy|2010|hg/ha|20238
+Crops|Burkina Faso|Production|Rice, paddy|2010|tonnes|270658
+Crops|Burundi|Area harvested|Rice, paddy|2010|ha|29569
+Crops|Burundi|Yield|Rice, paddy|2010|hg/ha|28077
+Crops|Burundi|Production|Rice, paddy|2010|tonnes|83019
+Crops|Cabo Verde|Area harvested|Rice, paddy|2010||0
+Crops|Cabo Verde|Yield|Rice, paddy|2010||0
+Crops|Cabo Verde|Production|Rice, paddy|2010||0
+Crops|Cambodia|Area harvested|Rice, paddy|2010|ha|2776507
+Crops|Cambodia|Yield|Rice, paddy|2010|hg/ha|29697
+Crops|Cambodia|Production|Rice, paddy|2010|tonnes|8245320
+Crops|Cameroon|Area harvested|Rice, paddy|2010|ha|139976
+Crops|Cameroon|Yield|Rice, paddy|2010|hg/ha|10936
+Crops|Cameroon|Production|Rice, paddy|2010|tonnes|153078
+Crops|Canada|Area harvested|Rice, paddy|2010||0
+Crops|Canada|Yield|Rice, paddy|2010||0
+Crops|Canada|Production|Rice, paddy|2010||0
+Crops|Cayman Islands|Area harvested|Rice, paddy|2010||0
+Crops|Cayman Islands|Yield|Rice, paddy|2010||0
+Crops|Cayman Islands|Production|Rice, paddy|2010||0
+Crops|Central African Republic|Area harvested|Rice, paddy|2010|ha|16700
+Crops|Central African Republic|Yield|Rice, paddy|2010|hg/ha|23353
+Crops|Central African Republic|Production|Rice, paddy|2010|tonnes|39000
+Crops|Chad|Area harvested|Rice, paddy|2010|ha|138740
+Crops|Chad|Yield|Rice, paddy|2010|hg/ha|13415
+Crops|Chad|Production|Rice, paddy|2010|tonnes|186118
+Crops|Channel Islands|Area harvested|Rice, paddy|2010||0
+Crops|Channel Islands|Yield|Rice, paddy|2010||0
+Crops|Channel Islands|Production|Rice, paddy|2010||0
+Crops|Chile|Area harvested|Rice, paddy|2010|ha|24527
+Crops|Chile|Yield|Rice, paddy|2010|hg/ha|38599
+Crops|Chile|Production|Rice, paddy|2010|tonnes|94673
+Crops|China|Area harvested|Rice, paddy|2010|ha|30117262
+Crops|China|Yield|Rice, paddy|2010|hg/ha|65481
+Crops|China|Production|Rice, paddy|2010|tonnes|197212003
+Crops|China, Hong Kong SAR|Area harvested|Rice, paddy|2010|ha|0
+Crops|China, Hong Kong SAR|Yield|Rice, paddy|2010|hg/ha|20004
+Crops|China, Hong Kong SAR|Production|Rice, paddy|2010|tonnes|0
+Crops|China, Macao SAR|Area harvested|Rice, paddy|2010||0
+Crops|China, Macao SAR|Yield|Rice, paddy|2010||0
+Crops|China, Macao SAR|Production|Rice, paddy|2010||0
+Crops|China, mainland|Area harvested|Rice, paddy|2010|ha|29873400
+Crops|China, mainland|Yield|Rice, paddy|2010|hg/ha|65530
+Crops|China, mainland|Production|Rice, paddy|2010|tonnes|195760992
+Crops|China, Taiwan Province of|Area harvested|Rice, paddy|2010|ha|243862
+Crops|China, Taiwan Province of|Yield|Rice, paddy|2010|hg/ha|59501
+Crops|China, Taiwan Province of|Production|Rice, paddy|2010|tonnes|1451011
+Crops|Colombia|Area harvested|Rice, paddy|2010|ha|482297
+Crops|Colombia|Yield|Rice, paddy|2010|hg/ha|41223
+Crops|Colombia|Production|Rice, paddy|2010|tonnes|1988191
+Crops|Comoros|Area harvested|Rice, paddy|2010|ha|19000
+Crops|Comoros|Yield|Rice, paddy|2010|hg/ha|12632
+Crops|Comoros|Production|Rice, paddy|2010|tonnes|24000
+Crops|Congo|Area harvested|Rice, paddy|2010|ha|2390
+Crops|Congo|Yield|Rice, paddy|2010|hg/ha|6256
+Crops|Congo|Production|Rice, paddy|2010|tonnes|1495
+Crops|Cook Islands|Area harvested|Rice, paddy|2010||0
+Crops|Cook Islands|Yield|Rice, paddy|2010||0
+Crops|Cook Islands|Production|Rice, paddy|2010||0
+Crops|Costa Rica|Area harvested|Rice, paddy|2010|ha|79968
+Crops|Costa Rica|Yield|Rice, paddy|2010|hg/ha|33485
+Crops|Costa Rica|Production|Rice, paddy|2010|tonnes|267772
+Crops|Côte d'Ivoire|Area harvested|Rice, paddy|2010|ha|394868
+Crops|Côte d'Ivoire|Yield|Rice, paddy|2010|hg/ha|30546
+Crops|Côte d'Ivoire|Production|Rice, paddy|2010|tonnes|1206153
+Crops|Croatia|Area harvested|Rice, paddy|2010||0
+Crops|Croatia|Yield|Rice, paddy|2010||0
+Crops|Croatia|Production|Rice, paddy|2010||0
+Crops|Cuba|Area harvested|Rice, paddy|2010|ha|176429
+Crops|Cuba|Yield|Rice, paddy|2010|hg/ha|25755
+Crops|Cuba|Production|Rice, paddy|2010|tonnes|454400
+Crops|Cyprus|Area harvested|Rice, paddy|2010||0
+Crops|Cyprus|Yield|Rice, paddy|2010||0
+Crops|Cyprus|Production|Rice, paddy|2010||0
+Crops|Czechia|Area harvested|Rice, paddy|2010||0
+Crops|Czechia|Yield|Rice, paddy|2010||0
+Crops|Czechia|Production|Rice, paddy|2010||0
+Crops|Czechoslovakia|Area harvested|Rice, paddy|2010||0
+Crops|Czechoslovakia|Yield|Rice, paddy|2010||0
+Crops|Czechoslovakia|Production|Rice, paddy|2010||0
+Crops|Democratic People's Republic of Korea|Area harvested|Rice, paddy|2010|ha|570000
+Crops|Democratic People's Republic of Korea|Yield|Rice, paddy|2010|hg/ha|42561
+Crops|Democratic People's Republic of Korea|Production|Rice, paddy|2010|tonnes|2426000
+Crops|Democratic Republic of the Congo|Area harvested|Rice, paddy|2010|ha|420174
+Crops|Democratic Republic of the Congo|Yield|Rice, paddy|2010|hg/ha|7572
+Crops|Democratic Republic of the Congo|Production|Rice, paddy|2010|tonnes|318144
+Crops|Denmark|Area harvested|Rice, paddy|2010||0
+Crops|Denmark|Yield|Rice, paddy|2010||0
+Crops|Denmark|Production|Rice, paddy|2010||0
+Crops|Djibouti|Area harvested|Rice, paddy|2010||0
+Crops|Djibouti|Yield|Rice, paddy|2010||0
+Crops|Djibouti|Production|Rice, paddy|2010||0
+Crops|Dominica|Area harvested|Rice, paddy|2010||0
+Crops|Dominica|Yield|Rice, paddy|2010||0
+Crops|Dominica|Production|Rice, paddy|2010||0
+Crops|Dominican Republic|Area harvested|Rice, paddy|2010|ha|178430
+Crops|Dominican Republic|Yield|Rice, paddy|2010|hg/ha|47651
+Crops|Dominican Republic|Production|Rice, paddy|2010|tonnes|850228
+Crops|Ecuador|Area harvested|Rice, paddy|2010|ha|393137
+Crops|Ecuador|Yield|Rice, paddy|2010|hg/ha|43399
+Crops|Ecuador|Production|Rice, paddy|2010|tonnes|1706193
+Crops|Egypt|Area harvested|Rice, paddy|2010|ha|459525
+Crops|Egypt|Yield|Rice, paddy|2010|hg/ha|94217
+Crops|Egypt|Production|Rice, paddy|2010|tonnes|4329503
+Crops|El Salvador|Area harvested|Rice, paddy|2010|ha|4916
+Crops|El Salvador|Yield|Rice, paddy|2010|hg/ha|70136
+Crops|El Salvador|Production|Rice, paddy|2010|tonnes|34479
+Crops|Equatorial Guinea|Area harvested|Rice, paddy|2010||0
+Crops|Equatorial Guinea|Yield|Rice, paddy|2010||0
+Crops|Equatorial Guinea|Production|Rice, paddy|2010||0
+Crops|Eritrea|Area harvested|Rice, paddy|2010||0
+Crops|Eritrea|Yield|Rice, paddy|2010||0
+Crops|Eritrea|Production|Rice, paddy|2010||0
+Crops|Estonia|Area harvested|Rice, paddy|2010||0
+Crops|Estonia|Yield|Rice, paddy|2010||0
+Crops|Estonia|Production|Rice, paddy|2010||0
+Crops|Eswatini|Area harvested|Rice, paddy|2010|ha|34
+Crops|Eswatini|Yield|Rice, paddy|2010|hg/ha|34350
+Crops|Eswatini|Production|Rice, paddy|2010|tonnes|117
+Crops|Ethiopia|Area harvested|Rice, paddy|2010|ha|29866
+Crops|Ethiopia|Yield|Rice, paddy|2010|hg/ha|30273
+Crops|Ethiopia|Production|Rice, paddy|2010|tonnes|90412
+Crops|Ethiopia PDR|Area harvested|Rice, paddy|2010||0
+Crops|Ethiopia PDR|Yield|Rice, paddy|2010||0
+Crops|Ethiopia PDR|Production|Rice, paddy|2010||0
+Crops|Falkland Islands (Malvinas)|Area harvested|Rice, paddy|2010||0
+Crops|Falkland Islands (Malvinas)|Yield|Rice, paddy|2010||0
+Crops|Falkland Islands (Malvinas)|Production|Rice, paddy|2010||0
+Crops|Faroe Islands|Area harvested|Rice, paddy|2010||0
+Crops|Faroe Islands|Yield|Rice, paddy|2010||0
+Crops|Faroe Islands|Production|Rice, paddy|2010||0
+Crops|Fiji|Area harvested|Rice, paddy|2010|ha|2540
+Crops|Fiji|Yield|Rice, paddy|2010|hg/ha|30173
+Crops|Fiji|Production|Rice, paddy|2010|tonnes|7664
+Crops|Finland|Area harvested|Rice, paddy|2010||0
+Crops|Finland|Yield|Rice, paddy|2010||0
+Crops|Finland|Production|Rice, paddy|2010||0
+Crops|France|Area harvested|Rice, paddy|2010|ha|23828
+Crops|France|Yield|Rice, paddy|2010|hg/ha|50432
+Crops|France|Production|Rice, paddy|2010|tonnes|120170
+Crops|French Guiana|Area harvested|Rice, paddy|2010|ha|2854
+Crops|French Guiana|Yield|Rice, paddy|2010|hg/ha|18938
+Crops|French Guiana|Production|Rice, paddy|2010|tonnes|5405
+Crops|French Polynesia|Area harvested|Rice, paddy|2010||0
+Crops|French Polynesia|Yield|Rice, paddy|2010||0
+Crops|French Polynesia|Production|Rice, paddy|2010||0
+Crops|Gabon|Area harvested|Rice, paddy|2010|ha|552
+Crops|Gabon|Yield|Rice, paddy|2010|hg/ha|25754
+Crops|Gabon|Production|Rice, paddy|2010|tonnes|1421
+Crops|Gambia|Area harvested|Rice, paddy|2010|ha|86150
+Crops|Gambia|Yield|Rice, paddy|2010|hg/ha|11595
+Crops|Gambia|Production|Rice, paddy|2010|tonnes|99890
+Crops|Georgia|Area harvested|Rice, paddy|2010||0
+Crops|Georgia|Yield|Rice, paddy|2010||0
+Crops|Georgia|Production|Rice, paddy|2010||0
+Crops|Germany|Area harvested|Rice, paddy|2010||0
+Crops|Germany|Yield|Rice, paddy|2010||0
+Crops|Germany|Production|Rice, paddy|2010||0
+Crops|Ghana|Area harvested|Rice, paddy|2010|ha|181228
+Crops|Ghana|Yield|Rice, paddy|2010|hg/ha|27126
+Crops|Ghana|Production|Rice, paddy|2010|tonnes|491603
+Crops|Gibraltar|Area harvested|Rice, paddy|2010||0
+Crops|Gibraltar|Yield|Rice, paddy|2010||0
+Crops|Gibraltar|Production|Rice, paddy|2010||0
+Crops|Greece|Area harvested|Rice, paddy|2010|ha|30052
+Crops|Greece|Yield|Rice, paddy|2010|hg/ha|69283
+Crops|Greece|Production|Rice, paddy|2010|tonnes|208210
+Crops|Greenland|Area harvested|Rice, paddy|2010||0
+Crops|Greenland|Yield|Rice, paddy|2010||0
+Crops|Greenland|Production|Rice, paddy|2010||0
+Crops|Grenada|Area harvested|Rice, paddy|2010||0
+Crops|Grenada|Yield|Rice, paddy|2010||0
+Crops|Grenada|Production|Rice, paddy|2010||0
+Crops|Guadeloupe|Area harvested|Rice, paddy|2010||0
+Crops|Guadeloupe|Yield|Rice, paddy|2010||0
+Crops|Guadeloupe|Production|Rice, paddy|2010||0
+Crops|Guam|Area harvested|Rice, paddy|2010||0
+Crops|Guam|Yield|Rice, paddy|2010||0
+Crops|Guam|Production|Rice, paddy|2010||0
+Crops|Guatemala|Area harvested|Rice, paddy|2010|ha|10483
+Crops|Guatemala|Yield|Rice, paddy|2010|hg/ha|28258
+Crops|Guatemala|Production|Rice, paddy|2010|tonnes|29624
+Crops|Guinea|Area harvested|Rice, paddy|2010|ha|1465953
+Crops|Guinea|Yield|Rice, paddy|2010|hg/ha|11008
+Crops|Guinea|Production|Rice, paddy|2010|tonnes|1613730
+Crops|Guinea-Bissau|Area harvested|Rice, paddy|2010|ha|100510
+Crops|Guinea-Bissau|Yield|Rice, paddy|2010|hg/ha|20818
+Crops|Guinea-Bissau|Production|Rice, paddy|2010|tonnes|209240
+Crops|Guyana|Area harvested|Rice, paddy|2010|ha|131400
+Crops|Guyana|Yield|Rice, paddy|2010|hg/ha|42328
+Crops|Guyana|Production|Rice, paddy|2010|tonnes|556193
+Crops|Haiti|Area harvested|Rice, paddy|2010|ha|60702
+Crops|Haiti|Yield|Rice, paddy|2010|hg/ha|23241
+Crops|Haiti|Production|Rice, paddy|2010|tonnes|141075
+Crops|Holy See|Area harvested|Rice, paddy|2010||0
+Crops|Holy See|Yield|Rice, paddy|2010||0
+Crops|Holy See|Production|Rice, paddy|2010||0
+Crops|Honduras|Area harvested|Rice, paddy|2010|ha|7364
+Crops|Honduras|Yield|Rice, paddy|2010|hg/ha|57287
+Crops|Honduras|Production|Rice, paddy|2010|tonnes|42186
+Crops|Hungary|Area harvested|Rice, paddy|2010|ha|2000
+Crops|Hungary|Yield|Rice, paddy|2010|hg/ha|29465
+Crops|Hungary|Production|Rice, paddy|2010|tonnes|5893
+Crops|Iceland|Area harvested|Rice, paddy|2010||0
+Crops|Iceland|Yield|Rice, paddy|2010||0
+Crops|Iceland|Production|Rice, paddy|2010||0
+Crops|India|Area harvested|Rice, paddy|2010|ha|42862400
+Crops|India|Yield|Rice, paddy|2010|hg/ha|33587
+Crops|India|Production|Rice, paddy|2010|tonnes|143963008
+Crops|Indonesia|Area harvested|Rice, paddy|2010|ha|13253450
+Crops|Indonesia|Yield|Rice, paddy|2010|hg/ha|50153
+Crops|Indonesia|Production|Rice, paddy|2010|tonnes|66469392
+Crops|Iran (Islamic Republic of)|Area harvested|Rice, paddy|2010|ha|563517
+Crops|Iran (Islamic Republic of)|Yield|Rice, paddy|2010|hg/ha|44187
+Crops|Iran (Islamic Republic of)|Production|Rice, paddy|2010|tonnes|2489999
+Crops|Iraq|Area harvested|Rice, paddy|2010|ha|47974
+Crops|Iraq|Yield|Rice, paddy|2010|hg/ha|32482
+Crops|Iraq|Production|Rice, paddy|2010|tonnes|155829
+Crops|Ireland|Area harvested|Rice, paddy|2010||0
+Crops|Ireland|Yield|Rice, paddy|2010||0
+Crops|Ireland|Production|Rice, paddy|2010||0
+Crops|Isle of Man|Area harvested|Rice, paddy|2010||0
+Crops|Isle of Man|Yield|Rice, paddy|2010||0
+Crops|Isle of Man|Production|Rice, paddy|2010||0
+Crops|Israel|Area harvested|Rice, paddy|2010||0
+Crops|Israel|Yield|Rice, paddy|2010||0
+Crops|Israel|Production|Rice, paddy|2010||0
+Crops|Italy|Area harvested|Rice, paddy|2010|ha|247700
+Crops|Italy|Yield|Rice, paddy|2010|hg/ha|61219
+Crops|Italy|Production|Rice, paddy|2010|tonnes|1516400
+Crops|Jamaica|Area harvested|Rice, paddy|2010|ha|56
+Crops|Jamaica|Yield|Rice, paddy|2010|hg/ha|47397
+Crops|Jamaica|Production|Rice, paddy|2010|tonnes|264
+Crops|Japan|Area harvested|Rice, paddy|2010|ha|1628000
+Crops|Japan|Yield|Rice, paddy|2010|hg/ha|65135
+Crops|Japan|Production|Rice, paddy|2010|tonnes|10604000
+Crops|Jordan|Area harvested|Rice, paddy|2010||0
+Crops|Jordan|Yield|Rice, paddy|2010||0
+Crops|Jordan|Production|Rice, paddy|2010||0
+Crops|Kazakhstan|Area harvested|Rice, paddy|2010|ha|94000
+Crops|Kazakhstan|Yield|Rice, paddy|2010|hg/ha|39697
+Crops|Kazakhstan|Production|Rice, paddy|2010|tonnes|373150
+Crops|Kenya|Area harvested|Rice, paddy|2010|ha|20181
+Crops|Kenya|Yield|Rice, paddy|2010|hg/ha|42384
+Crops|Kenya|Production|Rice, paddy|2010|tonnes|85536
+Crops|Kiribati|Area harvested|Rice, paddy|2010||0
+Crops|Kiribati|Yield|Rice, paddy|2010||0
+Crops|Kiribati|Production|Rice, paddy|2010||0
+Crops|Kuwait|Area harvested|Rice, paddy|2010||0
+Crops|Kuwait|Yield|Rice, paddy|2010||0
+Crops|Kuwait|Production|Rice, paddy|2010||0
+Crops|Kyrgyzstan|Area harvested|Rice, paddy|2010|ha|6334
+Crops|Kyrgyzstan|Yield|Rice, paddy|2010|hg/ha|32935
+Crops|Kyrgyzstan|Production|Rice, paddy|2010|tonnes|20861
+Crops|Lao People's Democratic Republic|Area harvested|Rice, paddy|2010|ha|855114
+Crops|Lao People's Democratic Republic|Yield|Rice, paddy|2010|hg/ha|35909
+Crops|Lao People's Democratic Republic|Production|Rice, paddy|2010|tonnes|3070640
+Crops|Latvia|Area harvested|Rice, paddy|2010||0
+Crops|Latvia|Yield|Rice, paddy|2010||0
+Crops|Latvia|Production|Rice, paddy|2010||0
+Crops|Lebanon|Area harvested|Rice, paddy|2010||0
+Crops|Lebanon|Yield|Rice, paddy|2010||0
+Crops|Lebanon|Production|Rice, paddy|2010||0
+Crops|Lesotho|Area harvested|Rice, paddy|2010||0
+Crops|Lesotho|Yield|Rice, paddy|2010||0
+Crops|Lesotho|Production|Rice, paddy|2010||0
+Crops|Liberia|Area harvested|Rice, paddy|2010|ha|251230
+Crops|Liberia|Yield|Rice, paddy|2010|hg/ha|11786
+Crops|Liberia|Production|Rice, paddy|2010|tonnes|296090
+Crops|Libya|Area harvested|Rice, paddy|2010||0
+Crops|Libya|Yield|Rice, paddy|2010||0
+Crops|Libya|Production|Rice, paddy|2010||0
+Crops|Liechtenstein|Area harvested|Rice, paddy|2010||0
+Crops|Liechtenstein|Yield|Rice, paddy|2010||0
+Crops|Liechtenstein|Production|Rice, paddy|2010||0
+Crops|Lithuania|Area harvested|Rice, paddy|2010||0
+Crops|Lithuania|Yield|Rice, paddy|2010||0
+Crops|Lithuania|Production|Rice, paddy|2010||0
+Crops|Luxembourg|Area harvested|Rice, paddy|2010||0
+Crops|Luxembourg|Yield|Rice, paddy|2010||0
+Crops|Luxembourg|Production|Rice, paddy|2010||0
+Crops|Madagascar|Area harvested|Rice, paddy|2010|ha|1307043
+Crops|Madagascar|Yield|Rice, paddy|2010|hg/ha|36249
+Crops|Madagascar|Production|Rice, paddy|2010|tonnes|4737965
+Crops|Malawi|Area harvested|Rice, paddy|2010|ha|59098
+Crops|Malawi|Yield|Rice, paddy|2010|hg/ha|18631
+Crops|Malawi|Production|Rice, paddy|2010|tonnes|110106
+Crops|Malaysia|Area harvested|Rice, paddy|2010|ha|677884
+Crops|Malaysia|Yield|Rice, paddy|2010|hg/ha|36361
+Crops|Malaysia|Production|Rice, paddy|2010|tonnes|2464830
+Crops|Maldives|Area harvested|Rice, paddy|2010||0
+Crops|Maldives|Yield|Rice, paddy|2010||0
+Crops|Maldives|Production|Rice, paddy|2010||0
+Crops|Mali|Area harvested|Rice, paddy|2010|ha|615936
+Crops|Mali|Yield|Rice, paddy|2010|hg/ha|21044
+Crops|Mali|Production|Rice, paddy|2010|tonnes|1296154
+Crops|Malta|Area harvested|Rice, paddy|2010||0
+Crops|Malta|Yield|Rice, paddy|2010||0
+Crops|Malta|Production|Rice, paddy|2010||0
+Crops|Marshall Islands|Area harvested|Rice, paddy|2010||0
+Crops|Marshall Islands|Yield|Rice, paddy|2010||0
+Crops|Marshall Islands|Production|Rice, paddy|2010||0
+Crops|Martinique|Area harvested|Rice, paddy|2010||0
+Crops|Martinique|Yield|Rice, paddy|2010||0
+Crops|Martinique|Production|Rice, paddy|2010||0
+Crops|Mauritania|Area harvested|Rice, paddy|2010|ha|25702
+Crops|Mauritania|Yield|Rice, paddy|2010|hg/ha|52310
+Crops|Mauritania|Production|Rice, paddy|2010|tonnes|134447
+Crops|Mauritius|Area harvested|Rice, paddy|2010|ha|55
+Crops|Mauritius|Yield|Rice, paddy|2010|hg/ha|28504
+Crops|Mauritius|Production|Rice, paddy|2010|tonnes|156
+Crops|Mayotte|Area harvested|Rice, paddy|2010||0
+Crops|Mayotte|Yield|Rice, paddy|2010||0
+Crops|Mayotte|Production|Rice, paddy|2010||0
+Crops|Mexico|Area harvested|Rice, paddy|2010|ha|41748
+Crops|Mexico|Yield|Rice, paddy|2010|hg/ha|51901
+Crops|Mexico|Production|Rice, paddy|2010|tonnes|216676
+Crops|Micronesia (Federated States of)|Area harvested|Rice, paddy|2010|ha|91
+Crops|Micronesia (Federated States of)|Yield|Rice, paddy|2010|hg/ha|14942
+Crops|Micronesia (Federated States of)|Production|Rice, paddy|2010|tonnes|137
+Crops|Monaco|Area harvested|Rice, paddy|2010||0
+Crops|Monaco|Yield|Rice, paddy|2010||0
+Crops|Monaco|Production|Rice, paddy|2010||0
+Crops|Mongolia|Area harvested|Rice, paddy|2010||0
+Crops|Mongolia|Yield|Rice, paddy|2010||0
+Crops|Mongolia|Production|Rice, paddy|2010||0
+Crops|Montenegro|Area harvested|Rice, paddy|2010||0
+Crops|Montenegro|Yield|Rice, paddy|2010||0
+Crops|Montenegro|Production|Rice, paddy|2010||0
+Crops|Montserrat|Area harvested|Rice, paddy|2010||0
+Crops|Montserrat|Yield|Rice, paddy|2010||0
+Crops|Montserrat|Production|Rice, paddy|2010||0
+Crops|Morocco|Area harvested|Rice, paddy|2010|ha|7400
+Crops|Morocco|Yield|Rice, paddy|2010|hg/ha|68270
+Crops|Morocco|Production|Rice, paddy|2010|tonnes|50520
+Crops|Mozambique|Area harvested|Rice, paddy|2010|ha|226593
+Crops|Mozambique|Yield|Rice, paddy|2010|hg/ha|11365
+Crops|Mozambique|Production|Rice, paddy|2010|tonnes|257527
+Crops|Myanmar|Area harvested|Rice, paddy|2010|ha|8011164
+Crops|Myanmar|Yield|Rice, paddy|2010|hg/ha|40026
+Crops|Myanmar|Production|Rice, paddy|2010|tonnes|32065100
+Crops|Namibia|Area harvested|Rice, paddy|2010||0
+Crops|Namibia|Yield|Rice, paddy|2010||0
+Crops|Namibia|Production|Rice, paddy|2010||0
+Crops|Nauru|Area harvested|Rice, paddy|2010||0
+Crops|Nauru|Yield|Rice, paddy|2010||0
+Crops|Nauru|Production|Rice, paddy|2010||0
+Crops|Nepal|Area harvested|Rice, paddy|2010|ha|1481289
+Crops|Nepal|Yield|Rice, paddy|2010|hg/ha|27164
+Crops|Nepal|Production|Rice, paddy|2010|tonnes|4023823
+Crops|Netherlands|Area harvested|Rice, paddy|2010||0
+Crops|Netherlands|Yield|Rice, paddy|2010||0
+Crops|Netherlands|Production|Rice, paddy|2010||0
+Crops|Netherlands Antilles (former)|Area harvested|Rice, paddy|2010||0
+Crops|Netherlands Antilles (former)|Yield|Rice, paddy|2010||0
+Crops|Netherlands Antilles (former)|Production|Rice, paddy|2010||0
+Crops|New Caledonia|Area harvested|Rice, paddy|2010||0
+Crops|New Caledonia|Yield|Rice, paddy|2010||0
+Crops|New Caledonia|Production|Rice, paddy|2010||0
+Crops|New Zealand|Area harvested|Rice, paddy|2010|ha|
+Crops|New Zealand|Yield|Rice, paddy|2010||0
+Crops|New Zealand|Production|Rice, paddy|2010|tonnes|
+Crops|Nicaragua|Area harvested|Rice, paddy|2010|ha|88314
+Crops|Nicaragua|Yield|Rice, paddy|2010|hg/ha|51406
+Crops|Nicaragua|Production|Rice, paddy|2010|tonnes|453990
+Crops|Niger|Area harvested|Rice, paddy|2010|ha|33446
+Crops|Niger|Yield|Rice, paddy|2010|hg/ha|30742
+Crops|Niger|Production|Rice, paddy|2010|tonnes|102820
+Crops|Nigeria|Area harvested|Rice, paddy|2010|ha|2432630
+Crops|Nigeria|Yield|Rice, paddy|2010|hg/ha|18386
+Crops|Nigeria|Production|Rice, paddy|2010|tonnes|4472520
+Crops|Niue|Area harvested|Rice, paddy|2010||0
+Crops|Niue|Yield|Rice, paddy|2010||0
+Crops|Niue|Production|Rice, paddy|2010||0
+Crops|Norfolk Island|Area harvested|Rice, paddy|2010||0
+Crops|Norfolk Island|Yield|Rice, paddy|2010||0
+Crops|Norfolk Island|Production|Rice, paddy|2010||0
+Crops|North Macedonia|Area harvested|Rice, paddy|2010|ha|4125
+Crops|North Macedonia|Yield|Rice, paddy|2010|hg/ha|62303
+Crops|North Macedonia|Production|Rice, paddy|2010|tonnes|25700
+Crops|Northern Mariana Islands|Area harvested|Rice, paddy|2010||0
+Crops|Northern Mariana Islands|Yield|Rice, paddy|2010||0
+Crops|Northern Mariana Islands|Production|Rice, paddy|2010||0
+Crops|Norway|Area harvested|Rice, paddy|2010||0
+Crops|Norway|Yield|Rice, paddy|2010||0
+Crops|Norway|Production|Rice, paddy|2010||0
+Crops|Oman|Area harvested|Rice, paddy|2010||0
+Crops|Oman|Yield|Rice, paddy|2010||0
+Crops|Oman|Production|Rice, paddy|2010||0
+Crops|Pacific Islands Trust Territory|Area harvested|Rice, paddy|2010||0
+Crops|Pacific Islands Trust Territory|Yield|Rice, paddy|2010||0
+Crops|Pacific Islands Trust Territory|Production|Rice, paddy|2010||0
+Crops|Pakistan|Area harvested|Rice, paddy|2010|ha|2365300
+Crops|Pakistan|Yield|Rice, paddy|2010|hg/ha|30588
+Crops|Pakistan|Production|Rice, paddy|2010|tonnes|7234950
+Crops|Palau|Area harvested|Rice, paddy|2010||0
+Crops|Palau|Yield|Rice, paddy|2010||0
+Crops|Palau|Production|Rice, paddy|2010||0
+Crops|Palestine|Area harvested|Rice, paddy|2010||0
+Crops|Palestine|Yield|Rice, paddy|2010||0
+Crops|Palestine|Production|Rice, paddy|2010||0
+Crops|Panama|Area harvested|Rice, paddy|2010|ha|105251
+Crops|Panama|Yield|Rice, paddy|2010|hg/ha|26130
+Crops|Panama|Production|Rice, paddy|2010|tonnes|275025
+Crops|Papua New Guinea|Area harvested|Rice, paddy|2010|ha|410
+Crops|Papua New Guinea|Yield|Rice, paddy|2010|hg/ha|20056
+Crops|Papua New Guinea|Production|Rice, paddy|2010|tonnes|822
+Crops|Paraguay|Area harvested|Rice, paddy|2010|ha|59476
+Crops|Paraguay|Yield|Rice, paddy|2010|hg/ha|52998
+Crops|Paraguay|Production|Rice, paddy|2010|tonnes|315213
+Crops|Peru|Area harvested|Rice, paddy|2010|ha|388659
+Crops|Peru|Yield|Rice, paddy|2010|hg/ha|72850
+Crops|Peru|Production|Rice, paddy|2010|tonnes|2831374
+Crops|Philippines|Area harvested|Rice, paddy|2010|ha|4354161
+Crops|Philippines|Yield|Rice, paddy|2010|hg/ha|36224
+Crops|Philippines|Production|Rice, paddy|2010|tonnes|15772319
+Crops|Pitcairn Islands|Area harvested|Rice, paddy|2010||0
+Crops|Pitcairn Islands|Yield|Rice, paddy|2010||0
+Crops|Pitcairn Islands|Production|Rice, paddy|2010||0
+Crops|Poland|Area harvested|Rice, paddy|2010||0
+Crops|Poland|Yield|Rice, paddy|2010||0
+Crops|Poland|Production|Rice, paddy|2010||0
+Crops|Portugal|Area harvested|Rice, paddy|2010|ha|29120
+Crops|Portugal|Yield|Rice, paddy|2010|hg/ha|58453
+Crops|Portugal|Production|Rice, paddy|2010|tonnes|170216
+Crops|Puerto Rico|Area harvested|Rice, paddy|2010|ha|21
+Crops|Puerto Rico|Yield|Rice, paddy|2010|hg/ha|15957
+Crops|Puerto Rico|Production|Rice, paddy|2010|tonnes|33
+Crops|Qatar|Area harvested|Rice, paddy|2010||0
+Crops|Qatar|Yield|Rice, paddy|2010||0
+Crops|Qatar|Production|Rice, paddy|2010||0
+Crops|Republic of Korea|Area harvested|Rice, paddy|2010|ha|892074
+Crops|Republic of Korea|Yield|Rice, paddy|2010|hg/ha|65138
+Crops|Republic of Korea|Production|Rice, paddy|2010|tonnes|5810817
+Crops|Republic of Moldova|Area harvested|Rice, paddy|2010|ha|
+Crops|Republic of Moldova|Yield|Rice, paddy|2010||0
+Crops|Republic of Moldova|Production|Rice, paddy|2010|tonnes|
+Crops|Réunion|Area harvested|Rice, paddy|2010|ha|57
+Crops|Réunion|Yield|Rice, paddy|2010|hg/ha|40897
+Crops|Réunion|Production|Rice, paddy|2010|tonnes|233
+Crops|Romania|Area harvested|Rice, paddy|2010|ha|12403
+Crops|Romania|Yield|Rice, paddy|2010|hg/ha|49656
+Crops|Romania|Production|Rice, paddy|2010|tonnes|61588
+Crops|Russian Federation|Area harvested|Rice, paddy|2010|ha|200878
+Crops|Russian Federation|Yield|Rice, paddy|2010|hg/ha|52801
+Crops|Russian Federation|Production|Rice, paddy|2010|tonnes|1060658
+Crops|Rwanda|Area harvested|Rice, paddy|2010|ha|12975
+Crops|Rwanda|Yield|Rice, paddy|2010|hg/ha|51833
+Crops|Rwanda|Production|Rice, paddy|2010|tonnes|67253
+Crops|Saint Helena, Ascension and Tristan da Cunha|Area harvested|Rice, paddy|2010||0
+Crops|Saint Helena, Ascension and Tristan da Cunha|Yield|Rice, paddy|2010||0
+Crops|Saint Helena, Ascension and Tristan da Cunha|Production|Rice, paddy|2010||0
+Crops|Saint Kitts and Nevis|Area harvested|Rice, paddy|2010||0
+Crops|Saint Kitts and Nevis|Yield|Rice, paddy|2010||0
+Crops|Saint Kitts and Nevis|Production|Rice, paddy|2010||0
+Crops|Saint Lucia|Area harvested|Rice, paddy|2010||0
+Crops|Saint Lucia|Yield|Rice, paddy|2010||0
+Crops|Saint Lucia|Production|Rice, paddy|2010||0
+Crops|Saint Pierre and Miquelon|Area harvested|Rice, paddy|2010||0
+Crops|Saint Pierre and Miquelon|Yield|Rice, paddy|2010||0
+Crops|Saint Pierre and Miquelon|Production|Rice, paddy|2010||0
+Crops|Saint Vincent and the Grenadines|Area harvested|Rice, paddy|2010|ha|
+Crops|Saint Vincent and the Grenadines|Yield|Rice, paddy|2010||0
+Crops|Saint Vincent and the Grenadines|Production|Rice, paddy|2010|tonnes|
+Crops|Samoa|Area harvested|Rice, paddy|2010||0
+Crops|Samoa|Yield|Rice, paddy|2010||0
+Crops|Samoa|Production|Rice, paddy|2010||0
+Crops|San Marino|Area harvested|Rice, paddy|2010||0
+Crops|San Marino|Yield|Rice, paddy|2010||0
+Crops|San Marino|Production|Rice, paddy|2010||0
+Crops|Sao Tome and Principe|Area harvested|Rice, paddy|2010||0
+Crops|Sao Tome and Principe|Yield|Rice, paddy|2010||0
+Crops|Sao Tome and Principe|Production|Rice, paddy|2010||0
+Crops|Saudi Arabia|Area harvested|Rice, paddy|2010|ha|0
+Crops|Saudi Arabia|Yield|Rice, paddy|2010||0
+Crops|Saudi Arabia|Production|Rice, paddy|2010|tonnes|0
+Crops|Senegal|Area harvested|Rice, paddy|2010|ha|147208
+Crops|Senegal|Yield|Rice, paddy|2010|hg/ha|41033
+Crops|Senegal|Production|Rice, paddy|2010|tonnes|604043
+Crops|Serbia|Area harvested|Rice, paddy|2010||0
+Crops|Serbia|Yield|Rice, paddy|2010||0
+Crops|Serbia|Production|Rice, paddy|2010||0
+Crops|Serbia and Montenegro|Area harvested|Rice, paddy|2010||0
+Crops|Serbia and Montenegro|Yield|Rice, paddy|2010||0
+Crops|Serbia and Montenegro|Production|Rice, paddy|2010||0
+Crops|Seychelles|Area harvested|Rice, paddy|2010||0
+Crops|Seychelles|Yield|Rice, paddy|2010||0
+Crops|Seychelles|Production|Rice, paddy|2010||0
+Crops|Sierra Leone|Area harvested|Rice, paddy|2010|ha|549022
+Crops|Sierra Leone|Yield|Rice, paddy|2010|hg/ha|18700
+Crops|Sierra Leone|Production|Rice, paddy|2010|tonnes|1026671
+Crops|Singapore|Area harvested|Rice, paddy|2010||0
+Crops|Singapore|Yield|Rice, paddy|2010||0
+Crops|Singapore|Production|Rice, paddy|2010||0
+Crops|Slovakia|Area harvested|Rice, paddy|2010||0
+Crops|Slovakia|Yield|Rice, paddy|2010||0
+Crops|Slovakia|Production|Rice, paddy|2010||0
+Crops|Slovenia|Area harvested|Rice, paddy|2010||0
+Crops|Slovenia|Yield|Rice, paddy|2010||0
+Crops|Slovenia|Production|Rice, paddy|2010||0
+Crops|Solomon Islands|Area harvested|Rice, paddy|2010|ha|1251
+Crops|Solomon Islands|Yield|Rice, paddy|2010|hg/ha|20915
+Crops|Solomon Islands|Production|Rice, paddy|2010|tonnes|2617
+Crops|Somalia|Area harvested|Rice, paddy|2010|ha|1650
+Crops|Somalia|Yield|Rice, paddy|2010|hg/ha|52000
+Crops|Somalia|Production|Rice, paddy|2010|tonnes|8580
+Crops|South Africa|Area harvested|Rice, paddy|2010|ha|1184
+Crops|South Africa|Yield|Rice, paddy|2010|hg/ha|25882
+Crops|South Africa|Production|Rice, paddy|2010|tonnes|3064
+Crops|South Sudan|Area harvested|Rice, paddy|2010||0
+Crops|South Sudan|Yield|Rice, paddy|2010||0
+Crops|South Sudan|Production|Rice, paddy|2010||0
+Crops|Spain|Area harvested|Rice, paddy|2010|ha|122184
+Crops|Spain|Yield|Rice, paddy|2010|hg/ha|75936
+Crops|Spain|Production|Rice, paddy|2010|tonnes|927817
+Crops|Sri Lanka|Area harvested|Rice, paddy|2010|ha|1060360
+Crops|Sri Lanka|Yield|Rice, paddy|2010|hg/ha|40558
+Crops|Sri Lanka|Production|Rice, paddy|2010|tonnes|4300620
+Crops|Sudan|Area harvested|Rice, paddy|2010||0
+Crops|Sudan|Yield|Rice, paddy|2010||0
+Crops|Sudan|Production|Rice, paddy|2010||0
+Crops|Sudan (former)|Area harvested|Rice, paddy|2010|ha|6400
+Crops|Sudan (former)|Yield|Rice, paddy|2010|hg/ha|36484
+Crops|Sudan (former)|Production|Rice, paddy|2010|tonnes|23350
+Crops|Suriname|Area harvested|Rice, paddy|2010|ha|53553
+Crops|Suriname|Yield|Rice, paddy|2010|hg/ha|42329
+Crops|Suriname|Production|Rice, paddy|2010|tonnes|226686
+Crops|Svalbard and Jan Mayen Islands|Area harvested|Rice, paddy|2010||0
+Crops|Svalbard and Jan Mayen Islands|Yield|Rice, paddy|2010||0
+Crops|Svalbard and Jan Mayen Islands|Production|Rice, paddy|2010||0
+Crops|Sweden|Area harvested|Rice, paddy|2010||0
+Crops|Sweden|Yield|Rice, paddy|2010||0
+Crops|Sweden|Production|Rice, paddy|2010||0
+Crops|Switzerland|Area harvested|Rice, paddy|2010||0
+Crops|Switzerland|Yield|Rice, paddy|2010||0
+Crops|Switzerland|Production|Rice, paddy|2010||0
+Crops|Syrian Arab Republic|Area harvested|Rice, paddy|2010|ha|
+Crops|Syrian Arab Republic|Yield|Rice, paddy|2010||0
+Crops|Syrian Arab Republic|Production|Rice, paddy|2010|tonnes|
+Crops|Tajikistan|Area harvested|Rice, paddy|2010|ha|14854
+Crops|Tajikistan|Yield|Rice, paddy|2010|hg/ha|51740
+Crops|Tajikistan|Production|Rice, paddy|2010|tonnes|76854
+Crops|Thailand|Area harvested|Rice, paddy|2010|ha|11932320
+Crops|Thailand|Yield|Rice, paddy|2010|hg/ha|29921
+Crops|Thailand|Production|Rice, paddy|2010|tonnes|35702946
+Crops|Timor-Leste|Area harvested|Rice, paddy|2010|ha|36548
+Crops|Timor-Leste|Yield|Rice, paddy|2010|hg/ha|30898
+Crops|Timor-Leste|Production|Rice, paddy|2010|tonnes|112925
+Crops|Togo|Area harvested|Rice, paddy|2010|ha|47403
+Crops|Togo|Yield|Rice, paddy|2010|hg/ha|23228
+Crops|Togo|Production|Rice, paddy|2010|tonnes|110109
+Crops|Tokelau|Area harvested|Rice, paddy|2010||0
+Crops|Tokelau|Yield|Rice, paddy|2010||0
+Crops|Tokelau|Production|Rice, paddy|2010||0
+Crops|Tonga|Area harvested|Rice, paddy|2010||0
+Crops|Tonga|Yield|Rice, paddy|2010||0
+Crops|Tonga|Production|Rice, paddy|2010||0
+Crops|Trinidad and Tobago|Area harvested|Rice, paddy|2010|ha|1982
+Crops|Trinidad and Tobago|Yield|Rice, paddy|2010|hg/ha|11398
+Crops|Trinidad and Tobago|Production|Rice, paddy|2010|tonnes|2259
+Crops|Tunisia|Area harvested|Rice, paddy|2010||0
+Crops|Tunisia|Yield|Rice, paddy|2010||0
+Crops|Tunisia|Production|Rice, paddy|2010||0
+Crops|Turkey|Area harvested|Rice, paddy|2010|ha|98966
+Crops|Turkey|Yield|Rice, paddy|2010|hg/ha|86899
+Crops|Turkey|Production|Rice, paddy|2010|tonnes|860000
+Crops|Turkmenistan|Area harvested|Rice, paddy|2010|ha|18000
+Crops|Turkmenistan|Yield|Rice, paddy|2010|hg/ha|17000
+Crops|Turkmenistan|Production|Rice, paddy|2010|tonnes|30600
+Crops|Turks and Caicos Islands|Area harvested|Rice, paddy|2010||0
+Crops|Turks and Caicos Islands|Yield|Rice, paddy|2010||0
+Crops|Turks and Caicos Islands|Production|Rice, paddy|2010||0
+Crops|Tuvalu|Area harvested|Rice, paddy|2010||0
+Crops|Tuvalu|Yield|Rice, paddy|2010||0
+Crops|Tuvalu|Production|Rice, paddy|2010||0
+Crops|Uganda|Area harvested|Rice, paddy|2010|ha|87000
+Crops|Uganda|Yield|Rice, paddy|2010|hg/ha|25070
+Crops|Uganda|Production|Rice, paddy|2010|tonnes|218111
+Crops|Ukraine|Area harvested|Rice, paddy|2010|ha|29300
+Crops|Ukraine|Yield|Rice, paddy|2010|hg/ha|50512
+Crops|Ukraine|Production|Rice, paddy|2010|tonnes|148000
+Crops|United Arab Emirates|Area harvested|Rice, paddy|2010||0
+Crops|United Arab Emirates|Yield|Rice, paddy|2010||0
+Crops|United Arab Emirates|Production|Rice, paddy|2010||0
+Crops|United Kingdom|Area harvested|Rice, paddy|2010||0
+Crops|United Kingdom|Yield|Rice, paddy|2010||0
+Crops|United Kingdom|Production|Rice, paddy|2010||0
+Crops|United Republic of Tanzania|Area harvested|Rice, paddy|2010|ha|1136290
+Crops|United Republic of Tanzania|Yield|Rice, paddy|2010|hg/ha|23323
+Crops|United Republic of Tanzania|Production|Rice, paddy|2010|tonnes|2650120
+Crops|United States of America|Area harvested|Rice, paddy|2010|ha|1462950
+Crops|United States of America|Yield|Rice, paddy|2010|hg/ha|75375
+Crops|United States of America|Production|Rice, paddy|2010|tonnes|11027010
+Crops|United States Virgin Islands|Area harvested|Rice, paddy|2010||0
+Crops|United States Virgin Islands|Yield|Rice, paddy|2010||0
+Crops|United States Virgin Islands|Production|Rice, paddy|2010||0
+Crops|Uruguay|Area harvested|Rice, paddy|2010|ha|161900
+Crops|Uruguay|Yield|Rice, paddy|2010|hg/ha|70954
+Crops|Uruguay|Production|Rice, paddy|2010|tonnes|1148738
+Crops|USSR|Area harvested|Rice, paddy|2010||0
+Crops|USSR|Yield|Rice, paddy|2010||0
+Crops|USSR|Production|Rice, paddy|2010||0
+Crops|Uzbekistan|Area harvested|Rice, paddy|2010|ha|69200
+Crops|Uzbekistan|Yield|Rice, paddy|2010|hg/ha|36098
+Crops|Uzbekistan|Production|Rice, paddy|2010|tonnes|249800
+Crops|Vanuatu|Area harvested|Rice, paddy|2010||0
+Crops|Vanuatu|Yield|Rice, paddy|2010||0
+Crops|Vanuatu|Production|Rice, paddy|2010||0
+Crops|Venezuela (Bolivarian Republic of)|Area harvested|Rice, paddy|2010|ha|180455
+Crops|Venezuela (Bolivarian Republic of)|Yield|Rice, paddy|2010|hg/ha|49851
+Crops|Venezuela (Bolivarian Republic of)|Production|Rice, paddy|2010|tonnes|899584
+Crops|Viet Nam|Area harvested|Rice, paddy|2010|ha|7489400
+Crops|Viet Nam|Yield|Rice, paddy|2010|hg/ha|53416
+Crops|Viet Nam|Production|Rice, paddy|2010|tonnes|40005600
+Crops|Wallis and Futuna Islands|Area harvested|Rice, paddy|2010||0
+Crops|Wallis and Futuna Islands|Yield|Rice, paddy|2010||0
+Crops|Wallis and Futuna Islands|Production|Rice, paddy|2010||0
+Crops|Western Sahara|Area harvested|Rice, paddy|2010||0
+Crops|Western Sahara|Yield|Rice, paddy|2010||0
+Crops|Western Sahara|Production|Rice, paddy|2010||0
+Crops|Yemen|Area harvested|Rice, paddy|2010||0
+Crops|Yemen|Yield|Rice, paddy|2010||0
+Crops|Yemen|Production|Rice, paddy|2010||0
+Crops|Yugoslav SFR|Area harvested|Rice, paddy|2010||0
+Crops|Yugoslav SFR|Yield|Rice, paddy|2010||0
+Crops|Yugoslav SFR|Production|Rice, paddy|2010||0
+Crops|Zambia|Area harvested|Rice, paddy|2010|ha|30788
+Crops|Zambia|Yield|Rice, paddy|2010|hg/ha|16778
+Crops|Zambia|Production|Rice, paddy|2010|tonnes|51656
+Crops|Zimbabwe|Area harvested|Rice, paddy|2010|ha|292
+Crops|Zimbabwe|Yield|Rice, paddy|2010|hg/ha|22773
+Crops|Zimbabwe|Production|Rice, paddy|2010|tonnes|664

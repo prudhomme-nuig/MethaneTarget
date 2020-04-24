@@ -27,7 +27,8 @@ convert_unit_dict={'1000 Head':1E3, #in Head
                     'kg/ha':1E-3,
                     'kg of nutrients':1E-3,
                     "g/capita/day":1E-6,
-                    "tonnes CO2/ha":1
+                    "tonnes CO2/ha":1,
+                    "tN/ha":1
                     }
 
 new_unit_dict={'1000 Head':'Head', #in Head
@@ -51,7 +52,8 @@ new_unit_dict={'1000 Head':'Head', #in Head
                     'kg of nutrients':'t',
                     "g/capita/day":'t',
                     't':'t',
-                    "tonnes CO2/ha":"t CO2/ha"
+                    "tonnes CO2/ha":"t CO2/ha",
+                    "tN/ha":"tN/ha"
                     }
 
 def read_FAOSTAT_df(file_name,convert_unit_dict=convert_unit_dict,delimiter=",",index_col=None):

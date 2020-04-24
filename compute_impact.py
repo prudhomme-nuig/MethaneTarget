@@ -29,24 +29,24 @@ item_list=['Cattle','Swine','Chickens','Sheep and Goats'] #'Rice, paddy'
 country_list=["Brazil","France","India","Ireland"]
 yield_dict={'Milk, Total':'Yield','Beef and Buffalo Meat':'Yield/Carcass Weight','Meat, pig':'Yield/Carcass Weight','Meat, Poultry':'Yield/Carcass Weight','Eggs Primary':'Yield','Sheep and Goat Meat':'Yield/Carcass Weight'}
 animal_producing_dict={'Milk, Total':'Milk Animals','Beef and Buffalo Meat':'Producing Animals/Slaughtered','Meat, pig':'Producing Animals/Slaughtered','Meat, Poultry':'Producing Animals/Slaughtered','Eggs Primary':'Laying','Sheep and Goat Meat':'Producing Animals/Slaughtered'}
-pathway_dict={"Ireland":["Ireland","Temperate"],
-            "France":["France","Temperate"],
-            "India":["India","Tropical"],
-            "Brazil":["Brazil","Tropical"]}
+pathway_dict={"Ireland":["Ireland"],#,"Temperate"
+            "France":["France"],#,"Temperate"
+            "India":["India"],#,"Tropical"
+            "Brazil":["Brazil"]}#,"Tropical"
 ruminant_list=['Cattle','Sheep and Goats']
 production_aggregation_dict={'Milk':['Milk, Total'],'Meat':['Beef and Buffalo Meat','Meat, pig','Meat, Poultry','Sheep and Goat Meat'],'Eggs':['Eggs Primary']}
 activity_df=pd.read_csv("output/activity_2050.csv")
 activity_ref_df=read_FAOSTAT_df("data/FAOSTAT_manure_management.csv")
-yields_df=read_FAOSTAT_df("data/FAOSTAT_animal_yields.csv")
+yields_df=read_FAOSTAT_df("data/FAOSTAT_animal_yields.csv",delimiter="|")
 feed_per_head_df=read_FAOSTAT_df("data/GLEAM_feed.csv")
 yield_feed_df=pd.read_csv("output/feed_yield_aggregate.csv")
 yield_grass_df=pd.read_csv("output/grass_yield.csv")
 density_df=pd.read_csv("output/density_livestock.csv",index_col=[0])
 area_df=pd.read_csv("data/FAOSTAT_areas.csv",index_col=[0])
-yield_rice_df=read_FAOSTAT_df("data/FAOSTAT_rice.csv")
+yield_rice_df=read_FAOSTAT_df("data/FAOSTAT_rice.csv",delimiter="|")
 grassland_area_df=pd.read_csv('output/grassland_area.csv')
 emission_intensity_N2O_df=pd.read_csv("output/emission_intensity_N2O.csv")
-N_fertilizer_rate_df=read_FAOSTAT_df("data/FAOSTAT_N_fertilizer_rate.csv")
+N_fertilizer_rate_df=read_FAOSTAT_df("output/N_fertilizer_rate.csv")
 kha_to_ha=1E3
 climatic_region={"India":"Tropical","Brazil":"Tropical","Ireland":"Temperate","France":"Temperate"}
 carbon_growth_rate={"Tropical":4.86*48./12.,"Temperate":2.8*48./12.}
@@ -142,10 +142,11 @@ for country in country_list:
         activity_df.loc[country_pathway_mask,'Feed area change']=activity_df.loc[country_pathway_mask,'Feed area']-activity_df.loc[country_pathway_mask,'Feed area 2010']
         activity_df.loc[country_pathway_mask,'Feed area index']=activity_df.loc[country_pathway_mask,'Feed area']/activity_df.loc[country_pathway_mask,'Feed area 2010']
         #N2O emissions from fertilization of feed
-        activity_df.loc[country_pathway_mask,'N2O feed']=activity_df.loc[country_pathway_mask,'Feed area']*N_fertilizer_rate_df.loc[(N_fertilizer_rate_df['Area']==country),'Value'].values[0]*(1.+yield_change)*emission_intensity_N2O_df.loc[(emission_intensity_N2O_df['Country']==country) & (emission_intensity_N2O_df['Emission']=='fertilizer'),'Intensity'].values[0]
-        activity_df.loc[country_pathway_mask,'N2O feed 2010']=activity_df.loc[country_pathway_mask,'Feed area 2010']*N_fertilizer_rate_df.loc[(N_fertilizer_rate_df['Area']==country),'Value'].values[0]*emission_intensity_N2O_df.loc[(emission_intensity_N2O_df['Country']==country) & (emission_intensity_N2O_df['Emission']=='fertilizer'),'Intensity'].values[0]
-        activity_df.loc[country_pathway_mask,'N2O feed index']=activity_df.loc[country_pathway_mask,'N2O feed']/activity_df.loc[country_pathway_mask,'N2O feed 2010']
-        activity_df.loc[country_pathway_mask,'N2O']=activity_df.loc[country_pathway_mask,'N2O feed']+activity_df.loc[country_pathway_mask,'N2O manure']
+        activity_df.loc[country_pathway_mask,'N2O fert']=activity_df.loc[country_pathway_mask,'Feed area']*N_fertilizer_rate_df.loc[(N_fertilizer_rate_df['Area']==country) & (N_fertilizer_rate_df['Item']=="Cropland"),'Value'].values[0]*(1.+yield_change)*emission_intensity_N2O_df.loc[(emission_intensity_N2O_df['Country']==country) & (emission_intensity_N2O_df['Emission']=='fertilizer'),'Intensity'].values[0]
+        activity_df.loc[country_pathway_mask,'N2O fert']+=activity_df.loc[country_pathway_mask,'Grass area']*N_fertilizer_rate_df.loc[(N_fertilizer_rate_df['Area']==country) & (N_fertilizer_rate_df['Item']=="Grassland"),'Value'].values[0]*(1.+yield_change)*emission_intensity_N2O_df.loc[(emission_intensity_N2O_df['Country']==country) & (emission_intensity_N2O_df['Emission']=='fertilizer'),'Intensity'].values[0]
+        activity_df.loc[country_pathway_mask,'N2O fert 2010']=activity_df.loc[country_pathway_mask,'Feed area 2010']*N_fertilizer_rate_df.loc[(N_fertilizer_rate_df['Area']==country),'Value'].values[0]*emission_intensity_N2O_df.loc[(emission_intensity_N2O_df['Country']==country) & (emission_intensity_N2O_df['Emission']=='fertilizer'),'Intensity'].values[0]
+        activity_df.loc[country_pathway_mask,'N2O fert index']=activity_df.loc[country_pathway_mask,'N2O fert']/activity_df.loc[country_pathway_mask,'N2O fert 2010']
+        activity_df.loc[country_pathway_mask,'N2O']=activity_df.loc[country_pathway_mask,'N2O fert']+activity_df.loc[country_pathway_mask,'N2O manure']
         activity_df.loc[country_pathway_mask & (activity_df.loc[country_pathway_mask,'Feed area 2010']==0),'Feed area index']=0
         activity_df.loc[country_pathway_mask,'Total area change']=activity_df.loc[country_pathway_mask,'Grass area change']+activity_df.loc[country_pathway_mask,'Feed area change']+activity_df.loc[country_pathway_mask,'Rice area change']
         activity_df.loc[country_pathway_mask,'Total area']=activity_df.loc[country_pathway_mask,'Grass area']+activity_df.loc[country_pathway_mask,'Feed area']+activity_df.loc[country_pathway_mask,'Rice area']

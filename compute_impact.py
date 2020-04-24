@@ -50,7 +50,8 @@ N_fertilizer_rate_df=read_FAOSTAT_df("output/N_fertilizer_rate.csv")
 kha_to_ha=1E3
 climatic_region={"India":"Tropical","Brazil":"Tropical","Ireland":"Temperate","France":"Temperate"}
 carbon_growth_rate={"Tropical":4.86*48./12.,"Temperate":2.8*48./12.}
-carbon_release_deforestation=25.117 #tCO2e/yr
+deforestation_df=pd.read_csv("output/deforestation_factor.csv")
+carbon_release_deforestation=deforestation_df.loc[0,"World"]
 
 #Change yield depending on the sensitivty analysis
 new_yield_feed_df=pd.DataFrame(columns=yield_feed_df.columns.values)

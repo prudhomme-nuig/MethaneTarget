@@ -7,14 +7,25 @@ Compute national nitrous oxyde intensity of manure and fertilization
 import pandas as pd
 import numpy as np
 from common_data import read_FAOSTAT_df
+import argparse
+
+parser = argparse.ArgumentParser('Compute national nitrous oxyde intensity of manure and fertilization')
+parser.add_argument('--no-mitigation', action='store_true', help='No mitigation option')
+
+args = parser.parse_args()
 
 country_list=["France","Ireland","Brazil","India","Netherlands"]
 animal_list=["Cattle","Chickens","Mules and Asses","Poultry Birds","Sheep and Goats","Swine"]
 
 #Mitigation potential and cost
 # fom national MAC curves
-mitigation_potential_df=pd.read_csv("data/national_mitigation_mac.csv",dtype={"Mitigation potential":np.float64})
-#mitigation_potential_df=pd.read_csv("data/no_mitigation.csv",dtype={"Mitigation potential":np.float64})
+#Option with or without mitigation aplied in 2050 for N2O and methane
+if args.no_mitigation:
+    mitigation_potential_df=pd.read_csv("data/no_mitigation.csv",dtype={"Mitigation potential":np.float64})
+    output_file_name='output/emission_intensity_N2O_no_mitigation.csv'
+else:
+    mitigation_potential_df=pd.read_csv("data/national_mitigation_mac.csv",dtype={"Mitigation potential":np.float64})
+    output_file_name='output/emission_intensity_N2O.csv'
 
 #Read methane emissions in 2010 from FAOSTAT
 N2O_df=read_FAOSTAT_df("data/FAOSTAT_N2O_reference.csv",delimiter=",")
@@ -94,5 +105,5 @@ for emission_df in [aggregate_df,N2O_fertilizer_df]:
                     intensity=emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Implied" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
                     output_df.loc[index,:]=[country,emission_df.name,item,intensity]
             index+=1
-output_df.to_csv('output/emission_intensity_N2O.csv',index=False)
+output_df.to_csv(output_file_name,index=False)
 #output_activity_df.to_csv('output/activity_2050.csv',index=False)

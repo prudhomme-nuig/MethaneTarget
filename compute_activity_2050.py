@@ -8,15 +8,27 @@ from copy import deepcopy
 import numpy as np
 import pandas as pd
 from common_data import read_FAOSTAT_df
+import argparse
+
+parser = argparse.ArgumentParser('Compute national unit of production compatible with national methane quotas')
+parser.add_argument('--no-mitigation', action='store_true', help='No mitigation option')
+
+args = parser.parse_args()
 
 methane_quota_df=pd.read_csv("output/methane_quota.csv")
 
-pathways_df={"Ireland":["Ireland","Temperate"],
-            "France":["France","Temperate"],
-            "India":["India","Tropical"],
-            "Brazil":["Brazil","Tropical"]}
+pathways_df={"Ireland":["Ireland"],#,"Temperate"
+            "France":["France"],#,"Temperate"
+            "India":["India"], #,"Tropical"
+            "Brazil":["Brazil"]} #,"Tropical"
 
-methane_intensity_df=pd.read_csv("output/emission_intensity_2050.csv")
+if args.no_mitigation:
+    methane_intensity_df=pd.read_csv("output/emission_intensity_2050_no_mitigation.csv")
+    output_file_name='output/activity_2050_no_mitigation.csv'
+else:
+    methane_intensity_df=pd.read_csv("output/emission_intensity_2050.csv")
+    output_file_name='output/activity_2050.csv'
+
 methane_all_reference_df=read_FAOSTAT_df("data/FAOSTAT_methane_reference.csv")
 
 country_list=["Ireland","France","India","Brazil"]
@@ -50,4 +62,4 @@ for country in country_list:
         output_df.loc[:,'Pathways']=pathways
         activity_2050=pd.concat([activity_2050,output_df])
         activity_2050.index=range(len(activity_2050))
-activity_2050.to_csv("output/activity_2050.csv",index=False)
+activity_2050.to_csv(output_file_name,index=False)

@@ -15,12 +15,24 @@ parser.add_argument('--sensitivity-analysis', help='Yields can be +50 or -50')
 
 args = parser.parse_args()
 
+#Option for sensitivity analysis: change yield of +50% or -50%
 if args.sensitivity_analysis is not None:
     yield_change=float(args.sensitivity_analysis)/100.
     file_name_suffix='_yield'+args.sensitivity_analysis
 else:
     yield_change=0
     file_name_suffix=''
+
+#Option with or without mitigation aplied in 2050 for N2O and methane
+if args.no_mitigation:
+    emission_intensity_N2O_df=pd.read_csv("output/emission_intensity_N2O_no_mitigation.csv")
+    activity_df=pd.read_csv("output/activity_2050_no_mitigation.csv")
+    file_name_suffix=file_name_suffix+'_no_mitigation'
+else:
+    emission_intensity_N2O_df=pd.read_csv("output/emission_intensity_N2O.csv")
+    activity_df=pd.read_csv("output/activity_2050.csv")
+    output_file_name='output/emission_intensity_N2O.csv'
+    file_name_suffix+=file_name_suffix+''
 
 demand_dict={'Grass':['Grass area'],'Grain':['Feed prodution','Cropland area (Feed)']}
 #,'Rice, paddy':['prodution','area']
@@ -35,7 +47,6 @@ pathway_dict={"Ireland":["Ireland"],#,"Temperate"
             "Brazil":["Brazil"]}#,"Tropical"
 ruminant_list=['Cattle','Sheep and Goats']
 production_aggregation_dict={'Milk':['Milk, Total'],'Meat':['Beef and Buffalo Meat','Meat, pig','Meat, Poultry','Sheep and Goat Meat'],'Eggs':['Eggs Primary']}
-activity_df=pd.read_csv("output/activity_2050.csv")
 activity_ref_df=read_FAOSTAT_df("data/FAOSTAT_manure_management.csv")
 yields_df=read_FAOSTAT_df("data/FAOSTAT_animal_yields.csv",delimiter="|")
 feed_per_head_df=read_FAOSTAT_df("data/GLEAM_feed.csv")
@@ -45,7 +56,6 @@ density_df=pd.read_csv("output/density_livestock.csv",index_col=[0])
 area_df=pd.read_csv("data/FAOSTAT_areas.csv",index_col=[0])
 yield_rice_df=read_FAOSTAT_df("data/FAOSTAT_rice.csv",delimiter="|")
 grassland_area_df=pd.read_csv('output/grassland_area.csv')
-emission_intensity_N2O_df=pd.read_csv("output/emission_intensity_N2O.csv")
 N_fertilizer_rate_df=read_FAOSTAT_df("output/N_fertilizer_rate.csv")
 kha_to_ha=1E3
 climatic_region={"India":"Tropical","Brazil":"Tropical","Ireland":"Temperate","France":"Temperate"}

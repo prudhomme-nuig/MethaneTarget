@@ -7,16 +7,34 @@ Compute methane intensity per unit of production in 2050 for each intensificatio
 import pandas as pd
 import numpy as np
 from common_data import read_FAOSTAT_df
+import argparse
 
-country_list=["France","Ireland","Brazil","India","Netherlands"]
+parser = argparse.ArgumentParser('Compute methane intensity per unit of production in 2050 for each intensification pathway')
+parser.add_argument('--no-mitigation', action='store_true', help='No mitigation option')
+
+args = parser.parse_args()
+
+country_list=["France","Ireland","Brazil","India"]
 animal_list=["Cattle","Chickens","Mules and Asses","Poultry Birds","Sheep and Goats","Swine"]
 GWP100_CH4=34
 GWP100_N2O=298
 
 #Mitigation potential and cost
 # fom national MAC curves
-mitigation_potential_df=pd.read_csv("data/national_mitigation_mac.csv",dtype={"Mitigation potential":np.float64})
-#mitigation_potential_df=pd.read_csv("data/no_mitigation.csv",dtype={"Mitigation potential":np.float64})
+if args.no_mitigation:
+    mitigation_potential_df=pd.read_csv("data/no_mitigation.csv",dtype={"Mitigation potential":np.float64})
+    output_file_name='output/emission_intensity_2050_no_mitigation.csv'
+else:
+    mitigation_potential_df=pd.read_csv("data/national_mitigation_mac.csv",dtype={"Mitigation potential":np.float64})
+    output_file_name='output/emission_intensity_2050.csv'
+
+#Option with or without mitigation aplied in 2050 for N2O and methane
+if args.no_mitigation:
+    mitigation_potential_df=pd.read_csv("data/no_mitigation.csv",dtype={"Mitigation potential":np.float64})
+    output_file_name='output/emission_intensity_2050_no_mitigation.csv'
+else:
+    mitigation_potential_df=pd.read_csv("data/national_mitigation_mac.csv",dtype={"Mitigation potential":np.float64})
+    output_file_name='output/emission_intensity_2050.csv'
 
 #Read methane emissions in 2010 from FAOSTAT
 methane_df=read_FAOSTAT_df("data/FAOSTAT_methane.csv",delimiter=",")
@@ -111,6 +129,6 @@ for emission_df in [methane_Ent_Ferm_df,methane_rice_df,methane_Man_df]:
             activity=compute_activity(mitigation_potential_df,emission_df,country,item)
             output_activity_df.loc[index,:]=[country,emission_df.name,item,activity]
             index+=1
-output_df.to_csv('output/emission_intensity_2050.csv',index=False)
+output_df.to_csv(output_file_name,index=False)
 
 #output_activity_df.to_csv('output/activity_2050.csv',index=False)

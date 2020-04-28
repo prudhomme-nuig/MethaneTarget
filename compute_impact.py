@@ -38,7 +38,8 @@ demand_dict={'Grass':['Grass area'],'Grain':['Feed prodution','Cropland area (Fe
 #,'Rice, paddy':['prodution','area']
 production_dict={'Cattle':['Milk, Total','Beef and Buffalo Meat'],'Rice, paddy':['Rice, paddy'],'Swine':['Meat, pig'],'Chickens':['Meat, Poultry','Eggs Primary'],'Sheep and Goats':['Sheep and Goat Meat']}
 item_list=['Cattle','Swine','Chickens','Sheep and Goats'] #'Rice, paddy'
-country_list=["Brazil","France","India","Ireland"]
+country_intensification_pd=pd.read_csv("output/model_country.csv",index_col=0)
+country_list=list(country_intensification_pd.columns)
 yield_dict={'Milk, Total':'Yield','Beef and Buffalo Meat':'Yield/Carcass Weight','Meat, pig':'Yield/Carcass Weight','Meat, Poultry':'Yield/Carcass Weight','Eggs Primary':'Yield','Sheep and Goat Meat':'Yield/Carcass Weight'}
 animal_producing_dict={'Milk, Total':'Milk Animals','Beef and Buffalo Meat':'Producing Animals/Slaughtered','Meat, pig':'Producing Animals/Slaughtered','Meat, Poultry':'Producing Animals/Slaughtered','Eggs Primary':'Laying','Sheep and Goat Meat':'Producing Animals/Slaughtered'}
 pathway_dict={"Ireland":["Ireland","Intensification"],#,"Temperate"
@@ -57,7 +58,6 @@ area_df=pd.read_csv("data/FAOSTAT_areas.csv",index_col=[0])
 yield_rice_df=read_FAOSTAT_df("data/FAOSTAT_rice.csv",delimiter="|")
 grassland_area_df=pd.read_csv('output/grassland_area.csv')
 N_fertilizer_rate_df=read_FAOSTAT_df("output/N_fertilizer_rate.csv")
-country_intensification_pd=pd.read_csv("output/model_country.csv",index_col=0)
 kha_to_ha=1E3
 climatic_region={"India":"Tropical","Brazil":"Tropical","Ireland":"Temperate","France":"Temperate"}
 carbon_growth_rate={"Tropical":4.86*48./12.,"Temperate":2.8*48./12.}

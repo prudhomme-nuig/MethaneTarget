@@ -10,7 +10,7 @@ from common_data import convert_unit_dict,read_FAOSTAT_df
 
 #Data
 country_pd=pd.read_csv("output/model_country.csv",index_col=0)
-country_list=list(country_pd.values)
+country_list=list(np.unqiue(country_pd.values))
 country_list.extend(list(country_pd.columns))
 
 #read yields

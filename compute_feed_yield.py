@@ -9,7 +9,9 @@ import pandas as pd
 from common_data import convert_unit_dict,read_FAOSTAT_df
 
 #Data
-country_list=["Ireland","France","India","Brazil","Netherlands"]
+country_pd=pd.read_csv("output/model_country.csv",index_col=0)
+country_list=list(country_pd.values)
+country_list.extend(list(country_pd.columns))
 
 #read yields
 feed_yields_df=read_FAOSTAT_df("data/FAOSTAT_feed_yields.csv")

@@ -17,10 +17,12 @@ args = parser.parse_args()
 
 methane_quota_df=pd.read_csv("output/methane_quota.csv")
 
-pathways_df={"Ireland":["Ireland"],#,"Temperate"
-            "France":["France"],#,"Temperate"
-            "India":["India"], #,"Tropical"
-            "Brazil":["Brazil"]} #,"Tropical"
+pathways_df={"Ireland":["Ireland","Intensification"],#,"Temperate"
+            "France":["France","Intensification"],#,"Temperate"
+            "India":["India","Intensification"], #,"Tropical"
+            "Brazil":["Brazil","Intensification"]} #,"Tropical"
+
+country_intensification_pd=pd.read_csv("output/model_country.csv",index_col=0)
 
 if args.no_mitigation:
     methane_intensity_df=pd.read_csv("output/emission_intensity_2050_no_mitigation.csv")
@@ -46,11 +48,16 @@ for country in country_list:
     for pathways in pathways_df[country]:
         output_df=deepcopy(methane_quota_df.loc[methane_quota_df['Country']==country,:])
         for (emission_type,item) in zip(methane_intensity_df['Emission'],methane_intensity_df['Item']):
+            if pathways == "Intensification":
+                pathways=country_intensification_pd.loc[item,country]
+                pathway_name="Improved"
+            else:
+                pathway_name=country
             if methane_intensity_df.loc[(methane_intensity_df['Country']==pathways) & (methane_intensity_df['Emission']==emission_type) & (methane_intensity_df['Item']==item),'Intensity'].values[0]==0.0:
                 methane_intensity=methane_intensity_df.loc[(methane_intensity_df['Country']==country) & (methane_intensity_df['Emission']==emission_type) & (methane_intensity_df['Item']==item),'Intensity']
             else:
                 methane_intensity=methane_intensity_df.loc[(methane_intensity_df['Country']==pathways) & (methane_intensity_df['Emission']==emission_type) & (methane_intensity_df['Item']==item),'Intensity']
-            methane_reference_df=read_FAOSTAT_df("data/FAOSTAT_"+item_file_dict[emission_type]+".csv")
+            methane_reference_df=read_FAOSTAT_df("data/FAOSTAT_"+item_file_dict[emission_type]+".csv",delimiter='|')
             item_share=methane_reference_df['Value'][(methane_reference_df['Area']==country) & (methane_reference_df['Item']==item) & (['Emissions (CH4)' in element for element in methane_reference_df['Element']])].values[0]/methane_all_reference_df['Value'][(methane_all_reference_df['Area']==country)].values[0]
             methane_quota=methane_quota_df.loc[methane_quota_df['Country']==country,'National quota'].values*item_share
             if methane_intensity.values[0]>0:
@@ -59,7 +66,7 @@ for country in country_list:
             else:
                 output_df.loc[:,'Quota '+emission_type+' '+item]=0
                 output_df.loc[:,'Activity '+emission_type+' '+item]=0
-        output_df.loc[:,'Pathways']=pathways
+        output_df.loc[:,'Pathways']=pathway_name
         activity_2050=pd.concat([activity_2050,output_df])
         activity_2050.index=range(len(activity_2050))
 activity_2050.to_csv(output_file_name,index=False)

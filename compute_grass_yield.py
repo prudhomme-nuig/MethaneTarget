@@ -9,7 +9,9 @@ import pandas as pd
 from common_data import read_FAOSTAT_df
 
 #Compute average grass yield per country
-country_list=["Ireland","France","India","Brazil","Netherlands"]
+country_pd=pd.read_csv("output/model_country.csv",index_col=0)
+country_list=list(country_pd.values)
+country_list.extend(list(country_pd.columns)
 
 #Load grassland area
 area_df=read_FAOSTAT_df("data/FAOSTAT_areas.csv")

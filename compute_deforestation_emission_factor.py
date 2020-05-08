@@ -14,6 +14,7 @@ from copy import deepcopy
 last_year=2017
 first_year=2008
 
+country_list=["France","Ireland","Brazil","India"]
 agricultural_df=read_FAOSTAT_df("data/FAOSTAT_agricultural_expansion.csv")
 agricultural_expansion_df=pd.DataFrame(columns=["Area","Value"])
 agricultural_expansion_df["Value"]=(agricultural_df.loc[agricultural_df["Year"]==last_year,"Value"].values-agricultural_df.loc[agricultural_df["Year"]==first_year,"Value"].values)*1E-6
@@ -51,4 +52,10 @@ for country in agricultural_selection["Area"].values:
     print(deforestation_df.loc[(deforestation_df["Area"]==country) & mask,'Value'].values)
 mean_emission_factor_df=pd.DataFrame(columns=["World"])
 mean_emission_factor_df["World"]=[np.sum(total_emission)/np.sum(total_deforestation)/20]
+for country in country_list:
+    if cumulative_deforestation_pd.loc[cumulative_deforestation_pd["Area"]==country,"Value"].sum()>0:
+        mean_emission_factor_df[country]=cumulative_emission_pd.loc[(cumulative_emission_pd["Area"]==country),"Value"].sum()/cumulative_deforestation_pd.loc[cumulative_deforestation_pd["Area"]==country,"Value"].sum()/20
+    else:
+        mean_emission_factor_df[country]=mean_emission_factor_df["World"]
+
 mean_emission_factor_df.to_csv("output/deforestation_factor.csv")

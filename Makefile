@@ -63,7 +63,7 @@ output/activity_2050.csv:output compute_activity_2050.py output/methane_quota.cs
 				${launch_python} compute_activity_2050.py
 
 #Compute aggregate feed yield with national yield
-output/feed_yield_aggregate.csv:compute_feed_yield.py output
+output/feed_yield_aggregate.csv:compute_feed_yield.py output output/share_trade_feed.csv
 					${launch_python} compute_feed_yield.py
 
 #Compute mean grass yield at a national scale based on

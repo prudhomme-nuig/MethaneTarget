@@ -52,6 +52,11 @@ output/emission_intensity_2050.csv:output compute_methane_intensity_2050.py outp
 output/emission_intensity_2050_no_mitigation.csv:output compute_methane_intensity_2050.py output/model_countries.csv
 				${launch_python} compute_methane_intensity_2050.py --no-mitigation
 
+#Compute share of each crop whih is domestically produced
+# and the share of feed in the total production
+output/share_trade_feed.csv:compute_trade_share.py output
+				${launch_python} compute_trade_share.py
+
 #Compute national production compatible with national methane quotas
 #defined in output/methane_quota.csv
 output/activity_2050.csv:output compute_activity_2050.py output/methane_quota.csv output/emission_intensity_2050.csv

@@ -2,7 +2,7 @@
 #Read the README.md
 
 #To be changed depending on the localization of your python folder
-launch_python=/mnt/c/Users/remip/Anaconda3/python.exe
+launch_python=python.exe
 
 output:
 		mkdir -p $@
@@ -38,18 +38,13 @@ output/FAOSTAT_protein_production.csv: output compute_protein_production_ref.py
 output/methane_quota.csv:output compute_methane_quota.py output/production_2010.csv output/FAOSTAT_methane_debt.csv output/FAOSTAT_protein_production.csv
 				${launch_python} compute_methane_quota.py
 
-# Compute "model" country for intensificaiton pathways
-# chosen among "temperate" and "tropical" countries
-output/model_countries.csv:output compute_model_countries.py
-				${launch_python} compute_model_countries.py
-
 #Compute methane intensity per unit of production in 2050
 # for each intensification pathway, with and without mitigation
-output/emission_intensity_2050.csv:output compute_methane_intensity_2050.py output/model_countries.csv
+output/emission_intensity_2050.csv:output compute_methane_intensity_2050.py
 				${launch_python} compute_methane_intensity_2050.py
 
 #Without mitigation technologies applied
-output/emission_intensity_2050_no_mitigation.csv:output compute_methane_intensity_2050.py output/model_countries.csv
+output/emission_intensity_2050_no_mitigation.csv:output compute_methane_intensity_2050.py
 				${launch_python} compute_methane_intensity_2050.py --no-mitigation
 
 #Compute share of each crop whih is domestically produced
@@ -77,7 +72,7 @@ output/emission_intensity_N2O.csv: output
 				${launch_python} compute_N2O_intensity_2050.py
 
 #Without mitigation technologies applied
-output/emission_intensity_N2O_no_mitigation.csv:output compute_N2O_intensity_2050.py output/model_countries.csv
+output/emission_intensity_N2O_no_mitigation.csv:output compute_N2O_intensity_2050.py
 				${launch_python} compute_N2O_intensity_2050.py --no-mitigation
 
 #Compute deforesattion emission factor based on IPCC methodology

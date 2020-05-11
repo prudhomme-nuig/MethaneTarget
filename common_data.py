@@ -68,3 +68,6 @@ def read_FAOSTAT_df(file_name,convert_unit_dict=convert_unit_dict,delimiter=",",
             df.loc[df['Unit']==unit,'Value']=df.loc[df['Unit']==unit,'Value'].values*convert_unit_dict[unit]
             df.loc[df['Unit']==unit,'Unit']=new_unit_dict[unit]
     return df
+
+GWP100_N2O=298
+GWP100_CH4=34

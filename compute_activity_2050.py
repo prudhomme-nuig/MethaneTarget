@@ -17,10 +17,10 @@ args = parser.parse_args()
 
 methane_quota_df=pd.read_csv("output/methane_quota.csv")
 
-pathways_df={"Ireland":["Ireland","Intensification"],#,"Temperate"
-            "France":["France","Intensification"],#,"Temperate"
-            "India":["India","Intensification"], #,"Tropical"
-            "Brazil":["Brazil","Intensification"]} #,"Tropical"
+pathways_df={"Ireland":["Ireland"],#,"Temperate"
+            "France":["France"],#,"Temperate"
+            "India":["India"], #,"Tropical"
+            "Brazil":["Brazil"]} #,"Tropical"
 
 country_intensification_pd=pd.read_csv("output/model_country.csv",index_col=0)
 

@@ -12,6 +12,7 @@ import matplotlib.cm as cm
 import seaborn as sns
 import argparse
 from common_data import read_FAOSTAT_df
+from common_methane import compute_CO2_equivalent
 
 parser = argparse.ArgumentParser('Box plot of methane quotas,production, areas, emissions...')
 parser.add_argument('--sensitivity-analysis', help='Yields can be +50 or -50')
@@ -158,30 +159,6 @@ def plot_boxplot_quota_with_sns(df_to_plot,country_list,y_column_name,allocation
     fig.savefig(file_name)
     plt.close('all')
 
-def compute_CO2_equivalent(input_df,rule,emission_ref_year,country,ponderation_in_GWP_star=None,offset_change_world=None):
-    output_df=deepcopy(input_df)
-    is_GWP100=False
-    Horizon=100.
-    if rule=='Grand-fathering':
-        emission_ref=emission_ref_year
-    elif rule=='Debt':
-        emission_ref=input_df.values-ponderation_in_GWP_star[country].values[0]*offset_change_world
-    elif rule=='GDP':
-        emission_ref=input_df.values-ponderation_in_GWP_star[ponderation_in_GWP_star['Country Name']==country]['2010'].values[0]/ponderation_in_GWP_star[ponderation_in_GWP_star['Country Name']=='World']['2010'].values[0]*offset_change_world
-    elif rule=='Population':
-        emission_ref=emission_ref_year*ponderation_in_GWP_star[ponderation_in_GWP_star['Country Name']==country]['2010'].values[0]/ponderation_in_GWP_star[ponderation_in_GWP_star['Country Name']=='World']['2010'].values[0]
-    elif rule=='Protein':
-        emission_ref=emission_ref_year*ponderation_in_GWP_star[country].values[0]
-    elif rule=='GWP100':
-        is_GWP100=True
-    else:
-        print('Unknown method. Code it!')
-    if is_GWP100:
-        output_df=input_df*GWP100_CH4
-    else:
-        output_df=(input_df.values-emission_ref)*(GWP100_CH4*Horizon)/40.
-    return output_df
-
 #Load impacts for different scenarios
 activity_df=pd.read_csv("output/impact_2050"+file_name_suffix+".csv")
 #Change name of rice for esthetic in graph
@@ -192,6 +169,9 @@ for country in country_list:
 
 activity_df.loc[:,'National methane index']=activity_df.loc[:,'National quota']/activity_df.loc[:,'National methane 2010']
 activity_df.loc[activity_df['National methane 2010']==0,'National methane index']=0
+
+#Read methane Debt
+methane_debt_df=pd.read_csv("output/FAOSTAT_methane_debt_value.csv")
 
 #Print methane quota
 df_to_plot=activity_df.loc[:,['Country','Pathways',"National methane 2010","National methane index","Allocation rule"]]
@@ -296,7 +276,7 @@ for country in country_list:
     for rule in np.unique(df_to_plot['Allocation rule']):
         country_rule_mak=(df_pivot['Allocation rule'][country]==rule) & (~np.isnan(df_pivot['N2O'][country]))
         N2O_emissions=df_pivot['N2O'].loc[country_rule_mak,country]*t_2_Mt*GWP100_N2O
-        CO2_equivalent=compute_CO2_equivalent(df_pivot['National quota'].loc[country_rule_mak,country],rule,emission_ref_year,country,ponderation_in_GWP_star=ponderation_dict[rule],offset_change_world=pd.pivot(activity_df,columns='Country')['CO2 offset world'][country][country_rule_mak])
+        CO2_equivalent=compute_CO2_equivalent(df_pivot['National quota'].loc[country_rule_mak,country],rule,emission_ref_year,country,ponderation_in_GWP_star=ponderation_dict[rule],methane_debt=methane_debt_df)
         df_to_plot.loc[df_to_plot['Allocation rule']==rule,country]=-df_offset.loc[country_rule_mak,country]*t_to_Mt+CO2_equivalent*t_to_Mt+N2O_emissions
 plot_boxplot(df_to_plot,country_list,"AFOLU balance(MtCO2eq)","Figs/AFOLU_balance_bar_plot_countries"+file_name_suffix+".png")
 #plot_boxplot(df_to_plot,country_list,"Net AFOLU balance (MtCH4)","Figs/CH4_net_bar_plot_countries.pdf")

@@ -14,9 +14,10 @@ parser.add_argument('--no-mitigation', action='store_true', help='No mitigation 
 
 args = parser.parse_args()
 
-country_pd=pd.read_csv("output/model_country.csv",index_col=0)
-country_list=list(np.unique(country_pd.values))
-country_list.extend(list(country_pd.columns))
+country_list=["France","Ireland","Brazil","India"]
+# country_pd=pd.read_csv("output/model_country.csv",index_col=0)
+# country_list=list(np.unique(country_pd.values))
+# country_list.extend(list(country_pd.columns))
 
 animal_list=["Cattle, non-dairy","Cattle, dairy","Chickens, layers","Poultry Birds","Sheep and Goats","Swine"]
 GWP100_CH4=34

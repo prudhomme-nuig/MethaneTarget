@@ -15,8 +15,7 @@ FB_df=read_FAOSTAT_df("data/FAOSTAT_trade.csv",delimiter='|')
 FB_df=FB_df.drop("Domain",axis=1)
 
 #List of country
-country_intensification_pd=pd.read_csv("output/model_country.csv",index_col=0)
-country_list=list(country_intensification_pd.columns)
+country_list=["France","Ireland","Brazil","India"]
 
 output_df=pd.DataFrame(columns=FB_df.columns);index=0
 feed_element_mask=FB_df["Element"]=="Feed"

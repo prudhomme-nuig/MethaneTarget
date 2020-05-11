@@ -9,9 +9,7 @@ import pandas as pd
 from common_data import read_FAOSTAT_df
 
 #Country studied in the article
-country_pd=pd.read_csv("output/model_country.csv",index_col=0)
-country_list=list(np.unique(country_pd.values))
-country_list.extend(list(country_pd.columns)
+country_list=["France","Ireland","Brazil","India"]
 
 #Load grassland area
 area_df=read_FAOSTAT_df("data/FAOSTAT_areas.csv")
@@ -26,7 +24,7 @@ for country in country_list:
             grassland_area_df.loc[0,country]+=area_df.loc[country_grass_mask,'Value'].values[0]
 
 #Load animal number
-animal_number_df=read_FAOSTAT_df("data/FAOSTAT_manure_management.csv",delimiter=",")
+animal_number_df=read_FAOSTAT_df("data/FAOSTAT_manure_management.csv",delimiter="|")
 
 #Load feed share from gleam
 feed_per_head_df=read_FAOSTAT_df("data/GLEAM_feed.csv")

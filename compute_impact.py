@@ -53,7 +53,7 @@ ruminant_list=['Cattle','Sheep and Goats']
 production_aggregation_dict={'Milk':['Milk, Total'],'Meat':['Beef and Buffalo Meat','Meat, pig','Meat, Poultry','Sheep and Goat Meat'],'Eggs':['Eggs Primary']}
 activity_ref_df=read_FAOSTAT_df("data/FAOSTAT_manure_management.csv",delimiter="|")
 yields_df=read_FAOSTAT_df("data/FAOSTAT_animal_yields.csv",delimiter="|")
-feed_per_head_df=read_FAOSTAT_df("data/GLEAM_feed.csv")
+feed_per_head_df=read_FAOSTAT_df("data/GLEAM_feed.csv",index_col=0)
 yield_feed_df=pd.read_csv("output/feed_yield_aggregate.csv")
 yield_grass_df=pd.read_csv("output/grass_yield.csv")
 density_df=pd.read_csv("output/density_livestock.csv",index_col=[0])
@@ -66,6 +66,8 @@ climatic_region={"India":"Tropical","Brazil":"Tropical","Ireland":"Temperate","F
 carbon_growth_rate={"Tropical":4.86*48./12.,"Temperate":2.8*48./12.}
 deforestation_df=pd.read_csv("output/deforestation_factor.csv")
 carbon_release_deforestation=deforestation_df.loc[0,"World"]
+trade_feed_df=pd.read_csv("output/trade_aggregate_feed.csv",index_col=0)
+yield_feed_international_df=pd.read_csv("output/feed_yield_global_aggregate.csv",index_col=0)
 
 #Change yield depending on the sensitivty analysis
 new_yield_feed_df=pd.DataFrame(columns=yield_feed_df.columns.values)
@@ -100,12 +102,18 @@ for country in country_list:
             #Feed production
             feed='Grains'
             country_pathway_item_feed_mask=(feed_per_head_df['Country']==pathway_tmp) & (feed_per_head_df['Item']==item) & (feed_per_head_df['Feed']==feed)
-            activity_df.loc[country_pathway_mask,'Feed production '+item]=feed_per_head_df.loc[country_pathway_item_feed_mask,'Value'].values[0]*animal_number
+            activity_df.loc[country_pathway_mask,'National Feed production '+item]=feed_per_head_df.loc[country_pathway_item_feed_mask,'Value'].values[0]*animal_number*trade_feed_df.loc["Share feed demand domestically produced",country]
             animal_number_ref=activity_ref_df.loc[(activity_ref_df['Area']==country) & (activity_ref_df['Item']==item) & (activity_ref_df['Element']=='Stocks'),'Value'].values[0]
-            activity_df.loc[country_pathway_mask,'Feed production 2010 '+item]=feed_per_head_df.loc[(feed_per_head_df['Country']==country) & (feed_per_head_df['Item']==item) & (feed_per_head_df['Feed']==feed),'Value'].values[0]*animal_number_ref
+            activity_df.loc[country_pathway_mask,'National Feed production 2010 '+item]=feed_per_head_df.loc[(feed_per_head_df['Country']==country) & (feed_per_head_df['Item']==item) & (feed_per_head_df['Feed']==feed),'Value'].values[0]*animal_number_ref*trade_feed_df.loc["Share feed demand domestically produced",country]
+            activity_df.loc[country_pathway_mask,'International Feed production '+item]=feed_per_head_df.loc[country_pathway_item_feed_mask,'Value'].values[0]*animal_number*(1-trade_feed_df.loc["Share feed demand domestically produced",country])
+            activity_df.loc[country_pathway_mask,'International Feed production 2010 '+item]=feed_per_head_df.loc[(feed_per_head_df['Country']==country) & (feed_per_head_df['Item']==item) & (feed_per_head_df['Feed']==feed),'Value'].values[0]*animal_number_ref*(1-trade_feed_df.loc["Share feed demand domestically produced",country])
+            activity_df.loc[country_pathway_mask,'National crop production '+item]=activity_df.loc[country_pathway_mask,'National Feed production 2010 '+item]+trade_feed_df.loc["Crop other",country]
+            activity_df.loc[country_pathway_mask,'National crop production 2010 '+item]=activity_df.loc[country_pathway_mask,'National Feed production 2010 '+item]+trade_feed_df.loc["Crop other",country]
             #Feed yield
-            activity_df.loc[country_pathway_mask,'Feed yield '+item]=new_yield_feed_df.loc[0,country]
-            activity_df.loc[country_pathway_mask,'Feed yield 2010 '+item]=yield_feed_df.loc[0,country]
+            activity_df.loc[country_pathway_mask,'National Feed yield '+item]=new_yield_feed_df.loc[0,country]
+            activity_df.loc[country_pathway_mask,'National Feed yield 2010 '+item]=yield_feed_df.loc[0,country]
+            activity_df.loc[country_pathway_mask,'International Feed yield '+item]=yield_feed_international_df.loc[0,country]
+            activity_df.loc[country_pathway_mask,'International Feed yield 2010 '+item]=yield_feed_international_df.loc[0,country]
             #Grass area
             activity_df.loc[country_pathway_mask,'Grass area '+item]=animal_number*feed_per_head_df.loc[(feed_per_head_df['Country']==pathway_tmp) & (feed_per_head_df['Item']==item) & (feed_per_head_df['Feed']=='Grass'),'Value'].values[0]/yield_grass_df.loc[0,pathway_tmp]
             activity_df.loc[country_pathway_mask,'Grass area 2010 '+item]=animal_number_ref*feed_per_head_df.loc[(feed_per_head_df['Country']==country) & (feed_per_head_df['Item']==item) & (feed_per_head_df['Feed']=='Grass'),'Value'].values[0]/yield_grass_df.loc[0,country]
@@ -148,40 +156,57 @@ for country in country_list:
             activity_df.loc[country_pathway_mask,'Total production 2010']+=activity_df.loc[country_pathway_mask,production+' 2010']
         #Spared land
         activity_df.loc[country_pathway_mask,'Grass area change']=0
-        activity_df.loc[country_pathway_mask,'Feed area change']=0
-        activity_df.loc[country_pathway_mask,'Feed area']=0
-        activity_df.loc[country_pathway_mask,'Feed area 2010']=0
+        activity_df.loc[country_pathway_mask,'National Feed area change']=0
+        activity_df.loc[country_pathway_mask,'National Feed area']=0
+        activity_df.loc[country_pathway_mask,'National Feed area 2010']=0
+        activity_df.loc[country_pathway_mask,'International Feed area']=0
+        activity_df.loc[country_pathway_mask,'International Feed area 2010']=0
         for item in item_list:
             if item in ruminant_list:
                 activity_df.loc[country_pathway_mask,'Grass area change']+=activity_df.loc[country_pathway_mask,'Grass area '+item]-activity_df.loc[country_pathway_mask,'Grass area 2010 '+item]
-            activity_df.loc[country_pathway_mask,'Feed area 2010']+=activity_df.loc[country_pathway_mask,'Feed production 2010 '+item]/yield_feed_df[country].values[0]
-            activity_df.loc[country_pathway_mask,'Feed area']+=(activity_df.loc[country_pathway_mask,'Feed production '+item])/activity_df.loc[country_pathway_mask,'Feed yield '+item].values[0]
-        activity_df.loc[country_pathway_mask,'Feed area change']=activity_df.loc[country_pathway_mask,'Feed area']-activity_df.loc[country_pathway_mask,'Feed area 2010']
-        activity_df.loc[country_pathway_mask,'Feed area index']=activity_df.loc[country_pathway_mask,'Feed area']/activity_df.loc[country_pathway_mask,'Feed area 2010']
+            activity_df.loc[country_pathway_mask,'National Feed area 2010']+=activity_df.loc[country_pathway_mask,'National Feed production 2010 '+item]/yield_feed_df[country].values[0]
+            activity_df.loc[country_pathway_mask,'National Feed area']+=(activity_df.loc[country_pathway_mask,'National Feed production '+item])/activity_df.loc[country_pathway_mask,'National Feed yield '+item].values[0]
+            activity_df.loc[country_pathway_mask,'International Feed area 2010']+=activity_df.loc[country_pathway_mask,'International Feed production 2010 '+item]/yield_feed_international_df[country].values[0]
+            activity_df.loc[country_pathway_mask,'International Feed area']+=(activity_df.loc[country_pathway_mask,'International Feed production '+item])/activity_df.loc[country_pathway_mask,'International Feed yield '+item].values[0]
+        activity_df.loc[country_pathway_mask,'National Feed area change']=activity_df.loc[country_pathway_mask,'National Feed area']-activity_df.loc[country_pathway_mask,'National Feed area 2010']
+        activity_df.loc[country_pathway_mask,'National Feed area index']=activity_df.loc[country_pathway_mask,'National Feed area']/activity_df.loc[country_pathway_mask,'National Feed area 2010']
+        activity_df.loc[country_pathway_mask,'International Feed area change']=activity_df.loc[country_pathway_mask,'International Feed area']-activity_df.loc[country_pathway_mask,'International Feed area 2010']
+        activity_df.loc[country_pathway_mask,'International Feed area index']=activity_df.loc[country_pathway_mask,'International Feed area']/activity_df.loc[country_pathway_mask,'International Feed area 2010']
+        activity_df.loc[country_pathway_mask,'National cropland area']=area_df.loc[(area_df["Area"]==country) & (area_df["Item"]=="Cropland"),"Value"]
+        activity_df.loc[country_pathway_mask,'National other cropland area']=activity_df.loc[country_pathway_mask,'National cropland area']-activity_df.loc[country_pathway_mask,'National Feed area']
         #N2O emissions from fertilization of feed
-        activity_df.loc[country_pathway_mask,'N2O fert']=activity_df.loc[country_pathway_mask,'Feed area']*N_fertilizer_rate_df.loc[(N_fertilizer_rate_df['Area']==pathway) & (N_fertilizer_rate_df['Item']=="Cropland"),'Value'].values[0]*(1.+yield_change)*emission_intensity_N2O_df.loc[(emission_intensity_N2O_df['Country']==pathway) & (emission_intensity_N2O_df['Emission']=='fertilizer'),'Intensity'].values[0]
+        activity_df.loc[country_pathway_mask,'N2O fert']=activity_df.loc[country_pathway_mask,'National Feed area']*N_fertilizer_rate_df.loc[(N_fertilizer_rate_df['Area']==pathway) & (N_fertilizer_rate_df['Item']=="Cropland"),'Value'].values[0]*(1.+yield_change)*emission_intensity_N2O_df.loc[(emission_intensity_N2O_df['Country']==pathway) & (emission_intensity_N2O_df['Emission']=='fertilizer'),'Intensity'].values[0]
+        activity_df.loc[country_pathway_mask,'N2O fert']+=activity_df.loc[country_pathway_mask,'National other cropland area']*N_fertilizer_rate_df.loc[(N_fertilizer_rate_df['Area']==pathway) & (N_fertilizer_rate_df['Item']=="Cropland"),'Value'].values[0]*emission_intensity_N2O_df.loc[(emission_intensity_N2O_df['Country']==pathway) & (emission_intensity_N2O_df['Emission']=='fertilizer'),'Intensity'].values[0]
         activity_df.loc[country_pathway_mask,'N2O fert']+=activity_df.loc[country_pathway_mask,'Grass area']*N_fertilizer_rate_df.loc[(N_fertilizer_rate_df['Area']==pathway) & (N_fertilizer_rate_df['Item']=="Grassland"),'Value'].values[0]*(1.+yield_change)*emission_intensity_N2O_df.loc[(emission_intensity_N2O_df['Country']==pathway) & (emission_intensity_N2O_df['Emission']=='fertilizer'),'Intensity'].values[0]
-        activity_df.loc[country_pathway_mask,'N2O fert 2010']=activity_df.loc[country_pathway_mask,'Feed area 2010']*N_fertilizer_rate_df.loc[(N_fertilizer_rate_df['Area']==country),'Value'].values[0]*emission_intensity_N2O_df.loc[(emission_intensity_N2O_df['Country']==country) & (emission_intensity_N2O_df['Emission']=='fertilizer'),'Intensity'].values[0]
+        activity_df.loc[country_pathway_mask,'N2O fert 2010']=activity_df.loc[country_pathway_mask,'National Feed area 2010']*N_fertilizer_rate_df.loc[(N_fertilizer_rate_df['Area']==country),'Value'].values[0]*emission_intensity_N2O_df.loc[(emission_intensity_N2O_df['Country']==country) & (emission_intensity_N2O_df['Emission']=='fertilizer'),'Intensity'].values[0]
+        activity_df.loc[country_pathway_mask,'N2O fert 2010']+=activity_df.loc[country_pathway_mask,'National other cropland area']*N_fertilizer_rate_df.loc[(N_fertilizer_rate_df['Area']==pathway) & (N_fertilizer_rate_df['Item']=="Cropland"),'Value'].values[0]*emission_intensity_N2O_df.loc[(emission_intensity_N2O_df['Country']==pathway) & (emission_intensity_N2O_df['Emission']=='fertilizer'),'Intensity'].values[0]
+        activity_df.loc[country_pathway_mask,'N2O fert 2010']+=activity_df.loc[country_pathway_mask,'Grass area 2010']*N_fertilizer_rate_df.loc[(N_fertilizer_rate_df['Area']==pathway) & (N_fertilizer_rate_df['Item']=="Grassland"),'Value'].values[0]*emission_intensity_N2O_df.loc[(emission_intensity_N2O_df['Country']==pathway) & (emission_intensity_N2O_df['Emission']=='fertilizer'),'Intensity'].values[0]
         activity_df.loc[country_pathway_mask,'N2O fert index']=activity_df.loc[country_pathway_mask,'N2O fert']/activity_df.loc[country_pathway_mask,'N2O fert 2010']
         activity_df.loc[country_pathway_mask,'N2O']=activity_df.loc[country_pathway_mask,'N2O fert']+activity_df.loc[country_pathway_mask,'N2O manure']
-        activity_df.loc[country_pathway_mask & (activity_df.loc[country_pathway_mask,'Feed area 2010']==0),'Feed area index']=0
-        activity_df.loc[country_pathway_mask,'Total area change']=activity_df.loc[country_pathway_mask,'Grass area change']+activity_df.loc[country_pathway_mask,'Feed area change']+activity_df.loc[country_pathway_mask,'Rice area change']
-        activity_df.loc[country_pathway_mask,'Total area']=activity_df.loc[country_pathway_mask,'Grass area']+activity_df.loc[country_pathway_mask,'Feed area']+activity_df.loc[country_pathway_mask,'Rice area']
-        activity_df.loc[country_pathway_mask,'Total area 2010']=activity_df.loc[country_pathway_mask,'Grass area 2010']+activity_df.loc[country_pathway_mask,'Feed area 2010']+activity_df.loc[country_pathway_mask,'Rice area 2010']
+        activity_df.loc[country_pathway_mask & (activity_df.loc[country_pathway_mask,'National Feed area 2010']==0),'National Feed area index']=0
+        activity_df.loc[country_pathway_mask,'Total area change']=activity_df.loc[country_pathway_mask,'Grass area change']+activity_df.loc[country_pathway_mask,'National Feed area change']+activity_df.loc[country_pathway_mask,'Rice area change']
+        activity_df.loc[country_pathway_mask,'Total area']=activity_df.loc[country_pathway_mask,'Grass area']+activity_df.loc[country_pathway_mask,'National Feed area']+activity_df.loc[country_pathway_mask,'Rice area']+activity_df.loc[country_pathway_mask,'National other cropland area']
+        activity_df.loc[country_pathway_mask,'Total area 2010']=activity_df.loc[country_pathway_mask,'Grass area 2010']+activity_df.loc[country_pathway_mask,'National Feed area 2010']+activity_df.loc[country_pathway_mask,'Rice area 2010']+activity_df.loc[country_pathway_mask,'National other cropland area']
         activity_df.loc[country_pathway_mask,'Total area index']=activity_df.loc[country_pathway_mask,'Total area']/activity_df.loc[country_pathway_mask,'Total area 2010']
         activity_df.loc[country_pathway_mask & (activity_df.loc[country_pathway_mask,'Total area 2010']==0),'Total area index']=0
         country_pathway_reforestation_mask=country_pathway_mask & (activity_df['Grass area change']<0)
         country_pathway_deforestation_mask=country_pathway_mask & (activity_df['Grass area change']>0)
         country_pathway_no_change_mask=country_pathway_mask & (activity_df['Grass area change']==0)
         activity_df.loc[country_pathway_reforestation_mask,'Grass offset']=-activity_df.loc[country_pathway_reforestation_mask,'Grass area change']*carbon_growth_rate[climatic_region[country]]
-        activity_df.loc[country_pathway_deforestation_mask,'Grass offset']=-activity_df.loc[country_pathway_deforestation_mask,'Grass area change']*carbon_release_deforestation
+        activity_df.loc[country_pathway_deforestation_mask,'Grass offset']=-activity_df.loc[country_pathway_deforestation_mask,'Grass area change']*deforestation_df.loc[0,country]
         activity_df.loc[country_pathway_no_change_mask,'Grass offset']=0
-        country_pathway_reforestation_mask=country_pathway_mask & (activity_df['Feed area change']>0)
-        country_pathway_deforestation_mask=country_pathway_mask & (activity_df['Feed area change']<0)
-        country_pathway_no_change_mask=country_pathway_mask & (activity_df['Feed area change']==0)
-        activity_df.loc[country_pathway_reforestation_mask,'Feed offset']=-activity_df.loc[country_pathway_reforestation_mask,'Feed area change']*carbon_growth_rate[climatic_region[country]]
-        activity_df.loc[country_pathway_deforestation_mask,'Feed offset']=-activity_df.loc[country_pathway_deforestation_mask,'Feed area change']*carbon_release_deforestation
+        country_pathway_reforestation_mask=country_pathway_mask & (activity_df['National Feed area change']>0)
+        country_pathway_deforestation_mask=country_pathway_mask & (activity_df['National Feed area change']<0)
+        country_pathway_no_change_mask=country_pathway_mask & (activity_df['National Feed area change']==0)
+        activity_df.loc[country_pathway_reforestation_mask,'Feed offset']=-activity_df.loc[country_pathway_reforestation_mask,'National Feed area change']*carbon_growth_rate[climatic_region[country]]
+        activity_df.loc[country_pathway_deforestation_mask,'Feed offset']=-activity_df.loc[country_pathway_deforestation_mask,'National Feed area change']*deforestation_df.loc[0,country]
         activity_df.loc[country_pathway_no_change_mask,'Feed offset']=0
+        international_pathway_reforestation_mask=country_pathway_mask & (activity_df['International Feed area change']>0)
+        international_pathway_deforestation_mask=country_pathway_mask & (activity_df['International Feed area change']<0)
+        international_pathway_no_change_mask=country_pathway_mask & (activity_df['International Feed area change']==0)
+        activity_df.loc[international_pathway_reforestation_mask,'International Feed offset']=-activity_df.loc[international_pathway_reforestation_mask,'International Feed area change']*carbon_growth_rate[climatic_region[country]]
+        activity_df.loc[international_pathway_deforestation_mask,'International Feed offset']=-activity_df.loc[international_pathway_deforestation_mask,'International Feed area change']*deforestation_df.loc[0,"World"]
+        activity_df.loc[international_pathway_no_change_mask,'International Feed offset']=0
         country_pathway_reforestation_mask=country_pathway_mask & (activity_df['Rice area change']>0)
         country_pathway_deforestation_mask=country_pathway_mask & (activity_df['Rice area change']<0)
         country_pathway_no_change_mask=country_pathway_mask & (activity_df['Rice area change']==0)

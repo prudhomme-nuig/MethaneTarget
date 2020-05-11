@@ -1,73 +1,49 @@
-Country,Feed,Item,Value,Unit
-Netherlands,Total,Cattle,3142,kg DM/head
-France,Total,Cattle,2970,kg DM/head
-Ireland,Total,Cattle,2817,kg DM/head
-Brazil,Total,Cattle,3307,kg DM/head
-Costa-Rica,Total,Cattle,3391,kg DM/head
-India,Total,Cattle,2380,kg DM/head
-Netherlands,Total,Swine,63,kg DM/head
-France,Total,Swine,70,kg DM/head
-Ireland,Total,Swine,81,kg DM/head
-Brazil,Total,Swine,95,kg DM/head
-Costa-Rica,Total,Swine,98,kg DM/head
-India,Total,Swine,64,kg DM/head
-Netherlands,Total,Chickens,45,kg DM/head
-France,Total,Chickens,53,kg DM/head
-Ireland,Total,Chickens,47,kg DM/head
-Brazil,Total,Chickens,40,kg DM/head
-Costa-Rica,Total,Chickens,47,kg DM/head
-India,Total,Chickens,35,kg DM/head
-Netherlands,Grains,Cattle,516,kg DM/head
-France,Grains,Cattle,331,kg DM/head
-Ireland,Grains,Cattle,278,kg DM/head
-Brazil,Grains,Cattle,265,kg DM/head
-Costa-Rica,Grains,Cattle,158,kg DM/head
-India,Grains,Cattle,88,kg DM/head
-Netherlands,Grains,Swine,50,kg DM/head
-France,Grains,Swine,55,kg DM/head
-Ireland,Grains,Swine,51,kg DM/head
-Brazil,Grains,Swine,53,kg DM/head
-Costa-Rica,Grains,Swine,55,kg DM/head
-India,Grains,Swine,34,kg DM/head
-Netherlands,Grains,Chickens,41,kg DM/head
-France,Grains,Chickens,39,kg DM/head
-Ireland,Grains,Chickens,35,kg DM/head
-Brazil,Grains,Chickens,28,kg DM/head
-Costa-Rica,Grains,Chickens,32,kg DM/head
-India,Grains,Chickens,18,kg DM/head
-Netherlands,Grass,Cattle,2075,kg DM/head
-France,Grass,Cattle,2363,kg DM/head
-Ireland,Grass,Cattle,2301,kg DM/head
-Brazil,Grass,Cattle,2422,kg DM/head
-Costa-Rica,Grass,Cattle,2754,kg DM/head
-India,Grass,Cattle,1862,kg DM/head
-Netherlands,Grass,Swine,0,kg DM/head
-France,Grass,Swine,0,kg DM/head
-Ireland,Grass,Swine,0,kg DM/head
-Brazil,Grass,Swine,7,kg DM/head
-Costa-Rica,Grass,Swine,1,kg DM/head
-India,Grass,Swine,9,kg DM/head
-Netherlands,Grass,Chickens,0,kg DM/head
-France,Grass,Chickens,0,kg DM/head
-Ireland,Grass,Chickens,0,kg DM/head
-Brazil,Grass,Chickens,1,kg DM/head
-Costa-Rica,Grass,Chickens,2,kg DM/head
-India,Grass,Chickens,6,kg DM/head
-Netherlands,Total,Sheep and Goats,256,kg DM/head
-France,Total,Sheep and Goats,258,kg DM/head
-Ireland,Total,Sheep and Goats,210,kg DM/head
-Brazil,Total,Sheep and Goats,302,kg DM/head
-Costa-Rica,Total,Sheep and Goats,1,kg DM/head
-India,Total,Sheep and Goats,219,kg DM/head
-Netherlands,Grass,Sheep and Goats,234,kg DM/head
-France,Grass,Sheep and Goats,218,kg DM/head
-Ireland,Grass,Sheep and Goats,197,kg DM/head
-Brazil,Grass,Sheep and Goats,296,kg DM/head
-Costa-Rica,Grass,Sheep and Goats,0,kg DM/head
-India,Grass,Sheep and Goats,215,kg DM/head
-Netherlands,Grains,Sheep and Goats,1.4,kg DM/head
-France,Grains,Sheep and Goats,6.9,kg DM/head
-Ireland,Grains,Sheep and Goats,1.7,kg DM/head
-Brazil,Grains,Sheep and Goats,0,kg DM/head
-Costa-Rica,Grains,Sheep and Goats,0,kg DM/head
-India,Grains,Sheep and Goats,0,kg DM/head
+,Country,Feed,Item,Value,Unit
+0,Brazil,Grains,"Cattle, dairy",265.13248589213566,kg DM/head
+1,Brazil,Grass,"Cattle, dairy",2422.4384854970453,kg DM/head
+2,Brazil,Grains,"Cattle, non-dairy",184.8440341781066,kg DM/head
+3,Brazil,Grass,"Cattle, non-dairy",1965.306679070757,kg DM/head
+4,Brazil,Grains,Swine,53.33429190653146,kg DM/head
+5,Brazil,Grass,Swine,6.5260496984142575,kg DM/head
+6,Brazil,Grains,Poultry Birds,27.78895207698092,kg DM/head
+7,Brazil,Grass,Poultry Birds,0.733146591299008,kg DM/head
+8,Brazil,Grains,"Chickens, layers",48.708714317416934,kg DM/head
+9,Brazil,Grass,"Chickens, layers",0.0,kg DM/head
+10,Brazil,Grains,Sheep and Goats,0.0,kg DM/head
+11,Brazil,Grass,Sheep and Goats,257.35728279679915,kg DM/head
+12,France,Grains,"Cattle, dairy",330.73870970570823,kg DM/head
+13,France,Grass,"Cattle, dairy",2363.008132259559,kg DM/head
+14,France,Grains,"Cattle, non-dairy",76.66890260638932,kg DM/head
+15,France,Grass,"Cattle, non-dairy",1955.083746633857,kg DM/head
+16,France,Grains,Swine,55.22452475164971,kg DM/head
+17,France,Grass,Swine,0.0,kg DM/head
+18,France,Grains,Poultry Birds,39.048400312336376,kg DM/head
+19,France,Grass,Poultry Birds,0.0,kg DM/head
+20,France,Grains,"Chickens, layers",102.96561529234097,kg DM/head
+21,France,Grass,"Chickens, layers",0.0,kg DM/head
+22,France,Grains,Sheep and Goats,9.584328263369008,kg DM/head
+23,France,Grass,Sheep and Goats,226.1107260590343,kg DM/head
+24,India,Grains,"Cattle, dairy",88.33952336726799,kg DM/head
+25,India,Grass,"Cattle, dairy",1862.0779320662525,kg DM/head
+26,India,Grains,"Cattle, non-dairy",0.0,kg DM/head
+27,India,Grass,"Cattle, non-dairy",1608.3188758791835,kg DM/head
+28,India,Grains,Swine,34.989084266417,kg DM/head
+29,India,Grass,Swine,9.120798974860831,kg DM/head
+30,India,Grains,Poultry Birds,18.187494563678243,kg DM/head
+31,India,Grass,Poultry Birds,6.030848375048084,kg DM/head
+32,India,Grains,"Chickens, layers",40.98669057297237,kg DM/head
+33,India,Grass,"Chickens, layers",0.0,kg DM/head
+34,India,Grains,Sheep and Goats,0.0,kg DM/head
+35,India,Grass,Sheep and Goats,204.35362837209453,kg DM/head
+36,Ireland,Grains,"Cattle, dairy",278.1088934662869,kg DM/head
+37,Ireland,Grass,"Cattle, dairy",2301.2193945302415,kg DM/head
+38,Ireland,Grains,"Cattle, non-dairy",45.005674085697216,kg DM/head
+39,Ireland,Grass,"Cattle, non-dairy",2008.9598744706816,kg DM/head
+40,Ireland,Grains,Swine,51.585277472264124,kg DM/head
+41,Ireland,Grass,Swine,0.0,kg DM/head
+42,Ireland,Grains,Poultry Birds,35.32475438281628,kg DM/head
+43,Ireland,Grass,Poultry Birds,0.0,kg DM/head
+44,Ireland,Grains,"Chickens, layers",121.63442856309247,kg DM/head
+45,Ireland,Grass,"Chickens, layers",0.0,kg DM/head
+46,Ireland,Grains,Sheep and Goats,1.7166670186026003,kg DM/head
+47,Ireland,Grass,Sheep and Goats,197.46527266300427,kg DM/head

@@ -2,7 +2,8 @@
 
 '''
 Compute national methane debt based on FAOSTAT data between 1961 and 2010.
-The methane debt is the cumulative methane emissions (10% of total methane emissions).
+The methane debt is the cumulative methane emissions (10% of total methane emissions) spread
+between 2010 and 2050.
 '''
 
 import pandas as pd
@@ -26,7 +27,7 @@ for country in methane_pivot_df['Value'].columns:
     methane_past=methane_pivot_df['Value'][country][~np.isnan(methane_pivot_df['Value'][country])].values
     year_list=methane_pivot_df['Year'][country][~np.isnan(methane_pivot_df['Year'][country])].values
     methane_debt_country=compute_methane_debt(methane_past,year_list)
-    methane_debt_df=pd.concat([methane_debt_df,pd.DataFrame(data={country: [-methane_debt_country/40]})],axis=1)
+    methane_debt_df=pd.concat([methane_debt_df,pd.DataFrame(data={country: [-methane_debt_country/40]})],axis=1) #40 years to "pay" the methane debt (between 2010 and 2050)
 
 total_methane_debt=np.sum(methane_debt_df.values)
 methane_debt_share_df=methane_debt_df[country_list]/total_methane_debt

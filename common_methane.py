@@ -6,40 +6,6 @@ from common_data import GWP100_N2O,GWP100_CH4
 import pandas as pd
 import numpy as np
 
-def read_table(fname,header_name,value_name,delimiter=','):
-    table_dict={}
-    file=open(fname, 'r')
-    csv_input = csv.reader(file,delimiter=delimiter)
-    index=0
-    for row in csv_input:
-        if index==0:
-            header=row
-            header_index=header.index(header_name)
-            value_index=header.index(value_name)
-        else:
-            print(row[header_index])
-            table_dict[row[header_index]]=float(row[value_index])
-        index+=1
-    return table_dict
-
-def read_aggregate_table(fname,aggregate_header,aggregated_header,delimiter='|'):
-    aggregate_table_dict={}
-    file=open(fname, 'r')
-    csv_input = csv.reader(file,delimiter=delimiter)
-    index=0
-    for row in csv_input:
-        if index==0:
-            header=row
-            aggregate_index=header.index(aggregate_header)
-            aggregated_index=header.index(aggregated_header)
-        else:
-            if row[aggregate_index] not in aggregate_table_dict.keys():
-                aggregate_table_dict[row[aggregate_index]]=[row[aggregated_index]]
-            else:
-                aggregate_table_dict[row[aggregate_index]].append(row[aggregated_index])
-        index+=1
-    return aggregate_table_dict
-
 def read_FAO_file(fname,country,element,item=None,delimiter=','):
     table_dict={}
     file=open(fname, 'r')
@@ -103,9 +69,9 @@ def compute_CO2_equivalent(input_df,rule,emission_ref_year,country,ponderation_i
     if rule=='Grand-fathering':
         emission_ref=emission_ref_year
     elif rule=='Debt':
-        emission_ref=methane_debt[country].values[0]
+        emission_ref=np.max([methane_debt[country].values[0],0])
     elif rule=='GDP':
-        emission_ref=methane_debt[country].values[0]
+        emission_ref=np.max([methane_debt[country].values[0],0])
     elif rule=='Population':
         emission_ref=emission_ref_year*ponderation_in_GWP_star[ponderation_in_GWP_star['Country Name']==country]['2010'].values[0]/ponderation_in_GWP_star[ponderation_in_GWP_star['Country Name']=='World']['2010'].values[0]
     elif rule=='Protein':

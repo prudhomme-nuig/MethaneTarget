@@ -207,7 +207,7 @@ print("Print all production with different metrics...")
 #Print area change for different quota
 df_to_plot=pd.DataFrame(columns=['Area change','Allocation rule','Country','Item'])
 for item in ['Grass','Feed','Rice','Total']:
-    df_to_concat=pd.concat([activity_df[['Country','Pathways',item+' area change',"Allocation rule"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
+    df_to_concat=pd.concat([activity_df[['Country','Pathways','National '+item+' area change',"Allocation rule"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
     df_to_concat=df_to_concat.rename(columns = {item+' area change':'Area change'})
     df_to_plot=pd.concat([df_to_plot,df_to_concat],axis=0,sort='True')
 
@@ -222,9 +222,9 @@ print("Print all change of area with different metrics...")
 #Print area index for different quota
 df_to_plot=pd.DataFrame(columns=['Area index','Area in 2010 (Mha)','Allocation rule','Country','Item'])
 for item in ['Grass','Feed','Rice','Total']:
-    df_to_concat=pd.concat([activity_df[['Country','Pathways',item+' area index',item+' area 2010',"Allocation rule"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
-    df_to_concat=df_to_concat.rename(columns = {item+' area index':'Area index'})
-    df_to_concat=df_to_concat.rename(columns = {item+' area 2010':'Area in 2010 (Mha)'})
+    df_to_concat=pd.concat([activity_df[['Country','Pathways','National '+item+' area index','National '+item+' area 2010',"Allocation rule"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
+    df_to_concat=df_to_concat.rename(columns = {'National '+item+' area index':'Area index'})
+    df_to_concat=df_to_concat.rename(columns = {'National '+item+' area 2010':'Area in 2010 (Mha)'})
     df_to_plot=pd.concat([df_to_plot,df_to_concat],axis=0,sort='True')
 
 ha_to_Mha=1E-6
@@ -237,7 +237,7 @@ print("Print area index with different metrics...")
 
 #Compute N2O emissions from manure
 df_to_plot=pd.DataFrame(columns=['N2O emissions','Allocation rule','Country','Item'])
-for item in ['manure','feed']:
+for item in ['manure','fert']:
     df_to_concat=pd.concat([activity_df[['Country','Pathways','N2O '+item+' index', 'N2O '+item+' 2010',"Allocation rule"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
     df_to_concat=df_to_concat.rename(columns = {'N2O '+item+' 2010':'N2O emissions in 2010'})
     df_to_concat=df_to_concat.rename(columns = {'N2O '+item+' index':'N2O index (compared to 2010)'})

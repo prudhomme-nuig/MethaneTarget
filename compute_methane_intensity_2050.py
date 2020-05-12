@@ -81,7 +81,7 @@ def compute_emission_intensity(mitigation_potential_df,df,country,item,share_met
     for index in mitigation_df.index:
         if ((mitigation_df.loc[index,"gaz"]=='CH4') | (mitigation_df.loc[index,"gaz"]=='both')) & (mitigation_df.loc[index,"Item"] in item_name):
             if mitigation_df.loc[index,"gaz"]=='both':
-                gaz_share=share_methane_df.loc[(share_methane_df['Country']==country) & (share_methane_df['Item']==item),'Value'].values[0]/GWP100_CH4
+                gaz_share=share_methane_df.loc[(share_methane_df['Country']==country) & (share_methane_df['Item']==item),'Value'].values[0]
             elif mitigation_df.loc[index,"gaz"]=='CH4':
                 gaz_share=1
             else:
@@ -100,7 +100,10 @@ def compute_emission_intensity(mitigation_potential_df,df,country,item,share_met
             elif mitigation_df.loc[index,"Indicator"]=="mitigation per head":
                 emission_intensity=df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (["Implied emission factor" in list_element for list_element in df["Element"]]),"Value"].values[0]-(mitigation_df.loc[index,"Mitigation potential"]*gaz_share)
         else:
-            emission_intensity=df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (["Implied emission factor" in list_element for list_element in df["Element"]]),"Value"].values[0]
+            if item =='Rice, paddy':
+                emission_intensity=df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (["Emissions (CH4)" in list_element for list_element in df["Element"]]),"Value"].values[0]/df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (df["Element"]=="Area harvested"),"Value"].values[0]
+            else:
+                emission_intensity=df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (["Emissions (CH4)" in list_element for list_element in df["Element"]]),"Value"].values[0]/df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (df["Element"]=="Stocks"),"Value"].values[0]
     return emission_intensity
 
 def compute_activity(mitigation_potential_df,df,country,item):

@@ -140,13 +140,13 @@ for country in country_list:
                 activity_df.loc[country_pathway_mask,production_aggregate+' 2010']+=activity_df.loc[country_pathway_mask,production_aggregated+' 2010']
         item='Rice, paddy'
         #Rice area
-        activity_df.loc[country_pathway_mask,'Rice area']=activity_df.loc[country_pathway_mask,'Activity rice Rice, paddy']
+        activity_df.loc[country_pathway_mask,'National Rice area']=activity_df.loc[country_pathway_mask,'Activity rice Rice, paddy']
         activity_df.loc[country_pathway_mask,'National Rice area 2010']=yield_rice_df.loc[(yield_rice_df['Area']==country) & (yield_rice_df['Element']=='Area harvested'),'Value'].values[0]
-        activity_df.loc[country_pathway_mask,'National Rice area index']=activity_df.loc[country_pathway_mask,'Rice area']/activity_df.loc[country_pathway_mask,'National Rice area 2010']
+        activity_df.loc[country_pathway_mask,'National Rice area index']=activity_df.loc[country_pathway_mask,'National Rice area']/activity_df.loc[country_pathway_mask,'National Rice area 2010']
         activity_df.loc[country_pathway_mask & (activity_df.loc[country_pathway_mask,'National Rice area 2010']==0),'National Rice area index']=0
-        activity_df.loc[country_pathway_mask,'National Rice area change']=activity_df.loc[country_pathway_mask,'Rice area']-activity_df.loc[country_pathway_mask,'National Rice area 2010']
+        activity_df.loc[country_pathway_mask,'National Rice area change']=activity_df.loc[country_pathway_mask,'National Rice area']-activity_df.loc[country_pathway_mask,'National Rice area 2010']
         #Rice production
-        activity_df.loc[country_pathway_mask,'Production '+item]=activity_df.loc[country_pathway_mask,'Rice area']*yield_rice_df.loc[(yield_rice_df['Area']==country) & (yield_rice_df['Element']=='Yield'),'Value'].values[0]
+        activity_df.loc[country_pathway_mask,'Production '+item]=activity_df.loc[country_pathway_mask,'National Rice area']*yield_rice_df.loc[(yield_rice_df['Area']==country) & (yield_rice_df['Element']=='Yield'),'Value'].values[0]
         activity_df.loc[country_pathway_mask,'Production '+item+' 2010']=activity_df.loc[country_pathway_mask,'National Rice area 2010']*yield_rice_df.loc[(yield_rice_df['Area']==country) & (yield_rice_df['Element']=='Yield'),'Value'].values[0]
         activity_df.loc[country_pathway_mask,'Yield '+item]=yield_rice_df.loc[(yield_rice_df['Area']==country) & (yield_rice_df['Element']=='Yield'),'Value'].values[0]
         #Total production
@@ -189,9 +189,9 @@ for country in country_list:
         activity_df.loc[country_pathway_mask,'N2O']=activity_df.loc[country_pathway_mask,'N2O fert']+activity_df.loc[country_pathway_mask,'N2O manure']
         activity_df.loc[country_pathway_mask & (activity_df.loc[country_pathway_mask,'National Feed area 2010']==0),'National Feed area index']=0
         activity_df.loc[country_pathway_mask,'National Total area change']=activity_df.loc[country_pathway_mask,'National Grass area change']+activity_df.loc[country_pathway_mask,'National Feed area change']+activity_df.loc[country_pathway_mask,'National Rice area change']
-        activity_df.loc[country_pathway_mask,'Total area']=activity_df.loc[country_pathway_mask,'National Grass area']+activity_df.loc[country_pathway_mask,'National Feed area']+activity_df.loc[country_pathway_mask,'Rice area']+activity_df.loc[country_pathway_mask,'National other cropland area']
+        activity_df.loc[country_pathway_mask,'National Total area']=activity_df.loc[country_pathway_mask,'National Grass area']+activity_df.loc[country_pathway_mask,'National Feed area']+activity_df.loc[country_pathway_mask,'National Rice area']+activity_df.loc[country_pathway_mask,'National other cropland area']
         activity_df.loc[country_pathway_mask,'National Total area 2010']=activity_df.loc[country_pathway_mask,'National Grass area 2010']+activity_df.loc[country_pathway_mask,'National Feed area 2010']+activity_df.loc[country_pathway_mask,'National Rice area 2010']+activity_df.loc[country_pathway_mask,'National other cropland area']
-        activity_df.loc[country_pathway_mask,'National Total area index']=activity_df.loc[country_pathway_mask,'Total area']/activity_df.loc[country_pathway_mask,'National Total area 2010']
+        activity_df.loc[country_pathway_mask,'National Total area index']=activity_df.loc[country_pathway_mask,'National Total area']/activity_df.loc[country_pathway_mask,'National Total area 2010']
         activity_df.loc[country_pathway_mask & (activity_df.loc[country_pathway_mask,'National Total area 2010']==0),'National Total area index']=0
         country_pathway_reforestation_mask=country_pathway_mask & (activity_df['National Grass area change']<0)
         country_pathway_deforestation_mask=country_pathway_mask & (activity_df['National Grass area change']>0)
@@ -222,7 +222,7 @@ for country in country_list:
         #country_pathway_mask=(activity_df['Country']==country) & (activity_df['Pathways']==pathway)
         # #Spared area
         # area_rice_ref=yield_rice_df.loc[(yield_rice_df['Area']==country) & (yield_rice_df['Element']=='Area harvested'),'Value'].values[0]
-        # activity_df.loc[country_pathway_mask,'Spared area']=area_rice_ref-activity_df.loc[country_pathway_mask & (activity_df['Item']=='Rice, paddy'),'Rice area']
+        # activity_df.loc[country_pathway_mask,'Spared area']=area_rice_ref-activity_df.loc[country_pathway_mask & (activity_df['Item']=='Rice, paddy'),'National Rice area']
         # for item in ruminant_list:
         #     country_pathway_mask=(activity_df['Country']==country) & (activity_df['Pathways']==pathway) & (activity_df['Item']==item)
         #     activity_df.loc[country_pathway_mask,'Spared area']+=grassland_area_df.loc[item,country]-activity_df.loc[country_pathway_mask & (activity_df['Item']==item),'Grass area']

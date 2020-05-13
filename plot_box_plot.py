@@ -52,112 +52,8 @@ methane_emissions_pd=read_FAOSTAT_df('data/FAOSTAT_methane.csv')
 for country in country_list:
     methane_emissions_pd.loc[methane_emissions_pd['Area']==country,'Value']=methane_emissions_pd.loc[methane_emissions_pd['Area']==country,'Value'].values[0]
 
-def plot_boxplot(df_to_plot,country_list,y_label,file_name,reference_df=None):
-    fig, ax = plt.subplots(2, 2, figsize=(10, 5))
-    df_to_plot.boxplot(country_list[0],by=["Allocation rule"], ax=ax[0][0],patch_artist=True)
-    df_to_plot.boxplot(country_list[1],by=["Allocation rule"], ax=ax[0][1],patch_artist=True)
-    df_to_plot.boxplot(country_list[2],by=["Allocation rule"], ax=ax[1][0],patch_artist=True)
-    df_to_plot.boxplot(country_list[3],by=["Allocation rule"], ax=ax[1][1],patch_artist=True)
-    ax[0][0].set_ylabel(y_label)
-    ax[1][0].set_ylabel(y_label)
-    if reference_df is not None:
-        for rule in range(len(np.unique(df_to_plot["Allocation rule"]))):
-            ax[0][0].scatter(rule+1,reference_df[reference_df['Area']==country_list[0]]['Value'].values[0], c='red')
-            ax[0][1].scatter(rule+1,reference_df[reference_df['Area']==country_list[1]]['Value'].values[0], c='red')
-            ax[1][0].scatter(rule+1,reference_df[reference_df['Area']==country_list[2]]['Value'].values[0], c='red')
-            ax[1][1].scatter(rule+1,reference_df[reference_df['Area']==country_list[3]]['Value'].values[0], c='red')
-    plt.tight_layout()
-    plt.suptitle("")
-    plt.savefig(file_name)
-    plt.close()
-
-def plot_boxplot_with_sns(df_to_plot,country,y_column_name,allocation_column_name,y_label,file_name,item_column_name=None,ref_column_name=None,reference_df=None,plot_points=False):
-    if item_column_name==None:
-        a4_dims = (11.7, 8.27)
-        fig, axes = plt.subplots(len(country_list),1, figsize=a4_dims)
-        for ax,country in zip(axes,country_list):
-            df_to_plot.boxplot(country,by=["Allocation rule"], ax=ax,patch_artist=True)
-        plt.savefig(file_name)
-        plt.close()
-    else:
-        if plot_points:
-            allocation_list=np.unique(df_to_plot['Allocation rule'])
-            if ref_column_name!=None:
-                fig, axes = plt.subplots(2, len(allocation_list), sharey='row',sharex='row',figsize=(11.7, 8.27),gridspec_kw = {'height_ratios':[1,4]})
-                for (ax,rule) in zip(axes[0],allocation_list):
-                    country_rule_mask=(df_to_plot['Country']==country) & (df_to_plot['Allocation rule']==rule)
-                    sns.swarmplot(item_column_name, ref_column_name, data=df_to_plot[country_rule_mask],ax=ax,size=5)
-                ax_to_plot=axes[1]
-            else:
-                fig, axes = plt.subplots(1, len(allocation_list), sharey='row',sharex='row',figsize=(11.7, 8.27))
-                ax_to_plot=axes
-            for (ax,rule) in zip (ax_to_plot,allocation_list):
-                country_rule_mask=(df_to_plot['Country']==country) & (df_to_plot['Allocation rule']==rule)
-                with sns.axes_style(style='ticks'):
-                    sns.swarmplot(item_column_name, y_column_name,'Pathway', data=df_to_plot[country_rule_mask],ax=ax,size=3)
-                    sns.catplot(item_column_name, y_column_name, data=df_to_plot[country_rule_mask], kind="box",height=8.27, aspect=11.7/8.27,ax=ax)
-                    if rule!=allocation_list[0]:
-                        ax.get_legend().remove()
-                        y_axis = ax.axes.get_yaxis()
-                        y_axis.set_visible(False)
-                        #ax.tick_params(axis = 'y', which = 'major', labelsize = 0.5)
-                        ax.tick_params(axis = 'x', which = 'major', labelsize = 12)
-                        ax.spines["top"].set_visible(False)
-                        ax.spines["right"].set_visible(False)
-                        ax.spines["left"].set_visible(False)
-                        ax.set_xlabel(rule,fontsize='12')
-                    else:
-                        ax.set_ylabel(y_label,fontsize='12')
-                        ax.set_xlabel(rule,fontsize='12')
-                        ax.tick_params(axis = 'y', which = 'major', labelsize = 12)
-                        ax.tick_params(axis = 'x', which = 'major', labelsize = 12)
-                        ax.spines["top"].set_visible(False)
-                        ax.spines["right"].set_visible(False)
-
-
-                    #plt.xlabel(item_column_name,fontsize='22')
-                    #plt.tight_layout()
-                    plt.subplots_adjust(wspace =0.)
-        else:
-            fig, ax = plt.subplots()
-            with sns.axes_style(style='ticks'):
-                g = sns.catplot(allocation_column_name, y_column_name,item_column_name, data=df_to_plot[df_to_plot['Country']==country], legend=True, kind="box",height=8.27, aspect=11.7/8.27,ax=ax)
-                g.set_axis_labels(allocation_column_name, y_label)
-                g.set_xlabels(fontsize='22')
-                g.set_ylabels(fontsize='22')
-                g.set_xticklabels(fontsize='20')
-                g.set_yticklabels(fontsize='20')
-        plt.tight_layout()
-        fig.savefig(file_name)
-        plt.close('all')
-
-def plot_boxplot_quota_with_sns(df_to_plot,country_list,y_column_name,allocation_column_name,y_label,file_name,item_column_name=None,ref_column_name=None,reference_df=None,plot_points=False,subplot=None):
-    fig, axes = plt.subplots(2*subplot[0], subplot[1],figsize=(11.7, 8.27),gridspec_kw = {'height_ratios':[1/(5*subplot[0]),4/(5*subplot[0])]*subplot[0]})
-    index_country=0;ax_index_list=[];ax_value_list=[];y_label_list=[]
-    for row_index in range(subplot[0]):
-        ax_value_list.extend([axes[row_index*2][index] for index in range(subplot[1])])
-        ax_index_list.extend([axes[row_index*2+1][index] for index in range(subplot[1])])
-        y_label_list.extend([True,False])
-    for (ax_value,ax_index,country,y) in zip(ax_value_list,ax_index_list,country_list,y_label_list):
-        country_mask=(df_to_plot['Country']==country)
-        sns.swarmplot(item_column_name, ref_column_name, data=df_to_plot[country_mask],ax=ax_value,size=5)
-        ax_value.set_title(country)
-        plt.subplots_adjust(top = 0.9,hspace = 1.)
-        if not y:
-                ax_value.yaxis.label.set_visible(False)
-        with sns.axes_style(style='ticks'):
-            sns.catplot(item_column_name, y_column_name, data=df_to_plot[country_mask], kind="box",height=8.27, aspect=11.7/8.27,ax=ax_index)
-            if not y:
-                ax_index.yaxis.label.set_visible(False)
-            ax_index.tick_params(axis = 'x', which = 'major', labelsize = 12)
-            ax_index.spines["top"].set_visible(False)
-            ax_index.spines["right"].set_visible(False)
-            ax_index.xaxis.label.set_visible(False)
-            index_country+=1
-            plt.subplots_adjust(wspace =0.,top = 0.9,hspace = 0.)
-    plt.tight_layout()
-    fig.savefig(file_name)
-    plt.close('all')
+sns.set(font_scale=1.5)
+sns.set_style("whitegrid")
 
 #Load impacts for different scenarios
 activity_df=pd.read_csv("output/impact_2050"+file_name_suffix+".csv")
@@ -174,16 +70,29 @@ activity_df.loc[activity_df['National methane 2010']==0,'National methane index'
 methane_debt_df=pd.read_csv("output/FAOSTAT_methane_debt_value.csv")
 
 #Print methane quota
-df_to_plot=activity_df.loc[:,['Country','Pathways',"National methane 2010","National methane index","Allocation rule"]]
-df_to_plot.loc[:,"Methane\n2010\n(ktCH4)"]=df_to_plot.loc[:,"National methane 2010"].values*t_to_Mt
+df_to_plot=activity_df.loc[:,['Country','Pathways',"National methane 2010","National methane index","National quota","Allocation rule"]]
+df_to_plot.loc[:,"Methane 2010 (ktCH4)"]=df_to_plot.loc[:,"National methane 2010"].values*t_to_Mt
+df_to_plot.loc[:,"Methane 2050 (ktCH4)"]=df_to_plot.loc[:,"National quota"].values*t_to_Mt
 df_to_plot=df_to_plot.rename(columns = {'National methane index':'Methane index'})
-plot_boxplot_quota_with_sns(df_to_plot,country_list,"Methane index","Country","Methane index (relative to 2010)",'Figs/methane_quota_bar_plot_test.png',item_column_name='Allocation rule',ref_column_name='Methane\n2010\n(ktCH4)',reference_df=None,plot_points=False,subplot=(2,2))
+g = sns.catplot(x="Country", y="Methane index", hue="Allocation rule",
+                height=3.5, aspect=1.5,
+                kind="point", legend=False, data=df_to_plot,join=False);
+g.add_legend(title="Allocation rule")
+g.set_axis_labels("", "Methane index\n(in 2050 relative to 2010)")
+#plt.show()+
+#g.set(yticklabels=["Thursday", "Friday", "Saturday", "Sunday"])
+#g.despine(trim=True)
+g.fig.set_size_inches(6.5, 3.5)
+g.fig.savefig('Figs/methane_quota_bar_plot_test.png', dpi=100)
+table = pd.pivot_table(df_to_plot, values=['Methane 2010 (ktCH4)','Methane 2050 (ktCH4)'], index=['Country'],columns=["Allocation rule"],aggfunc=np.mean)
+table.index.name=None
+table.to_excel("output/table_methane_quotas.xlsx",index_label=None,float_format = "%0.1f")
 print("Print methane quota with different metrics...")
 
 #Print production indicators for different quota
 # Livestock production
 production_list=['Milk','Meat','Eggs','Rice']
-df_with_all_prod_to_plot=pd.DataFrame(columns=['Production index','Allocation rule','Production in 2010 (Mt)','Country','Item'])
+df_with_all_prod_to_plot=pd.DataFrame(columns=['Production index','Allocation rule','Production in 2010 (Mt)','Production','Country','Item'])
 for production in production_list:
     activity_df[production+' index']=activity_df[production]/activity_df[production+' 2010']
     activity_df.loc[activity_df[production+' 2010']==0,production+' index']=0
@@ -192,62 +101,78 @@ for production in production_list:
 #    plot_boxplot(df_to_plot,country_list,"Production","Figs/production_"+production.lower().replace(" ","_")+"_bar_plot_countries.png")
 #    plot_boxplot(df_to_plot,country_list,"Production","Figs/production_"+production.lower().replace(" ","_")+"_bar_plot_countries.pdf")
 #    print("Print production with different metrics...")
-    df_to_concat=pd.concat([activity_df[['Country','Pathways',production+' 2010',production+' index',"Allocation rule"]],pd.DataFrame([production]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
+    df_to_concat=pd.concat([activity_df[['Country','Pathways',production+' 2010',production+' index',production,"Allocation rule"]],pd.DataFrame([production]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
     df_to_concat=df_to_concat.rename(columns = {production+' index':'Production index (relative to 2010)'})
     df_to_concat=df_to_concat.rename(columns = {production+' 2010':'Production in 2010 (Mt)'})
+    df_to_concat=df_to_concat.rename(columns = {production:'Production'})
     df_with_all_prod_to_plot=pd.concat([df_with_all_prod_to_plot,df_to_concat],axis=0,sort=True)
 
 df_with_all_prod_to_plot.loc[df_with_all_prod_to_plot['Country']!=df_with_all_prod_to_plot['Pathways'],'Pathway']='Improved'
 df_with_all_prod_to_plot.loc[df_with_all_prod_to_plot['Country']==df_with_all_prod_to_plot['Pathways'],'Pathway']='Current'
 df_with_all_prod_to_plot['Production in 2010 (Mt)']=df_with_all_prod_to_plot['Production in 2010 (Mt)']*t_to_Mt
-for country in country_list:
-    plot_boxplot_with_sns(df_with_all_prod_to_plot,country,"Production index (relative to 2010)","Allocation rule","Production index (relative to 2010)",'Figs/production_bar_plot_'+country.lower().replace(' ','_')+file_name_suffix+'.png',item_column_name='Item',ref_column_name='Production in 2010 (Mt)',reference_df=None,plot_points=True)
+df_with_all_prod_to_plot['Production in 2050 (Mt)']=df_with_all_prod_to_plot['Production']*t_to_Mt
+df_with_all_prod_to_plot=df_with_all_prod_to_plot.reset_index()
+g = sns.catplot(x="Item", y="Production index (relative to 2010)", hue="Allocation rule",col="Country",
+                height=3.5, aspect=1.5,sharey=True,col_wrap=2,
+                kind="point", data=df_with_all_prod_to_plot,join=False)
+g.add_legend(title="Allocation rule")
+g.set_axis_labels("", "Production index\n(in 2050 relative to 2010)")
+g.set_titles("{col_name}")
+g.fig.savefig('Figs/production_bar_plot.png', dpi=100)
+plt.close("all")
+#plot_boxplot_with_sns(df_with_all_prod_to_plot,country,"Production index (relative to 2010)","Allocation rule","Production index (relative to 2010)",'Figs/production_bar_plot_'+country.lower().replace(' ','_')+file_name_suffix+'.png',item_column_name='Item',ref_column_name='Production in 2010 (Mt)',reference_df=None,plot_points=True)
+table = pd.pivot_table(df_with_all_prod_to_plot, values=['Production in 2010 (Mt)','Production in 2050 (Mt)'], index=['Country','Item'],columns=["Allocation rule"],aggfunc=np.mean)
+table.index.name=None
+table.to_excel("output/table_production.xlsx",index_label=None,float_format = "%0.1f")
 print("Print all production with different metrics...")
 
 #Print area change for different quota
-df_to_plot=pd.DataFrame(columns=['Area change','Allocation rule','Country','Item'])
+df_to_plot=pd.DataFrame(columns=['Area index','Allocation rule','Area 2010','Area 2050','Country','Item'])
 for item in ['Grass','Feed','Rice','Total']:
-    df_to_concat=pd.concat([activity_df[['Country','Pathways','National '+item+' area change',"Allocation rule"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
-    df_to_concat=df_to_concat.rename(columns = {item+' area change':'Area change'})
+    df_to_concat=pd.concat([activity_df[['Country','National '+item+' area index','National '+item+' area 2010','National '+item+' area',"Allocation rule"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
+    df_to_concat=df_to_concat.rename(columns = {'National '+item+' area index':'Area index'})
+    df_to_concat=df_to_concat.rename(columns = {'National '+item+' area 2010':'Area 2010'})
+    df_to_concat=df_to_concat.rename(columns = {'National '+item+' area':'Area 2050'})
     df_to_plot=pd.concat([df_to_plot,df_to_concat],axis=0,sort='True')
 
 ha_2_Mha=1E-6
-df_to_plot['Area change']=df_to_plot['Area change']*ha_2_Mha
-df_to_plot.loc[df_to_plot['Country']!=df_to_plot['Pathways'],'Pathway']='Improved'
-df_to_plot.loc[df_to_plot['Country']==df_to_plot['Pathways'],'Pathway']='Current'
-for country in country_list:
-    plot_boxplot_with_sns(df_to_plot,country,"Area change","Allocation rule","Area change (Mha)",'Figs/changed_area_bar_plot_'+country.lower().replace(' ','_')+file_name_suffix+'.png',item_column_name='Item',reference_df=None,plot_points=True)
-print("Print all change of area with different metrics...")
-
-#Print area index for different quota
-df_to_plot=pd.DataFrame(columns=['Area index','Area in 2010 (Mha)','Allocation rule','Country','Item'])
-for item in ['Grass','Feed','Rice','Total']:
-    df_to_concat=pd.concat([activity_df[['Country','Pathways','National '+item+' area index','National '+item+' area 2010',"Allocation rule"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
-    df_to_concat=df_to_concat.rename(columns = {'National '+item+' area index':'Area index'})
-    df_to_concat=df_to_concat.rename(columns = {'National '+item+' area 2010':'Area in 2010 (Mha)'})
-    df_to_plot=pd.concat([df_to_plot,df_to_concat],axis=0,sort='True')
-
-ha_to_Mha=1E-6
-df_to_plot['Area in 2010 (Mha)']=df_to_plot['Area in 2010 (Mha)']*ha_to_Mha
-df_to_plot.loc[df_to_plot['Country']!=df_to_plot['Pathways'],'Pathway']='Improved'
-df_to_plot.loc[df_to_plot['Country']==df_to_plot['Pathways'],'Pathway']='Current'
-for country in country_list:
-    plot_boxplot_with_sns(df_to_plot,country,"Area index","Allocation rule","Area index (relative to 2010)",'Figs/area_index_bar_plot_'+country.lower().replace(' ','_')+file_name_suffix+'.png',item_column_name='Item',ref_column_name='Area in 2010 (Mha)',reference_df=None,plot_points=True)
-print("Print area index with different metrics...")
+df_to_plot['Area in 2050 (Mha)']=df_to_plot['Area 2050']*ha_2_Mha
+df_to_plot['Area in 2010 (Mha)']=df_to_plot['Area 2010']*ha_2_Mha
+g = sns.catplot(x="Item", y="Area index", hue="Allocation rule",col="Country",
+                height=3.5, aspect=1.5,sharey=True,legend=False,
+                kind="point", data=df_to_plot,join=False)
+g.set_axis_labels("", "Area index\n(2050 relative to 2010)")
+g.set_titles("{col_name}")
+g.add_legend(title="Allocation rule")
+g.fig.savefig('Figs/area_bar_plot.png', dpi=100)
+plt.close("all")
+table = pd.pivot_table(df_to_plot, values=['Area in 2010 (Mha)','Area in 2050 (Mha)'], index=['Country','Item'],columns=["Allocation rule"],aggfunc=np.mean)
+table.index.name=None
+table.to_excel("output/table_area.xlsx",index_label=None,float_format = "%0.1f")
+print("Print all area index with different metrics...")
 
 #Compute N2O emissions from manure
 df_to_plot=pd.DataFrame(columns=['N2O emissions','Allocation rule','Country','Item'])
 for item in ['manure','fert']:
-    df_to_concat=pd.concat([activity_df[['Country','Pathways','N2O '+item+' index', 'N2O '+item+' 2010',"Allocation rule"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
+    df_to_concat=pd.concat([activity_df[['Country','N2O '+item+' index', 'N2O '+item+' 2010','N2O '+item,"Allocation rule"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
     df_to_concat=df_to_concat.rename(columns = {'N2O '+item+' 2010':'N2O emissions in 2010'})
-    df_to_concat=df_to_concat.rename(columns = {'N2O '+item+' index':'N2O index (compared to 2010)'})
+    df_to_concat=df_to_concat.rename(columns = {'N2O '+item+' index':'N2O index (2050 relative to 2010)'})
+    df_to_concat=df_to_concat.rename(columns = {'N2O '+item:'N2O emissions in 2050'})
     df_to_plot=pd.concat([df_to_plot,df_to_concat],axis=0,sort='True')
 
-df_to_plot['N2O emissions in 2010 (ktN2O)']=df_to_plot['N2O emissions in 2010']*t_to_kt
-df_to_plot.loc[df_to_plot['Country']!=df_to_plot['Pathways'],'Pathway']='Improved'
-df_to_plot.loc[df_to_plot['Country']==df_to_plot['Pathways'],'Pathway']='Current'
-for country in country_list:
-    plot_boxplot_with_sns(df_to_plot,country,"N2O index (compared to 2010)","Allocation rule","N2O index (compared to 2010)",'Figs/N2O_index_bar_plot_'+country.lower().replace(' ','_')+file_name_suffix+'.png',item_column_name='Item',ref_column_name='N2O emissions in 2010 (ktN2O)',reference_df=None,plot_points=True)
+df_to_plot['N2O emissions\nin 2010 (ktN2O)']=df_to_plot['N2O emissions in 2010']*t_to_kt
+df_to_plot['N2O emissions\nin 2050 (ktN2O)']=df_to_plot['N2O emissions in 2050']*t_to_kt
+g = sns.catplot(x="Item", y="N2O index (2050 relative to 2010)", hue="Allocation rule",col="Country",
+                height=3.5, aspect=1.5,sharey=True,
+                kind="point", data=df_to_plot,join=False)
+g.add_legend(title="Allocation rule")
+g.set_axis_labels("", "N2O index\n(2050 relative to 2010)")
+g.set_titles("{col_name}")
+g.fig.savefig('Figs/N2O_bar_plot.png', dpi=100)
+plt.close("all")
+table = pd.pivot_table(df_to_plot, values=['N2O emissions\nin 2010 (ktN2O)','N2O emissions\nin 2050 (ktN2O)'], index=['Country','Item'],columns=["Allocation rule"],aggfunc=np.mean)
+table.index.name=None
+table.to_excel("output/table_N2O.xlsx",index_label=None,float_format = "%0.1f")
 print("Print N2O with different metrics...")
 
 #Compute negative emissions of CO2
@@ -258,26 +183,60 @@ for item in ['Grass','Feed','Rice','Total']:
     df_to_plot=pd.concat([df_to_plot,df_to_concat],axis=0,sort='True')
 
 df_to_plot['CO2 offset (MtCO2)']=df_to_plot['CO2 offset']*t_to_Mt
-df_to_plot.loc[df_to_plot['Country']!=df_to_plot['Pathways'],'Pathway']='Improved'
-df_to_plot.loc[df_to_plot['Country']==df_to_plot['Pathways'],'Pathway']='Current'
-for country in country_list:
-    plot_boxplot_with_sns(df_to_plot,country,"CO2 offset (MtCO2)","Allocation rule","CO2 offset (MtCO2)",'Figs/offset_bar_plot_'+country.lower().replace(' ','_')+file_name_suffix+'.png',item_column_name='Item',reference_df=None,plot_points=True)
+g = sns.catplot(x="Item", y="CO2 offset (MtCO2)", hue="Allocation rule",col="Country",
+                height=3.5, aspect=1.5,sharey=False,
+                kind="point", legend=False, data=df_to_plot,join=False);
+g.add_legend(title="Allocation rule")
+g.set_axis_labels("", "CO2 offset (MtCO2)")
+g.set_titles("{col_name}")
+g.fig.savefig('Figs/CO2_bar_plot.png', dpi=100)
+table = pd.pivot_table(df_to_plot, values=['CO2 offset (MtCO2)'], index=['Country','Item'],columns=["Allocation rule"],aggfunc=np.mean)
+table.index.name=None
+table.to_excel("output/table_CO2.xlsx",index_label=None,float_format = "%0.1f")
 print("Print CO2 offset with different metrics...")
 
 #Compute AFOLU balance
 GWP100_N2O=298
-activity_df.loc[:,'AFOLU balance(MtCO2eq)']=0
 activity_df['CO2 offset world']=(activity_df['2050']-activity_df['2010'])
-df_pivot=activity_df.pivot(columns="Country")
-df_offset=pd.concat([df_pivot["Total offset"],activity_df["Allocation rule"]],axis=1)
-df_to_plot=pd.concat([df_pivot["AFOLU balance(MtCO2eq)"],activity_df["Allocation rule"]],axis=1)
+df_to_plot=pd.DataFrame(columns=['GWP (MtCO2eq)','Allocation rule','Country','Item'])
 for country in country_list:
     emission_ref_year=methane_emissions_pd['Value'][methane_emissions_pd['Area']==country].values[0]
-    for rule in np.unique(df_to_plot['Allocation rule']):
-        country_rule_mak=(df_pivot['Allocation rule'][country]==rule) & (~np.isnan(df_pivot['N2O'][country]))
-        N2O_emissions=df_pivot['N2O'].loc[country_rule_mak,country]*t_2_Mt*GWP100_N2O
-        CO2_equivalent=compute_CO2_equivalent(df_pivot['National quota'].loc[country_rule_mak,country],rule,emission_ref_year,country,ponderation_in_GWP_star=ponderation_dict[rule],methane_debt=methane_debt_df)
-        df_to_plot.loc[df_to_plot['Allocation rule']==rule,country]=-df_offset.loc[country_rule_mak,country]*t_to_Mt+CO2_equivalent*t_to_Mt+N2O_emissions
-plot_boxplot(df_to_plot,country_list,"AFOLU balance(MtCO2eq)","Figs/AFOLU_balance_bar_plot_countries"+file_name_suffix+".png")
+    for rule in np.unique(activity_df['Allocation rule']):
+        country_rule_mask=(activity_df['Allocation rule']==rule) & (activity_df["Country"]==country)
+        N2O_emissions=activity_df.loc[country_rule_mask,'N2O']*t_2_Mt*GWP100_N2O
+        CO2_equivalent=compute_CO2_equivalent(activity_df.loc[country_rule_mask,'National quota'],rule,emission_ref_year,country,ponderation_in_GWP_star=ponderation_dict[rule],methane_debt=methane_debt_df)
+        for gaz in ["CO2","CH4","N2O","AFOLU"]:
+            df_tmp=pd.DataFrame(columns=['GWP (MtCO2eq)','Allocation rule','Country'])
+            if gaz=="CO2":
+                df_tmp.loc[:,'GWP (MtCO2eq)']=-activity_df.loc[country_rule_mask,"Total offset"].values*t_to_Mt
+            elif gaz=="CH4":
+                df_tmp.loc[:,'GWP (MtCO2eq)']=CO2_equivalent*t_to_Mt
+            elif gaz=="N2O":
+                df_tmp.loc[:,'GWP (MtCO2eq)']=N2O_emissions.values
+            elif gaz=="AFOLU":
+                df_tmp.loc[:,'GWP (MtCO2eq)']=-activity_df.loc[country_rule_mask,"Total offset"].values*t_to_Mt+CO2_equivalent*t_to_Mt+N2O_emissions.values
+            df_tmp['Country']=country
+            df_tmp['Allocation rule']=rule
+            df_to_concat=pd.concat([df_tmp[['Country','GWP (MtCO2eq)',"Allocation rule"]],pd.DataFrame([gaz]*len(df_tmp['Country']),columns=['Item'])],axis=1,sort=True)
+            #df_to_concat=df_to_concat.rename(columns = {"GWP "+gaz+' (MtCO2eq)':'GWP (MtCO2eq)'})
+            df_to_plot=pd.concat([df_to_plot,df_to_concat],axis=0,sort=False)
+        df_tmp=pd.DataFrame(columns=['GWP (MtCO2eq)','Allocation rule','Country',"Item"])
+        df_tmp["GWP (MtCO2eq)"]=activity_df.loc[country_rule_mask,'International Feed offset'].values*t_2_Mt
+        df_tmp["Country"]=country
+        df_tmp["Allocation rule"]=rule
+        df_tmp["Item"]="Import"
+        df_to_plot=pd.concat([df_to_plot,df_tmp],axis=0,sort=False)
+
+g = sns.catplot(x="Item", y="GWP (MtCO2eq)", hue="Allocation rule",col="Country",
+                height=3.5, aspect=1.5,sharey=False,col_wrap=2,
+                kind="point", legend=False, data=df_to_plot,join=False);
+g.add_legend(title="Allocation rule")
+g.set_axis_labels("", "GWP (MtCO2eq)")
+g.set_titles("{col_name}")
+g.fig.savefig('Figs/AFOLU_bar_plot.png', dpi=100)
+table = pd.pivot_table(df_to_plot, values=['GWP (MtCO2eq)'], index=['Country','Item'],columns=["Allocation rule"],aggfunc=np.mean)
+table.index.name=None
+table.to_excel("output/table_GWP.xlsx",index_label=None,float_format = "%0.1f")
+#plot_boxplot(df_to_plot,country_list,"AFOLU balance(MtCO2eq)","Figs/AFOLU_balance_bar_plot_countries"+file_name_suffix+".png")
 #plot_boxplot(df_to_plot,country_list,"Net AFOLU balance (MtCH4)","Figs/CH4_net_bar_plot_countries.pdf")
 print("Print net AFOLU balance with different metrics...")

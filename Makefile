@@ -96,7 +96,7 @@ output/paper_table2.csv: output compute_AFOLU_balance.py common_methane.py outpu
 
 # PLot boxplot of national AFOLU balance following the national
 #methane quota
-Figs/AFOLU_balance_bar_plot_countries.png: Figs plot_box_plot.py output/impact_2050.csv
+Figs/AFOLU_bar_plot.png: Figs plot_box_plot.py output/impact_2050.csv
 				${launch_python} plot_box_plot.py
 
 # Figs/area_national_offset_quota.png: Figs plot_burden_sharing_offset.py compute_production.py output/production_2010.csv

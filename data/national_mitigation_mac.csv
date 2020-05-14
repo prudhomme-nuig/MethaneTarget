@@ -13,9 +13,9 @@ Brazil,enteric,Concentrate,mitigation,196428.5714,nan,0,0,0,CH4,Cattle
 Brazil,enteric,Additives,mitigation,125000,nan,0,0,0,CH4,Cattle
 Brazil,enteric,Breeding,mitigation,171428.571,nan,0,0,0,CH4,Cattle
 Brazil,manure,manure management,mitigation,16778,nan,0,0,0,both,Cattle
-Ireland,enteric,Improved LG,mitigation,2178.57,nan,0,0,0,CH4,Cattle
-Ireland,enteric,Beef MR,mitigation,903.57,nan,0,0,0,CH4,Cattle
-Ireland,enteric,Dairy EBI,mitigation,1265,nan,0,0,0,CH4,Cattle
+Ireland,enteric,Improved LG,mitigation,2178.57,nan,0,0,0,CH4,"Cattle, non-dairy"
+Ireland,enteric,Beef MR,mitigation,903.57,nan,0,0,0,CH4,"Cattle, non-dairy"
+Ireland,enteric,Dairy EBI,mitigation,1265,nan,0,0,0,CH4,"Cattle, dairy"
 Ireland,enteric,Extended grazing,mitigation,3428.57,nan,0,0,0,CH4,Cattle
 Ireland,enteric,Animal health,mitigation,5250,nan,0,0,0,CH4,Cattle
 Ireland,enteric,Sex seemed,mitigation,867.85,nan,0,0,0,CH4,Cattle

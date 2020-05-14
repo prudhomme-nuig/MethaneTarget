@@ -126,6 +126,21 @@ table.index.name=None
 table.to_excel("output/table_production.xlsx",index_label=None,float_format = "%0.1f")
 print("Print all production with different metrics...")
 
+#Print unit of production of each methane intensive production
+item_list=['Cattle, dairy','Cattle, non-dairy','Swine','Poultry Birds','Chickens, layers','Sheep and Goats'] #'Rice, paddy'
+df_with_all_prod_to_plot=pd.DataFrame(columns=['UP','UP index','Allocation rule','UP 2010','Country','Item'])
+for item in item_list:
+    activity_df['UP index '+item]=activity_df['UP '+item].values/activity_df['UP 2010 '+item].values
+    df_to_concat=pd.concat([activity_df[['Country','Pathways','UP 2010 '+item,'UP index '+item,'UP '+item,"Allocation rule"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
+    df_to_concat=df_to_concat.rename(columns = {'UP 2010 '+item:'UP 2010'})
+    df_to_concat=df_to_concat.rename(columns = {'UP '+item:'UP'})
+    df_to_concat=df_to_concat.rename(columns = {'UP index '+item:'UP index'})
+    df_with_all_prod_to_plot=pd.concat([df_with_all_prod_to_plot,df_to_concat],axis=0,sort=True)
+table = pd.pivot_table(df_with_all_prod_to_plot, values=['UP 2010','UP','UP index'], index=['Country','Item'],columns=["Allocation rule"],aggfunc=np.mean)
+table.index.name=None
+table.to_excel("output/table_UP.xlsx",index_label=None,float_format = "%0.2f")
+print("Print all UP index with different metrics...")
+
 #Print area change for different quota
 df_to_plot=pd.DataFrame(columns=['Area index','Allocation rule','Area 2010','Area 2050','Country','Item'])
 for item in ['Grass','Feed','Rice','Total']:
@@ -205,6 +220,7 @@ for country in country_list:
         country_rule_mask=(activity_df['Allocation rule']==rule) & (activity_df["Country"]==country)
         N2O_emissions=activity_df.loc[country_rule_mask,'N2O']*t_2_Mt*GWP100_N2O
         CO2_equivalent=compute_CO2_equivalent(activity_df.loc[country_rule_mask,'National quota'],rule,emission_ref_year,country,ponderation_in_GWP_star=ponderation_dict[rule],methane_debt=methane_debt_df)
+        methane_emissions_pd['Value'][methane_emissions_pd['Area']==country].values[0]
         for gaz in ["CO2","CH4","N2O","AFOLU"]:
             df_tmp=pd.DataFrame(columns=['GWP (MtCO2eq)','Allocation rule','Country'])
             if gaz=="CO2":

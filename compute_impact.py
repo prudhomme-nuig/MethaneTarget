@@ -39,7 +39,7 @@ else:
 
 demand_dict={'Grass':['National Grass area'],'Grain':['Feed prodution','Cropland area (Feed)']}
 #,'Rice, paddy':['prodution','area']
-production_dict={'Cattle, dairy':['Milk, Total'],'Cattle, non-dairy':['Beef and Buffalo Meat'],'Rice, paddy':['Rice, paddy'],'Swine':['Meat, pig'],'Poultry Birds':['Meat, Poultry'],'Chickens, layers':['Eggs Primary'],'Sheep and Goats':['Sheep and Goat Meat']}
+production_dict={'Cattle, dairy':['Milk, Total','Beef and Buffalo Meat'],'Cattle, non-dairy':['Beef and Buffalo Meat'],'Rice, paddy':['Rice, paddy'],'Swine':['Meat, pig'],'Poultry Birds':['Meat, Poultry'],'Chickens, layers':['Eggs Primary'],'Sheep and Goats':['Sheep and Goat Meat']}
 item_list=['Cattle, dairy','Cattle, non-dairy','Swine','Poultry Birds','Chickens, layers','Sheep and Goats'] #'Rice, paddy'
 # country_intensification_pd=pd.read_csv("output/model_country.csv",index_col=0)
 # country_list=list(country_intensification_pd.columns)
@@ -90,21 +90,37 @@ for country in country_list:
                 pathway_tmp=country
                 pathway_name=country
             for production in production_dict[item]:
-                animal_producing=yields_df.loc[(yields_df['Area']==pathway_tmp) & (yields_df['Element']==animal_producing_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
                 animal_number_ref=activity_ref_df.loc[(activity_ref_df['Area']==pathway_tmp) & (activity_ref_df['Element']=='Stocks') & (activity_ref_df['Item']==item),'Value'].values[0]
+                if "Cattle" in item:
+                    cattle_all_number_ref=activity_ref_df.loc[(activity_ref_df['Area']==pathway_tmp) & (activity_ref_df['Element']=='Stocks') & (activity_ref_df['Item']=="Cattle"),'Value'].values[0]
+                    slaugthered_animals=yields_df.loc[(yields_df['Area']==pathway_tmp) & (yields_df['Element']==animal_producing_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
+                    slaugthered_animals_ref=yields_df.loc[(yields_df['Area']==country) & (yields_df['Element']==animal_producing_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
+                    animal_producing=slaugthered_animals*animal_number_ref/cattle_all_number_ref
+                    animal_producing_ref=slaugthered_animals_ref*animal_number_ref/cattle_all_number_ref
+                else:
+                    animal_producing=yields_df.loc[(yields_df['Area']==pathway_tmp) & (yields_df['Element']==animal_producing_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
+                    animal_producing_ref=yields_df.loc[(yields_df['Area']==country) & (yields_df['Element']==animal_producing_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
                 share_animal_producing=animal_producing/animal_number_ref
                 yields=yields_df.loc[(yields_df['Area']==pathway_tmp) & (yields_df['Element']==yield_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
                 yields_ref=yields_df.loc[(yields_df['Area']==country) & (yields_df['Element']==yield_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
                 animal_number=activity_df.loc[country_pathway_mask,'Activity '+item].values
-                activity_df.loc[country_pathway_mask,production]=yields*share_animal_producing*animal_number
-                animal_producing_ref=yields_df.loc[(yields_df['Area']==country) & (yields_df['Element']==animal_producing_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
-                activity_df.loc[country_pathway_mask,production+' 2010']=yields_ref*animal_producing_ref
-
+                if "Beef and Buffalo Meat"==production:
+                    if production in activity_df.columns:
+                        activity_df.loc[country_pathway_mask,production]+=yields*share_animal_producing*animal_number
+                        activity_df.loc[country_pathway_mask,production+' 2010']+=yields_ref*animal_producing_ref
+                    else:
+                        activity_df.loc[country_pathway_mask,production]=yields*share_animal_producing*animal_number
+                        activity_df.loc[country_pathway_mask,production+' 2010']=yields_ref*animal_producing_ref
+                else:
+                    activity_df.loc[country_pathway_mask,production]=yields*share_animal_producing*animal_number
+                    activity_df.loc[country_pathway_mask,production+' 2010']=yields_ref*animal_producing_ref
             #Feed production
             feed='Grains'
             country_pathway_item_feed_mask=(feed_per_head_df['Country']==pathway_tmp) & (feed_per_head_df['Item']==item) & (feed_per_head_df['Feed']==feed)
             activity_df.loc[country_pathway_mask,'National Feed production '+item]=feed_per_head_df.loc[country_pathway_item_feed_mask,'Value'].values[0]*animal_number*trade_feed_df.loc["Share feed demand domestically produced",country]
             animal_number_ref=activity_ref_df.loc[(activity_ref_df['Area']==country) & (activity_ref_df['Item']==item) & (activity_ref_df['Element']=='Stocks'),'Value'].values[0]
+            activity_df.loc[country_pathway_mask,'UP 2010 '+item]=animal_number_ref
+            activity_df.loc[country_pathway_mask,'UP '+item]=animal_number
             activity_df.loc[country_pathway_mask,'National Feed production 2010 '+item]=feed_per_head_df.loc[(feed_per_head_df['Country']==country) & (feed_per_head_df['Item']==item) & (feed_per_head_df['Feed']==feed),'Value'].values[0]*animal_number_ref*trade_feed_df.loc["Share feed demand domestically produced",country]
             activity_df.loc[country_pathway_mask,'International Feed production '+item]=feed_per_head_df.loc[country_pathway_item_feed_mask,'Value'].values[0]*animal_number*(1-trade_feed_df.loc["Share feed demand domestically produced",country])
             activity_df.loc[country_pathway_mask,'International Feed production 2010 '+item]=feed_per_head_df.loc[(feed_per_head_df['Country']==country) & (feed_per_head_df['Item']==item) & (feed_per_head_df['Feed']==feed),'Value'].values[0]*animal_number_ref*(1-trade_feed_df.loc["Share feed demand domestically produced",country])

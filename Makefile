@@ -43,10 +43,6 @@ output/methane_quota.csv:output compute_methane_quota.py output/production_2010.
 output/emission_intensity_2050.csv:output compute_methane_intensity_2050.py
 				${launch_python} compute_methane_intensity_2050.py
 
-#Without mitigation technologies applied
-output/emission_intensity_2050_no_mitigation.csv:output compute_methane_intensity_2050.py
-				${launch_python} compute_methane_intensity_2050.py --no-mitigation
-
 #Compute share of each crop whih is domestically produced
 # and the share of feed in the total production
 output/share_trade_feed.csv:compute_trade_share.py output
@@ -58,8 +54,8 @@ output/activity_2050.csv:output compute_activity_2050.py output/methane_quota.cs
 				${launch_python} compute_activity_2050.py
 
 #Compute aggregate feed yield with national yield
-output/feed_yield_aggregate.csv:compute_feed_yield.py output output/share_trade_feed.csv
-					${launch_python} compute_feed_yield.py
+output/feed_yield_aggregate.csv:compute_feed_yield.py output output/share_trade_feed.csv logs
+					${launch_python} compute_feed_yield.py > logs/compute_feed_yield.log
 
 #Compute mean grass yield at a national scale based on
 # FAOSTAT data
@@ -70,10 +66,6 @@ output/grass_yield.csv: output compute_grass_yield.py
 # and fertilization
 output/emission_intensity_N2O.csv: output
 				${launch_python} compute_N2O_intensity_2050.py
-
-#Without mitigation technologies applied
-output/emission_intensity_N2O_no_mitigation.csv:output compute_N2O_intensity_2050.py
-				${launch_python} compute_N2O_intensity_2050.py --no-mitigation
 
 #Compute deforesattion emission factor based on IPCC methodology
 # for countries with the highest agricultural exapnsion during these
@@ -86,17 +78,13 @@ output/deforestation_factor.csv: output compute_deforestation_emission_factor.py
 output/impact_2050.csv: output compute_impact.py output/feed_yield_aggregate.csv output/activity_2050.csv output/grass_yield.csv output/emission_intensity_N2O.csv output/deforestation_factor.csv common_methane.py
 				${launch_python} compute_impact.py --print-table
 
-#Without mitigation technologies applied
-output/impact_2050_no_mitigation.csv: output compute_impact.py output/feed_yield_aggregate.csv output/activity_2050_no_mitigation.csv output/grass_yield.csv output/emission_intensity_N2O_no_mitigation.csv output/deforestation_factor.csv common_methane.py
-				${launch_python} compute_impact.py --no-mitigation
-
 #Compute AFOLU balance
-output/paper_table2.csv: output compute_AFOLU_balance.py common_methane.py output/impact_2050.csv
+output/AFOLU_balance_2050.csv: output compute_AFOLU_balance.py common_methane.py output/impact_2050.csv
 				${launch_python} compute_AFOLU_balance.py --print-table
 
 # PLot boxplot of national AFOLU balance following the national
 #methane quota
-Figs/AFOLU_bar_plot.png: Figs plot_box_plot.py output/impact_2050.csv
+Figs/AFOLU_bar_plot.png: Figs plot_box_plot.py output/AFOLU_balance_2050.csv
 				${launch_python} plot_box_plot.py
 
 # Figs/area_national_offset_quota.png: Figs plot_burden_sharing_offset.py compute_production.py output/production_2010.csv
@@ -106,10 +94,44 @@ Figs/AFOLU_bar_plot.png: Figs plot_box_plot.py output/impact_2050.csv
 #---------------- Sensitivity analysis -------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------
 
-Figs/AFOLU_balance_bar_plot_countries_yield+50.png: output compute_impact.py plot_box_plot.py output/feed_yield_aggregate.csv output/activity_2050.csv output/grass_yield.csv output/emission_intensity_N2O.csv
-				${launch_python} compute_impact.py --sensitivity-analysis=+50
-				${launch_python} plot_box_plot.py --sensitivity-analysis=+50
+#No mitigation
+output/AFOLU_balance_2050_no_mitigation.csv: output compute_impact.py compute_AFOLU_balance.py output/feed_yield_aggregate.csv output/grass_yield.csv output/deforestation_factor.csv common_methane.py
+				${launch_python} compute_N2O_intensity_2050.py --no-mitigation
+				${launch_python} compute_methane_intensity_2050.py --no-mitigation --print-table
+				${launch_python} compute_activity_2050.py --no-mitigation
+				${launch_python} compute_impact.py --no-mitigation --print-table
+				${launch_python} compute_AFOLU_balance.py --no-mitigation --print-table
 
-Figs/AFOLU_balance_bar_plot_countries_yield-50.png: output compute_impact.py plot_box_plot.py output/feed_yield_aggregate.csv output/activity_2050.csv output/grass_yield.csv output/emission_intensity_N2O.csv
-				${launch_python} compute_impact.py --sensitivity-analysis=-50
-				${launch_python} plot_box_plot.py --sensitivity-analysis=-50
+#+50% mitigation
+output/AFOLU_balance_2050_mitigation-50.csv: output compute_impact.py output/feed_yield_aggregate.csv output/activity_2050_no_mitigation.csv output/grass_yield.csv output/emission_intensity_N2O_no_mitigation.csv output/deforestation_factor.csv common_methane.py
+				${launch_python} compute_N2O_intensity_2050.py --mitigation=-50
+				${launch_python} compute_methane_intensity_2050.py --mitigation=-50 --print-table
+				${launch_python} compute_activity_2050.py --mitigation=-50
+				${launch_python} compute_impact.py --mitigation=-50 --print-table
+				${launch_python} compute_AFOLU_balance.py --mitigation=-50 --print-table
+
+#Yield increase of 50%
+output/AFOLU_balance_2050_yield+50.csv: output compute_impact.py compute_AFOLU_balance.py output/feed_yield_aggregate.csv output/activity_2050.csv output/grass_yield.csv output/emission_intensity_N2O.csv
+				${launch_python} compute_impact.py --sensitivity-analysis=+50 --print-table
+				${launch_python} compute_AFOLU_balance.py --sensitivity-analysis=+50 --print-table
+
+#Yield decrease of 50%
+output/AFOLU_balance_2050_yield-50.csv: output compute_impact.py compute_AFOLU_balance.py output/feed_yield_aggregate.csv output/activity_2050.csv output/grass_yield.csv output/emission_intensity_N2O.csv
+				${launch_python} compute_impact.py --sensitivity-analysis=-50 --print-table
+				${launch_python} compute_AFOLU_balance.py --sensitivity-analysis=-50 --print-table
+
+#Forest growth rate decrease of 50%
+output/AFOLU_balance_2050_carbon-50.csv: output compute_impact.py compute_AFOLU_balance.py output/activity_2050.csv
+				${launch_python} compute_deforestation_emission_factor.py --sensitivity=-50
+				${launch_python} compute_impact.py --carbon=-50 --print-table
+				${launch_python} compute_AFOLU_balance.py --carbon=-50 --print-table
+
+#Forest growth rate increase of 50%
+output/AFOLU_balance_2050_carbon+50.csv: output compute_impact.py compute_AFOLU_balance.py output/activity_2050.csv
+				${launch_python} compute_deforestation_emission_factor.py --sensitivity=+50
+				${launch_python} compute_impact.py --carbon=+50 --print-table
+				${launch_python} compute_AFOLU_balance.py --carbon=+50 --print-table
+
+#Output table and perform statistical test
+output/sensitivity_analysis.csv: output output/AFOLU_balance_2050_mitigation+50.csv output/AFOLU_balance_2050_no_mitigation.csv output/AFOLU_balance_2050_yield+50.csv output/AFOLU_balance_2050_yield-50.csv
+				${launch_python} sensitivity_analysis.py

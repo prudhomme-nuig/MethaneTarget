@@ -12,6 +12,7 @@ import argparse
 parser = argparse.ArgumentParser('Compute national nitrous oxyde intensity of manure and fertilization')
 parser.add_argument('--no-mitigation', action='store_true', help='No mitigation option')
 parser.add_argument('--print-table', action='store_true', help='Print table')
+parser.add_argument('--mitigation',  help='Change mitigation option')
 
 args = parser.parse_args()
 
@@ -25,10 +26,16 @@ element_list=["Stocks","Emissions (N2O)"]
 #Option with or without mitigation aplied in 2050 for N2O and methane
 if args.no_mitigation:
     mitigation_potential_df=pd.read_csv("data/no_mitigation.csv",dtype={"Mitigation potential":np.float64})
-    output_file_name='output/emission_intensity_N2O_no_mitigation.csv'
+    file_name_suffix='_no_mitigation'
 else:
     mitigation_potential_df=pd.read_csv("data/national_mitigation_mac.csv",dtype={"Mitigation potential":np.float64})
-    output_file_name='output/emission_intensity_N2O.csv'
+    file_name_suffix=''
+
+if args.mitigation is not None:
+    mitigation_strength=1+float(args.mitigation)/100
+    file_name_suffix+='_mitigation'+args.mitigation
+else:
+    mitigation_strength=1
 
 #Read methane emissions in 2010 from FAOSTAT
 N2O_df=read_FAOSTAT_df("data/FAOSTAT_N2O_reference.csv",delimiter=",")
@@ -158,16 +165,16 @@ for emission_df in [aggregate_df,N2O_fertilizer_df]:
                 if emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Emissions (N2O)" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]==0:
                     output_df.loc[index,:]=[country,emission_df.name,item,0]
                 else:
-                    intensity=emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Emissions (N2O)" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]/emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Stocks" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
+                    intensity=mitigation_strength*emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Emissions (N2O)" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]/emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Stocks" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
                     output_df.loc[index,:]=[country,emission_df.name,item,intensity]
             else:
                 if emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Implied" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]==0:
                     output_df.loc[index,:]=[country,emission_df.name,item,0]
                 else:
-                    intensity=emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Implied" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
+                    intensity=mitigation_strength*emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Implied" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
                     output_df.loc[index,:]=[country,emission_df.name,item,intensity]
             index+=1
-output_df.to_csv(output_file_name,index=False)
+output_df.to_csv('output/emission_intensity_N2O'+file_name_suffix+'.csv',index=False)
 #output_activity_df.to_csv('output/activity_2050.csv',index=False)
 
 if args.print_table:

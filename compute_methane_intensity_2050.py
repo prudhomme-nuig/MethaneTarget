@@ -10,6 +10,8 @@ from common_data import read_FAOSTAT_df
 import argparse
 
 parser = argparse.ArgumentParser('Compute methane intensity per unit of production in 2050 for each intensification pathway')
+parser.add_argument('--mitigation',  help='Change mitigation option')
+parser.add_argument('--print-table', action='store_true', help='Print table')
 parser.add_argument('--no-mitigation', action='store_true', help='No mitigation option')
 
 args = parser.parse_args()
@@ -25,20 +27,21 @@ GWP100_N2O=298
 
 #Mitigation potential and cost
 # fom national MAC curves
+#Option with or without mitigation applied in 2050 for methane
 if args.no_mitigation:
     mitigation_potential_df=pd.read_csv("data/no_mitigation.csv",dtype={"Mitigation potential":np.float64})
-    output_file_name='output/emission_intensity_2050_no_mitigation.csv'
+    file_name_suffix='_no_mitigation'
 else:
     mitigation_potential_df=pd.read_csv("data/national_mitigation_mac.csv",dtype={"Mitigation potential":np.float64})
-    output_file_name='output/emission_intensity_2050.csv'
+    file_name_suffix=""
 
-#Option with or without mitigation aplied in 2050 for N2O and methane
-if args.no_mitigation:
-    mitigation_potential_df=pd.read_csv("data/no_mitigation.csv",dtype={"Mitigation potential":np.float64})
-    output_file_name='output/emission_intensity_2050_no_mitigation.csv'
+# Stronger mitigation option than ones computed in MAC curves
+if args.mitigation is not None:
+    mitigation_strength=1+float(args.mitigation)/100
+    file_name_suffix+='_mitigation'+args.mitigation
 else:
-    mitigation_potential_df=pd.read_csv("data/national_mitigation_mac.csv",dtype={"Mitigation potential":np.float64})
-    output_file_name='output/emission_intensity_2050.csv'
+    mitigation_strength=1
+    file_name_suffix+=""
 
 #Read methane emissions in 2010 from FAOSTAT
 methane_df=read_FAOSTAT_df("data/FAOSTAT_methane.csv",delimiter=",")
@@ -81,7 +84,7 @@ def compute_emission_intensity(mitigation_potential_df,df,country,item,share_met
     for index in mitigation_df.index:
         if ((mitigation_df.loc[index,"gaz"]=='CH4') | (mitigation_df.loc[index,"gaz"]=='both')) & (mitigation_df.loc[index,"Item"] in item_name):
             if mitigation_df.loc[index,"gaz"]=='both':
-                gaz_share=share_methane_df.loc[(share_methane_df['Country']==country) & (share_methane_df['Item']==item),'Value'].values[0]
+                gaz_share=share_methane_df.loc[(share_methane_df['Country']==country) & (share_methane_df['Item']==item),'Value'].values[0]/GWP100_CH4
             elif mitigation_df.loc[index,"gaz"]=='CH4':
                 gaz_share=1
             else:
@@ -133,16 +136,37 @@ for emission_df in [methane_Ent_Ferm_df,methane_rice_df,methane_Man_df]:
             else:
                 if emission_df.name in mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,"Emission"].values:
                     emission_intensity=compute_emission_intensity(mitigation_potential_df,emission_df,country,item,share_methane_df=share_methane_df)
-                    output_df.loc[index,:]=[country,emission_df.name,item,emission_intensity]
+                    output_df.loc[index,:]=[country,emission_df.name,item,mitigation_strength*emission_intensity]
+                else:
+                    if emission_df.name in ['manure','enteric']:
+                        intensity=mitigation_strength*emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Emissions (CH4)" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]/emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Stocks" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
+                    else:
+                        intensity=mitigation_strength*emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Emissions (CH4)" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]/emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Area harvested" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
+                    output_df.loc[index,:]=[country,emission_df.name,item,intensity]
+            # activity=compute_activity(mitigation_potential_df,emission_df,country,item)
+            # output_activity_df.loc[index,:]=[country,emission_df.name,item,activity]
+            index+=1
+output_df.to_csv('output/emission_intensity_2050'+file_name_suffix+'.csv',index=False)
+
+if args.print_table:
+    output_ref_df=pd.DataFrame(columns=output_df.columns)
+    for emission_df in [methane_Ent_Ferm_df,methane_rice_df,methane_Man_df]:
+        for country in country_list:
+            for item in item_of_df[emission_df.name]:
+                if emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Emissions (CH4)" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]==0:
+                    output_ref_df.loc[index,:]=[country,emission_df.name,item,0]
                 else:
                     if emission_df.name in ['manure','enteric']:
                         intensity=emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Emissions (CH4)" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]/emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Stocks" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
                     else:
                         intensity=emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Emissions (CH4)" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]/emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Area harvested" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
-                    output_df.loc[index,:]=[country,emission_df.name,item,intensity]
-            # activity=compute_activity(mitigation_potential_df,emission_df,country,item)
-            # output_activity_df.loc[index,:]=[country,emission_df.name,item,activity]
-            index+=1
-output_df.to_csv(output_file_name,index=False)
-
-#output_activity_df.to_csv('output/activity_2050.csv',index=False)
+                    output_ref_df.loc[index,:]=[country,emission_df.name,item,intensity]
+                index+=1
+    output_df["EI 2050 (tCH4/Head or tCH4/ha)"]=output_df["Intensity"].values
+    output_df["EI 2010 (tCH4/Head or tCH4/ha)"]=output_ref_df["Intensity"].values
+    mask=output_df["EI 2010 (tCH4/Head or tCH4/ha)"]>0
+    output_df["EI index (2050 relative to 2010)"]=0
+    output_df.loc[mask,"EI index (2050 relative to 2010)"]=output_df.loc[mask,"EI 2050 (tCH4/Head or tCH4/ha)"]/output_df.loc[mask,"EI 2010 (tCH4/Head or tCH4/ha)"]
+    table = pd.pivot_table(output_df, values=['EI 2010 (tCH4/Head or tCH4/ha)','EI 2050 (tCH4/Head or tCH4/ha)','EI index (2050 relative to 2010)'], index=['Country','Item',"Emission"],aggfunc='first')
+    table.index.name=None
+    table.to_excel("output/table_methane_EI"+file_name_suffix+".xlsx",index_label=None,float_format = "%0.3f")

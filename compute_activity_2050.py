@@ -12,6 +12,7 @@ import argparse
 
 parser = argparse.ArgumentParser('Compute national unit of production compatible with national methane quotas')
 parser.add_argument('--no-mitigation', action='store_true', help='No mitigation option')
+parser.add_argument('--mitigation',  help='Change mitigation option')
 
 args = parser.parse_args()
 
@@ -28,6 +29,10 @@ if args.no_mitigation:
 else:
     methane_intensity_df=pd.read_csv("output/emission_intensity_2050.csv")
     output_file_name='output/activity_2050.csv'
+
+if args.mitigation is not None:
+    methane_intensity_df=pd.read_csv("output/emission_intensity_2050_mitigation"+args.mitigation+".csv")
+    output_file_name='output/activity_2050_mitigation'+args.mitigation+'.csv'
 
 methane_all_reference_df=read_FAOSTAT_df("data/FAOSTAT_methane_reference.csv")
 

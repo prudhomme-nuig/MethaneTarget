@@ -15,6 +15,8 @@ parser = argparse.ArgumentParser('Compute impacts of different national level ac
 parser.add_argument('--sensitivity-analysis', help='Yields can be +50 or -50')
 parser.add_argument('--no-mitigation', action='store_true', help='No mitigation option')
 parser.add_argument('--print-table', action='store_true', help='Print tables used in the methane paper and ')
+parser.add_argument('--mitigation',  help='Change mitigation option')
+parser.add_argument('--carbon',  help='Change mitigation option')
 
 args = parser.parse_args()
 
@@ -30,12 +32,23 @@ else:
 if args.no_mitigation:
     emission_intensity_N2O_df=pd.read_csv("output/emission_intensity_N2O_no_mitigation.csv")
     activity_df=pd.read_csv("output/activity_2050_no_mitigation.csv")
-    file_name_suffix=file_name_suffix+'_no_mitigation'
+    file_name_suffix+='_no_mitigation'
 else:
     emission_intensity_N2O_df=pd.read_csv("output/emission_intensity_N2O.csv")
     activity_df=pd.read_csv("output/activity_2050.csv")
-    output_file_name='output/emission_intensity_N2O.csv'
-    file_name_suffix+=file_name_suffix+''
+    file_name_suffix+=''
+
+if args.mitigation is not None:
+    emission_intensity_N2O_df=pd.read_csv("output/emission_intensity_N2O_mitigation"+args.mitigation+".csv")
+    activity_df=pd.read_csv("output/activity_2050_mitigation"+args.mitigation+".csv")
+    file_name_suffix+="_mitigation"+args.mitigation
+
+if args.carbon is not None:
+    file_name_suffix+="_carbon"+args.carbon
+    deforestation_df=pd.read_csv("output/deforestation_factor"+file_name_suffix+".csv")
+else:
+    file_name_suffix+=""
+    deforestation_df=pd.read_csv("output/deforestation_factor.csv")
 
 demand_dict={'Grass':['National Grass area'],'Grain':['Feed prodution','Cropland area (Feed)']}
 #,'Rice, paddy':['prodution','area']
@@ -65,7 +78,6 @@ N_fertilizer_rate_df=read_FAOSTAT_df("output/N_fertilizer_rate.csv")
 kha_to_ha=1E3
 climatic_region={"India":"Tropical","Brazil":"Tropical","Ireland":"Temperate","France":"Temperate"}
 carbon_growth_rate={"Tropical":4.86*48./12.,"Temperate":2.8*48./12.}
-deforestation_df=pd.read_csv("output/deforestation_factor.csv")
 carbon_release_deforestation=deforestation_df.loc[0,"World"]
 trade_feed_df=pd.read_csv("output/trade_aggregate_feed.csv",index_col=0)
 yield_feed_international_df=pd.read_csv("output/feed_yield_global_aggregate.csv",index_col=0)
@@ -169,8 +181,8 @@ for country in country_list:
         activity_df.loc[country_pathway_mask,'Total production']=0
         activity_df.loc[country_pathway_mask,'Total production 2010']=0
         for production in ['Milk','Meat','Eggs','Production Rice, paddy']:
-            activity_df.loc[country_pathway_mask,'Total production']+=activity_df.loc[country_pathway_mask,production]
-            activity_df.loc[country_pathway_mask,'Total production 2010']+=activity_df.loc[country_pathway_mask,production+' 2010']
+            activity_df.loc[country_pathway_mask,'Total production']+=activity_df.loc[country_pathway_mask,production].values
+            activity_df.loc[country_pathway_mask,'Total production 2010']+=activity_df.loc[country_pathway_mask,production+' 2010'].values
         #Spared land
         activity_df.loc[country_pathway_mask,'National Grass area change']=0
         activity_df.loc[country_pathway_mask,'National Feed area change']=0
@@ -273,4 +285,4 @@ if args.print_table:
                                         }
     from common_methane import print_table_results
     print_table_df=print_table_results(activity_df,country_list,column_name_to_variable_name_dict)
-    print_table_df.to_csv("output/paper_table1.csv",sep=";",encoding="utf-8",decimal =",",float_format='%.3f')
+    print_table_df.to_csv("output/paper_table1"+file_name_suffix+".csv",sep=";",encoding="utf-8",decimal =",",float_format='%.3f')

@@ -10,6 +10,19 @@ import pandas as pd
 import numpy as np
 from common_data import read_FAOSTAT_df
 from copy import deepcopy
+import argparse
+
+parser = argparse.ArgumentParser('Compute impacts of different national level activity on production, areas, emissions...')
+parser.add_argument('--sensitivity', help='Carbon growth rate can change of +50 percent or -50 percent')
+
+args = parser.parse_args()
+
+if args.sensitivity is not None:
+    carbon_sensitivity=1+float(args.sensitivity)/100
+    file_name_suffix="_carbon"+args.sensitivity
+else:
+    carbon_sensitivity=1
+    file_name_suffix=""
 
 last_year=2017
 first_year=2008
@@ -51,8 +64,8 @@ mean_emission_factor_df=pd.DataFrame(columns=["World"])
 mean_emission_factor_df["World"]=[np.sum(total_emission)/np.sum(total_deforestation)/20]
 for country in country_list:
     if cumulative_deforestation_pd.loc[cumulative_deforestation_pd["Area"]==country,"Value"].sum()>0:
-        mean_emission_factor_df[country]=cumulative_emission_pd.loc[(cumulative_emission_pd["Area"]==country),"Value"].sum()/cumulative_deforestation_pd.loc[cumulative_deforestation_pd["Area"]==country,"Value"].sum()/20
+        mean_emission_factor_df[country]=carbon_sensitivity*cumulative_emission_pd.loc[(cumulative_emission_pd["Area"]==country),"Value"].sum()/cumulative_deforestation_pd.loc[cumulative_deforestation_pd["Area"]==country,"Value"].sum()/20
     else:
-        mean_emission_factor_df[country]=mean_emission_factor_df["World"]
+        mean_emission_factor_df[country]=carbon_sensitivity*mean_emission_factor_df["World"]
 
-mean_emission_factor_df.to_csv("output/deforestation_factor.csv")
+mean_emission_factor_df.to_csv("output/deforestation_factor"+file_name_suffix+".csv")

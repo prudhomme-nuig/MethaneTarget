@@ -40,7 +40,6 @@ yields_df=pd.DataFrame(columns=country_list)
 #Difference of yield between country is due of the crop mix
 global_yields_df=pd.DataFrame(columns=country_list)
 for country in country_list:
-    print(yields_df)
     feed_tot_demand=0;global_feed_tot_demand=0
     yields_df.loc[0,country]=0;global_yields_df.loc[0,country]=0
     country_mask=feed_demand_df["Country"]==country

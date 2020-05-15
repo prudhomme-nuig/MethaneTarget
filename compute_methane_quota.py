@@ -99,6 +99,7 @@ for country in country_list:
             else:
                 methane_tmp_df.loc[index_new,'National quota']=np.maximum(methane_tmp_df.loc[index_new,'Share']*(methane_tmp_df.loc[index_new,'2050']-methane_tmp_df.loc[index_new,'2010'])+methane_reference_df.loc[methane_reference_df['Area']==country,'Value'].values[0],1E-6)
             methane_tmp_df.loc[index_new,'Country']=country
+            methane_tmp_df.loc[index_new,'National 2010']=methane_reference_df.loc[methane_reference_df["Area"]==country,"Value"].values[0]
             index_new+=1
 
 methane_df=deepcopy(methane_tmp_df)

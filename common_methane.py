@@ -2,7 +2,7 @@
 
 import csv
 from copy import deepcopy
-from common_data import GWP100_N2O,GWP100_CH4
+from common_data import GWP100_N2O,GWP100_CH4,read_FAOSTAT_df
 import pandas as pd
 import numpy as np
 
@@ -83,6 +83,60 @@ def compute_CO2_equivalent(input_df,rule,emission_ref_year,country,ponderation_i
     if is_GWP100:
         output_df=input_df*GWP100_CH4
     else:
-        #import pdb;pdb.set_trace()
         output_df=(input_df.values-emission_ref)*(GWP100_CH4*100.)/40.
     return output_df
+
+def compute_emission_intensity(mitigation_potential_df,df,country,item,share_methane_df,gaz):
+    GWP100={"CH4":34,"N2O":298}
+    animal_list=["Cattle","Poultry Birds","Sheep and Goats","Swine"]
+    all_animal_list=["Cattle","Cattle, dairy","Cattle, non-dairy","Poultry Birds","Sheep and Goats","Swine","Chickens, layers"]
+    mitigation_df=mitigation_potential_df.loc[mitigation_potential_df["Emission"]==df.name,:]
+    df_excreted=read_FAOSTAT_df("data/FAOSTAT_manure_excreted.csv",delimiter="|")
+    if item =='Rice, paddy':
+        item_name='Rice'
+    elif item =='Synthetic Nitrogen fertilizers':
+        item_name='Synthetic Nitrogen fertilizers'
+    else:
+        item_name=item
+    if item in all_animal_list:
+        element_name="Stocks"
+    elif item=="Synthetic Nitrogen fertilizers":
+        element_name="Agricultural Use in nutrients"
+    elif item=='Rice, paddy':
+        element_name="Area harvested"
+    emission_intensity=df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (["Implied emission factor for "+gaz in list_element for list_element in df["Element"]]),"Value"].values[0]
+    for index in mitigation_df.index:
+        if ((mitigation_df.loc[index,"gaz"]==gaz) | (mitigation_df.loc[index,"gaz"]=='both')) & ((mitigation_df.loc[index,"Item"] in item_name)) | ((mitigation_df.loc[index,"Item"]=='All animals') & (item_name in all_animal_list)):
+            if mitigation_df.loc[index,"gaz"]=='both':
+                gaz_share=share_methane_df.loc[(share_methane_df['Country']==country) & (share_methane_df['Item']==item),'Value'].values[0]/GWP100[gaz]
+            elif mitigation_df.loc[index,"gaz"]=='CH4':
+                gaz_share=1
+            else:
+                gaz_share=0
+            if (mitigation_df.loc[index,"Item"]=="Cattle"):
+                share_item=df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010)  & (df["Element"]=="Stocks"),"Value"].values[0]/df.loc[(df["Item"]=="Cattle") & (df["Area"]==country) & (df["Year"]==2010) & (df["Element"]=="Stocks"),"Value"].values[0]
+            elif (mitigation_df.loc[index,"Item"]=="All animals"):
+                share_item=df_excreted.loc[(df_excreted["Item"]==item) & (df_excreted["Area"]==country) & (df_excreted["Year"]==2010),"Value"].values[0]/np.sum([df_excreted.loc[(df_excreted["Item"]==animal) & (df_excreted["Area"]==country) & (df_excreted["Year"]==2010),"Value"].values[0] for animal in animal_list])
+            else:
+                share_item=1
+            if mitigation_df.loc[index,"Indicator"]=="share":
+                emission_intensity=emission_intensity*(1-mitigation_df.loc[index,"Mitigation potential"])
+            elif mitigation_df.loc[index,"Indicator"]=="mitigation":
+                emission_total=-(mitigation_df.loc[index,"Mitigation potential"]*gaz_share*share_item)
+                emission_intensity_change=emission_total/df.loc[(df["Area"]==country) & (df["Year"]==2010) & (df["Item"]==item) & (df["Element"]==element_name),"Value"].values[0]
+                emission_intensity=emission_intensity+emission_intensity_change
+            elif mitigation_df.loc[index,"Indicator"]=="mitigation per ha":
+                emission_intensity=emission_intensity-(mitigation_df.loc[index,"Mitigation potential"]*gaz_share)
+            elif mitigation_df.loc[index,"Indicator"]=="mitigation per head":
+                emission_intensity=emission_intensity-(mitigation_df.loc[index,"Mitigation potential"]*gaz_share)
+            # if country=="Ireland" and item=="Cattle, dairy":
+            #     import pdb; pdb.set_trace()
+    if emission_intensity<0:
+        emission_intensity=1E-21
+        # else:
+        #     if item =='Rice, paddy':
+        #         emission_intensity=df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (["Emissions ("+gaz+")" in list_element for list_element in df["Element"]]),"Value"].values[0]/df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (df["Element"]=="Area harvested"),"Value"].values[0]
+        #     else:
+        #         emission_intensity=df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (["Emissions ("+gaz+")" in list_element for list_element in df["Element"]]),"Value"].values[0]/df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (df["Element"]=="Stocks"),"Value"].values[0]
+        #import pdb;pdb.set_trace()
+    return emission_intensity

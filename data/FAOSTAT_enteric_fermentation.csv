@@ -373,6 +373,7 @@ Enteric Fermentation|Brazil|Stocks|Cattle|2010|Head|209541109
 Enteric Fermentation|Brazil|Emissions (CH4) (Enteric)|Cattle|2010|gigagrams|12101.1007
 Enteric Fermentation|Brazil|Stocks|Sheep and Goats|2010|Head|26693365
 Enteric Fermentation|Brazil|Emissions (CH4) (Enteric)|Sheep and Goats|2010|gigagrams|133.4668
+Enteric Fermentation|Brazil|Implied emission factor for CH4 (Enteric)|Sheep and Goats|2010|kg CH4/head|4.9999
 Enteric Fermentation|Brazil|Stocks|Swine|2010|Head|38956760
 Enteric Fermentation|Brazil|Implied emission factor for CH4 (Enteric)|Swine|2010||0
 Enteric Fermentation|Brazil|Emissions (CH4) (Enteric)|Swine|2010|gigagrams|38.9568
@@ -1023,6 +1024,7 @@ Enteric Fermentation|France|Stocks|Cattle|2010|Head|19555173
 Enteric Fermentation|France|Emissions (CH4) (Enteric)|Cattle|2010|gigagrams|1337.6214
 Enteric Fermentation|France|Stocks|Sheep and Goats|2010|Head|9398527
 Enteric Fermentation|France|Emissions (CH4) (Enteric)|Sheep and Goats|2010|gigagrams|70.8799
+Enteric Fermentation|France|Implied emission factor for CH4 (Enteric)|Sheep and Goats|2010|kg CH4/head|7.5415
 Enteric Fermentation|France|Stocks|Swine|2010|Head|14287056
 Enteric Fermentation|France|Implied emission factor for CH4 (Enteric)|Swine|2010||0
 Enteric Fermentation|France|Emissions (CH4) (Enteric)|Swine|2010|gigagrams|21.4306
@@ -1322,6 +1324,7 @@ Enteric Fermentation|India|Stocks|Cattle|2010|Head|194184992
 Enteric Fermentation|India|Emissions (CH4) (Enteric)|Cattle|2010|gigagrams|6568.3998
 Enteric Fermentation|India|Stocks|Sheep and Goats|2010|Head|205064992
 Enteric Fermentation|India|Emissions (CH4) (Enteric)|Sheep and Goats|2010|gigagrams|1025.325
+Enteric Fermentation|India|Implied emission factor for CH4 (Enteric)|Sheep and Goats|2010|kg CH4/head|5.0000
 Enteric Fermentation|India|Stocks|Swine|2010|Head|10640000
 Enteric Fermentation|India|Implied emission factor for CH4 (Enteric)|Swine|2010||0
 Enteric Fermentation|India|Emissions (CH4) (Enteric)|Swine|2010|gigagrams|10.64
@@ -1374,6 +1377,7 @@ Enteric Fermentation|Ireland|Stocks|Cattle|2010|Head|6606600
 Enteric Fermentation|Ireland|Emissions (CH4) (Enteric)|Cattle|2010|gigagrams|440.8242
 Enteric Fermentation|Ireland|Stocks|Sheep and Goats|2010|Head|4755900
 Enteric Fermentation|Ireland|Emissions (CH4) (Enteric)|Sheep and Goats|2010|gigagrams|38.0157
+Enteric Fermentation|Ireland|Implied emission factor for CH4 (Enteric)|Sheep and Goats|2010|kg CH4/head|7.9933
 Enteric Fermentation|Ireland|Stocks|Swine|2010|Head|1516300
 Enteric Fermentation|Ireland|Implied emission factor for CH4 (Enteric)|Swine|2010||0
 Enteric Fermentation|Ireland|Emissions (CH4) (Enteric)|Swine|2010|gigagrams|2.2744

@@ -91,7 +91,7 @@ print("Plot methane quota with different metrics...")
 
 #Plot production indicators for different quota
 # Livestock production
-production_list=['Milk','Meat','Eggs','Rice']
+production_list=['Milk','Ruminant Meat','Monogastric Meat','Eggs','Rice']
 df_with_all_prod_to_plot=pd.DataFrame(columns=['Production index','Allocation rule','Production in 2010 (Mt)','Production','Country','Item'])
 for production in production_list:
     activity_df[production+' index']=activity_df[production]/activity_df[production+' 2010']
@@ -116,15 +116,41 @@ g = sns.catplot(x="Item", y="Production index (relative to 2010)", hue="Allocati
                 height=3.5, aspect=1.5,sharey=True,col_wrap=2,
                 kind="point", data=df_with_all_prod_to_plot,join=False)
 g.add_legend(title="Allocation rule")
+g.set_xticklabels(g.facet_axis(2,2).get_xticklabels(),rotation=45)
 g.set_axis_labels("", "Production index\n(in 2050 relative to 2010)")
 g.set_titles("{col_name}")
-g.fig.savefig('Figs/production_bar_plot.png', dpi=100)
+g.fig.savefig('Figs/production_bar_plot.png', dpi=100,bbox_inches = "tight")
 plt.close("all")
 #plot_boxplot_with_sns(df_with_all_prod_to_plot,country,"Production index (relative to 2010)","Allocation rule","Production index (relative to 2010)",'Figs/production_bar_plot_'+country.lower().replace(' ','_')+file_name_suffix+'.png',item_column_name='Item',ref_column_name='Production in 2010 (Mt)',reference_df=None,plot_points=True)
 table = pd.pivot_table(df_with_all_prod_to_plot, values=['Production in 2010 (Mt)','Production in 2050 (Mt)'], index=['Country','Item'],columns=["Allocation rule"],aggfunc=np.mean)
 table.index.name=None
 table.to_excel("output/table_production.xlsx",index_label=None,float_format = "%0.1f")
 print("Plot all production with different metrics...")
+
+#Print yield of each production
+df_to_print=pd.DataFrame(columns=['Yield','Yield 2010','Country','Item','Production'])
+production_dict={'Cattle, dairy':['Milk, Total','Beef and Buffalo Meat'],'Cattle, non-dairy':['Beef and Buffalo Meat'],'Rice, paddy':['Rice, paddy'],'Swine':['Meat, pig'],'Poultry Birds':['Meat, Poultry'],'Chickens, layers':['Eggs Primary'],'Sheep and Goats':['Sheep and Goat Meat']}
+for item in production_dict.keys():
+    for production in production_dict[item]:
+        if "Rice" in production:
+            activity_df[production+" yield 2010"]=activity_df['Yield Rice, paddy']
+            activity_df[production+" yield"]=activity_df['Yield Rice, paddy']
+        elif "Beef" in production:
+            activity_df[production+" yield 2010"]=activity_df[production+' 2010'].values/(activity_df["Share Annimal producing 2010 "+production+' Cattle, dairy'].values*activity_df['Activity 2010 Cattle, dairy'].values+activity_df["Share Annimal producing 2010 "+production+' Cattle, non-dairy'].values*activity_df['Activity 2010 Cattle, non-dairy'].values)
+            activity_df[production+" yield"]=activity_df[production].values/(activity_df["Share Annimal producing 2010 "+production+' Cattle, dairy'].values*activity_df['Activity Cattle, dairy'].values+activity_df["Share Annimal producing 2010 "+production+' Cattle, non-dairy'].values*activity_df['Activity Cattle, non-dairy'].values)
+        else:
+            activity_df[production+" yield 2010"]=activity_df[production+' 2010'].values/(activity_df["Share Annimal producing 2010 "+production+" "+item].values*activity_df['Activity 2010 '+item].values)
+            activity_df[production+" yield"]=activity_df[production].values/(activity_df["Share Annimal producing 2010 "+production+" "+item].values*activity_df['Activity '+item].values)
+        activity_df[production+" yield index"]=activity_df[production+" yield"].values/activity_df[production+" yield 2010"].values
+        df_to_concat=pd.concat([activity_df[["Country",production+" yield",production+" yield 2010"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
+        df_to_concat=pd.concat([df_to_concat,pd.DataFrame([production]*len(activity_df['Country']),columns=['Production'])],axis=1,sort=True)
+        df_to_concat=df_to_concat.rename(columns = {production+" yield":'Yield'})
+        df_to_concat=df_to_concat.rename(columns = {production+" yield 2010":'Yield 2010'})
+        df_to_print=pd.concat([df_to_print,df_to_concat],axis=0,sort=True)
+table = pd.pivot_table(df_to_print, values=['Yield','Yield 2010'], index=['Country',"Item"],columns=["Production"],aggfunc='first')
+table.index.name=None
+table.to_excel("output/table_productivity.xlsx",index_label=None,float_format = "%0.3f")
+print("Print productivity for each production...")
 
 #Plot unit of production of each methane intensive production
 item_list=['Cattle, dairy','Cattle, non-dairy','Swine','Poultry Birds','Chickens, layers','Sheep and Goats'] #'Rice, paddy'

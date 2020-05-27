@@ -33,8 +33,10 @@ if args.no_mitigation:
     emission_intensity_N2O_df=pd.read_csv("output/emission_intensity_N2O_no_mitigation.csv")
     activity_df=pd.read_csv("output/activity_2050_no_mitigation.csv")
     file_name_suffix+='_no_mitigation'
+    mitigation_potential_df=pd.read_csv("data/no_mitigation.csv",dtype={"Mitigation potential":np.float64})
 else:
     emission_intensity_N2O_df=pd.read_csv("output/emission_intensity_N2O.csv")
+    mitigation_potential_df=pd.read_csv("data/national_mitigation_mac.csv",dtype={"Mitigation potential":np.float64})
     activity_df=pd.read_csv("output/activity_2050.csv")
     file_name_suffix+=''
 
@@ -64,7 +66,7 @@ pathway_dict={"Ireland":["Ireland"],#,"Intensification"
             "India":["India"],#,"Intensification"
             "Brazil":["Brazil"]}#,"Intensification"
 ruminant_list=['Cattle','Sheep and Goats']
-production_aggregation_dict={'Milk':['Milk, Total'],'Meat':['Beef and Buffalo Meat','Meat, pig','Meat, Poultry','Sheep and Goat Meat'],'Eggs':['Eggs Primary']}
+production_aggregation_dict={'Milk':['Milk, Total'],'Ruminant Meat':['Beef and Buffalo Meat','Sheep and Goat Meat'],'Monogastric Meat':['Meat, pig','Meat, Poultry'],'Eggs':['Eggs Primary']}
 activity_ref_df=read_FAOSTAT_df("data/FAOSTAT_manure_management.csv",delimiter="|")
 yields_df=read_FAOSTAT_df("data/FAOSTAT_animal_yields.csv",delimiter="|")
 feed_per_head_df=read_FAOSTAT_df("data/GLEAM_feed.csv",index_col=0)
@@ -81,6 +83,19 @@ carbon_growth_rate={"Tropical":4.86*48./12.,"Temperate":2.8*48./12.}
 carbon_release_deforestation=deforestation_df.loc[0,"World"]
 trade_feed_df=pd.read_csv("output/trade_aggregate_feed.csv",index_col=0)
 yield_feed_international_df=pd.read_csv("output/feed_yield_global_aggregate.csv",index_col=0)
+if args.no_mitigation:
+    mitigation_potential_df=pd.read_csv("data/no_mitigation.csv",dtype={"Mitigation potential":np.float64})
+    file_name_suffix='_no_mitigation'
+else:
+    mitigation_potential_df=pd.read_csv("data/national_mitigation_mac.csv",dtype={"Mitigation potential":np.float64})
+    file_name_suffix=""
+
+production_change_mask=mitigation_potential_df["Production change"]!=0
+productivity_change_mac={}
+for index in mitigation_potential_df.loc[production_change_mask,:].index:
+    animal=mitigation_potential_df.loc[index,"Item"]
+    for production in production_dict[animal]:
+        productivity_change_mac[production]=mitigation_potential_df.loc[index,"Production change"]
 
 #Change yield depending on the sensitivty analysis
 new_yield_feed_df=pd.DataFrame(columns=yield_feed_df.columns.values)
@@ -113,11 +128,20 @@ for country in country_list:
                     animal_producing=yields_df.loc[(yields_df['Area']==pathway_tmp) & (yields_df['Element']==animal_producing_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
                     animal_producing_ref=yields_df.loc[(yields_df['Area']==country) & (yields_df['Element']==animal_producing_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
                 share_animal_producing=animal_producing/animal_number_ref
-                yields=yields_df.loc[(yields_df['Area']==pathway_tmp) & (yields_df['Element']==yield_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
+                activity_df.loc[country_pathway_mask,"Share Annimal producing 2010 "+production+" "+item]=share_animal_producing
+                activity_df.loc[country_pathway_mask,"Activity 2010 "+item]=animal_number_ref
+                if production in productivity_change_mac.keys():
+                    yields=yields_df.loc[(yields_df['Area']==pathway_tmp) & (yields_df['Element']==yield_dict[production]) & (yields_df['Item']==production),'Value'].values[0]*productivity_change_mac[production]
+                else:
+                    yields=yields_df.loc[(yields_df['Area']==pathway_tmp) & (yields_df['Element']==yield_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
                 yields_ref=yields_df.loc[(yields_df['Area']==country) & (yields_df['Element']==yield_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
                 animal_number=activity_df.loc[country_pathway_mask,'Activity '+item].values
                 if "Beef and Buffalo Meat"==production:
                     if production in activity_df.columns:
+                        country_pathway_nan_mask=country_pathway_mask & np.isnan(activity_df[production])
+                        activity_df.loc[country_pathway_nan_mask,production]=0
+                        country_pathway_nan_mask=country_pathway_mask & np.isnan(activity_df[production+' 2010'])
+                        activity_df.loc[country_pathway_nan_mask,production+' 2010']=0
                         activity_df.loc[country_pathway_mask,production]+=yields*share_animal_producing*animal_number
                         activity_df.loc[country_pathway_mask,production+' 2010']+=yields_ref*animal_producing_ref
                     else:
@@ -126,6 +150,7 @@ for country in country_list:
                 else:
                     activity_df.loc[country_pathway_mask,production]=yields*share_animal_producing*animal_number
                     activity_df.loc[country_pathway_mask,production+' 2010']=yields_ref*animal_producing_ref
+
             #Feed production
             feed='Grains'
             country_pathway_item_feed_mask=(feed_per_head_df['Country']==pathway_tmp) & (feed_per_head_df['Item']==item) & (feed_per_head_df['Feed']==feed)
@@ -164,8 +189,8 @@ for country in country_list:
             activity_df.loc[country_pathway_mask,production_aggregate]=0
             activity_df.loc[country_pathway_mask,production_aggregate+' 2010']=0
             for production_aggregated in production_aggregation_dict[production_aggregate]:
-                activity_df.loc[country_pathway_mask,production_aggregate]+=activity_df.loc[country_pathway_mask,production_aggregated]
-                activity_df.loc[country_pathway_mask,production_aggregate+' 2010']+=activity_df.loc[country_pathway_mask,production_aggregated+' 2010']
+                activity_df.loc[country_pathway_mask,production_aggregate]+=activity_df.loc[country_pathway_mask,production_aggregated].values
+                activity_df.loc[country_pathway_mask,production_aggregate+' 2010']+=activity_df.loc[country_pathway_mask,production_aggregated+' 2010'].values
         item='Rice, paddy'
         #Rice area
         activity_df.loc[country_pathway_mask,'National Rice area']=activity_df.loc[country_pathway_mask,'Activity rice Rice, paddy']
@@ -180,7 +205,7 @@ for country in country_list:
         #Total production
         activity_df.loc[country_pathway_mask,'Total production']=0
         activity_df.loc[country_pathway_mask,'Total production 2010']=0
-        for production in ['Milk','Meat','Eggs','Production Rice, paddy']:
+        for production in production_aggregation_dict.keys():
             activity_df.loc[country_pathway_mask,'Total production']+=activity_df.loc[country_pathway_mask,production].values
             activity_df.loc[country_pathway_mask,'Total production 2010']+=activity_df.loc[country_pathway_mask,production+' 2010'].values
         #Spared land
@@ -264,11 +289,13 @@ activity_df.to_csv("output/impact_2050"+file_name_suffix+".csv")
 if args.print_table:
     column_name_to_variable_name_dict={"Methane quota":{'All':['National quota'],
                                                         'Milk':['Quota enteric Cattle, dairy','Quota manure Cattle, dairy'],
-                                                        'Meat':['Quota enteric Cattle, non-dairy','Quota manure Cattle, non-dairy','Quota manure Poultry Birds','Quota manure Swine','Quota enteric Sheep and Goats','Quota manure Sheep and Goats'],
+                                                        'Ruminant Meat':['Quota enteric Cattle, non-dairy','Quota manure Cattle, non-dairy','Quota enteric Sheep and Goats','Quota manure Sheep and Goats'],
+                                                        'Monogastric Meat':['Quota manure Poultry Birds','Quota manure Swine'],
                                                         'Eggs':['Quota manure Chickens, layers'],
                                                         'Rice':['Quota rice Rice, paddy']},
                                         "Production":{'Milk':['Milk, Total'],
-                                                      'Meat':['Beef and Buffalo Meat','Meat, pig','Meat, Poultry','Sheep and Goat Meat'],
+                                                      'Ruminant Meat':['Beef and Buffalo Meat','Sheep and Goat Meat'],
+                                                      'Monogastric Meat':['Meat, pig','Meat, Poultry'],
                                                       'Eggs':['Eggs Primary'],
                                                       'Rice':['Production Rice, paddy']},
                                         "Area":{'Grassland':['National Grass area'],

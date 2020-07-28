@@ -139,4 +139,4 @@ if args.print_table:
     table.index.name=None
     table.columns = table.columns.swaplevel(0, 1)
     table.sort_index(level=0, axis=1, inplace=True)
-    table.to_excel("output/table_N2O_EI.xlsx",index_label=None,float_format = "%0.5f")
+    table.to_excel("output/table_N2O_EI.xlsx",index_label=None)

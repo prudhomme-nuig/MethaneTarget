@@ -87,12 +87,15 @@ def compute_activity(mitigation_potential_df,df,country,item):
     return activity
 
 for df in [methane_Ent_Ferm_df,methane_Man_df]:
-    index=len(df["Area"])
     for country in country_list:
         for item in item_of_df[df.name]:
+            index_list=df.index[(df['Item'] == item) & (df['Area'] == country) & (df['Element'].str.contains("Implied emission factor for CH4"))].tolist()
+            if len(index_list)==0:
+                index=len(df)
+            else:
+                index=index_list[0]
             value=df.loc[(df["Area"]==country) & (df["Item"]==item) & (["Emissions (CH4)" in list_element for list_element in df["Element"]]),"Value"].values[0]/df.loc[(df["Area"]==country) & (df["Item"]==item) & (["Stock" in list_element for list_element in df["Element"]]),"Value"].values[0]
-            df.loc[index,:]=[df.name,country,"Implied emission factor",item,2010,"tCH4/head",value]
-            index+=1
+            df.loc[index,:]=[df.name,country,"Implied emission factor for CH4",item,2010,"tCH4/head",value]
 
 output_df=pd.DataFrame(columns=["Country","Emission","Item","Intensity"])
 output_activity_df=pd.DataFrame(columns=["Country","Emission","Item","Activity"])
@@ -100,7 +103,7 @@ index=0
 for emission_df in [methane_Ent_Ferm_df,methane_rice_df,methane_Man_df]:
     for country in country_list:
         for item in item_of_df[emission_df.name]:
-            if len(emission_df.loc[(emission_df['Item']==item) & (["Implied emission factor for CH4" in list_element for list_element in emission_df["Element"]]),'Value'].values)==0:
+            if len(emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Implied emission factor for CH4" in list_element for list_element in emission_df["Element"]]),'Value'].values)==0:
                 name_tmp=deepcopy(emission_df.name)
                 emission_tmp_df=emission_df.loc[(emission_df['Item']==item) & (["Emissions (CH4)" in list_element for list_element in emission_df["Element"]]),:]
                 emission_tmp_df.loc[:,"Element"]="Implied emission factor for CH4"
@@ -151,4 +154,4 @@ if args.print_table:
     table.index.name=None
     table.columns = table.columns.swaplevel(0, 1)
     table.sort_index(level=0, axis=1, inplace=True)
-    table.to_excel("output/table_methane_EI"+file_name_suffix+".xlsx",index_label=None,float_format = "%0.3f")
+    table.to_excel("output/table_methane_EI"+file_name_suffix+".xlsx",index_label=None)

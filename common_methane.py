@@ -129,10 +129,10 @@ def compute_emission_intensity(mitigation_potential_df,df,country,item,share_met
                 emission_intensity=emission_intensity-(mitigation_df.loc[index,"Mitigation potential"]*gaz_share)
             elif mitigation_df.loc[index,"Indicator"]=="mitigation per head":
                 emission_intensity=emission_intensity-(mitigation_df.loc[index,"Mitigation potential"]*gaz_share)
-            # if country=="Ireland" and item=="Cattle, dairy":
+            # if item=="Swine":
             #     import pdb; pdb.set_trace()
     if emission_intensity<0:
-        emission_intensity=1E-21
+        emission_intensity=df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (["Implied emission factor for "+gaz in list_element for list_element in df["Element"]]),"Value"].values[0]*0.1
         # else:
         #     if item =='Rice, paddy':
         #         emission_intensity=df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (["Emissions ("+gaz+")" in list_element for list_element in df["Element"]]),"Value"].values[0]/df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (df["Element"]=="Area harvested"),"Value"].values[0]

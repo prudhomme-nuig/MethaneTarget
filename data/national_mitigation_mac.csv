@@ -1,9 +1,9 @@
 Country,Emission,Measure,Indicator,Mitigation potential,Mitigation cost,Pasture change,Feed change,Production change,gaz,Item
-India,enteric,MUB,share,0.11,nan,0,0,0,CH4,Cattle
+India,enteric,MUB,share,0.11,nan,0,0,0,CH4,"Cattle, dairy"
 India,enteric,Concentrate,share,0.15,nan,0,0,0,CH4,Cattle
-India,enteric,Ionophore,share,0.22,nan,0,0,0,CH4,Cattle
+India,enteric,Ionophore,share,0.22,nan,0,0,0,CH4,"Cattle, dairy"
 India,enteric,Green fodder,mitigation per head,0.0094,nan,0,0,0,CH4,Cattle
-India,enteric,Improved diet,mitigation per head,0.0062,nan,0,0,0,CH4,Sheep and Goats
+India,enteric,Improved diet,mitigation per head,0.00062,nan,0,0,0,CH4,Sheep and Goats
 India,manure,High fiber diet for pigs,mitigation per head,0.0004,nan,0,0,0,N2O,Swine
 India,rice,Rice management,mitigation per ha,0.081,nan,0,0,0,CH4,Rice
 India,manure,Improved Manure management,mitigation per head,0.03063,nan,0,0,0,both,Cattle

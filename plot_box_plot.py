@@ -70,7 +70,8 @@ activity_df.loc[activity_df['National methane 2010']==0,'National methane index'
 methane_debt_df=pd.read_csv("output/FAOSTAT_methane_debt_value.csv")
 
 #Plot methane quota
-df_to_plot=activity_df.loc[:,['Country','Pathways',"National methane 2010","National methane index","National quota","Allocation rule"]]
+activity_df.loc[:,"National quota unused"]=activity_df.loc[:,"National quota used and unused"]-activity_df.loc[:,"National quota"]
+df_to_plot=activity_df.loc[:,['Country','Pathways',"National methane 2010","National methane index","National quota","Allocation rule","National quota unused"]]
 df_to_plot.loc[:,"Methane 2010 (ktCH4)"]=df_to_plot.loc[:,"National methane 2010"].values*t_to_Mt
 df_to_plot.loc[:,"Methane 2050 (ktCH4)"]=df_to_plot.loc[:,"National quota"].values*t_to_Mt
 df_to_plot=df_to_plot.rename(columns = {'National methane index':'Methane index'})
@@ -84,7 +85,9 @@ g.set_axis_labels("", "Methane index\n(in 2050 relative to 2010)")
 #g.despine(trim=True)
 g.fig.set_size_inches(6.5, 3.5)
 g.fig.savefig('Figs/methane_quota_bar_plot_test.png', dpi=100)
-table = pd.pivot_table(df_to_plot, values=['Methane 2010 (ktCH4)','Methane 2050 (ktCH4)'], index=['Country'],columns=["Allocation rule"],aggfunc=np.mean)
+df_to_plot.loc[:,"Methane reduction (%)"]=(df_to_plot['Methane 2010 (ktCH4)']-df_to_plot['Methane 2050 (ktCH4)'])/df_to_plot['Methane 2010 (ktCH4)']*100
+df_to_plot["Non-used methane quota (ktCH4)"]=df_to_plot['National quota unused']/1E6
+table = pd.pivot_table(df_to_plot, values=['Methane 2010 (ktCH4)','Methane 2050 (ktCH4)',"Methane reduction (%)","Non-used methane quota (ktCH4)"], index=['Country'],columns=["Allocation rule"],aggfunc=np.mean)
 table.index.name=None
 table.to_excel("output/table_methane_quotas.xlsx",index_label=None,float_format = "%0.1f")
 print("Plot methane quota with different metrics...")
@@ -113,7 +116,7 @@ df_with_all_prod_to_plot['Production in 2010 (Mt)']=df_with_all_prod_to_plot['Pr
 df_with_all_prod_to_plot['Production in 2050 (Mt)']=df_with_all_prod_to_plot['Production']*t_to_Mt
 df_with_all_prod_to_plot=df_with_all_prod_to_plot.reset_index()
 g = sns.catplot(x="Item", y="Production index (relative to 2010)", hue="Allocation rule",col="Country",
-                height=3.5, aspect=1.5,sharey=True,col_wrap=2,
+                height=3.5, aspect=1.5,sharey=False,col_wrap=2,legend=False,
                 kind="point", data=df_with_all_prod_to_plot,join=False)
 g.add_legend(title="Allocation rule")
 g.set_xticklabels(g.facet_axis(2,2).get_xticklabels(),rotation=45)
@@ -180,7 +183,7 @@ ha_2_Mha=1E-6
 df_to_plot['Area in 2050 (Mha)']=df_to_plot['Area 2050']*ha_2_Mha
 df_to_plot['Area in 2010 (Mha)']=df_to_plot['Area 2010']*ha_2_Mha
 g = sns.catplot(x="Item", y="Area index", hue="Allocation rule",col="Country",
-                height=3.5, aspect=1.5,sharey=True,legend=False,
+                height=3.5, aspect=1.5,sharey=False,legend=False,
                 kind="point", data=df_to_plot,join=False)
 g.set_axis_labels("", "Area index\n(2050 relative to 2010)")
 g.set_titles("{col_name}")
@@ -204,7 +207,7 @@ for item in ['manure','fert']:
 df_to_plot['N2O emissions\nin 2010 (ktN2O)']=df_to_plot['N2O emissions in 2010']*t_to_kt
 df_to_plot['N2O emissions\nin 2050 (ktN2O)']=df_to_plot['N2O emissions in 2050']*t_to_kt
 g = sns.catplot(x="Item", y="N2O index (2050 relative to 2010)", hue="Allocation rule",col="Country",
-                height=3.5, aspect=1.5,sharey=True,
+                height=3.5, aspect=1.5,sharey=False,legend=False,
                 kind="point", data=df_to_plot,join=False)
 g.add_legend(title="Allocation rule")
 g.set_axis_labels("", "N2O index\n(2050 relative to 2010)")

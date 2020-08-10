@@ -9,7 +9,6 @@ import statsmodels.formula.api as smf
 import seaborn as sns
 
 gleam_intake_df = read_FAOSTAT_df("data/GLEAM_Intake.csv",delimiter=";")
-#gleam_intake_df = read_FAOSTAT_df("data/GLEAM_Intake_tropical_warm.csv",delimiter=",")
 faostat_yield_df = read_FAOSTAT_df("data/FAOSTAT_animal_yields.csv",delimiter="|")
 fostat_methane_df = read_FAOSTAT_df("data/FAOSTAT_enteric_fermentation.csv",delimiter="|")
 
@@ -22,8 +21,6 @@ faostat_yield_df.index=faostat_yield_df["Area"]
 
 country_list = list(set(gleam_intake_df["Country"]).intersection(set(faostat_yield_df["Area"])))
 country_list = list(set(country_list).intersection(set(fostat_methane_df["Area"])))
-
-#country_list.remove("Mongolia")
 
 fostat_yield_country_mask = faostat_yield_df["Area"].isin(country_list)
 fostat_yield_element_mask = faostat_yield_df["Element"]=="Yield"

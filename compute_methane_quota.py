@@ -62,8 +62,10 @@ methane_df.loc[:,'2050']=methane_df.loc[:,'2050']*methane_df.loc[:,'World Emissi
 methane_df.loc[:,'2010']=methane_df.loc[:,'World Emission FAO 2010']
 
 #Load data for allocation rules
-methane_debt_df=pd.read_csv('output/FAOSTAT_methane_debt.csv',delimiter=',')
-methane_debt_df.name='debt_methane_df'
+# methane_debt_df=pd.read_csv('output/FAOSTAT_methane_debt.csv',delimiter=',')
+# methane_debt_df.name='debt_methane_df'
+methane_past_df=pd.read_csv('data/FAOSTAT_methane_past.csv',delimiter=',')
+methane_past_df.name='methane_past_df'
 protein_production_df=pd.read_csv('output/FAOSTAT_protein_production.csv',delimiter=',')
 protein_production_df.name='protein_production_df'
 population_reference_df=pd.read_csv('data/WB_population_reference.csv',delimiter=',')
@@ -81,18 +83,16 @@ index_list=deepcopy(list(methane_df.index))
 index_new=0
 for country in country_list:
     for index in index_list:
-        for df in [population_reference_df,GDP_reference_df,methane_debt_df,protein_production_df]:
+        for df in [population_reference_df,GDP_reference_df,methane_past_df,protein_production_df]:
             methane_tmp_df.loc[index_new,:]=deepcopy(methane_df.loc[index,:])
             if df.name=="population_reference_df":
                 methane_tmp_df.loc[index_new,'Share']=df.loc[df['Country Name']==country,'2010'].values[0]/df.loc[df['Country Name']=='World','2010'].values[0]
             elif df.name=="GDP_reference_df":
                 methane_tmp_df.loc[index_new,'Share']=df.loc[df['Country Name']==country,'2010'].values[0]/df.loc[df['Country Name']=='World','2010'].values[0]
-            elif df.name=="debt_methane_df":
-                methane_tmp_df.loc[index_new,'Share']=df.loc[0,country]
-            elif df.name:
-                methane_tmp_df.loc[index_new,'Share']=df.loc[0,country]
+            elif df.name=="methane_past_df":
+                methane_tmp_df.loc[index_new,'Share']=df.loc[(df['Area']==country) & (df['Year']==2010),'Value'].values[0]/df.loc[(df['Area']=='World') & (df['Year']==2010),'Value'].values[0]
             else:
-                methane_tmp_df.loc[index_new,'Share']=df.loc[df['Area']==country,'Value'].values[0]/df.loc[df['Area']=='World','Value'].values[0]
+                methane_tmp_df.loc[index_new,'Share']=df[country].values[0]#/df.loc[df['Area']=='World','Value'].values[0]
             methane_tmp_df.loc[index_new,'Allocation rule']=df.name[:3]
             if (df.name=="population_reference_df") | (df.name=="protein_production_df"):
                 methane_tmp_df.loc[index_new,'National quota']=methane_tmp_df.loc[index_new,'Share']*methane_tmp_df.loc[index_new,'2050']

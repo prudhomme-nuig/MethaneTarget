@@ -1,6 +1,6 @@
 library(lme4)
 
-df <- read.table("output/data_for_lm.csv", 
+df <- read.table("output/data_dairy_for_lm.csv", 
                  header = TRUE,
                  sep = ",",
                  encoding = "UTF-8")
@@ -18,7 +18,7 @@ ggplot(df_temperate,aes(x=Concentrate_intake, y=Methane_intensity,color=factor(G
   geom_point(size=3) + 
   geom_line(aes(y = predlm), size = 1.5)+
   scale_color_discrete(name = "GAEZ:", labels = c("Temperate cool", "Tropical warm"))+
-  labs(y="Methane intensity (kgCH4/head/year)", x = "Concentrate intake (tDM/year)")+
+  labs(y="Methane intensity (kgCH4/kg milk/year)", x = "Concentrate intake (tDM/year)")+
   theme(axis.title = element_text(size = 18),
         legend.text = element_text(size = 18),
         legend.title = element_text(face = "bold",size = 18))

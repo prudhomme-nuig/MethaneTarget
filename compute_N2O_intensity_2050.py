@@ -23,6 +23,14 @@ country_list=["France","Ireland","Brazil","India"]
 animal_list=["Cattle, non-dairy","Cattle, dairy","Chickens, layers","Poultry Birds","Sheep and Goats","Swine"]
 
 element_list=["Stocks","Emissions (N2O)"]
+
+pathway_dict={"Ireland":["Ireland","Intensification"],#,"Intensification"
+            "France":["France","Intensification"],#,"Intensification"
+            "India":["India","Intensification"],#,"Intensification"
+            "Brazil":["Brazil","Intensification"]}#,"Intensification"
+
+production_dict={'Cattle, dairy':['Milk, Total','Beef and Buffalo Meat'],'Cattle, non-dairy':['Beef and Buffalo Meat'],'Rice, paddy':['Rice, paddy'],'Swine':['Meat, pig'],'Poultry Birds':['Meat, Poultry'],'Chickens, layers':['Eggs Primary'],'Sheep and Goats':['Sheep and Goat Meat'],'Synthetic Nitrogen fertilizers':['Synthetic Nitrogen fertilizers']}
+
 #Mitigation potential and cost
 # fom national MAC curves
 #Option with or without mitigation aplied in 2050 for N2O and methane
@@ -74,39 +82,45 @@ methane_Man_df=read_FAOSTAT_df("data/FAOSTAT_manure_management.csv",delimiter="|
 nutrious_Man_df.name="manure"
 GWP100_CH4=34
 GWP100_N2O=298
+mitigation_list=["No mitigation","MACC"]
 
 #Compute new emission intensity
 index=0
-aggregate_df=pd.DataFrame(columns=nutrious_Man_df.columns)
+header_list=list(nutrious_Man_df.columns.values)
+header_list.extend(["Pathways","Mitigation","Production"])
+aggregate_df=pd.DataFrame(columns=header_list)
 for df in [nutrious_Man_df,N2O_fertilizer_df]:
     for country in country_list:
         for item in item_of_df[df.name]:
-            if df.name=="manure":
-                value_stock=df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"]=="Stocks"),"Value"].values[0]
-            elif df.name=="fertilizer":
-                value_stock=df.loc[(df["Area"]==country) & (df["Item"]=="Synthetic Nitrogen fertilizers") & (df["Element"]=="Agricultural Use in nutrients"),"Value"].values[0]
-            value_emission=deepcopy(df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Emissions")),"Value"].values[0])
-            if len(df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Implied emission factor for N2O")),"Value"])==0:
-                df.loc[len(df),:]=["",country,"Implied emission factor for N2O",item,2010,"gigagrams",df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Emissions \(N2O")),"Value"].values[0]/df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Stocks")),"Value"].values[0]]
-            if df.name=="manure":
-                df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Implied emission factor for N2O")),"Value"]=df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Emissions \(N2O")),"Value"].values[0]/df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Stocks")),"Value"].values[0]
-            if (item in mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,"Item"].values) | (("Cattle" in item) & ("Cattle" in mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,"Item"].values)) | (("All animals" in mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,"Item"].values) and (item in animal_list)):
-                value=float(mitigation_strength)*compute_emission_intensity(mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,:],df,country,item,share_N2O_df,"N2O")
-            else:
-                value=value_emission/value_stock
-            if df.name=="manure":
-                aggregate_df.loc[index,:]=[country,"Implied emission factor",item,2010,value]
-            else:
-                aggregate_df.loc[index,:]=[country,"Implied emission factor",item,2010,value]
-            index+=1
-            aggregate_df.loc[index,:]=[country,"Emissions (N2O)",item,2010,value_emission]
-            index+=1
-            if df.name=="manure":
-                aggregate_df.loc[index,:]=[country,"Stocks",item,2010,value_stock]
-            else:
-                aggregate_df.loc[index,:]=[country,"Synthetic Nitrogen fertilizers",item,2010,value_stock]
-            index+=1
-output_df=aggregate_df.loc[aggregate_df["Element"]=="Implied emission factor",["Area","Element","Item","Value"]]
+            for mitigation in mitigation_list:
+                for pathway in pathway_dict[country]:
+                    for production in production_dict[item]:
+                        if df.name=="manure":
+                            value_stock=df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"]=="Stocks"),"Value"].values[0]
+                        elif df.name=="fertilizer":
+                            value_stock=df.loc[(df["Area"]==country) & (df["Item"]=="Synthetic Nitrogen fertilizers") & (df["Element"]=="Agricultural Use in nutrients"),"Value"].values[0]
+                        value_emission=deepcopy(df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Emissions")),"Value"].values[0])
+                        if len(df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Implied emission factor for N2O")),"Value"])==0:
+                            df.loc[len(df),:]=["",country,"Implied emission factor for N2O",item,2010,"gigagrams",df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Emissions \(N2O")),"Value"].values[0]/df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Stocks")),"Value"].values[0]]
+                        if df.name=="manure":
+                            df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Implied emission factor for N2O")),"Value"]=df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Emissions \(N2O")),"Value"].values[0]/df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Stocks")),"Value"].values[0]
+                        if (item in mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,"Item"].values) | (("Cattle" in item) & ("Cattle" in mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,"Item"].values)) | (("All animals" in mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,"Item"].values) and (item in animal_list)):
+                            value=float(mitigation_strength)*compute_emission_intensity(mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,:],df,country,item,share_N2O_df,"N2O")
+                        else:
+                            value=value_emission/value_stock
+                        if df.name=="manure":
+                            aggregate_df.loc[index,:]=[country,"Implied emission factor",item,2010,value,pathway,mitigation,production]
+                        else:
+                            aggregate_df.loc[index,:]=[country,"Implied emission factor",item,2010,value,pathway,mitigation,production]
+                        index+=1
+                        aggregate_df.loc[index,:]=[country,"Emissions (N2O)",item,2010,value_emission,pathway,mitigation,production]
+                        index+=1
+                        if df.name=="manure":
+                            aggregate_df.loc[index,:]=[country,"Stocks",item,2010,value_stock,pathway,mitigation,production]
+                        else:
+                            aggregate_df.loc[index,:]=[country,"Synthetic Nitrogen fertilizers",item,2010,value_stock,pathway,mitigation,production]
+                        index+=1
+output_df=aggregate_df.loc[aggregate_df["Element"]=="Implied emission factor",["Area","Element","Item","Value","Pathways","Mitigation","Production"]]
 output_df=output_df.rename(columns = {'Area':'Country'})
 output_df=output_df.rename(columns = {'Value':'Intensity'})
 mask_fertilizer=output_df["Item"]=="Synthetic Nitrogen fertilizers"
@@ -122,20 +136,26 @@ if args.print_table:
     for emission_df in [nutrious_Man_df,N2O_fertilizer_df]:
         for country in country_list:
             for item in item_of_df[emission_df.name]:
-                if 'manure' in emission_df.name:
-                    intensity=emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Emissions (N2O)" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]/emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Stocks" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
-                    output_ref_df.loc[index,:]=[country,emission_df.name,item,intensity]
-                else:
-                        intensity=emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (emission_df['Element']=="Emissions (N2O) (Synthetic fertilizers)"),'Value'].values[0]/emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (emission_df['Element']=="Agricultural Use in nutrients"),"Value"].values[0]
-                        output_ref_df.loc[index,:]=[country,emission_df.name,item,intensity]
-                index+=1
+                for pathway in pathway_dict[country]:
+                    for mitigation in mitigation_list:
+                        for production in production_dict[item]:
+                            if 'manure' in emission_df.name:
+                                intensity=emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Emissions (N2O)" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]/emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Stocks" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
+                                output_ref_df.loc[index,:]=[country,emission_df.name,item,intensity,pathway,mitigation,production]
+                            else:
+                                intensity=emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (emission_df['Element']=="Emissions (N2O) (Synthetic fertilizers)"),'Value'].values[0]/emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (emission_df['Element']=="Agricultural Use in nutrients"),"Value"].values[0]
+                                output_ref_df.loc[index,:]=[country,emission_df.name,item,intensity,pathway,mitigation,production]
+                            index+=1
     t_to_kg=1000
     output_df["EI 2050"]=output_df["Intensity"].values*t_to_kg #(kgN2O/Head or kgN2O/tN)
     output_df["EI 2010"]=output_ref_df["Intensity"].values*t_to_kg
     mask=output_df["EI 2010"]>0
     output_df["EI index"]=0
     output_df.loc[mask,"EI index"]=output_df.loc[mask,"EI 2050"]/output_df.loc[mask,"EI 2010"]
-    table = pd.pivot_table(output_df, values=['EI 2010','EI 2050','EI index'], columns=["Emission"], index=['Country','Item'],aggfunc='first')
+    output_df.loc[output_df['Country']!=output_df['Pathways'],'Pathway']='Improved'
+    output_df.loc[output_df['Country']==output_df['Pathways'],'Pathway']='Current'
+    output_df["Type of product"]=output_df[["Item","Production"]].agg('-'.join, axis=1)
+    table = pd.pivot_table(output_df, values=['EI 2010','EI index'], columns=["Emission","Pathway"], index=['Country','Type of product',"Mitigation"],aggfunc='first')
     table.index.name=None
     table.columns = table.columns.swaplevel(0, 1)
     table.sort_index(level=0, axis=1, inplace=True)

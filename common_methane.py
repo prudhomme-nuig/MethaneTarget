@@ -66,12 +66,12 @@ def compute_CO2_equivalent(input_df,rule,emission_ref_year,country,ponderation_i
     output_df=deepcopy(input_df)
     is_GWP100=False
     Horizon=100.
-    if rule=='Grand-fathering':
+    if rule=='Grand-parenting':
         emission_ref=emission_ref_year
     elif rule=='Debt':
         emission_ref=np.max([methane_debt[country].values[0],0])
     elif rule=='GDP':
-        emission_ref=np.max([methane_debt[country].values[0],0])
+        emission_ref=emission_ref_year#np.max([methane_debt[country].values[0],0])
     elif rule=='Population':
         emission_ref=emission_ref_year*ponderation_in_GWP_star[ponderation_in_GWP_star['Country Name']==country]['2010'].values[0]/ponderation_in_GWP_star[ponderation_in_GWP_star['Country Name']=='World']['2010'].values[0]
     elif rule=='Protein':

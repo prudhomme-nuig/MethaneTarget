@@ -50,7 +50,7 @@ output/share_trade_feed.csv:compute_trade_share.py output
 
 #Compute national production compatible with national methane quotas
 #defined in output/methane_quota.csv
-output/activity_2050.csv:output compute_activity_2050.py output/methane_quota.csv output/emission_intensity_2050.csv
+output/activity_2050.csv:output compute_activity_2050.py output/methane_quota.csv output/emission_intensity_2050.csv output/emission_intensity_2050_no_mitigation.csv
 				${launch_python} compute_activity_2050.py
 
 #Compute aggregate feed yield with national yield
@@ -95,14 +95,14 @@ Figs/AFOLU_bar_plot.png: Figs plot_box_plot.py output/AFOLU_balance_2050.csv
 #---------------- Sensitivity analysis -------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------
 
-#No mitigation
-output/AFOLU_balance_2050_no_mitigation.csv: output compute_impact.py compute_AFOLU_balance.py output/feed_yield_aggregate.csv output/grass_yield.csv output/deforestation_factor.csv common_methane.py
-				${launch_python} compute_N2O_intensity_2050.py --no-mitigation
-				${launch_python} compute_methane_intensity_2050.py --no-mitigation --print-table
-				${launch_python} compute_activity_2050.py --no-mitigation
-				${launch_python} compute_impact.py --no-mitigation --print-table
-				${launch_python} check_area.py --no-mitigation --print-table
-				${launch_python} compute_AFOLU_balance.py --no-mitigation --print-table
+# #No mitigation
+# output/AFOLU_balance_2050_no_mitigation.csv: output compute_impact.py compute_AFOLU_balance.py output/feed_yield_aggregate.csv output/grass_yield.csv output/deforestation_factor.csv common_methane.py
+# 				${launch_python} compute_N2O_intensity_2050.py --no-mitigation
+# 				${launch_python} compute_methane_intensity_2050.py --no-mitigation --print-table
+# 				${launch_python} compute_activity_2050.py --no-mitigation
+# 				${launch_python} compute_impact.py --no-mitigation --print-table
+# 				${launch_python} check_area.py --no-mitigation --print-table
+# 				${launch_python} compute_AFOLU_balance.py --no-mitigation --print-table
 
 #+50% mitigation
 output/AFOLU_balance_2050_mitigation-50.csv: output compute_impact.py output/feed_yield_aggregate.csv output/activity_2050_no_mitigation.csv output/grass_yield.csv output/emission_intensity_N2O_no_mitigation.csv output/deforestation_factor.csv common_methane.py
@@ -140,5 +140,5 @@ output/AFOLU_balance_2050_carbon+50.csv: output compute_impact.py compute_AFOLU_
 				${launch_python} compute_AFOLU_balance.py --carbon=+50 --print-table
 
 #Output table and perform statistical test
-output/sensitivity_analysis.csv: output output/AFOLU_balance_2050_mitigation-50.csv output/AFOLU_balance_2050_no_mitigation.csv output/AFOLU_balance_2050_yield+50.csv output/AFOLU_balance_2050_yield-50.csv output/AFOLU_balance_2050_carbon+50.csv output/AFOLU_balance_2050_carbon-50.csv
+output/sensitivity_analysis.csv: output output/AFOLU_balance_2050_mitigation-50.csv output/AFOLU_balance_2050_yield+50.csv output/AFOLU_balance_2050_yield-50.csv output/AFOLU_balance_2050_carbon+50.csv output/AFOLU_balance_2050_carbon-50.csv
 				${launch_python} sensitivity_analysis.py

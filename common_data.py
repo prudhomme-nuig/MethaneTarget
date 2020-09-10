@@ -31,7 +31,8 @@ convert_unit_dict={'1000 Head':1E3, #in Head
                     "tN/ha":1,
                     "kg CH4/head":1E-3,
                     "gigagrams N2O-N":44./28.*1E3,
-                    "gigagrams N2O":1E3
+                    "gigagrams N2O":1E3,
+                    "kg DM/year":1E-3
                     }
 
 new_unit_dict={'1000 Head':'Head', #in Head
@@ -59,7 +60,8 @@ new_unit_dict={'1000 Head':'Head', #in Head
                     "tN/ha":"tN/ha",
                     "kg CH4/head":'tCH4/Head',
                     "gigagrams N2O-N":'t N2O',
-                    "gigagrams N2O":'t N2O'
+                    "gigagrams N2O":'t N2O',
+                    "kg DM/year":"t DM/year"
                     }
 
 def read_FAOSTAT_df(file_name,convert_unit_dict=convert_unit_dict,delimiter=",",index_col=None):

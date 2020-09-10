@@ -14,7 +14,6 @@ import argparse
 
 parser = argparse.ArgumentParser('Compute impacts of different national methane quotas on AFOLU balance...')
 parser.add_argument('--sensitivity-analysis', help='Yields can be +50 or -50')
-parser.add_argument('--no-mitigation', action='store_true', help='No mitigation option')
 parser.add_argument('--print-table', action='store_true', help='Print tables used in the methane paper and ')
 parser.add_argument('--mitigation',  help='Change mitigation option')
 parser.add_argument('--carbon',  help='Change mitigation option')
@@ -29,31 +28,29 @@ else:
     yield_change=0
     file_name_suffix=''
 
-#Option with or without mitigation aplied in 2050 for N2O and methane
-if args.no_mitigation:
-    activity_df=pd.read_csv("output/activity_2050_no_mitigation.csv")
-    file_name_suffix+='_no_mitigation'
-else:
-    activity_df=pd.read_csv("output/activity_2050.csv")
-    file_name_suffix+=''
-
+#Option with an increased mitigation aplied in 2050 for N2O and methane
 if args.mitigation is not None:
     activity_df=pd.read_csv("output/activity_2050_mitigation"+args.mitigation+".csv")
     file_name_suffix+="_mitigation"+args.mitigation
+else:
+    activity_df=pd.read_csv("output/activity_2050.csv")
+    file_name_suffix+=''
 
 if args.carbon is not None:
     file_name_suffix+="_carbon"+args.carbon
 else:
     file_name_suffix+=""
 
+country_list=["Brazil","France","India","Ireland"]
+
 ponderation_dict={}
 ponderation_dict['Population']=pd.read_csv('data/WB_population_reference.csv',delimiter=',')
 ponderation_dict['GDP']=pd.read_csv('data/WB_GDP_reference.csv',delimiter=',')
-ponderation_dict['Grand-fathering']=None
+ponderation_grand_parenting_df=pd.read_csv('data/FAOSTAT_methane_past.csv',delimiter=',')
+ponderation_dict['Grand-parenting']=None
 ponderation_dict['Debt']=pd.read_csv('output/FAOSTAT_methane_debt.csv',delimiter=',')
 ponderation_dict['Protein']=pd.read_csv('output/FAOSTAT_protein_production.csv',delimiter=',',index_col=0)
 
-country_list=["Brazil","France","India","Ireland"]
 
 activity_df=pd.read_csv("output/impact_2050"+file_name_suffix+".csv",index_col=0)
 GWP_N2O=298
@@ -76,11 +73,21 @@ for country in country_list:
     for rule in np.unique(activity_df['Allocation rule']):
         country_rule_mak=(activity_df['Allocation rule']==rule) & (activity_df['Country']==country)
         activity_df.loc[country_rule_mak,'National quota eGWP*']=compute_CO2_equivalent(activity_df.loc[country_rule_mak,'National quota'],rule,activity_df.loc[country_rule_mak,'2010']*activity_df.loc[country_rule_mak,'Share'],country,ponderation_in_GWP_star=ponderation_dict[rule],methane_debt=methane_debt_df)
-        activity_df.loc[country_rule_mak,'National quota GWP*']=compute_CO2_equivalent(activity_df.loc[country_rule_mak,'National quota'],'Grand-fathering',activity_df.loc[country_rule_mak,'National 2010'],country,ponderation_in_GWP_star=ponderation_dict[rule],methane_debt=methane_debt_df)
+        activity_df.loc[country_rule_mak,'National quota GWP*']=compute_CO2_equivalent(activity_df.loc[country_rule_mak,'National quota'],'Grand-parenting',activity_df.loc[country_rule_mak,'National 2010'],country,ponderation_in_GWP_star=ponderation_dict[rule],methane_debt=methane_debt_df)
         activity_df.loc[country_rule_mak,'National quota GWP100']=compute_CO2_equivalent(activity_df.loc[country_rule_mak,'National quota'],'GWP100',activity_df.loc[country_rule_mak,'National 2010'],country,ponderation_in_GWP_star=ponderation_dict[rule],methane_debt=methane_debt_df)
         activity_df.loc[country_rule_mak,'National quota GWP* 2010']=0
         activity_df.loc[country_rule_mak,'National quota eGWP* 2010']=compute_CO2_equivalent(activity_df.loc[country_rule_mak,'National 2010'],rule,activity_df.loc[country_rule_mak,'2010'],country,ponderation_in_GWP_star=ponderation_dict[rule],methane_debt=methane_debt_df)
         activity_df.loc[country_rule_mak,'National quota GWP100 2010']=activity_df.loc[country_rule_mak,'National 2010']*GWP100_CH4
+        if rule=='Grand-parenting':
+            activity_df.loc[country_rule_mak,'Biogenic reference CH4 emissions in 2010 (ktCH4)']=activity_df.loc[country_rule_mak,'National 2010']
+        elif rule=='Debt':
+            activity_df.loc[country_rule_mak,'Biogenic reference CH4 emissions in 2010 (ktCH4)']=activity_df.loc[country_rule_mak,'National 2010']
+        elif rule=='GDP':
+            activity_df.loc[country_rule_mak,'Biogenic reference CH4 emissions in 2010 (ktCH4)']=activity_df.loc[country_rule_mak,'National 2010']
+        elif rule=='Population':
+            activity_df.loc[country_rule_mak,'Biogenic reference CH4 emissions in 2010 (ktCH4)']=activity_df.loc[country_rule_mak,'National 2010']*ponderation_dict[rule][ponderation_dict[rule]['Country Name']==country]['2010'].values[0]/ponderation_dict[rule][ponderation_dict[rule]['Country Name']=='World']['2010'].values[0]
+        elif rule=='Protein':
+            activity_df.loc[country_rule_mak,'Biogenic reference CH4 emissions in 2010 (ktCH4)']=activity_df.loc[country_rule_mak,'National 2010']*ponderation_dict[rule][country].values[0]
 
 activity_df['AFOLU balance (with eGWP*)']=activity_df['National quota eGWP*']+activity_df['GWP N2O fert']+activity_df['GWP N2O manure']+activity_df['Total CO2 emissions']
 activity_df['AFOLU balance (with GWP*)']=activity_df['National quota GWP*']+activity_df['GWP N2O fert']+activity_df['GWP N2O manure']+activity_df['Total CO2 emissions']

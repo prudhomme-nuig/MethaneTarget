@@ -3,6 +3,7 @@
 import pandas as pd
 import numpy as np
 from scipy.optimize import minimize
+from common_methane import read_FAOSTAT_df
 
 def milk_yield(X,GAEZ):
 
@@ -36,7 +37,7 @@ def weight_gain(X,GAEZ):
 
     return milk_yield
 
-def methane_intensity(X,GAEZ):
+def methane_intensity_milk_yield(X,GAEZ):
 
     if GAEZ=="Temperate":
 
@@ -52,9 +53,31 @@ def methane_intensity(X,GAEZ):
 
     return methane_intensity
 
+def methane_intensity(X,GAEZ,production,emission_type,concentrate_change=1):
+
+    if emission_type=="methane":
+
+        if production=='Milk, Total':
+            #Effect of intensification on enteric methane intensity of milk
+            methane_intensity=methane_intensity_milk_yield(X,GAEZ)
+        elif (production=='Eggs Primary') | (production=='Meat, Poultry'):
+            #No effect of intensification on enteric methane intensity of poultry products
+            methane_intensity=1
+        elif production=='Meat, pig':
+            #No effect of intensification on enteric methane intensity of pig products
+            methane_intensity=1
+        else:
+            #No effect of intensification on enteric methane intensity of Beef products
+            print("No change in methane intensity of for "+production)
+            methane_intensity=1
+    else:
+        #No effect of intensification on methane intensity of manure
+        methane_intensity= 1
+    return methane_intensity
+
 def milk_yield_max(GAEZ):
 
-    concentrate_for_milk_yield_max = minimize(lambda x: -milk_yield(x,GAEZ), 0.5)
+    concentrate_for_milk_yield_max = minimize(lambda x: -methane_intensity_milk_yield(x,GAEZ), 0.5)
 
     return concentrate_for_milk_yield_max.x[0]
 
@@ -68,13 +91,15 @@ def weight_swine(X):
 
     coefficient_weight_df=pd.read_csv("output/coefficients_weight_intake_swine_relation.csv",sep=",",index_col=0)
 
-    return coefficient_weight_df.iloc[0,0] + coefficient_weight_df.iloc[0,1]*X
+    return coefficient_weight_df.iloc[0,0] + coefficient_weight_df.iloc[0,1]*X.values[0]
 
 def weight_swine_max():
 
     df_weight_swine = pd.read_csv("output/weight_intake_swine.csv",sep=",",index_col=0)
 
-    total_production_nineth_quantile = df_weight_swine["Meat.per.head"].quantile([0.75], interpolation='nearest').values[0]
+    df_weight_swine.dropna(inplace=True)
+
+    total_production_nineth_quantile = df_weight_swine["Meat.per.head"].quantile([0.9], interpolation='nearest').values[0]
 
     return df_weight_swine.loc[df_weight_swine["Meat.per.head"]==total_production_nineth_quantile,"swine_grain"]
 
@@ -103,43 +128,49 @@ def weight_poultry_max():
 
     df_weight_poultry = pd.read_csv("output/FAOSTAT_meat_eggs_intake_poultry.csv",sep=",",index_col=0)
 
-    total_production_nineth_quantile = df_weight_poultry["Meat yield"].quantile([0.75], interpolation='nearest').values[0]
+    df_weight_poultry.dropna(inplace=True)
 
-    return df_weight_poultry.loc[df_weight_poultry["Meat yield"]==total_production_nineth_quantile,"Grain intake rate"]
+    total_production_nineth_quantile = df_weight_poultry["Meat yield"].quantile([0.9], interpolation='nearest').values[0]
+
+    return df_weight_poultry.loc[df_weight_poultry["Meat yield"]==total_production_nineth_quantile,"Grain intake rate"].values[0]
 
 def eggs_poultry_max():
 
     df_eggs_poultry = pd.read_csv("output/FAOSTAT_meat_eggs_intake_poultry.csv",sep=",",index_col=0)
 
-    total_production_nineth_quantile = df_eggs_poultry["Eggs"].quantile([0.75], interpolation='nearest').values[0]
+    df_eggs_poultry.dropna(inplace=True)
 
-    return df_eggs_poultry.loc[df_eggs_poultry["Eggs"]==total_production_nineth_quantile,"Grain intake rate"]
+    total_production_nineth_quantile = df_eggs_poultry["Eggs"].quantile([0.9], interpolation='nearest').values[0]
+
+    return df_eggs_poultry.loc[df_eggs_poultry["Eggs"]==total_production_nineth_quantile,"Grain intake rate"].values[0]
 
 def compute_yield_change(country,item,production,yields_df):
     yield_dict={'Milk, Total':'Yield','Beef and Buffalo Meat':'Yield/Carcass Weight','Meat, pig':'Yield/Carcass Weight','Meat, Poultry':'Yield/Carcass Weight','Eggs Primary':'Yield','Sheep and Goat Meat':'Yield/Carcass Weight'}
+    climatic_region={"India":"Tropical","Brazil":"Tropical","Ireland":"Temperate","France":"Temperate"}
     yields_df=read_FAOSTAT_df("data/FAOSTAT_animal_yields.csv",delimiter="|")
     if production=='Milk, Total':
-        concentrate_for_milk_yield_max=compute_SI_pathways.milk_yield_max(climatic_region[country])
-        milk_yield_max=compute_SI_pathways.milk_yield(concentrate_for_milk_yield_max,climatic_region[country])
+        concentrate_for_milk_yield_max=milk_yield_max(climatic_region[country])
+        yield_max=milk_yield(concentrate_for_milk_yield_max,climatic_region[country])
         milk_yield_current = yields_df.loc[(yields_df['Area']==country) & (yields_df['Element']==yield_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
-        yield_change = np.max([milk_yield_max/milk_yield_current,1])
-    elif (production=='Eggs Primary') & (production=='Meat, Poultry'):
+        yield_change = np.max([yield_max/milk_yield_current,1])
+    elif (production=='Eggs Primary') | (production=='Meat, Poultry'):
         if production=='Eggs Primary':
-            concentrate_for_production_max=compute_SI_pathways.eggs_poultry_max()
-            yield_max=compute_SI_pathways.eggs_poultry(concentrate_for_production_max,country)
+            concentrate_for_production_max=eggs_poultry_max()
+            yield_max=eggs_poultry(concentrate_for_production_max,country)
         elif production=='Meat, Poultry':
-            concentrate_for_production_max=compute_SI_pathways.weight_poultry_max()
-            yield_max=compute_SI_pathways.eggs_poultry(concentrate_for_production_max,country)
-            yield_current = yields_df.loc[(yields_df['Area']==country) & (yields_df['Element']==yield_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
-            yield_change = np.max([yield_max/yield_current,1])
-    elif (production=='Meat, pig):
-        concentrate_for_production_max=compute_SI_pathways.weight_swine_max
-        yield_max=compute_SI_pathways.weight_swine(concentrate_for_production_max)
+            concentrate_for_production_max=weight_poultry_max()
+            yield_max=eggs_poultry(concentrate_for_production_max,country)
+        yield_current = yields_df.loc[(yields_df['Area']==country) & (yields_df['Element']==yield_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
+        yield_change = np.max([yield_max/yield_current,1])
+    elif production=='Meat, pig':
+        concentrate_for_production_max=weight_swine_max()
+        yield_max=weight_swine(concentrate_for_production_max)
         yield_current = yields_df.loc[(yields_df['Area']==country) & (yields_df['Element']==yield_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
         yield_change = np.max([yield_max/yield_current,1])
     else:
+        # print("No change in yield for "+production)
         yield_change=1
-    return yield_change_ratio
+    return yield_change
 # import numpy as np
 # import os
 # os.environ['R_HOME'] = 'C:\\Users\\prudhomme\\anaconda3\\Lib\\R\\'

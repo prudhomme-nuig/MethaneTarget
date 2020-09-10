@@ -5,3 +5,4 @@ data/GLiPHAmaps
 data/NCS
 *.pyc
 logs
+.Rhistory

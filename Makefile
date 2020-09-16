@@ -38,6 +38,16 @@ output/FAOSTAT_protein_production.csv: output compute_protein_production_ref.py
 output/methane_quota.csv:output compute_methane_quota.py output/production_2010.csv output/FAOSTAT_methane_debt.csv output/FAOSTAT_protein_production.csv
 				${launch_python} compute_methane_quota.py
 
+#Compute emission intensity and yield for intensification pathways
+output/coefficients_milk_yield_concentrate_relation.csv:
+				Rscript.exe fit_carcass_yield_intake_relation_non_dairy.R
+				Rscript.exe fit_carcass_yield_intake_relation_poultry.R
+				Rscript.exe fit_carcass_yield_poultry_relations.R
+				Rscript.exe fit_carcass_yield_swine_relations.R
+				Rscript.exe fit_methane_intensity_intake_relation_dairy.R
+				Rscript.exe fit_methane_intensity_intake_relation_non_dairy.R
+				Rscript.exe fit_milk_yield_relations.R
+
 #Compute methane intensity per unit of production in 2050
 # for each intensification pathway, with and without mitigation
 output/emission_intensity_2050.csv:output compute_methane_intensity_2050.py

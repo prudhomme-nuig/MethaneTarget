@@ -10,6 +10,7 @@ from common_data import read_FAOSTAT_df
 import argparse
 from common_methane import compute_emission_intensity
 from copy import deepcopy
+import SI_pathways
 
 parser = argparse.ArgumentParser('Compute national nitrous oxyde intensity of manure and fertilization')
 parser.add_argument('--no-mitigation', action='store_true', help='No mitigation option')
@@ -47,7 +48,6 @@ if args.mitigation is not None:
 else:
     mitigation_strength=1
 
-
 item_of_df={"manure":animal_list,
             "fertilizer":['Synthetic Nitrogen fertilizers'],}
 
@@ -83,6 +83,7 @@ nutrious_Man_df.name="manure"
 GWP100_CH4=34
 GWP100_N2O=298
 mitigation_list=["No mitigation","MACC"]
+yields_df=read_FAOSTAT_df("data/FAOSTAT_animal_yields.csv",delimiter="|")
 
 #Compute new emission intensity
 index=0
@@ -95,6 +96,9 @@ for df in [nutrious_Man_df,N2O_fertilizer_df]:
             for mitigation in mitigation_list:
                 for pathway in pathway_dict[country]:
                     for production in production_dict[item]:
+                        if (pathway!=country) & (if item in animal_list):
+                            yields_df
+                            mitigation_strength=float(mitigation_strength)*SI_pathways.compute_yield_change(country,item,production,yields_df)
                         if df.name=="manure":
                             value_stock=df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"]=="Stocks"),"Value"].values[0]
                         elif df.name=="fertilizer":

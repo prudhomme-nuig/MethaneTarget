@@ -55,7 +55,7 @@ def methane_intensity_milk_yield(X,GAEZ):
 
 def methane_intensity(X,GAEZ,production,emission_type,concentrate_change=1):
 
-    if emission_type=="methane":
+    if emission_type=="enteric":
 
         if production=='Milk, Total':
             #Effect of intensification on enteric methane intensity of milk
@@ -70,10 +70,13 @@ def methane_intensity(X,GAEZ,production,emission_type,concentrate_change=1):
             #No effect of intensification on enteric methane intensity of Beef products
             print("No change in methane intensity of for "+production)
             methane_intensity=1
-    else:
+    elif emission_type=="manure":
         #No effect of intensification on methane intensity of manure
+        methane_intensity= concentrate_change
+    else:
         methane_intensity= 1
     return methane_intensity
+
 
 def milk_yield_max(GAEZ):
 
@@ -89,7 +92,7 @@ def methane_intensity_max(GAEZ):
 
 def weight_swine(X):
 
-    coefficient_weight_df=pd.read_csv("output/coefficients_weight_intake_swine_relation.csv",sep=",",index_col=0)
+    coefficient_weight_df=pd.read_csv("output/coefficients_weight_intake_pigs_relation.csv",sep=",",index_col=0)
 
     return coefficient_weight_df.iloc[0,0] + coefficient_weight_df.iloc[0,1]*X.values[0]
 
@@ -106,7 +109,7 @@ def weight_swine_max():
 
 def weight_poultry(X,country):
 
-    coefficient_weight_df=pd.read_csv("output/coefficients_weight_intake_swine_relation.csv",sep=",",index_col=0)
+    coefficient_weight_df=pd.read_csv("output/coefficients_weight_intake_poultry_relation.csv",sep=",",index_col=0)
 
     df_weight_poultry = pd.read_csv("output/FAOSTAT_meat_eggs_intake_poultry.csv",sep=",",index_col=0)
 
@@ -116,7 +119,7 @@ def weight_poultry(X,country):
 
 def eggs_poultry(X,country):
 
-    coefficient_weight_df=pd.read_csv("output/coefficients_weight_intake_swine_relation.csv",sep=",",index_col=0)
+    coefficient_weight_df=pd.read_csv("output/coefficients_eggs_intake_poultry_relation.csv",sep=",",index_col=0)
 
     df_weight_poultry = pd.read_csv("output/FAOSTAT_meat_eggs_intake_poultry.csv",sep=",",index_col=0)
 

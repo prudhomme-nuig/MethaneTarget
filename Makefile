@@ -23,10 +23,10 @@ logs:
 Figs/methane_index_bar_plot.png: Figs compute_methane_change.py
 		${launch_python} compute_methane_change.py
 
-#Compute national methane debt based on
-# FAOSTAT data between 1961 and 2010
-output/FAOSTAT_methane_debt.csv: output compute_methane_debt.py
-				${launch_python} compute_methane_debt.py
+# #Compute national methane debt based on
+# # FAOSTAT data between 1961 and 2010
+# output/FAOSTAT_methane_debt.csv: output compute_methane_debt.py
+# 				${launch_python} compute_methane_debt.py
 
 #Compute national protein production based on
 # FAOSTAT data in 2010 to have an allocation rule of methane
@@ -35,7 +35,7 @@ output/FAOSTAT_protein_production.csv: output compute_protein_production_ref.py
 
 #Compute national methane quota for different rules:
 #methane debt, protein production, gdp, population
-output/methane_quota.csv:output compute_methane_quota.py output/production_2010.csv output/FAOSTAT_methane_debt.csv output/FAOSTAT_protein_production.csv
+output/methane_quota.csv:output compute_methane_quota.py output/production_2010.csv output/FAOSTAT_protein_production.csv
 				${launch_python} compute_methane_quota.py
 
 #Compute emission intensity and yield for intensification pathways

@@ -32,7 +32,11 @@ convert_unit_dict={'1000 Head':1E3, #in Head
                     "kg CH4/head":1E-3,
                     "gigagrams N2O-N":44./28.*1E3,
                     "gigagrams N2O":1E3,
-                    "kg DM/year":1E-3
+                    "kg DM/year":1E-3,
+                    "heads/year":1,
+                    "kg CO2-eq/year":1E-3,
+                    "kg CW/year":1E-3,
+                    "kg eggs/year":1E-3
                     }
 
 new_unit_dict={'1000 Head':'Head', #in Head
@@ -61,7 +65,11 @@ new_unit_dict={'1000 Head':'Head', #in Head
                     "kg CH4/head":'tCH4/Head',
                     "gigagrams N2O-N":'t N2O',
                     "gigagrams N2O":'t N2O',
-                    "kg DM/year":"t DM/year"
+                    "kg DM/year":"t DM/year",
+                    "heads/year":"Head",
+                    "kg CO2-eq/year":"tCO2/year",
+                    "kg CW/year":"t CW/year",
+                    "kg eggs/year":"t eggs/year"
                     }
 
 def read_FAOSTAT_df(file_name,convert_unit_dict=convert_unit_dict,delimiter=",",index_col=None):

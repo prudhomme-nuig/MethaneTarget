@@ -51,7 +51,7 @@ output/coefficients_milk_yield_concentrate_relation.csv:
 #Compute methane intensity per unit of production in 2050
 # for each intensification pathway, with and without mitigation
 output/emission_intensity_2050.csv:output compute_methane_intensity_2050.py
-				${launch_python} compute_methane_intensity_2050.py
+				${launch_python} compute_methane_intensity_2050.py --print-table
 
 #Compute share of each crop whih is domestically produced
 # and the share of feed in the total production
@@ -75,7 +75,7 @@ output/grass_yield.csv: output compute_grass_yield.py
 #Compute national nitrous oxyde intensity of manure
 # and fertilization
 output/emission_intensity_N2O.csv: output
-				${launch_python} compute_N2O_intensity_2050.py
+				${launch_python} compute_N2O_intensity_2050.py --print-table
 
 #Compute deforesattion emission factor based on IPCC methodology
 # for countries with the highest agricultural exapnsion during these

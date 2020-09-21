@@ -55,6 +55,7 @@ ponderation_dict['Protein']=pd.read_csv('output/FAOSTAT_protein_production.csv',
 activity_df=pd.read_csv("output/impact_2050"+file_name_suffix+".csv",index_col=0)
 GWP_N2O=298
 GWP100_CH4=34
+t_to_kt=1E-3
 
 #Read methane Debt
 methane_debt_df=pd.read_csv("output/FAOSTAT_methane_debt_value.csv")
@@ -80,14 +81,19 @@ for country in country_list:
         activity_df.loc[country_rule_mak,'National quota GWP100 2010']=activity_df.loc[country_rule_mak,'National 2010']*GWP100_CH4
         if rule=='Grand-parenting':
             activity_df.loc[country_rule_mak,'Biogenic reference CH4 emissions in 2010 (ktCH4)']=activity_df.loc[country_rule_mak,'National 2010']
-        elif rule=='Debt':
-            activity_df.loc[country_rule_mak,'Biogenic reference CH4 emissions in 2010 (ktCH4)']=activity_df.loc[country_rule_mak,'National 2010']
         elif rule=='GDP':
-            activity_df.loc[country_rule_mak,'Biogenic reference CH4 emissions in 2010 (ktCH4)']=activity_df.loc[country_rule_mak,'National 2010']
+            activity_df.loc[country_rule_mak,'Biogenic reference CH4 emissions in 2010 (ktCH4)']=((-activity_df.loc[country_rule_mak,'National quota']+np.maximum(activity_df.loc[country_rule_mak,'National 2010'],-activity_df.loc[country_rule_mak,'Share']*(activity_df.loc[country_rule_mak,'2050']-activity_df.loc[country_rule_mak,'2010'])))/activity_df.loc[country_rule_mak,'Share']+activity_df.loc[country_rule_mak,'2050'])/activity_df.loc[country_rule_mak,'2050']*activity_df.loc[country_rule_mak,'National quota']
         elif rule=='Population':
-            activity_df.loc[country_rule_mak,'Biogenic reference CH4 emissions in 2010 (ktCH4)']=activity_df.loc[country_rule_mak,'National 2010']*ponderation_dict[rule][ponderation_dict[rule]['Country Name']==country]['2010'].values[0]/ponderation_dict[rule][ponderation_dict[rule]['Country Name']=='World']['2010'].values[0]
+            activity_df.loc[country_rule_mak,'Biogenic reference CH4 emissions in 2010 (ktCH4)']=activity_df.loc[country_rule_mak,'2010']*ponderation_dict[rule][ponderation_dict[rule]['Country Name']==country]['2010'].values[0]/ponderation_dict[rule][ponderation_dict[rule]['Country Name']=='World']['2010'].values[0]
         elif rule=='Protein':
-            activity_df.loc[country_rule_mak,'Biogenic reference CH4 emissions in 2010 (ktCH4)']=activity_df.loc[country_rule_mak,'National 2010']*ponderation_dict[rule][country].values[0]
+            activity_df.loc[country_rule_mak,'Biogenic reference CH4 emissions in 2010 (ktCH4)']=activity_df.loc[country_rule_mak,'2010']*ponderation_dict[rule][country].values[0]
+
+activity_df['Biogenic CH4 target 2050 (ktCH4)']=activity_df['National quota']
+activity_df['Biogenic CH4 change in 2050 (%)']=100-activity_df['National quota']/activity_df['Biogenic reference CH4 emissions in 2010 (ktCH4)']*100
+
+table_ref = pd.pivot_table(activity_df, values=['Biogenic reference CH4 emissions in 2010 (ktCH4)','Biogenic CH4 target 2050 (ktCH4)','Biogenic CH4 change in 2050 (%)'], index=['Country'],columns=["Allocation rule"],aggfunc='mean')
+table_ref.loc[:,['Biogenic reference CH4 emissions in 2010 (ktCH4)','Biogenic CH4 target 2050 (ktCH4)']] = table_ref[['Biogenic reference CH4 emissions in 2010 (ktCH4)','Biogenic CH4 target 2050 (ktCH4)']]*t_to_kt
+table_ref.to_excel("output/table_methane_reference.xlsx")
 
 activity_df['AFOLU balance (with eGWP*)']=activity_df['National quota eGWP*']+activity_df['GWP N2O fert']+activity_df['GWP N2O manure']+activity_df['Total CO2 emissions']
 activity_df['AFOLU balance (with GWP*)']=activity_df['National quota GWP*']+activity_df['GWP N2O fert']+activity_df['GWP N2O manure']+activity_df['Total CO2 emissions']

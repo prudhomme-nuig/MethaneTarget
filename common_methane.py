@@ -84,7 +84,7 @@ def compute_CO2_equivalent(input_df,rule,emission_ref_year,country,ponderation_i
         output_df=input_df*GWP100_CH4
     else:
         output_df=(input_df.values-emission_ref)*(GWP100_CH4*100.)/40.
-    return output_df
+    return output_df,emission_ref
 
 def compute_emission_intensity(mitigation_potential_df,df,country,item,share_methane_df,gaz):
     GWP100={"CH4":34,"N2O":298}
@@ -109,7 +109,7 @@ def compute_emission_intensity(mitigation_potential_df,df,country,item,share_met
         if ((mitigation_df.loc[index,"gaz"]==gaz) | (mitigation_df.loc[index,"gaz"]=='both')) & ((mitigation_df.loc[index,"Item"] in item_name)) | ((mitigation_df.loc[index,"Item"]=='All animals') & (item_name in all_animal_list)):
             if mitigation_df.loc[index,"gaz"]=='both':
                 gaz_share=share_methane_df.loc[(share_methane_df['Country']==country) & (share_methane_df['Item']==item),'Value'].values[0]/GWP100[gaz]
-            elif mitigation_df.loc[index,"gaz"]=='CH4':
+            elif mitigation_df.loc[index,"gaz"]==gaz:
                 gaz_share=1
             else:
                 gaz_share=0

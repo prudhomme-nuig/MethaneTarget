@@ -74,7 +74,7 @@ df_to_plot.loc[:,"Methane 2050 (ktCH4)"]=df_to_plot.loc[:,"National quota"].valu
 df_to_plot=df_to_plot.rename(columns = {'National methane index':'Methane index'})
 g = sns.catplot(x="Country", y="Methane index", hue="Allocation rule",
                 height=3.5, aspect=1.5,
-                kind="point", legend=False, data=df_to_plot,join=False);
+                kind="box", legend=False, data=df_to_plot);#,join=False
 g.add_legend(title="Allocation rule")
 g.set_axis_labels("", "Methane index\n(in 2050 relative to 2010)")
 #plt.show()+
@@ -107,7 +107,7 @@ for production in production_list:
     df_to_concat=df_to_concat.rename(columns = {production:'Production'})
     df_with_all_prod_to_plot=pd.concat([df_with_all_prod_to_plot,df_to_concat],axis=0,sort=True)
 
-df_with_all_prod_to_plot.loc[df_with_all_prod_to_plot['Country']!=df_with_all_prod_to_plot['Pathways'],'Pathway']='Improved'
+df_with_all_prod_to_plot.loc[df_with_all_prod_to_plot['Country']!=df_with_all_prod_to_plot['Pathways'],'Pathway']='Intensified'
 df_with_all_prod_to_plot.loc[df_with_all_prod_to_plot['Country']==df_with_all_prod_to_plot['Pathways'],'Pathway']='Current'
 df_with_all_prod_to_plot['Production in 2010 (Mt)']=df_with_all_prod_to_plot['Production in 2010 (Mt)']*t_to_Mt
 df_with_all_prod_to_plot['Production in 2050 (Mt)']=df_with_all_prod_to_plot['Production']*t_to_Mt
@@ -117,7 +117,7 @@ df_with_all_prod_to_plot["Item and allocation"]=df_with_all_prod_to_plot[["Alloc
 g = sns.catplot(x="Item", y="Production index (relative to 2010)", hue="Category",col="Allocation rule",
                 height=3.5, aspect=1.5,sharey="row",legend=False, #col_wrap=2,
                 row="Country", ci="sd",
-                kind="box", data=df_with_all_prod_to_plot,margin_titles=True,fliersize =0) #,join=False
+                kind="box", data=df_with_all_prod_to_plot,margin_titles=True,showfliers=False) #,join=False
 g.add_legend(title="Intensification - Mitigation")
 g.set_xticklabels(rotation=45)#g.facet_axis(2,2).get_xticklabels(),
 #g.set(xticks=[])
@@ -152,7 +152,7 @@ for item in production_dict.keys():
         df_to_concat=df_to_concat.rename(columns = {production+" yield 2010":'Yield 2010'})
         df_to_concat=df_to_concat.rename(columns = {production+' yield index':'Yield index (relative to 2010)'})
         df_to_print=pd.concat([df_to_print,df_to_concat],axis=0,sort=True)
-df_to_print.loc[df_to_print['Country']!=df_to_print['Pathways'],'Pathway']='Improved'
+df_to_print.loc[df_to_print['Country']!=df_to_print['Pathways'],'Pathway']='Intensified'
 df_to_print.loc[df_to_print['Country']==df_to_print['Pathways'],'Pathway']='Current'
 df_to_print["Type of product"]=df_to_print[["Item","Production"]].agg('-'.join, axis=1)
 table = pd.pivot_table(df_to_print, values=['Yield','Yield index (relative to 2010)'], index=['Country',"Type of product","Mitigation"],columns=["Pathway"],aggfunc='first')
@@ -170,14 +170,14 @@ for item in item_list:
     df_to_concat=df_to_concat.rename(columns = {'UP '+item:'UP'})
     df_to_concat=df_to_concat.rename(columns = {'UP index '+item:'UP index'})
     df_with_all_prod_to_plot=pd.concat([df_with_all_prod_to_plot,df_to_concat],axis=0,sort=True)
-df_with_all_prod_to_plot.loc[df_with_all_prod_to_plot['Country']!=df_with_all_prod_to_plot['Pathways'],'Pathway']='Improved'
+df_with_all_prod_to_plot.loc[df_with_all_prod_to_plot['Country']!=df_with_all_prod_to_plot['Pathways'],'Pathway']='Intensified'
 df_with_all_prod_to_plot.loc[df_with_all_prod_to_plot['Country']==df_with_all_prod_to_plot['Pathways'],'Pathway']='Current'
 df_with_all_prod_to_plot["Category"]=df_with_all_prod_to_plot[["Pathway","Mitigation"]].agg('-'.join, axis=1)
 df_with_all_prod_to_plot["Item and allocation"]=df_with_all_prod_to_plot[["Allocation rule","Item"]].agg('-'.join, axis=1)
 g = sns.catplot(x="Allocation rule", y="UP index", hue="Category",col="Item",
                 height=3.5, aspect=1.5,sharey="row",legend=False, #col_wrap=2,
                 row="Country", ci="sd",
-                kind="box", data=df_with_all_prod_to_plot,margin_titles=True,fliersize =0) #,join=False
+                kind="box", data=df_with_all_prod_to_plot,margin_titles=True,showfliers=False) #,join=False
 g.add_legend(title="Intensification - Mitigation")
 g.set_xticklabels(rotation=45)#g.facet_axis(2,2).get_xticklabels(),
 #g.set(xticks=[])
@@ -202,14 +202,14 @@ for item in ['Grass','Feed','Rice','Total']:
 ha_2_Mha=1E-6
 df_to_plot['Area in 2050 (Mha)']=df_to_plot['Area 2050']*ha_2_Mha
 df_to_plot['Area in 2010 (Mha)']=df_to_plot['Area 2010']*ha_2_Mha
-df_to_plot.loc[df_to_plot['Country']!=df_to_plot['Pathways'],'Pathway']='Improved'
+df_to_plot.loc[df_to_plot['Country']!=df_to_plot['Pathways'],'Pathway']='Intensified'
 df_to_plot.loc[df_to_plot['Country']==df_to_plot['Pathways'],'Pathway']='Current'
 df_to_plot["Category"]=df_to_plot[["Pathway","Mitigation"]].agg('-'.join, axis=1)
 df_to_plot["Item and allocation"]=df_to_plot[["Allocation rule","Item"]].agg('-'.join, axis=1)
 g = sns.catplot(x="Item", y="Area index", hue="Category",col="Allocation rule",
                 height=3.5, aspect=1.5,sharey="row",legend=False, #col_wrap=2,
                 row="Country", ci="sd",
-                kind="box", data=df_to_plot,margin_titles=True,fliersize =0) #,join=False
+                kind="box", data=df_to_plot,margin_titles=True,showfliers=False) #,join=False
 g.add_legend(title="Intensification - Mitigation")
 g.set_xticklabels(rotation=45)#g.facet_axis(2,2).get_xticklabels(),
 #g.set(xticks=[])
@@ -233,14 +233,14 @@ for item in ['manure','fert']:
 
 df_to_plot['N2O emissions\nin 2010 (ktN2O)']=df_to_plot['N2O emissions in 2010']*t_to_kt
 df_to_plot['N2O emissions\nin 2050 (ktN2O)']=df_to_plot['N2O emissions in 2050']*t_to_kt
-df_to_plot.loc[df_to_plot['Country']!=df_to_plot['Pathways'],'Pathway']='Improved'
+df_to_plot.loc[df_to_plot['Country']!=df_to_plot['Pathways'],'Pathway']='Intensified'
 df_to_plot.loc[df_to_plot['Country']==df_to_plot['Pathways'],'Pathway']='Current'
 df_to_plot["Category"]=df_to_plot[["Pathway","Mitigation"]].agg('-'.join, axis=1)
 df_to_plot["Item and allocation"]=df_to_plot[["Allocation rule","Item"]].agg('-'.join, axis=1)
 g = sns.catplot(x="Item", y="N2O index (2050 relative to 2010)", hue="Category",col="Allocation rule",
                 height=3.5, aspect=1.5,sharey="row",legend=False, #col_wrap=2,
                 row="Country", ci="sd",
-                kind="box", data=df_to_plot,margin_titles=True,fliersize =0) #,join=False
+                kind="box", data=df_to_plot,margin_titles=True,showfliers=False) #,join=False
 g.add_legend(title="Intensification - Mitigation")
 g.set_xticklabels(rotation=45)#g.facet_axis(2,2).get_xticklabels(),
 #g.set(xticks=[])
@@ -263,14 +263,14 @@ for item in ['Grass','Feed','Rice','Total']:
 
 df_to_plot['CO2 offset (MtCO2)']=df_to_plot['CO2 offset']*t_to_Mt
 
-df_to_plot.loc[df_to_plot['Country']!=df_to_plot['Pathways'],'Pathway']='Improved'
+df_to_plot.loc[df_to_plot['Country']!=df_to_plot['Pathways'],'Pathway']='Intensified'
 df_to_plot.loc[df_to_plot['Country']==df_to_plot['Pathways'],'Pathway']='Current'
 df_to_plot["Category"]=df_to_plot[["Pathway","Mitigation"]].agg('-'.join, axis=1)
 df_to_plot["Item and allocation"]=df_to_plot[["Allocation rule","Item"]].agg('-'.join, axis=1)
 g = sns.catplot(x="Item", y="CO2 offset (MtCO2)", hue="Category",col="Allocation rule",
                 height=3.5, aspect=1.5,sharey="row",legend=False, #col_wrap=2,
                 row="Country", ci="sd",
-                kind="box", data=df_to_plot,margin_titles=True,fliersize =0) #,join=False
+                kind="box", data=df_to_plot,margin_titles=True,showfliers=False) #,join=False
 g.add_legend(title="Intensification - Mitigation")
 g.set_xticklabels(rotation=45)#g.facet_axis(2,2).get_xticklabels(),
 #g.set(xticks=[])
@@ -306,14 +306,14 @@ for gaz in ["CO2","CH4","N2O","AFOLU","Import"]:
     df_to_concat=pd.concat([df_tmp[['Country','GWP (MtCO2eq)',"Allocation rule","Pathways","Mitigation"]],pd.DataFrame([gaz]*len(df_tmp['Country']),columns=['Item'])],axis=1,sort=True)
     #df_to_concat=df_to_concat.rename(columns = {"GWP "+gaz+' (MtCO2eq)':'GWP (MtCO2eq)'})
     df_to_plot=pd.concat([df_to_plot,df_to_concat],axis=0,sort=False)
-df_to_plot.loc[df_to_plot['Country']!=df_to_plot['Pathways'],'Pathway']='Improved'
+df_to_plot.loc[df_to_plot['Country']!=df_to_plot['Pathways'],'Pathway']='Intensified'
 df_to_plot.loc[df_to_plot['Country']==df_to_plot['Pathways'],'Pathway']='Current'
 df_to_plot["Category"]=df_to_plot[["Pathway","Mitigation"]].agg('-'.join, axis=1)
 df_to_plot["Item and allocation"]=df_to_plot[["Allocation rule","Item"]].agg('-'.join, axis=1)
 g = sns.catplot(x="Item", y="GWP (MtCO2eq)", hue="Category",col="Allocation rule",
                 height=3.5, aspect=1.5,sharey="row",legend=False, #col_wrap=2,
                 row="Country", ci="sd",
-                kind="box", data=df_to_plot,margin_titles=True,fliersize =0) #,join=False
+                kind="box", data=df_to_plot,margin_titles=True,showfliers=False) #,join=False
 g.add_legend(title="Intensification - Mitigation")
 g.set_xticklabels(rotation=45)#g.facet_axis(2,2).get_xticklabels(),
 #g.set(xticks=[])
@@ -324,23 +324,27 @@ plt.close("all")
 table = pd.pivot_table(df_to_plot, values=['GWP (MtCO2eq)'], index=['Country','Item'],columns=["Allocation rule"],aggfunc=np.mean)
 table.index.name=None
 table.to_excel("output/table_GWP.xlsx",index_label=None,float_format = "%0.1f")
-print("Plot net AFOLU balance with different metrics...")
+print("Plot net AFOLU balance...")
 
-#Plot difference between the different metrics
-# df_to_plot=pd.DataFrame(columns=['GWP (MtCO2eq)','Allocation rule','Country','Item'])
-# for item in ['eGWP*','GWP*','GWP100']:
-#     activity_df[item]=activity_df["AFOLU balance (with "+item+")"]
-#     df_to_concat=pd.concat([activity_df[['Country',item,"Allocation rule"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
-#     df_to_concat=df_to_concat.rename(columns = {item:'GWP (MtCO2eq)'})
-#     df_to_plot=pd.concat([df_to_plot,df_to_concat],axis=0,sort='True')
+df_to_plot=pd.DataFrame(columns=['GWP (MtCO2eq)','Allocation rule','Country','Item'])
+for item in ['eGWP*','GWP100']:
+    activity_df[item]=activity_df["AFOLU balance (with "+item+")"]
+    df_to_concat=pd.concat([activity_df[['Country',item,"Allocation rule"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
+    df_to_concat=df_to_concat.rename(columns = {item:'GWP (MtCO2eq)'})
+    df_to_plot=pd.concat([df_to_plot,df_to_concat],axis=0,sort='True')
+g = sns.catplot(x="Item", y="GWP (MtCO2eq)", hue="Item",col="Allocation rule",
+                height=3.5, aspect=1.5,sharey="row",legend=False, #col_wrap=2,
+                row="Country", ci="sd",
+                kind="box", data=df_to_plot,margin_titles=True,showfliers=False)
 # g = sns.catplot(x="Item", y="GWP (MtCO2eq)", hue="Allocation rule",col="Country",
 #                 height=3.5, aspect=1.5,sharey=False,col_wrap=2,
-#                 kind="point", legend=False, data=df_to_plot,join=False);
-# g.add_legend(title="Allocation rule")
-# g.set_axis_labels("Methane metrics", "GWP AFOLU (MtCO2eq)")
-# g.set_xticklabels(g.facet_axis(2,2).get_xticklabels(), rotation=45, horizontalalignment='right')
-# g.set_titles("{col_name}")
-# g.fig.savefig('Figs/AFOLU_metrics_bar_plot.png', dpi=100)
-# table = pd.pivot_table(df_to_plot, values=['GWP (MtCO2eq)'], index=['Country','Item'],columns=["Allocation rule"],aggfunc=np.mean)
-# table.index.name=None
-# table.to_excel("output/table_AFOLU_GWP.xlsx",index_label=None,float_format = "%0.1f")
+#                 kind="box", legend=False, data=df_to_plot,join=False);
+g.add_legend(title="Allocation rule")
+g.set_axis_labels("Methane metrics", "GWP AFOLU (MtCO2eq)")
+g.set_xticklabels(g.facet_axis(2,2).get_xticklabels(), rotation=45, horizontalalignment='right')
+g.set_titles("{col_name}")
+g.fig.savefig('Figs/AFOLU_metrics_bar_plot.png', dpi=100)
+table = pd.pivot_table(df_to_plot, values=['GWP (MtCO2eq)'], index=['Country','Item'],columns=["Allocation rule"],aggfunc=np.mean)
+table.index.name=None
+table.to_excel("output/table_AFOLU_GWP.xlsx",index_label=None,float_format = "%0.1f")
+print("Plot difference between the different metrics")

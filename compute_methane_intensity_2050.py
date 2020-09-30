@@ -23,10 +23,10 @@ country_list=["France","Ireland","Brazil","India"]
 # country_pd=pd.read_csv("output/model_country.csv",index_col=0)
 # country_list=list(np.unique(country_pd.values))
 # country_list.extend(list(country_pd.columns))
-pathways_df={"Ireland":["Ireland","Improved"],#,"Temperate"
-            "France":["France","Improved"],#,"Temperate"
-            "India":["India","Improved"], #,"Tropical"
-            "Brazil":["Brazil","Improved"]} #,"Tropical"
+pathways_df={"Ireland":["Ireland","Intensified"],#,"Temperate"
+            "France":["France","Intensified"],#,"Temperate"
+            "India":["India","Intensified"], #,"Tropical"
+            "Brazil":["Brazil","Intensified"]} #,"Tropical"
 
 climatic_region={"India":"Tropical","Brazil":"Tropical","Ireland":"Temperate","France":"Temperate"}
 
@@ -107,6 +107,30 @@ for df in [methane_Ent_Ferm_df,methane_Man_df]:
 
 yields_df=read_FAOSTAT_df("data/FAOSTAT_animal_yields.csv",delimiter="|")
 
+feed_per_head_df = pd.read_csv("data/GLEAM_Intake.csv",index_col=0,sep=";")
+item_to_herd_dict={"Cattle, non-dairy":"Non-dairy",
+                   "Cattle, dairy":"Dairy",
+                   "Sheep and Goats":"nan",
+                   'Swine':"nan",
+                   'Poultry Birds':"nan",
+                   'Chickens, layers':"nan"
+    }
+
+item_to_species_dict={"Cattle, non-dairy":"Cattle",
+                   "Cattle, dairy":"Cattle",
+                   "Sheep and Goats":"Sheep",
+                   'Swine':"Pigs",
+                   'Poultry Birds':"Chickens",
+                   'Chickens, layers':"Chickens"
+    }
+
+item_to_prod_dict={"Cattle, non-dairy":"All systems",
+                   "Cattle, dairy":"All systems",
+                   "Sheep and Goats":"All systems",
+                   'Swine':"All systems",
+                   'Poultry Birds':"All systems",
+                   'Chickens, layers':"Layers"
+    }
 output_df=pd.DataFrame(columns=["Country","Pathways","Emission","Item","Intensity","Mitigation","Production"])
 #output_activity_df=pd.DataFrame(columns=["Country","Emission","Item","Activity"])
 index=0
@@ -116,17 +140,28 @@ for emission_df in [methane_Ent_Ferm_df,methane_rice_df,methane_Man_df]:
             for pathway in pathways_df[country]:
                 for mitigation in mitigation_list:
                     for production in production_dict[item]:
-                        if (pathway=="Improved"):
+                        if (pathway=="Intensified"):
 
-                            if (item!= "Rice, paddy"):
+                            if (item!= "Rice, paddy") & (item!= "Sheep and Goats"):
 
-                                concentrate_change_for_yield_max=SI_pathways.compute_yield_change(country,item,production,yields_df)
-                                feed_per_head_df = read_FAOSTAT_df("data/GLEAM_feed.csv",index_col=0)
-                                country_pathway_item_feed_mask=(feed_per_head_df['Country']==country) & (feed_per_head_df['Item']==item) & (feed_per_head_df['Feed']=="Grains")
-                                concentrate_for_yield_max = concentrate_change_for_yield_max*feed_per_head_df.loc[country_pathway_item_feed_mask,'Value'].values[0]
+                                concentrate_change_for_yield_max=SI_pathways.compute_intake_change(country,item,production,yields_df)
+                                if production!='Beef and Buffalo Meat':
+                                    variable_name="INTAKE: Total intake - Grains"
+                                else:
+                                    variable_name="INTAKE: Total intake"
+                                if "Cattle" in item:
+                                    country_pathway_item_feed_mask=(feed_per_head_df.index==country) & (feed_per_head_df['Herd type']==item_to_herd_dict[item]) & (feed_per_head_df['Species']==item_to_species_dict[item]) & (feed_per_head_df['Variable']==variable_name) & (feed_per_head_df['Production system']==item_to_prod_dict[item])
+                                    country_pathway_item_number_mask=(feed_per_head_df.index==country) & (feed_per_head_df['Herd type']==item_to_herd_dict[item]) & (feed_per_head_df['Species']==item_to_species_dict[item]) & (feed_per_head_df['Variable']=="HERD: total number of animals") & (feed_per_head_df['Production system']==item_to_prod_dict[item])
+                                else:
+                                    country_pathway_item_feed_mask=(feed_per_head_df.index==country) &  (feed_per_head_df['Species']==item_to_species_dict[item]) & (feed_per_head_df['Variable'].str.contains(variable_name)) & (feed_per_head_df['Production system']==item_to_prod_dict[item])
+                                    country_pathway_item_number_mask=(feed_per_head_df.index==country) &  (feed_per_head_df['Species']==item_to_species_dict[item]) & (feed_per_head_df['Variable']=="HERD: total number of animals") & (feed_per_head_df['Production system']==item_to_prod_dict[item])
+                                # if production=='Milk, Total':
+                                #     import pdb; pdb.set_trace()
+                                concentrate_for_yield_max = concentrate_change_for_yield_max*feed_per_head_df.loc[country_pathway_item_feed_mask,'Value'].values[0]/feed_per_head_df.loc[country_pathway_item_number_mask,'Value'].values[0]
                                 methane_intensity_current = emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Implied emission factor for CH4" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
-                                methane_intensity_max=SI_pathways.methane_intensity(concentrate_for_yield_max,climatic_region[country],production,emission_df.name,concentrate_change=concentrate_change_for_yield_max) * methane_intensity_current/SI_pathways.methane_intensity(feed_per_head_df.loc[country_pathway_item_feed_mask,'Value'].values[0],climatic_region[country],production,emission_df.name,concentrate_change=1) #*1E-3
-                                mitigation_strength_tmp = mitigation_strength * methane_intensity_max/methane_intensity_current
+                                concentrate_for_current_yield = feed_per_head_df.loc[country_pathway_item_feed_mask,'Value'].values[0]/feed_per_head_df.loc[country_pathway_item_number_mask,'Value'].values[0]
+                                methane_intensity_change=SI_pathways.methane_intensity(concentrate_for_yield_max,climatic_region[country],production,emission_df.name,concentrate_change=concentrate_change_for_yield_max)/SI_pathways.methane_intensity(concentrate_for_current_yield,climatic_region[country],production,emission_df.name,concentrate_change=1) #*1E-3
+                                mitigation_strength_tmp = mitigation_strength * methane_intensity_change
                             else:
                                 mitigation_strength_tmp=mitigation_strength
 
@@ -163,6 +198,7 @@ for emission_df in [methane_Ent_Ferm_df,methane_rice_df,methane_Man_df]:
 output_df.to_csv('output/emission_intensity_2050'+file_name_suffix+'.csv',index=False)
 
 if args.print_table:
+    t_to_kg=1E3
     output_ref_df=pd.DataFrame(columns=output_df.columns)
     for emission_df in [methane_Ent_Ferm_df,methane_rice_df,methane_Man_df]:
         for country in country_list:
@@ -179,13 +215,13 @@ if args.print_table:
                                     intensity=emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Emissions (CH4)" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]/emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Area harvested" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
                                 output_ref_df.loc[index,:]=[country,pathway,emission_df.name,item,intensity,mitigation,production]
                             index+=1
-    output_df["EI 2050"]=output_df["Intensity"].values #(tCH4/Head or tCH4/ha)
-    output_df["EI 2010"]=output_ref_df["Intensity"].values #(tCH4/Head or tCH4/ha)
+    output_df["EI 2050"]=output_df["Intensity"].values*t_to_kg #(tCH4/Head or tCH4/ha)
+    output_df["EI 2010"]=output_ref_df["Intensity"].values*t_to_kg #(tCH4/Head or tCH4/ha)
     mask=output_df["EI 2010"]>0
     output_df["EI index"]=0
     output_df.loc[mask,"EI index"]=output_df.loc[mask,"EI 2050"]/output_df.loc[mask,"EI 2010"] # (2050 relative to 2010)
     output_df["Type of product"]=output_df[["Item","Production"]].agg('-'.join, axis=1)
-    output_df.loc[output_df['Country']!=output_df['Pathways'],'Pathway']='Improved'
+    output_df.loc[output_df['Country']!=output_df['Pathways'],'Pathway']='Intensified'
     output_df.loc[output_df['Country']==output_df['Pathways'],'Pathway']='Current'
     table = pd.pivot_table(output_df, values=['EI 2010','EI index'], index=['Country','Type of product','Mitigation'],columns=["Emission","Pathway"],aggfunc='first')
     table.index.name=None

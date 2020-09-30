@@ -17,10 +17,10 @@ args = parser.parse_args()
 
 methane_quota_df=pd.read_csv("output/methane_quota.csv")
 
-pathways_df={"Ireland":["Ireland","Improved"],#,"Temperate"
-            "France":["France","Improved"],#,"Temperate"
-            "India":["India","Improved"], #,"Tropical"
-            "Brazil":["Brazil","Improved"]} #,"Tropical"
+pathways_df={"Ireland":["Ireland","Intensified"],#,"Temperate"
+            "France":["France","Intensified"],#,"Temperate"
+            "India":["India","Intensified"], #,"Tropical"
+            "Brazil":["Brazil","Intensified"]} #,"Tropical"
 
 methane_all_reference_df=read_FAOSTAT_df("data/FAOSTAT_methane_reference.csv")
 

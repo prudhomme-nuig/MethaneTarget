@@ -109,7 +109,6 @@ for country in country_list:
                 for item in item_list:
                     for production in production_dict[item]:
                         if ("Cattle" in item) & ("Beef" in production):
-                            #SI_pathways.compute_weight(country)
                             yield_change=1
                         else:
                             yield_change = SI_pathways.compute_yield_change(country,item,production,yields_df)

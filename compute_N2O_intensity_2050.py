@@ -25,10 +25,10 @@ animal_list=["Cattle, non-dairy","Cattle, dairy","Chickens, layers","Poultry Bir
 
 element_list=["Stocks","Emissions (N2O)"]
 
-pathway_dict={"Ireland":["Ireland","Intensification"],#,"Intensification"
-            "France":["France","Intensification"],#,"Intensification"
-            "India":["India","Intensification"],#,"Intensification"
-            "Brazil":["Brazil","Intensification"]}#,"Intensification"
+pathway_dict={"Ireland":["Ireland","Intensified"],#,"Intensification"
+            "France":["France","Intensified"],#,"Intensified"
+            "India":["India","Intensified"],#,"Intensified"
+            "Brazil":["Brazil","Intensified"]}#,"Intensified"
 
 production_dict={'Cattle, dairy':['Milk, Total','Beef and Buffalo Meat'],'Cattle, non-dairy':['Beef and Buffalo Meat'],'Rice, paddy':['Rice, paddy'],'Swine':['Meat, pig'],'Poultry Birds':['Meat, Poultry'],'Chickens, layers':['Eggs Primary'],'Sheep and Goats':['Sheep and Goat Meat'],'Synthetic Nitrogen fertilizers':['Synthetic Nitrogen fertilizers']}
 
@@ -96,7 +96,11 @@ for df in [nutrious_Man_df,N2O_fertilizer_df]:
                 for pathway in pathway_dict[country]:
                     for production in production_dict[item]:
                         if (pathway!=country) & (item in animal_list):
-                            mitigation_strength=float(mitigation_strength)*SI_pathways.compute_yield_change(country,item,production,yields_df)
+                            if args.mitigation is not None:
+                                mitigation_strength=1+float(args.mitigation)/100
+                            else:
+                                mitigation_strength=1
+                            mitigation_strength=float(mitigation_strength)*SI_pathways.compute_intake_change(country,item,production,yields_df)
                         else:
                             if args.mitigation is not None:
                                 mitigation_strength=1+float(args.mitigation)/100
@@ -115,9 +119,9 @@ for df in [nutrious_Man_df,N2O_fertilizer_df]:
                             if mitigation=='MACC':
                                 value=float(mitigation_strength)*compute_emission_intensity(mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,:],df,country,item,share_N2O_df,"N2O")
                             else:
-                                value=df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (["Implied emission factor for N2O" in list_element for list_element in df["Element"]]),"Value"].values[0]
+                                value=float(mitigation_strength)*df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (["Implied emission factor for N2O" in list_element for list_element in df["Element"]]),"Value"].values[0]
                         else:
-                            value=value_emission/value_stock
+                            value=float(mitigation_strength)*value_emission/value_stock
                         if df.name=="manure":
                             aggregate_df.loc[index,:]=[country,"Implied emission factor",item,2010,value,pathway,mitigation,production]
                         else:
@@ -162,10 +166,14 @@ if args.print_table:
     mask=output_df["EI 2010"]>0
     output_df["EI index"]=0
     output_df.loc[mask,"EI index"]=output_df.loc[mask,"EI 2050"]/output_df.loc[mask,"EI 2010"]
-    output_df.loc[output_df['Country']!=output_df['Pathways'],'Pathway']='Intensified'
-    output_df.loc[output_df['Country']==output_df['Pathways'],'Pathway']='Current'
+    output_df["Intensification"]=np.nan
+    output_df.loc[(output_df["Mitigation"]!="MACC") & (output_df["Pathways"]!="Intensified"),"Intensification"]="2010"
+    output_df.loc[(output_df["Mitigation"]=="MACC") & (output_df["Pathways"]!="Intensified"),"Intensification"]="2050 MACC"
+    output_df.loc[(output_df["Mitigation"]=="MACC") & (output_df["Pathways"]=="Intensified"),"Intensification"]="2050 SI"
+    # output_df.loc[output_df['Country']!=output_df['Pathways'],'Pathway']='Intensified'
+    # output_df.loc[output_df['Country']==output_df['Pathways'],'Pathway']='Current'
     output_df["Type of product"]=output_df[["Item","Production"]].agg('-'.join, axis=1)
-    table = pd.pivot_table(output_df, values=['EI 2010','EI index'], columns=["Emission","Pathway"], index=['Country','Type of product',"Mitigation"],aggfunc='first')
+    table = pd.pivot_table(output_df, values=['EI 2050'], columns=["Emission","Intensification"], index=['Country','Type of product'],aggfunc="first")
     table.index.name=None
     table.columns = table.columns.swaplevel(0, 1)
     table.sort_index(level=0, axis=1, inplace=True)

@@ -102,20 +102,32 @@ def methane_intensity(X,GAEZ,production,emission_type,concentrate_change=1):
             methane_intensity=methane_intensity_milk_yield(X*1E-3,GAEZ)
         elif (production=='Beef and Buffalo Meat'):
             methane_intensity=methane_intensity_meat_non_dairy(X*1E3,GAEZ)*1E-3
-        elif (production=='Eggs Primary') | (production=='Meat, Poultry') | (production=='Meat, pig'):
-            #No effect of intensification on enteric methane intensity of poultry and pigs products
-            methane_intensity=1
         else:
             #No effect of intensification on enteric methane intensity of Beef products
-            print("No change in methane intensity of for "+production)
-            methane_intensity=1
+            print("No relation between methane intensity and intake for manure")
     elif emission_type=="manure":
         #No effect of intensification on methane intensity of manure
-        methane_intensity= concentrate_change
-    else:
-        methane_intensity= 1
+        print("No relation between methane intensity and intake for manure")
     return methane_intensity
 
+def methane_intensity_change(X,current_intake,GAEZ,production,emission_type,concentrate_change=1):
+
+    if emission_type=="enteric":
+
+        if production=='Milk, Total':
+            #Effect of intensification on enteric methane intensity of milk
+            methane_intensity_change=methane_intensity_milk_yield(X*1E-3,GAEZ)/methane_intensity_milk_yield(current_intake*1E-3,GAEZ)
+        elif (production=='Beef and Buffalo Meat'):
+            methane_intensity_change=methane_intensity_meat_non_dairy(X*1E3,GAEZ)*1E-3/(methane_intensity_meat_non_dairy(current_intake*1E3,GAEZ)*1E-3)
+        else:
+            #No effect of intensification on enteric methane intensity of poultry and pigs products
+            methane_intensity_change=1
+    elif emission_type=="manure":
+        #No effect of intensification on methane intensity of manure
+        methane_intensity_change= concentrate_change
+    else:
+        methane_intensity_change= 1
+    return methane_intensity_change
 
 def milk_yield_max(GAEZ):
 
@@ -168,13 +180,11 @@ def weight_swine_max():
 
     df_weight_swine.dropna(inplace=True)
 
-    kg_to_t=1E-3
-
     df_weight_swine["Meat yield"]=df_weight_swine["Meat"]/df_weight_swine["Number"]
 
     total_production_nineth_quantile = df_weight_swine["Meat yield"].quantile([0.9], interpolation='nearest').values[0]
 
-    return total_production_nineth_quantile*kg_to_t
+    return total_production_nineth_quantile
 
 def intake_for_weight_swine_max():
 
@@ -182,14 +192,12 @@ def intake_for_weight_swine_max():
 
     df_weight_swine.dropna(inplace=True)
 
-    kg_to_t=1E-3
-
     df_weight_swine["Meat yield"]=df_weight_swine["Meat"]/df_weight_swine["Number"]
     df_weight_swine["Grain intake rate"]=df_weight_swine["Grain_intake"]/df_weight_swine["Number"]
 
     total_production_nineth_quantile = df_weight_swine["Meat yield"].quantile([0.9], interpolation='nearest').values[0]
 
-    return df_weight_swine.loc[df_weight_swine["Meat yield"]==total_production_nineth_quantile,"Grain intake rate"]*kg_to_t
+    return df_weight_swine.loc[df_weight_swine["Meat yield"]==total_production_nineth_quantile,"Grain intake rate"]
 
 # def weight_poultry(X,country):
 #
@@ -288,8 +296,6 @@ def compute_yield_change(country,item,production,yields_df):
         current_theoretical_growth_rate=growth_rate(intake_rate_current,climatic_region[country])
         # yield_current = yield_current_df.loc[(yield_current_df["Area"]==country),"Production"].values[0]/yield_current_df.loc[(yield_current_df["Area"]==country),"Number"].values[0]
         yield_change=np.max([yield_max/current_theoretical_growth_rate,1])
-        # if production=='Beef and Buffalo Meat':
-        # import pdb; pdb.set_trace()
     elif (production=='Eggs Primary') | (production=='Meat, Poultry'):
         if production=='Eggs Primary':
             yield_max=eggs_poultry_max()
@@ -303,10 +309,11 @@ def compute_yield_change(country,item,production,yields_df):
             yield_current = yield_current_df.loc[(yield_current_df['Area']==country),'Meat'].values[0]/yield_current_df.loc[(yield_current_df['Area']==country),'Number'].values[0]
         yield_change = np.max([yield_max/yield_current,1])
     elif production=='Meat, pig':
-        yield_max=weight_swine_max()
-        #yield_max=weight_swine(concentrate_for_production_max)
-        yield_current = yields_df.loc[(yields_df['Area']==country) & (yields_df['Element']==yield_dict[production]) & (yields_df['Item']==production),'Value'].values[0]
-        yield_change = np.max([yield_max/yield_current,1])
+        concentrate_for_meat_yield_max=intake_for_weight_swine_max()
+        yield_max=weight_swine(concentrate_for_meat_yield_max)
+        yield_current_df=pd.read_csv("output/pigs_meat_emission_intake.csv",delimiter=",")
+        meat_yield_current = yield_current_df.loc[(yield_current_df['Area']==country),'Meat'].values[0]/yield_current_df.loc[(yield_current_df['Area']==country),'Number'].values[0]
+        yield_change = np.max([yield_max/meat_yield_current,1])
     else:
         # print("No change in yield for "+production)
         yield_change=1
@@ -320,30 +327,57 @@ def compute_intake_change(country,item,production,yields_df):
         concentrate_for_milk_yield_max=intake_for_methane_intensity_max(climatic_region[country])
         intake_current_df=pd.read_csv("output/data_for_lm.csv",delimiter=",")
         intake_rate_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Concentrate_intake"].values[0]
-        intake_change = np.max([concentrate_for_milk_yield_max/intake_rate_current,1])
+        milk_yield_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Milk_yield"].values[0]
+        output_ratio=milk_yield_max(climatic_region[country])/milk_yield_current
+        #Some countries have smaller intake and higher meat yield than the maximum computed here
+        if output_ratio>1:
+            intake_change = np.max([milk_yield_current/intake_rate_current,1])
+        else:
+            intake_change=1
     elif production=='Beef and Buffalo Meat':
         intake_for_yield_max=intake_for_growth_rate_max(climatic_region[country])
         intake_current_df=pd.read_csv("output/meat_intake_non_dairy.csv",delimiter=";")
         intake_rate_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Total_intake"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number"].values[0]
-        # current_theoretical_growth_rate=growth_rate(intake_rate_current,climatic_region[country])
-        # yield_current = yield_current_df.loc[(yield_current_df["Area"]==country),"Production"].values[0]/yield_current_df.loc[(yield_current_df["Area"]==country),"Number"].values[0]
-        intake_change=np.max([intake_for_yield_max/intake_rate_current,1])
+        if "non-dairy" in item:
+            meat_yield_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Production"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number"].values[0]
+        else:
+            meat_yield_current=intake_for_yield_max
+        output_ratio=growth_rate_max(climatic_region[country])/meat_yield_current
+        #Some countries have smaller intake and higher meat yield than the maximum computed here
+        if output_ratio>1:
+            intake_change = np.max([intake_for_yield_max/intake_rate_current,1])
+        else:
+            intake_change=1
     elif (production=='Eggs Primary') | (production=='Meat, Poultry'):
         if production=='Eggs Primary':
             concentrate_for_production_max=intake_for_eggs_poultry_max()
             intake_current_df=pd.read_csv("output/poultry_meat_eggs_emission_intake.csv",delimiter=",")
             intake_rate_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Grain_intake_poultry"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number"].values[0]
+            eggs_yield_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Eggs"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number"].values[0]
+            output_ratio=eggs_poultry_max()/eggs_yield_current
             # yield_max=eggs_poultry(concentrate_for_production_max,country)
         elif production=='Meat, Poultry':
             concentrate_for_production_max=intake_for_weight_poultry_max()
             intake_current_df=pd.read_csv("output/poultry_meat_eggs_emission_intake.csv",delimiter=",")
             intake_rate_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Grain_intake_poultry"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number"].values[0]
-        intake_change = np.max([concentrate_for_production_max/intake_rate_current,1])
+            meat_yield_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Meat"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number"].values[0]
+            output_ratio=weight_poultry_max()/meat_yield_current
+        #Some countries have smaller intake and higher meat yield than the maximum computed here
+        if output_ratio>1:
+            intake_change = np.max([concentrate_for_production_max/intake_rate_current,1])
+        else:
+            intake_change=1
+
     elif production=='Meat, pig':
         concentrate_for_production_max=intake_for_weight_swine_max()
-        intake_current_df=pd.read_csv("output/meat_intake_non_dairy.csv",delimiter=";")
-        intake_rate_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Total_intake"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number"].values[0]
-        intake_change = np.max([concentrate_for_production_max.values[0]/intake_rate_current,1])
+        intake_current_df=pd.read_csv("output/pigs_meat_emission_intake.csv",delimiter=",")
+        intake_rate_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Grain_intake"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number"].values[0]
+        meat_yield_current = intake_current_df.loc[(intake_current_df['Area']==country),'Meat'].values[0]/intake_current_df.loc[(intake_current_df['Area']==country),'Number'].values[0]
+        #Some countries have smaller intake and higher meat yield than the maximum computed here
+        if weight_swine_max()/meat_yield_current>1:
+            intake_change = np.max([concentrate_for_production_max.values[0]/intake_rate_current,1])
+        else:
+            intake_change = 1
     else:
         # print("No change in yield for "+production)
         intake_change=1

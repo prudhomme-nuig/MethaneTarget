@@ -155,13 +155,13 @@ for emission_df in [methane_Ent_Ferm_df,methane_rice_df,methane_Man_df]:
                                 else:
                                     country_pathway_item_feed_mask=(feed_per_head_df.index==country) &  (feed_per_head_df['Species']==item_to_species_dict[item]) & (feed_per_head_df['Variable'].str.contains(variable_name)) & (feed_per_head_df['Production system']==item_to_prod_dict[item])
                                     country_pathway_item_number_mask=(feed_per_head_df.index==country) &  (feed_per_head_df['Species']==item_to_species_dict[item]) & (feed_per_head_df['Variable']=="HERD: total number of animals") & (feed_per_head_df['Production system']==item_to_prod_dict[item])
-                                # if production=='Milk, Total':
-                                #     import pdb; pdb.set_trace()
                                 concentrate_for_yield_max = concentrate_change_for_yield_max*feed_per_head_df.loc[country_pathway_item_feed_mask,'Value'].values[0]/feed_per_head_df.loc[country_pathway_item_number_mask,'Value'].values[0]
                                 methane_intensity_current = emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Implied emission factor for CH4" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
                                 concentrate_for_current_yield = feed_per_head_df.loc[country_pathway_item_feed_mask,'Value'].values[0]/feed_per_head_df.loc[country_pathway_item_number_mask,'Value'].values[0]
-                                methane_intensity_change=SI_pathways.methane_intensity(concentrate_for_yield_max,climatic_region[country],production,emission_df.name,concentrate_change=concentrate_change_for_yield_max)/SI_pathways.methane_intensity(concentrate_for_current_yield,climatic_region[country],production,emission_df.name,concentrate_change=1) #*1E-3
+                                methane_intensity_change=SI_pathways.methane_intensity_change(concentrate_for_yield_max,concentrate_for_current_yield,climatic_region[country],production,emission_df.name,concentrate_change=concentrate_change_for_yield_max)
                                 mitigation_strength_tmp = mitigation_strength * methane_intensity_change
+                                # if production=="Meat, pig":
+                                #     import pdb; pdb.set_trace()
                             else:
                                 mitigation_strength_tmp=mitigation_strength
 
@@ -221,9 +221,13 @@ if args.print_table:
     output_df["EI index"]=0
     output_df.loc[mask,"EI index"]=output_df.loc[mask,"EI 2050"]/output_df.loc[mask,"EI 2010"] # (2050 relative to 2010)
     output_df["Type of product"]=output_df[["Item","Production"]].agg('-'.join, axis=1)
-    output_df.loc[output_df['Country']!=output_df['Pathways'],'Pathway']='Intensified'
-    output_df.loc[output_df['Country']==output_df['Pathways'],'Pathway']='Current'
-    table = pd.pivot_table(output_df, values=['EI 2010','EI index'], index=['Country','Type of product','Mitigation'],columns=["Emission","Pathway"],aggfunc='first')
+    # output_df.loc[output_df['Country']!=output_df['Pathways'],'Pathway']='Intensified'
+    # output_df.loc[output_df['Country']==output_df['Pathways'],'Pathway']='Current'
+    output_df["Intensification"]=np.nan
+    output_df.loc[(output_df["Mitigation"]!="MACC") & (output_df["Pathways"]!="Intensified"),"Intensification"]="2010"
+    output_df.loc[(output_df["Mitigation"]=="MACC") & (output_df["Pathways"]!="Intensified"),"Intensification"]="2050 MACC"
+    output_df.loc[(output_df["Mitigation"]=="MACC") & (output_df["Pathways"]=="Intensified"),"Intensification"]="2050 SI"
+    table = pd.pivot_table(output_df, values=['EI 2050'], index=['Country','Type of product'],columns=["Emission","Intensification"],aggfunc="first")
     table.index.name=None
     table.columns = table.columns.swaplevel(0, 1)
     table.sort_index(level=0, axis=1, inplace=True)

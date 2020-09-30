@@ -84,7 +84,7 @@ def compute_CO2_equivalent(input_df,rule,emission_ref_year,country,ponderation_i
         output_df=input_df*GWP100_CH4
     else:
         output_df=(input_df.values-emission_ref)*(GWP100_CH4*100.)/40.
-    return output_df,emission_ref
+    return output_df
 
 def compute_emission_intensity(mitigation_potential_df,df,country,item,share_methane_df,gaz):
     GWP100={"CH4":34,"N2O":298}

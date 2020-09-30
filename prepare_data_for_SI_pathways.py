@@ -53,6 +53,7 @@ gleam_chicken_mask= gleam_intake_df["Species"]=="Chickens"
 gleam_pigs_mask= gleam_intake_df["Species"]=="Pigs"
 gleam_country_mask= gleam_intake_df["Country"].isin(country_list)
 gleam_production_mask = gleam_intake_df["Variable"]=="PROD: Meat - carcass weight"
+gleam_milk_mask = gleam_intake_df["Variable"]=="PROD: Meat - carcass weight"
 gleam_methane_enteric_mask = gleam_intake_df["Variable"]=="EMSS: Enteric - CH4 from enteric fermentation"
 gleam_methane_manure_mask = gleam_intake_df["Variable"]=="EMSS: Manure - CH4 from manure management"
 gleam_n2o_manure_mask = gleam_intake_df["Variable"]=="EMSS: Manure - N2O from manure management"
@@ -72,9 +73,20 @@ fostat_manure_sheep_mask = fostat_manure_df["Item"]=="Sheep and Goats"
 fostat_manure_swine_mask = fostat_manure_df["Item"]=="Swine"
 fostat_manure_domain_mask = fostat_manure_df["Domain"]=="Manure Management"
 
-#Prepare data per cohort
-#Dairy cattle
-# df_to_plot=pd.DataFrame(columns=["Methane_intensity","Milk_yield","Concentrate_intake"])
+# Prepare data per cohort
+# Dairy cattle
+kt_to_kg=1E6
+df_dairy_milk=pd.DataFrame()
+df_dairy_milk["Milk_yield"]=faostat_yield_df.loc[fostat_yield_country_mask & fostat_yield_element_mask & fostat_yield_item_mask,"Value"]
+df_dairy_milk["Total_intake"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_total_mask,"Value"]*kt_to_kg
+df_dairy_milk["Concentrate_intake"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_grain_mask,"Value"]*kt_to_kg
+df_dairy_milk["Number"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_number_mask,"Value"]*1000
+df_dairy_milk["Production"] = gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_production_mask,"Value"]*1E6
+df_dairy_milk["Methane"] = gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_methane_enteric_mask,"Value"]/29*1E6
+df_dairy_milk["GAEZ"] = gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_production_mask,"GAEZ"]
+df_dairy_milk = df_dairy_milk.dropna()
+df_dairy_milk = df_dairy_milk.drop(df_dairy_milk[df_dairy_milk["Number"]==0].index)
+df_dairy_milk.to_csv("output/milk_intake_dairy.csv",sep=";")
 #
 # df_to_plot["Milk_yield"]=faostat_yield_df.loc[fostat_yield_country_mask & fostat_yield_element_mask & fostat_yield_item_mask,"Value"] #kg/year
 # df_to_plot.index=faostat_yield_df.loc[fostat_yield_country_mask & fostat_yield_element_mask & fostat_yield_item_mask,"Area"]
@@ -102,14 +114,18 @@ fostat_manure_domain_mask = fostat_manure_df["Domain"]=="Manure Management"
 #
 # df_to_plot.to_csv("output/data_dairy_for_lm.csv")
 #
-# #Non dairy cattle
-# df_non_dairy_meat=pd.DataFrame(columns=["Total intake","Number"])
-# df_non_dairy_meat["Total_intake"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_total_mask,"Value"]
-# df_non_dairy_meat["Number"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_number_mask,"Value"]
-# df_non_dairy_meat["Production"] = gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_production_mask,"Value"]
-# df_non_dairy_meat["Methane"] = gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_methane_enteric_mask,"Value"]
-# df_non_dairy_meat["GAEZ"] = gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_production_mask,"GAEZ"]
-# df_non_dairy_meat.to_csv("output/meat_intake_non_dairy.csv")
+#Non dairy cattle
+kt_to_kg=1E6
+df_non_dairy_meat=pd.DataFrame()
+df_non_dairy_meat["Total_intake"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_total_mask,"Value"]*kt_to_kg
+df_non_dairy_meat["Concentrate_intake"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_grain_mask,"Value"]*kt_to_kg
+df_non_dairy_meat["Number"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_number_mask,"Value"]*1000
+df_non_dairy_meat["Production"] = gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_production_mask,"Value"]*1E6
+df_non_dairy_meat["Methane"] = gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_methane_enteric_mask,"Value"]/29*1E6
+df_non_dairy_meat["GAEZ"] = gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_production_mask,"GAEZ"]
+df_non_dairy_meat = df_non_dairy_meat.dropna()
+df_non_dairy_meat = df_non_dairy_meat.drop(df_non_dairy_meat[df_non_dairy_meat["Number"]==0].index)
+df_non_dairy_meat.to_csv("output/meat_intake_non_dairy.csv",sep=";")
 
 #Poultry
 df_chicken=pd.DataFrame()

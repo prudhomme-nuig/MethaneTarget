@@ -1,17 +1,16 @@
 library(lme4)
 
-df <- read.table("output/data_for_lm.csv", 
+df <- read.table("output/milk_intake_dairy.csv", 
                  header = TRUE,
-                 sep = ",",
+                 sep = ";",
+                 quote="\"",
                  encoding = "UTF-8")
 
-df_temperate<-df#[df["GAEZ"]=="Temperate",]
-mod_temparate <- lm(log(Milk_yield) ~ poly(Concentrate_intake,2,raw=TRUE) + factor (GAEZ), data=df_temperate)
-#mod <- lm(Milk_yield ~ Concentrate_intake + Grass_intake, data=df_temperate)
-summary(mod_temparate)
+mod <- lm(log(Milk_yield+1) ~ poly(Concentrate_intake,2,raw=TRUE) + factor (GAEZ), data=df)
+summary(mod)
 par(mfrow = c(2, 2))
-plot(mod_temparate)
-df_temperate$predlm <- predict(mod_temparate)
+plot(mod)
+df_temperate$predlm <- predict(mod)
 
 library(ggplot2)
 
@@ -34,7 +33,7 @@ ggplot(df_temperate,aes(x=Concentrate_intake, y=Milk_yield,color=factor(GAEZ),sh
 
 # library(e1071)
 # 
-# saveRDS(mod_temparate, "output/milk_yield_concentrate.rds")
+# saveRDS(mod, "output/milk_yield_concentrate.rds")
 # file_conn <- file("output/milk_yield_concentrate.dep")
 # writeLines(DEP_LIBS, file_conn)
 # close(file_conn)
@@ -58,7 +57,8 @@ ggplot(df_temperate,aes(x=Concentrate_intake, y=Milk_yield,color=factor(GAEZ),sh
 #         legend.title = element_text(face = "bold",size = 18))
 # 
 library("plyr")
-coef_final<-data.frame(t(mod_temparate$coefficients))
+coef_final<-data.frame(t(mod$coefficients))
 colnames(coef_final)<- c("Intercept","Concentrate_intake","Concentrate_intake_2","Tropical")
 # coef_final[is.na(coef_final)] <- 0
 write.csv(coef_final,'output/coefficients_milk_yield_concentrate_relation.csv')
+

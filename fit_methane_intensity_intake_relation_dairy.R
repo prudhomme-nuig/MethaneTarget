@@ -23,7 +23,7 @@ ggplot(df_temperate,aes(x=Concentrate_intake, y=Methane_intensity,color=factor(G
         legend.text = element_text(size = 18),
         legend.title = element_text(face = "bold",size = 18))
 
-library("plyr")
+  library("plyr")
 coef_final<-as.data.frame.list(mod_temparate$coefficients)
 colnames(coef_final)<- c("Intercept","Concentrate_intake","Concentrate_intake_2","GAEZ")
 write.csv(coef_final,'output/coefficients_methane_intensity_concentrate_relation.csv')

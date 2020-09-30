@@ -15,6 +15,8 @@ df <- read.table("output/poultry_meat_eggs_emission_intake.csv",
 df["Meat_rate"]=df["Meat"]/df["Number"]
 df["Grain_intake_poultry_rate"]=df["Grain_intake_poultry"]/df["Number"]
 
+df<-df[df$Grain_intake_poultry_rate<0.06,]
+
 #Fit model
 mod <- lm(Meat_rate ~ Grain_intake_poultry_rate, data=df)
 summary(mod)
@@ -23,10 +25,10 @@ plot(mod)
 df$predlm <- predict(mod)
 
 #Plot model and data
-ggplot(df,aes(x=Grain_intake_poultry_rate, y=Meat_rate, color=factor(GAEZ))) +
+ggplot(df,aes(x=Grain_intake_poultry_rate*1E3, y=Meat_rate*1E3)) +
   geom_point(size=3) + 
-  geom_line(aes(y = predlm), size = 1.5)+
-  labs(y="Carcass weight (tCW/year)", x = "Grain intake (tDM/year)")+
+  geom_line(aes(y = predlm*1E3), size = 1.5)+
+  labs(y="Carcass weight (kgCW/year)", x = "Grain intake (kgDM/year)")+
   theme(axis.title = element_text(size = 18),
         legend.text = element_text(size = 18),
         legend.title = element_text(face = "bold",size = 18))
@@ -53,7 +55,7 @@ df$predlm <- predict(mod)
 ggplot(df,aes(x=Grain_intake_layers_rate, y=Eggs_rate)) +
   geom_point(size=3) + 
   geom_line(aes(y = predlm), size = 1.5)+
-  labs(y="Eggs (kg/head/day)", x = "Grain intake (kgDM/year)")+
+  labs(y="Eggs (t/year)", x = "Grain intake (tDM/year)")+
   theme(axis.title = element_text(size = 18),
         legend.text = element_text(size = 18),
         legend.title = element_text(face = "bold",size = 18))

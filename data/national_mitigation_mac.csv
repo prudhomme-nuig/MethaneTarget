@@ -1,15 +1,13 @@
 Country,Emission,Measure,Indicator,Mitigation potential,Mitigation cost,Pasture change,Feed change,Production change,gaz,Item
-India,enteric,MUB,share,0.11,nan,0,0,0,CH4,"Cattle, dairy"
+India,enteric,Additives,share,0.1,nan,0,0,0,CH4,"Cattle, dairy"
+India,enteric,Additives,share,0.15,nan,0,0,0,CH4,"Cattle, non-dairy"
 India,enteric,Concentrate,share,0.15,nan,0,0,0,CH4,Cattle
-India,enteric,Ionophore,share,0.22,nan,0,0,0,CH4,"Cattle, dairy"
 India,enteric,Green fodder,mitigation per head,0.0094,nan,0,0,0,CH4,Cattle
 India,enteric,Improved diet,mitigation per head,0.00062,nan,0,0,0,CH4,Sheep and Goats
 India,manure,High fiber diet for pigs,mitigation per head,0.0004,nan,0,0,0,N2O,Swine
 India,rice,Rice management,mitigation per ha,0.081,nan,0,0,0,CH4,Rice
 India,manure,Improved Manure management,mitigation per head,0.03063,nan,0,0,0,both,Cattle
-India,fertilizer,Fertilizer consumption,mitigation per ha,0.00066,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
-India,fertilizer,NUE,mitigation per ha,0.017,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
-India,fertilizer,Laser land leveling,share,0.28,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
+India,fertilizer,Fertilizer precision,mitigation,175000,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
 Brazil,rice,Rice management,share,0.5,nan,0,0,0,CH4,Rice
 Brazil,enteric,Concentrate,mitigation,196428.5714,nan,0,0,0,CH4,Cattle
 Brazil,enteric,Additives,mitigation,125000,nan,0,0,0,CH4,Cattle
@@ -29,19 +27,19 @@ Ireland,manure,crude proteins,mitigation,169,nan,0,0,0,N2O,Swine
 Ireland,manure,manure management,mitigation,4900,nan,0,0,0,both,All animals
 Ireland,fertilizer,Clover,mitigation,231,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
 Ireland,fertilizer,NUE,mitigation,375,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
-Ireland,fertilizer,Fertiliser type,mitigation,1748,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
+Ireland,fertilizer,Fertiliser type,share,0.36,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
 Ireland,fertilizer,Mineral soil drainage,mitigation,661,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
 France,rice,Rice management,share,0.5,nan,0,0,0,CH4,Rice
 France,enteric,Additives,mitigation,212800,nan,0,0,0,CH4,Cattle
-France,fertilizer,adjusting fertilizer application,mitigation,2.8,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
-France,manure,organic fertilizer,mitigation,6.3,nan,0,0,0,N2O,All animals
-France,fertilizer,adjusting application date,mitigation,1.4,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
+France,fertilizer,adjusting fertilizer application,mitigation,2800,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
+France,manure,organic fertilizer,mitigation,6300,nan,0,0,0,N2O,All animals
+France,fertilizer,adjusting application date,mitigation,1400,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
 France,fertilizer,nitrification inhibitor,mitigation,2.0,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
-France,fertilizer,Incorporate fertiliser in the soil,mitigation,1.9,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
-France,fertilizer,Incorporate grain legumes,mitigation,3.0,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
-France,fertilizer,Incorporate legumes in temp grassland,mitigation,1.6,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
+France,fertilizer,Incorporate fertiliser in the soil,mitigation,1900,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
+France,fertilizer,Incorporate grain legumes,mitigation,3080,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
+France,fertilizer,Incorporate legumes in temp grassland,mitigation,1600,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
 France,enteric,Extend the grazing period,mitigation,0.7,nan,0,0,0,both,Cattle
-France,fertilizer,intensive permanent and temporary grassland less intensive,mitigation,1.7,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
+France,fertilizer,intensive permanent and temporary grassland less intensive,mitigation,1700,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers
 France,enteric,carbohydrates by unsaturated fats in diets,mitigation,55,nan,0,0,0,CH4,Cattle
 France,enteric,Incorporate an additive (nitrate based),share,0.1,nan,0,0,0,CH4,Cattle
 France,manure,Reduce the nitrogen content in the diet of dairy cows,mitigation,0.7,nan,0,0,0,N2O,"Cattle, dairy"

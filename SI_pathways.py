@@ -339,7 +339,8 @@ def compute_intake_change(country,item,production,yields_df):
         intake_current_df=pd.read_csv("output/meat_intake_non_dairy.csv",delimiter=";")
         intake_rate_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Total_intake"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number"].values[0]
         if "non-dairy" in item:
-            meat_yield_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Production"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number"].values[0]
+            # meat_yield_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Production"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number"].values[0]
+            meat_yield_current=growth_rate(intake_rate_current,climatic_region[country])
         else:
             meat_yield_current=intake_for_yield_max
         output_ratio=growth_rate_max(climatic_region[country])/meat_yield_current

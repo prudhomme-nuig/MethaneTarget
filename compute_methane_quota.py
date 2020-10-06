@@ -80,6 +80,7 @@ methane_df.loc[:,'Country']=np.nan
 methane_tmp_df=pd.DataFrame(columns=methane_df.columns.values)
 WB_df=['population_reference_df','GDP_reference_df']
 index_list=deepcopy(list(methane_df.index))
+allocation=pd.DataFrame(columns=["Allocation","Country","Year","Country value","World value"])
 index_new=0
 for country in country_list:
     for index in index_list:
@@ -87,12 +88,16 @@ for country in country_list:
             methane_tmp_df.loc[index_new,:]=deepcopy(methane_df.loc[index,:])
             if df.name=="population_reference_df":
                 methane_tmp_df.loc[index_new,'Share']=df.loc[df['Country Name']==country,'2010'].values[0]/df.loc[df['Country Name']=='World','2010'].values[0]
+                allocation.loc[index_new,:]=[df.name[:3],country,"2010",df.loc[df['Country Name']==country,'2010'].values[0],df.loc[df['Country Name']=='World','2010'].values[0]]
             elif df.name=="GDP_reference_df":
                 methane_tmp_df.loc[index_new,'Share']=df.loc[df['Country Name']==country,'2010'].values[0]/df.loc[df['Country Name']=='World','2010'].values[0]
+                allocation.loc[index_new,:]=[df.name[:3],country,"2010",df.loc[df['Country Name']==country,'2010'].values[0],df.loc[df['Country Name']=='World','2010'].values[0]]
             elif df.name=="methane_past_df":
                 methane_tmp_df.loc[index_new,'Share']=df.loc[(df['Area']==country) & (df['Year']==2010),'Value'].values[0]/df.loc[(df['Area']=='World') & (df['Year']==2010),'Value'].values[0]
+                allocation.loc[index_new,:]=[df.name[:3],country,"2010",df.loc[(df['Area']==country) & (df['Year']==2010),'Value'].values[0],df.loc[(df['Area']=='World') & (df['Year']==2010),'Value'].values[0]]
             else:
                 methane_tmp_df.loc[index_new,'Share']=df[country].values[0]#/df.loc[df['Area']=='World','Value'].values[0]
+                allocation.loc[index_new,:]=[df.name[:3],country,"2010",df[country].values[0],df[country].values[0]]
             methane_tmp_df.loc[index_new,'Allocation rule']=df.name[:3]
             if (df.name=="population_reference_df") | (df.name=="protein_production_df"):
                 methane_tmp_df.loc[index_new,'National quota']=methane_tmp_df.loc[index_new,'Share']*methane_tmp_df.loc[index_new,'2050']
@@ -113,3 +118,7 @@ methane_df.loc[methane_df['Allocation rule']=='gdp','Allocation rule']='GDP'
 rule_list=['Debt','Population','GDP','Protein']
 
 methane_df.to_csv('output/methane_quota.csv',index=False)
+allocation=allocation.astype({"Country value":"float","World value":"float"})
+table = pd.pivot_table(allocation, values=["Country value","World value"], index=['Country'],columns=["Allocation"],aggfunc=np.mean)
+table.index.name=None
+table.to_excel("output/table_allocation.xlsx",index_label=None,float_format = "%0.1f")

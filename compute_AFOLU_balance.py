@@ -103,6 +103,10 @@ activity_df['AFOLU balance (with eGWP*) 2010']=activity_df['National quota eGWP*
 activity_df['AFOLU balance (with GWP*) 2010']=activity_df['National quota GWP* 2010']+activity_df['GWP N2O fert 2010']+activity_df['GWP N2O manure 2010']+activity_df['Total CO2 emissions 2010']
 activity_df['AFOLU balance (with GWP100) 2010']=activity_df['National quota GWP100 2010']+activity_df['GWP N2O fert 2010']+activity_df['GWP N2O manure 2010']+activity_df['Total CO2 emissions 2010']
 
+activity_df["Intensification"]=np.nan
+activity_df.loc[(activity_df["Mitigation"]!="MACC") & (activity_df["Pathways"]!="Intensified"),"Intensification"]="Base"
+activity_df.loc[(activity_df["Mitigation"]=="MACC") & (activity_df["Pathways"]!="Intensified"),"Intensification"]="2050 MACC"
+activity_df.loc[(activity_df["Mitigation"]=="MACC") & (activity_df["Pathways"]=="Intensified"),"Intensification"]="2050 SI"
 
 activity_df.to_csv("output/AFOLU_balance_2050"+file_name_suffix+".csv")
 

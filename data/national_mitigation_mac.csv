@@ -4,7 +4,7 @@ India,enteric,Additives,share,0.15,nan,0,0,0,CH4,"Cattle, non-dairy"
 India,enteric,Concentrate,share,0.15,nan,0,0,0,CH4,Cattle
 India,enteric,Green fodder,mitigation per head,0.0094,nan,0,0,0,CH4,Cattle
 India,enteric,Improved diet,mitigation per head,0.00062,nan,0,0,0,CH4,Sheep and Goats
-India,manure,High fiber diet for pigs,mitigation per head,0.0004,nan,0,0,0,N2O,Swine
+India,manure,High fiber diet for pigs,mitigation per head,0.00045,nan,0,0,0,N2O,Swine
 India,rice,Rice management,mitigation per ha,0.081,nan,0,0,0,CH4,Rice
 India,manure,Improved Manure management,mitigation per head,0.03063,nan,0,0,0,both,Cattle
 India,fertilizer,Fertilizer precision,mitigation,175000,nan,0,0,0,N2O,Synthetic Nitrogen fertilizers

@@ -167,7 +167,7 @@ if args.print_table:
     output_df["EI index"]=0
     output_df.loc[mask,"EI index"]=output_df.loc[mask,"EI 2050"]/output_df.loc[mask,"EI 2010"]
     output_df["Intensification"]=np.nan
-    output_df.loc[(output_df["Mitigation"]!="MACC") & (output_df["Pathways"]!="Intensified"),"Intensification"]="2010"
+    output_df.loc[(output_df["Mitigation"]!="MACC") & (output_df["Pathways"]!="Intensified"),"Intensification"]="Base"
     output_df.loc[(output_df["Mitigation"]=="MACC") & (output_df["Pathways"]!="Intensified"),"Intensification"]="2050 MACC"
     output_df.loc[(output_df["Mitigation"]=="MACC") & (output_df["Pathways"]=="Intensified"),"Intensification"]="2050 SI"
     # output_df.loc[output_df['Country']!=output_df['Pathways'],'Pathway']='Intensified'

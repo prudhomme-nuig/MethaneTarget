@@ -224,7 +224,7 @@ if args.print_table:
     # output_df.loc[output_df['Country']!=output_df['Pathways'],'Pathway']='Intensified'
     # output_df.loc[output_df['Country']==output_df['Pathways'],'Pathway']='Current'
     output_df["Intensification"]=np.nan
-    output_df.loc[(output_df["Mitigation"]!="MACC") & (output_df["Pathways"]!="Intensified"),"Intensification"]="2010"
+    output_df.loc[(output_df["Mitigation"]!="MACC") & (output_df["Pathways"]!="Intensified"),"Intensification"]="Base"
     output_df.loc[(output_df["Mitigation"]=="MACC") & (output_df["Pathways"]!="Intensified"),"Intensification"]="2050 MACC"
     output_df.loc[(output_df["Mitigation"]=="MACC") & (output_df["Pathways"]=="Intensified"),"Intensification"]="2050 SI"
     table = pd.pivot_table(output_df, values=['EI 2050'], index=['Country','Type of product'],columns=["Emission","Intensification"],aggfunc="first")

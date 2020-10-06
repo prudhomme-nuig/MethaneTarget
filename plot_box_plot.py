@@ -58,7 +58,7 @@ sns.set_style("whitegrid")
 #Load impacts for different scenarios
 activity_df=pd.read_csv("output/AFOLU_balance_2050"+file_name_suffix+".csv")
 activity_df["Intensification"]=np.nan
-activity_df.loc[(activity_df["Mitigation"]!="MACC") & (activity_df["Pathways"]!="Intensified"),"Intensification"]="2010"
+activity_df.loc[(activity_df["Mitigation"]!="MACC") & (activity_df["Pathways"]!="Intensified"),"Intensification"]="Base"
 activity_df.loc[(activity_df["Mitigation"]=="MACC") & (activity_df["Pathways"]!="Intensified"),"Intensification"]="2050 MACC"
 activity_df.loc[(activity_df["Mitigation"]=="MACC") & (activity_df["Pathways"]=="Intensified"),"Intensification"]="2050 SI"
 #Change name of rice for esthetic in graph
@@ -189,7 +189,7 @@ g.set_axis_labels("", "UP index\n(in 2050 relative to 2010)")
 g.set_titles("{col_name}")
 g.fig.savefig('Figs/UP_bar_plot.png', dpi=100,bbox_inches = "tight")
 plt.close("all")
-table = pd.pivot_table(df_with_all_prod_to_plot, values=['UP 2010','UP','UP index'], index=['Country','Item'],columns=["Allocation rule"],aggfunc=np.mean)
+table = pd.pivot_table(df_with_all_prod_to_plot, values=['UP 2010','UP','UP index'], index=['Country','Item'],columns=["Allocation rule","Intensification"],aggfunc=np.mean)
 table.index.name=None
 table.to_excel("output/table_UP.xlsx",index_label=None,float_format = "%0.2f")
 print("Plot all UP index with different metrics...")
@@ -282,7 +282,7 @@ g.set_axis_labels("", "CO2 offset (MtCO2)")
 g.set_titles("{col_name}")
 g.fig.savefig('Figs/offset_bar_plot.png', dpi=100,bbox_inches = "tight")
 plt.close("all")
-table = pd.pivot_table(df_to_plot, values=['CO2 offset (MtCO2)'], index=['Country','Item'],columns=["Allocation rule"],aggfunc=np.mean)
+table = pd.pivot_table(df_to_plot, values=['CO2 offset (MtCO2)'], index=['Country','Item'],columns=["Allocation rule","Intensification"],aggfunc=np.mean)
 table.index.name=None
 table.to_excel("output/table_CO2.xlsx",index_label=None,float_format = "%0.1f")
 print("Plot CO2 offset with different metrics...")

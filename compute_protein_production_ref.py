@@ -33,6 +33,7 @@ for country in np.unique(production_df['Area']):
         protein_production_df.loc[0,country]+=protein_content_df[item].values[0]*production
 
 total_protein=np.sum(protein_production_df.values)
+protein_production_df.to_csv("output/FAOSTAT_protein_production_2010.csv")
 protein_production_df=protein_production_df[country_list]/total_protein
 
 protein_production_df.to_csv('output/FAOSTAT_protein_production.csv')

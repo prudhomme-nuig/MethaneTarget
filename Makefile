@@ -35,7 +35,7 @@ output/FAOSTAT_protein_production.csv: output compute_protein_production_ref.py
 
 #Compute national methane quota for different rules:
 #methane debt, protein production, gdp, population
-output/methane_quota.csv:output compute_methane_quota.py output/production_2010.csv output/FAOSTAT_protein_production.csv
+output/methane_quota.csv:output compute_methane_quota.py output/production_2010.csv output/FAOSTAT_protein_production.csv Figs/methane_index_bar_plot.png
 				${launch_python} compute_methane_quota.py
 
 #Compute emission intensity and yield for intensification pathways
@@ -114,41 +114,50 @@ Figs/AFOLU_bar_plot.png: Figs plot_box_plot.py output/AFOLU_balance_2050.csv
 # 				${launch_python} check_area.py --no-mitigation --print-table
 # 				${launch_python} compute_AFOLU_balance.py --no-mitigation --print-table
 
-#+50% mitigation
-output/AFOLU_balance_2050_mitigation-50.csv: output compute_impact.py output/feed_yield_aggregate.csv output/activity_2050_no_mitigation.csv output/grass_yield.csv output/emission_intensity_N2O_no_mitigation.csv output/deforestation_factor.csv common_methane.py
-				${launch_python} compute_N2O_intensity_2050.py --mitigation=-50
-				${launch_python} compute_methane_intensity_2050.py --mitigation=-50 --print-table
-				${launch_python} compute_activity_2050.py --mitigation=-50
-				${launch_python} compute_impact.py --mitigation=-50 --print-table
-				${launch_python} check_area.py --mitigation=-50 --print-table
-				${launch_python} compute_AFOLU_balance.py --mitigation=-50 --print-table
+#-25% EI
+output/AFOLU_balance_2050_mitigation-25.csv: output compute_impact.py output/feed_yield_aggregate.csv output/grass_yield.csv output/deforestation_factor.csv common_methane.py
+				${launch_python} compute_N2O_intensity_2050.py --mitigation=-25
+				${launch_python} compute_methane_intensity_2050.py --mitigation=-25 --print-table
+				${launch_python} compute_activity_2050.py --mitigation=-25
+				${launch_python} compute_impact.py --mitigation=-25 --print-table
+				${launch_python} check_area.py --mitigation=-25 --print-table
+				${launch_python} compute_AFOLU_balance.py --mitigation=-25 --print-table
 
-#Yield increase of 50%
-output/AFOLU_balance_2050_yield+50.csv: output compute_impact.py compute_AFOLU_balance.py output/feed_yield_aggregate.csv output/activity_2050.csv output/grass_yield.csv output/emission_intensity_N2O.csv
-				${launch_python} compute_impact.py --sensitivity-analysis=+50 --print-table
-				${launch_python} check_area.py --sensitivity-analysis=+50 --print-table
-				${launch_python} compute_AFOLU_balance.py --sensitivity-analysis=+50 --print-table
+# #+25% EI
+# output/AFOLU_balance_2050_mitigation+25.csv: output compute_impact.py output/feed_yield_aggregate.csv output/activity_2050_no_mitigation.csv output/grass_yield.csv output/emission_intensity_N2O_no_mitigation.csv output/deforestation_factor.csv common_methane.py
+# 				${launch_python} compute_N2O_intensity_2050.py --mitigation=+25
+# 				${launch_python} compute_methane_intensity_2050.py --mitigation=+25 --print-table
+# 				${launch_python} compute_activity_2050.py --mitigation=+25
+# 				${launch_python} compute_impact.py --mitigation=+25 --print-table
+# 				${launch_python} check_area.py --mitigation=+25 --print-table
+# 				${launch_python} compute_AFOLU_balance.py --mitigation=+25 --print-table
 
-#Yield decrease of 50%
-output/AFOLU_balance_2050_yield-50.csv: output compute_impact.py compute_AFOLU_balance.py output/feed_yield_aggregate.csv output/activity_2050.csv output/grass_yield.csv output/emission_intensity_N2O.csv
-				${launch_python} compute_impact.py --sensitivity-analysis=-50 --print-table
-				${launch_python} check_area.py --sensitivity-analysis=-50 --print-table
-				${launch_python} compute_AFOLU_balance.py --sensitivity-analysis=-50 --print-table
+#Yield increase of 25%
+output/AFOLU_balance_2050_yield+25.csv: output compute_impact.py compute_AFOLU_balance.py output/feed_yield_aggregate.csv output/activity_2050.csv output/grass_yield.csv output/emission_intensity_N2O.csv
+				${launch_python} compute_impact.py --sensitivity-analysis=+25 --print-table
+				${launch_python} check_area.py --sensitivity-analysis=+25 --print-table
+				${launch_python} compute_AFOLU_balance.py --sensitivity-analysis=+25 --print-table
 
-#Forest growth rate decrease of 50%
-output/AFOLU_balance_2050_carbon-50.csv: output compute_impact.py compute_AFOLU_balance.py output/activity_2050.csv
-				${launch_python} compute_deforestation_emission_factor.py --sensitivity=-50
-				${launch_python} compute_impact.py --carbon=-50 --print-table
-				${launch_python} check_area.py --carbon=-50 --print-table
-				${launch_python} compute_AFOLU_balance.py --carbon=-50 --print-table
+# #Yield decrease of 25%
+# output/AFOLU_balance_2050_yield-25.csv: output compute_impact.py compute_AFOLU_balance.py output/feed_yield_aggregate.csv output/activity_2050.csv output/grass_yield.csv output/emission_intensity_N2O.csv
+# 				${launch_python} compute_impact.py --sensitivity-analysis=-25 --print-table
+# 				${launch_python} check_area.py --sensitivity-analysis=-25 --print-table
+# 				${launch_python} compute_AFOLU_balance.py --sensitivity-analysis=-25 --print-table
 
-#Forest growth rate increase of 50%
-output/AFOLU_balance_2050_carbon+50.csv: output compute_impact.py compute_AFOLU_balance.py output/activity_2050.csv
-				${launch_python} compute_deforestation_emission_factor.py --sensitivity=+50
-				${launch_python} compute_impact.py --carbon=+50 --print-table
-				${launch_python} check_area.py --carbon=+50 --print-table
-				${launch_python} compute_AFOLU_balance.py --carbon=+50 --print-table
+#Forest growth rate decrease of 25%
+output/AFOLU_balance_2050_carbon-25.csv: output compute_impact.py compute_AFOLU_balance.py output/activity_2050.csv
+				${launch_python} compute_deforestation_emission_factor.py --sensitivity=-25
+				${launch_python} compute_impact.py --carbon=-25 --print-table
+				${launch_python} check_area.py --carbon=-25 --print-table
+				${launch_python} compute_AFOLU_balance.py --carbon=-25 --print-table
 
-#Output table and perform statistical test
-output/sensitivity_analysis.csv: output output/AFOLU_balance_2050_mitigation-50.csv output/AFOLU_balance_2050_yield+50.csv output/AFOLU_balance_2050_yield-50.csv output/AFOLU_balance_2050_carbon+50.csv output/AFOLU_balance_2050_carbon-50.csv
+#Forest growth rate increase of 25%
+output/AFOLU_balance_2050_carbon+25.csv: output compute_impact.py compute_AFOLU_balance.py output/activity_2050.csv
+				${launch_python} compute_deforestation_emission_factor.py --sensitivity=+25
+				${launch_python} compute_impact.py --carbon=+25 --print-table
+				${launch_python} check_area.py --carbon=+25 --print-table
+				${launch_python} compute_AFOLU_balance.py --carbon=+25 --print-table
+
+#AFOLU balance and production median and std for all variants
+output/sensitivity_analysis_AFOLU_food.csv: output output/AFOLU_balance_2050_mitigation-25.csv output/AFOLU_balance_2050_yield+25.csv output/AFOLU_balance_2050_carbon+25.csv output/AFOLU_balance_2050_carbon-25.csv
 				${launch_python} sensitivity_analysis.py

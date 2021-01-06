@@ -63,13 +63,12 @@ activity_df["National quota used and unused"]=deepcopy(activity_df["National quo
 for country in country_list:
     country_forest_area=forest_area_df.loc[forest_area_df["Area"]==country,"Value"].values[0]
     country_mask=deepcopy((activity_df['Country']==country))
-    country_forest_area_mask=(activity_df['National Total area change']>country_forest_area) & (activity_df['Country']==country)
-    if len(country_forest_area_mask[country_forest_area_mask])>2:
+    country_forest_area_mask=(activity_df['National Total area change']-country_forest_area>1E-5) & (activity_df['Country']==country)
+    if (len(country_forest_area_mask[country_forest_area_mask])>0):
         print(country)
         #area_change_column_name=activity_df.loc[country_forest_area_mask,"Highest area change"].values[0]
         area_reduction=deepcopy(activity_df.loc[country_forest_area_mask,"National Total area change"]-country_forest_area)
         area_reduction_rate=deepcopy((country_forest_area)/(activity_df.loc[country_forest_area_mask,"National Total area change"]))
-        activity_df.loc[country_forest_area_mask,"National Total area change"]=activity_df.loc[country_forest_area_mask,"National Total area change"]-area_reduction
         for item in ["Rice","Feed","Grass"]:
             for column_name in ["National "+item+" area",'Production '+item,'N2O fert '+item.lower()]:
                 if ("Production" in  column_name):
@@ -87,7 +86,8 @@ for country in country_list:
             activity_df.loc[country_forest_area_mask,'National '+item+' area index']=activity_df.loc[country_forest_area_mask,'National '+item+' area']/activity_df.loc[country_forest_area_mask,'National '+item+' area 2010']
             activity_df.loc[country_forest_area_mask,'National '+item+' area change']=activity_df.loc[country_forest_area_mask,'National '+item+' area']-activity_df.loc[country_forest_area_mask,'National '+item+' area 2010']
             country_pathway_reforestation_mask=country_forest_area_mask & (activity_df['National '+item+' area change']<0)
-            country_pathway_deforestation_mask=country_forest_area_mask & (activity_df['National '+item+' area change']>0)
+            if item in ["Rice","Feed"]:
+                country_pathway_deforestation_mask=country_forest_area_mask & (activity_df['National '+item+' area change']>0)
             country_pathway_no_change_mask=country_forest_area_mask & (activity_df['National '+item+' area change']==0)
             activity_df.loc[country_pathway_reforestation_mask,item+' offset']=-activity_df.loc[country_pathway_reforestation_mask,'National '+item+' area change']*carbon_growth_rate[climatic_region[country]]
             activity_df.loc[country_pathway_deforestation_mask,item+' offset']=-activity_df.loc[country_pathway_deforestation_mask,'National '+item+' area change']*carbon_release_deforestation

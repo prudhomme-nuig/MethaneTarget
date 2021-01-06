@@ -1,20 +1,19 @@
 library(lme4)
 
-df <- read.table("output/data_dairy_for_lm.csv", 
+df <- read.table("output/milk_intake_dairy.csv", 
                  header = TRUE,
-                 sep = ",",
+                 sep = ";",
+                 quote="\"",
                  encoding = "UTF-8")
 
-df_temperate<-df#[df["GAEZ"]=="Temperate",]
-df_temperate["Methane"]<-df_temperate["Methane_intensity"]/df_temperate["Milk_yield"]
-mod_temparate <- lm(Methane_intensity ~ poly(Concentrate_intake,2) + factor(GAEZ), data=df_temperate)
+mod_temparate <- lm(Methane_intensity ~ poly(Concentrate_intake,2) + factor(GAEZ), data=df)
 #mod <- lm(Milk_yield ~ Concentrate_intake + Grass_intake, data=df_temperate)
 summary(mod_temparate)
 par(mfrow = c(2, 2))
 plot(mod_temparate)
-df_temperate$predlm <- predict(mod_temparate)
+df$predlm <- predict(mod_temparate)
 
-ggplot(df_temperate,aes(x=Concentrate_intake, y=Methane_intensity,color=factor(GAEZ))) +
+ggplot(df,aes(x=Concentrate_intake, y=Methane_intensity,color=factor(GAEZ))) +
   geom_point(size=3) + 
   geom_line(aes(y = predlm), size = 1.5)+
   scale_color_discrete(name = "GAEZ:", labels = c("Temperate cool", "Tropical warm"))+

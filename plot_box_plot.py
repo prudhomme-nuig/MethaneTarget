@@ -161,7 +161,7 @@ for item in production_dict.keys():
 df_to_print["Type of product"]=df_to_print[["Item","Production"]].agg('-'.join, axis=1)
 table = pd.pivot_table(df_to_print, values=['Yield','Yield index (relative to 2010)'], index=['Country',"Type of product"],columns=["Intensification"],aggfunc=np.mean)
 table.index.name=None
-table.to_excel("output/table_productivity.xlsx",index_label=None,float_format = "%0.3f")
+table.to_excel("output/table_productivity.xlsx",index_label=None,float_format = "%0.5f")
 print("Print productivity for each production...")
 
 #Plot unit of production of each methane intensive production

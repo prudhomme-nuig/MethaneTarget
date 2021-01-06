@@ -6,27 +6,32 @@ df <- read.table("output/milk_intake_dairy.csv",
                  quote="\"",
                  encoding = "UTF-8")
 
-mod <- lm(log(Milk_yield+1) ~ poly(Concentrate_intake,2,raw=TRUE) + factor (GAEZ), data=df)
+#df$Concentrate_intake_rate<-df$Concentrate_intake/df$Number
+#df$Total_intake_rate<-df$Total_intake/df$Number
+#df$Milk_yield<-df$Production/df$Number
+mod <- lm(Milk_yield ~ poly(Concentrate_intake,1,raw=TRUE) + factor (GAEZ), data=df)
 summary(mod)
 par(mfrow = c(2, 2))
 plot(mod)
-df_temperate$predlm <- predict(mod)
+df$predlm <- predict(mod)
 
 library(ggplot2)
 
-df<-data.frame(seq(from = 0, to = 1.5, by = 0.01))
-colnames(df)<-"x"
-df["y"]<-data.frame(exp(coef_final[1,"Intercept"]+coef_final[1,"Concentrate_intake"]*df["x"]+coef_final[1,"Concentrate_intake_2"]*df["x"]^2))#+coef_final[1,"Tropical"]
+# df<-data.frame(seq(from = 0, to = 1.5, by = 0.01))
+# colnames(df)<-"x"
+# coef_final<-data.frame(t(mod$coefficients))
+# colnames(coef_final)<- c("Intercept","Concentrate_intake","Concentrate_intake_2","Tropical")
+# df["y"]<-data.frame(exp(coef_final[1,"Intercept"]+coef_final[1,"Concentrate_intake"]*df["x"]+coef_final[1,"Concentrate_intake_2"]*df["x"]^2))#+coef_final[1,"Tropical"]
+# 
+# ggplot(df,aes(x=x,y=y))+
+#   geom_line()+
+#   geom_point(data=df,aes(x = Concentrate_intake, y=Milk_yield))
 
-ggplot(df,aes(x=x,y=y))+
-  geom_line()+
-  geom_point(data=df_temperate,aes(x = Concentrate_intake, y=Milk_yield))
-
-ggplot(df_temperate,aes(x=Concentrate_intake, y=Milk_yield,color=factor(GAEZ),shape=factor(GAEZ))) +
+ggplot(df,aes(x=Concentrate_intake, y=Milk_yield,color=factor(GAEZ),shape=factor(GAEZ))) +
   geom_point(size=3) + 
-  geom_line(aes(y = exp(predlm)), size = 1.5)+
+  geom_line(aes(y = predlm), size = 1.5)+
   #scale_color_discrete(name = "Grass intake:", labels = c("2 tDM/year", "3 tDM/year", "4 tDM/year"))+
-  labs(y="Milk yield (t/year)", x = "Concentrate intake (tDM/year)")+
+  labs(y="Milk yield (t/year)", x = "Concentrate intake rate (tDM/head/year)")+
   theme(axis.title = element_text(size = 18),
         legend.text = element_text(size = 18),
         legend.title = element_text(face = "bold",size = 18))
@@ -58,7 +63,7 @@ ggplot(df_temperate,aes(x=Concentrate_intake, y=Milk_yield,color=factor(GAEZ),sh
 # 
 library("plyr")
 coef_final<-data.frame(t(mod$coefficients))
-colnames(coef_final)<- c("Intercept","Concentrate_intake","Concentrate_intake_2","Tropical")
+colnames(coef_final)<- c("Intercept","Concentrate_intake","Tropical")
 # coef_final[is.na(coef_final)] <- 0
 write.csv(coef_final,'output/coefficients_milk_yield_concentrate_relation.csv')
 

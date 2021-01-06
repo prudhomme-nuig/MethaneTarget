@@ -77,42 +77,42 @@ fostat_manure_domain_mask = fostat_manure_df["Domain"]=="Manure Management"
 # Dairy cattle
 kt_to_kg=1E6
 df_dairy_milk=pd.DataFrame()
-df_dairy_milk["Milk_yield"]=faostat_yield_df.loc[fostat_yield_country_mask & fostat_yield_element_mask & fostat_yield_item_mask,"Value"]
-df_dairy_milk["Total_intake"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_total_mask,"Value"]*kt_to_kg
-df_dairy_milk["Concentrate_intake"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_grain_mask,"Value"]*kt_to_kg
-df_dairy_milk["Number"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_number_mask,"Value"]*1000
-df_dairy_milk["Production"] = gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_production_mask,"Value"]*1E6
-df_dairy_milk["Methane"] = gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_methane_enteric_mask,"Value"]/29*1E6
-df_dairy_milk["GAEZ"] = gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_production_mask,"GAEZ"]
+# df_dairy_milk["Milk_yield"]=faostat_yield_df.loc[fostat_yield_country_mask & fostat_yield_element_mask & fostat_yield_item_mask,"Value"]
+# df_dairy_milk["Total_intake"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_total_mask,"Value"]*kt_to_kg
+# df_dairy_milk["Concentrate_intake"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_grain_mask,"Value"]*kt_to_kg
+# df_dairy_milk["Number"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_number_mask,"Value"]*1000
+# df_dairy_milk["Production"] = gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_production_mask,"Value"]*1E6
+# df_dairy_milk["Methane"] = gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_methane_enteric_mask,"Value"]/29*1E6
+# df_dairy_milk["GAEZ"] = gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_non_dairy_mask & gleam_production_mask,"GAEZ"]
+# df_dairy_milk = df_dairy_milk.dropna()
+# df_dairy_milk = df_dairy_milk.drop(df_dairy_milk[df_dairy_milk["Number"]==0].index)
+# df_dairy_milk.to_csv("output/milk_intake_dairy.csv",sep=";")
+#
+df_dairy_milk["Milk_yield"]=faostat_yield_df.loc[fostat_yield_country_mask & fostat_yield_element_mask & fostat_yield_item_mask,"Value"] #kg/year
+df_dairy_milk.index=faostat_yield_df.loc[fostat_yield_country_mask & fostat_yield_element_mask & fostat_yield_item_mask,"Area"]
+df_dairy_milk["Methane_intensity"]=fostat_methane_df.loc[fostat_methane_country_mask & fostat_methane_emissions_mask & fostat_methane_item_mask,"Value"]*1000/fostat_methane_df.loc[fostat_methane_country_mask & fostat_methane_stock_mask & fostat_methane_item_mask,"Value"]#/(faostat_yield_df.loc[fostat_yield_country_mask & fostat_yield_element_mask & fostat_yield_item_mask,"Value"]*1000)
+no_zero_mask = gleam_intake_df.loc[gleam_total_mask,"Value"]!=0
+df_dairy_milk["Total_intake"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_herd_type_mask & gleam_total_mask,"Value"]/gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_herd_type_mask & gleam_number_mask,"Value"]
+df_dairy_milk["Concentrate_intake"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_herd_type_mask & gleam_grain_mask,"Value"]/gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_herd_type_mask & gleam_number_mask,"Value"]
+# df_dairy_milk.loc[df_dairy_milk["Concentrate_intake"]==0,"Concentrate_intake"]=1E-3
+df_dairy_milk["Grass_intake"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_herd_type_mask & gleam_grass_mask,"Value"]/gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_herd_type_mask & gleam_number_mask,"Value"]
+# df_dairy_milk["Manure_intensity"]=fostat_manure_df.loc[fostat_manure_country_mask & fostat_manure_emissions_mask & fostat_manure_dairy_mask,"Value"]*1000/fostat_manure_df.loc[fostat_manure_country_mask & fostat_manure_stock_mask & fostat_manure_dairy_mask & fostat_manure_domain_mask,"Value"]
 df_dairy_milk = df_dairy_milk.dropna()
-df_dairy_milk = df_dairy_milk.drop(df_dairy_milk[df_dairy_milk["Number"]==0].index)
+
+df_dairy_milk["GAEZ"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_herd_type_mask & gleam_grass_mask,"GAEZ"]
+
+df_dairy_milk["Grass_intake_cat"] = np.round(df_dairy_milk["Grass_intake"])
+
+df_dairy_milk["Grass_intake_cat"] = np.around(df_dairy_milk["Grass_intake"])
+index_list = df_dairy_milk.index[df_dairy_milk['Grass_intake_cat'] == 14.].tolist()
+df_dairy_milk.loc[index_list,"Grass_intake_cat"]=9.
+index_list = df_dairy_milk.index[df_dairy_milk['Grass_intake_cat'] == 20.].tolist()
+df_dairy_milk.loc[index_list,"Grass_intake_cat"]=9.
+
+df_dairy_milk.drop(index=["Antigua and Barbuda"])
+df_dairy_milk = df_dairy_milk.dropna()
+
 df_dairy_milk.to_csv("output/milk_intake_dairy.csv",sep=";")
-#
-# df_to_plot["Milk_yield"]=faostat_yield_df.loc[fostat_yield_country_mask & fostat_yield_element_mask & fostat_yield_item_mask,"Value"] #kg/year
-# df_to_plot.index=faostat_yield_df.loc[fostat_yield_country_mask & fostat_yield_element_mask & fostat_yield_item_mask,"Area"]
-# df_to_plot["Methane_intensity"]=fostat_methane_df.loc[fostat_methane_country_mask & fostat_methane_emissions_mask & fostat_methane_item_mask,"Value"]*1000/fostat_methane_df.loc[fostat_methane_country_mask & fostat_methane_stock_mask & fostat_methane_item_mask,"Value"]#/(faostat_yield_df.loc[fostat_yield_country_mask & fostat_yield_element_mask & fostat_yield_item_mask,"Value"]*1000)
-# no_zero_mask = gleam_intake_df.loc[gleam_total_mask,"Value"]!=0
-# df_to_plot["Total_intake"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_herd_type_mask & gleam_total_mask,"Value"]/gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_herd_type_mask & gleam_number_mask,"Value"]
-# df_to_plot["Concentrate_intake"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_herd_type_mask & gleam_grain_mask,"Value"]/gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_herd_type_mask & gleam_number_mask,"Value"]
-# # df_to_plot.loc[df_to_plot["Concentrate_intake"]==0,"Concentrate_intake"]=1E-3
-# df_to_plot["Grass_intake"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_herd_type_mask & gleam_grass_mask,"Value"]/gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_herd_type_mask & gleam_number_mask,"Value"]
-# # df_to_plot["Manure_intensity"]=fostat_manure_df.loc[fostat_manure_country_mask & fostat_manure_emissions_mask & fostat_manure_dairy_mask,"Value"]*1000/fostat_manure_df.loc[fostat_manure_country_mask & fostat_manure_stock_mask & fostat_manure_dairy_mask & fostat_manure_domain_mask,"Value"]
-# df_to_plot = df_to_plot.dropna()
-#
-# df_to_plot["GAEZ"]=gleam_intake_df.loc[gleam_country_mask & gleam_species_mask & gleam_herd_type_mask & gleam_grass_mask,"GAEZ"]
-#
-# df_to_plot["Grass_intake_cat"] = np.round(df_to_plot["Grass_intake"])
-#
-# df_to_plot["Grass_intake_cat"] = np.around(df_to_plot["Grass_intake"])
-# index_list = df_to_plot.index[df_to_plot['Grass_intake_cat'] == 14.].tolist()
-# df_to_plot.loc[index_list,"Grass_intake_cat"]=9.
-# index_list = df_to_plot.index[df_to_plot['Grass_intake_cat'] == 20.].tolist()
-# df_to_plot.loc[index_list,"Grass_intake_cat"]=9.
-#
-# df_to_plot.drop(index=["Antigua and Barbuda"])
-# df_to_plot = df_to_plot.dropna()
-#
-# df_to_plot.to_csv("output/data_dairy_for_lm.csv")
 #
 #Non dairy cattle
 kt_to_kg=1E6

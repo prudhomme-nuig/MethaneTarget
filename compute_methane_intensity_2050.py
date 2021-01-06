@@ -134,6 +134,9 @@ item_to_prod_dict={"Cattle, non-dairy":"All systems",
 output_df=pd.DataFrame(columns=["Country","Pathways","Emission","Item","Intensity","Mitigation","Production"])
 #output_activity_df=pd.DataFrame(columns=["Country","Emission","Item","Activity"])
 index=0
+yield_dict={'Milk, Total':'Yield','Beef and Buffalo Meat':'Yield/Carcass Weight','Meat, pig':'Yield/Carcass Weight','Meat, Poultry':'Yield/Carcass Weight','Eggs Primary':'Yield','Sheep and Goat Meat':'Yield/Carcass Weight'}
+animal_yields_df=read_FAOSTAT_df("data/FAOSTAT_animal_yields.csv",delimiter="|")
+
 for emission_df in [methane_Ent_Ferm_df,methane_rice_df,methane_Man_df]:
     for country in country_list:
         for item in item_of_df[emission_df.name]:
@@ -141,11 +144,13 @@ for emission_df in [methane_Ent_Ferm_df,methane_rice_df,methane_Man_df]:
                 for mitigation in mitigation_list:
                     for production in production_dict[item]:
                         if (pathway=="Intensified"):
-
                             if (item!= "Rice, paddy") & (item!= "Sheep and Goats"):
-
-                                concentrate_change_for_yield_max=SI_pathways.compute_intake_change(country,item,production,yields_df)
-                                if production!='Beef and Buffalo Meat':
+                                if ("Cattle, dairy" in item) & ("Meat" in production):
+                                    production_name="Milk, Total"
+                                else:
+                                    production_name=production
+                                concentrate_change_for_yield_max=SI_pathways.compute_intake_change(country,item,production_name,yields_df)
+                                if production_name!='Beef and Buffalo Meat':
                                     variable_name="INTAKE: Total intake - Grains"
                                 else:
                                     variable_name="INTAKE: Total intake"
@@ -158,16 +163,22 @@ for emission_df in [methane_Ent_Ferm_df,methane_rice_df,methane_Man_df]:
                                 concentrate_for_yield_max = concentrate_change_for_yield_max*feed_per_head_df.loc[country_pathway_item_feed_mask,'Value'].values[0]/feed_per_head_df.loc[country_pathway_item_number_mask,'Value'].values[0]
                                 methane_intensity_current = emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Implied emission factor for CH4" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]
                                 concentrate_for_current_yield = feed_per_head_df.loc[country_pathway_item_feed_mask,'Value'].values[0]/feed_per_head_df.loc[country_pathway_item_number_mask,'Value'].values[0]
-                                methane_intensity_change=SI_pathways.methane_intensity_change(concentrate_for_yield_max,concentrate_for_current_yield,climatic_region[country],production,emission_df.name,concentrate_change=concentrate_change_for_yield_max)
+                                if (production_name=='Beef and Buffalo Meat') & (item=='Cattle, non-dairy'):
+                                    growth_rate_df=pd.read_csv("output/meat_intake_non_dairy.csv",sep=";",index_col=0)
+                                    animal_yield_current=growth_rate_df.loc[growth_rate_df.index==country,"Production"].values[0]/growth_rate_df.loc[growth_rate_df.index==country,"Number"].values[0]
+                                else:
+                                    animal_yield_current=animal_yields_df.loc[(yields_df['Area']==country) & (yields_df['Element']==yield_dict[production_name]) & (yields_df['Item']==production_name),'Value'].values[0]
+                                methane_intensity_change=SI_pathways.methane_intensity_change(animal_yield_current,concentrate_for_current_yield,climatic_region[country],production,emission_df.name,concentrate_change=concentrate_change_for_yield_max,item=item)
                                 mitigation_strength_tmp = mitigation_strength * methane_intensity_change
                                 # if production=="Meat, pig":
-                                #     import pdb; pdb.set_trace()
                             else:
-                                mitigation_strength_tmp=mitigation_strength
+                                mitigation_strength_tmp=1
 
                         else:
-
-                            mitigation_strength_tmp=mitigation_strength
+                            if mitigation=="No mitigation":
+                                mitigation_strength_tmp=1
+                            else:
+                                mitigation_strength_tmp=mitigation_strength
 
                         if len(emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Implied emission factor for CH4" in list_element for list_element in emission_df["Element"]]),'Value'].values)==0:
                             name_tmp=deepcopy(emission_df.name)
@@ -183,7 +194,7 @@ for emission_df in [methane_Ent_Ferm_df,methane_rice_df,methane_Man_df]:
                         if emission_df.loc[(emission_df['Area']==country) & (emission_df['Item']==item) & (["Emissions (CH4)" in list_element for list_element in emission_df["Element"]]),'Value'].values[0]==0:
                             output_df.loc[index,:]=[country,pathway,emission_df.name,item,0,mitigation,production]
                         else:
-                            if emission_df.name in mitigation_potential_dict[mitigation].loc[mitigation_potential_dict[mitigation]["Country"]==country,"Emission"].values:
+                            if (emission_df.name in mitigation_potential_dict[mitigation].loc[mitigation_potential_dict[mitigation]["Country"]==country,"Emission"].values) & (args.mitigation is None):
                                 emission_intensity=compute_emission_intensity(mitigation_potential_dict[mitigation].loc[mitigation_potential_dict[mitigation]["Country"]==country,:],emission_df,country,item,share_methane_df,"CH4")
                                 output_df.loc[index,:]=[country,pathway,emission_df.name,item,mitigation_strength_tmp*emission_intensity,mitigation,production]
                             else:

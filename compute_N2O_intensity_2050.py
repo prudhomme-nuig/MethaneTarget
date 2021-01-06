@@ -96,13 +96,13 @@ for df in [nutrious_Man_df,N2O_fertilizer_df]:
                 for pathway in pathway_dict[country]:
                     for production in production_dict[item]:
                         if (pathway!=country) & (item in animal_list):
-                            if args.mitigation is not None:
+                            if (args.mitigation is not None) & (mitigation!="No mitigation"):
                                 mitigation_strength=1+float(args.mitigation)/100
                             else:
                                 mitigation_strength=1
                             mitigation_strength=float(mitigation_strength)*SI_pathways.compute_intake_change(country,item,production,yields_df)
                         else:
-                            if args.mitigation is not None:
+                            if (args.mitigation is not None) & (mitigation!="No mitigation"):
                                 mitigation_strength=1+float(args.mitigation)/100
                             else:
                                 mitigation_strength=1
@@ -117,7 +117,10 @@ for df in [nutrious_Man_df,N2O_fertilizer_df]:
                             df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Implied emission factor for N2O")),"Value"]=df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Emissions \(N2O")),"Value"].values[0]/df.loc[(df["Area"]==country) & (df["Item"]==item) & (df["Element"].str.contains(pat ="Stocks")),"Value"].values[0]
                         if (item in mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,"Item"].values) | (("Cattle" in item) & ("Cattle" in mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,"Item"].values)) | (("All animals" in mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,"Item"].values) and (item in animal_list)):
                             if mitigation=='MACC':
-                                value=float(mitigation_strength)*compute_emission_intensity(mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,:],df,country,item,share_N2O_df,"N2O")
+                                if args.mitigation is None:
+                                    value=float(mitigation_strength)*compute_emission_intensity(mitigation_potential_df.loc[mitigation_potential_df["Country"]==country,:],df,country,item,share_N2O_df,"N2O")
+                                else:
+                                    value=float(mitigation_strength)*df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (["Implied emission factor for N2O" in list_element for list_element in df["Element"]]),"Value"].values[0]
                             else:
                                 value=float(mitigation_strength)*df.loc[(df["Item"]==item) & (df["Area"]==country) & (df["Year"]==2010) & (["Implied emission factor for N2O" in list_element for list_element in df["Element"]]),"Value"].values[0]
                         else:

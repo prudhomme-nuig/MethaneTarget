@@ -166,6 +166,8 @@ for country in country_list:
                     else:
                         activity_df.loc[country_pathway_mitigation_mask,production]=yields*share_animal_producing*animal_number
                         activity_df.loc[country_pathway_mitigation_mask,production+' 2010']=yields_ref*animal_producing_ref
+                    activity_df.loc[country_pathway_mitigation_mask,production+' '+item+' yield 2010']=yields_ref
+                    activity_df.loc[country_pathway_mitigation_mask,production+' '+item+' yield']=yields
                 #Feed production
                 feed='Grains'
                 country_pathway_item_feed_mask=(feed_per_head_df['Country']==country) & (feed_per_head_df['Item']==item) & (feed_per_head_df['Feed']==feed)

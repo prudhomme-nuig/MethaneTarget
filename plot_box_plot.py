@@ -141,19 +141,16 @@ production_dict={'Cattle, dairy':['Milk, Total','Beef and Buffalo Meat'],'Cattle
 for item in production_dict.keys():
     for production in production_dict[item]:
         if "Rice" in production:
-            activity_df[production+" yield 2010"]=activity_df['Yield Rice, paddy']
-            activity_df[production+" yield"]=activity_df['Yield Rice, paddy']
-        elif "Beef" in production:
-            activity_df[production+" yield 2010"]=activity_df[production+' 2010'].values/(activity_df["Share Annimal producing 2010 "+production+' Cattle, dairy'].values*activity_df['Activity 2010 Cattle, dairy'].values+activity_df["Share Annimal producing 2010 "+production+' Cattle, non-dairy'].values*activity_df['Activity 2010 Cattle, non-dairy'].values)
-            activity_df[production+" yield"]=activity_df[production].values/(activity_df["Share Annimal producing 2010 "+production+' Cattle, dairy'].values*activity_df['Activity Cattle, dairy'].values+activity_df["Share Annimal producing 2010 "+production+' Cattle, non-dairy'].values*activity_df['Activity Cattle, non-dairy'].values)
-        else:
-            activity_df[production+" yield 2010"]=activity_df[production+' 2010'].values/(activity_df["Share Annimal producing 2010 "+production+" "+item].values*activity_df['Activity 2010 '+item].values)
-            activity_df[production+" yield"]=activity_df[production].values/(activity_df["Share Annimal producing 2010 "+production+" "+item].values*activity_df['Activity '+item].values)
-        activity_df[production+" yield index"]=activity_df[production+" yield"].values/activity_df[production+" yield 2010"].values
-        df_to_concat=pd.concat([activity_df[["Country",production+" yield",production+" yield 2010",production+" yield index","Intensification"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
+            activity_df[production+' '+item+" yield 2010"]=activity_df['Yield Rice, paddy']
+            activity_df[production+' '+item+" yield"]=activity_df['Yield Rice, paddy']
+        #elif "Beef" in production:
+        #    activity_df[production+" yield 2010"]=activity_df[production+' 2010'].values/(activity_df["Share Annimal producing 2010 "+production+' Cattle, dairy'].values*activity_df['Activity 2010 Cattle, dairy'].values+activity_df["Share Annimal producing 2010 "+production+' Cattle, non-dairy'].values*activity_df['Activity 2010 Cattle, non-dairy'].values)
+        #    activity_df[production+" yield"]=activity_df[production].values/(activity_df["Share Annimal producing 2010 "+production+' Cattle, dairy'].values*activity_df['Activity Cattle, dairy'].values+activity_df["Share Annimal producing 2010 "+production+' Cattle, non-dairy'].values*activity_df['Activity Cattle, non-dairy'].values)
+        activity_df[production+' '+item+" yield index"]=activity_df[production+' '+item+" yield"].values/activity_df[production+' '+item+" yield 2010"].values
+        df_to_concat=pd.concat([activity_df[["Country",production+' '+item+' yield',production+' '+item+' yield 2010',production+' '+item+" yield index","Intensification"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
         df_to_concat=pd.concat([df_to_concat,pd.DataFrame([production]*len(activity_df['Country']),columns=['Production'])],axis=1,sort=True)
-        df_to_concat=df_to_concat.rename(columns = {production+" yield":'Yield'})
-        df_to_concat=df_to_concat.rename(columns = {production+" yield 2010":'Yield 2010'})
+        df_to_concat=df_to_concat.rename(columns = {production+' '+item+' yield':'Yield'})
+        df_to_concat=df_to_concat.rename(columns = {production+' '+item+' yield 2010':'Yield 2010'})
         df_to_concat=df_to_concat.rename(columns = {production+' yield index':'Yield index (relative to 2010)'})
         df_to_print=pd.concat([df_to_print,df_to_concat],axis=0,sort=True)
 # df_to_print.loc[df_to_print['Country']!=df_to_print['Pathways'],'Pathway']='Intensified'

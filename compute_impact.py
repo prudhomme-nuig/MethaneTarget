@@ -185,6 +185,8 @@ for country in country_list:
                 activity_df.loc[country_pathway_mitigation_mask,'National Feed yield 2010 '+item]=yield_feed_df.loc[0,country]
                 activity_df.loc[country_pathway_mitigation_mask,'International Feed yield '+item]=yield_feed_international_df.loc[0,country]
                 activity_df.loc[country_pathway_mitigation_mask,'International Feed yield 2010 '+item]=yield_feed_international_df.loc[0,country]
+                #Grass yield
+                activity_df.loc[country_pathway_mitigation_mask,'National Grass yield '+item]=yield_grass_df.loc[0,country]*(1.+yield_change)
                 #Grass area
                 activity_df.loc[country_pathway_mitigation_mask,'National Grass area '+item]=animal_number*feed_per_head_df.loc[(feed_per_head_df['Country']==country) & (feed_per_head_df['Item']==item) & (feed_per_head_df['Feed']=='Grass'),'Value'].values[0]/(yield_grass_df.loc[0,country]*(1.+yield_change))
                 activity_df.loc[country_pathway_mitigation_mask,'National Grass area 2010 '+item]=animal_number_ref*feed_per_head_df.loc[(feed_per_head_df['Country']==country) & (feed_per_head_df['Item']==item) & (feed_per_head_df['Feed']=='Grass'),'Value'].values[0]/yield_grass_df.loc[0,country]

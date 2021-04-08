@@ -35,7 +35,10 @@ output/FAOSTAT_protein_production.csv: compute_protein_production_ref.py
 
 #Compute national methane quota for different rules:
 #methane debt, protein production, gdp, population
-output/methane_quota.csv:compute_methane_quota.py output/production_2010.csv output/FAOSTAT_protein_production.csv Figs/methane_index_bar_plot.png
+output/methane_quota.csv:compute_methane_quota.py output/production_2010.csv output/FAOSTAT_protein_production.csv Figs/methane_index_bar_plot.png output/GLEAM_feed.csv
+				${launch_python} compute_methane_quota.py
+
+output/GLEAM_feed.csv:compute_feed_intake.py
 				${launch_python} compute_methane_quota.py
 
 #Compute emission intensity and yield for intensification pathways
@@ -50,7 +53,7 @@ output/coefficients_milk_yield_concentrate_relation.csv:
 
 #Compute methane intensity per unit of production in 2050
 # for each intensification pathway, with and without mitigation
-output/emission_intensity_2050.csv:compute_methane_intensity_2050.py SI_pathways.py
+output/emission_intensity_2050.csv:compute_methane_intensity_2050.py SI_pathways.py output/coefficients_milk_yield_concentrate_relation.csv
 				${launch_python} compute_methane_intensity_2050.py --print-table
 
 #Compute share of each crop whih is domestically produced
@@ -97,6 +100,10 @@ output/AFOLU_balance_2050.csv: compute_AFOLU_balance.py common_methane.py output
 #methane quota
 Figs/AFOLU_bar_plot.png: Figs plot_box_plot.py output/AFOLU_balance_2050.csv
 				${launch_python} plot_box_plot.py
+
+
+output/table_AFOLU_balance_impact.csv: Figs/AFOLU_bar_plot.png table_summary.py
+				${launch_python} table_summary.py
 
 # Figs/area_national_offset_quota.png: Figs plot_burden_sharing_offset.py compute_production.py output/production_2010.csv
 # 				${launch_python} plot_burden_sharing_offset.py

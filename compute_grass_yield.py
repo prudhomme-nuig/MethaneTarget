@@ -27,7 +27,7 @@ for country in country_list:
 animal_number_df=read_FAOSTAT_df("data/FAOSTAT_manure_management.csv",delimiter="|")
 
 #Load feed share from gleam
-feed_per_head_df=read_FAOSTAT_df("data/GLEAM_feed.csv")
+feed_per_head_df=read_FAOSTAT_df("output/GLEAM_feed.csv")
 
 #Compute grass yield
 grass_yield_df=pd.DataFrame(columns=country_list)

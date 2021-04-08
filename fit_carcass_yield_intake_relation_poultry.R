@@ -12,8 +12,8 @@ df <- read.table("output/poultry_meat_eggs_emission_intake.csv",
 
 ############ Meat ####################
 
-df["Meat_rate"]=df["Meat"]/df["Number"]
-df["Grain_intake_poultry_rate"]=df["Grain_intake_poultry"]/df["Number"]
+df["Meat_rate"]=df["Meat"]/df["Number_poultry"]
+df["Grain_intake_poultry_rate"]=df["Grain_intake_poultry"]/df["Number_poultry"]
 
 df<-df[df$Grain_intake_poultry_rate<0.06,]
 
@@ -41,8 +41,8 @@ write.csv(coef_final,'output/coefficients_weight_intake_poultry_relation.csv')
 
 ############ Eggs ####################
 
-df["Eggs_rate"]=df["Eggs"]/df["Number"]
-df["Grain_intake_layers_rate"]=df["Grain_intake_layers"]/df["Number"]
+df["Eggs_rate"]=df["Eggs"]/df["Number_layer"]
+df["Grain_intake_layers_rate"]=df["Grain_intake_layers"]/df["Number_layer"]
 
 #Fit model
 mod <- lm(Eggs_rate ~ Grain_intake_layers_rate, data=df)
@@ -65,3 +65,4 @@ coef_final<-data.frame(t(mod$coefficients))
 colnames(coef_final)<- c("Intercept","Grain_intake")
 # coef_final[is.na(coef_final)] <- 0
 write.csv(coef_final,'output/coefficients_eggs_intake_poultry_relation.csv')
+

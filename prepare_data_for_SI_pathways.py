@@ -133,14 +133,16 @@ df_chicken["Grain_intake_poultry"]=gleam_intake_df.loc[gleam_country_mask & glea
 df_chicken["Total_intake_poultry"]=gleam_intake_df.loc[gleam_country_mask & gleam_chicken_mask & production_system_mask & gleam_total_mask,"Value"]
 df_chicken["Grain_intake_layers"]=gleam_intake_df.loc[gleam_country_mask & gleam_chicken_mask & production_system_layers_mask & gleam_grain_mask,"Value"]
 df_chicken["Total_intake_layers"]=gleam_intake_df.loc[gleam_country_mask & gleam_chicken_mask & production_system_layers_mask & gleam_total_mask,"Value"]
-df_chicken["Number"]=gleam_intake_df.loc[gleam_country_mask & gleam_chicken_mask & production_system_mask & gleam_number_mask,"Value"]
+df_chicken["Number_layer"]=gleam_intake_df.loc[gleam_country_mask & gleam_chicken_mask & production_system_layers_mask & gleam_number_mask,"Value"]
+df_chicken["Number_poultry"]=gleam_intake_df.loc[gleam_country_mask & gleam_chicken_mask & production_system_mask & gleam_number_mask,"Value"]
 df_chicken["Meat"] = gleam_intake_df.loc[gleam_country_mask & gleam_chicken_mask & production_system_mask & gleam_production_mask,"Value"]
 df_chicken["Eggs"] = gleam_intake_df.loc[gleam_country_mask & gleam_chicken_mask & production_system_layers_mask & gleam_eggs_mask,"Value"]
 df_chicken["CH4_manure"] = gleam_intake_df.loc[gleam_country_mask & gleam_chicken_mask & production_system_mask & gleam_methane_manure_mask,"Value"]
 df_chicken["N2O_manure"] = gleam_intake_df.loc[gleam_country_mask & gleam_chicken_mask & production_system_mask & gleam_n2o_manure_mask,"Value"]
 df_chicken["GAEZ"] = gleam_intake_df.loc[gleam_country_mask & gleam_chicken_mask & production_system_mask & gleam_production_mask,"GAEZ"]
 df_chicken = df_chicken.dropna()
-df_chicken = df_chicken.drop(df_chicken[df_chicken["Number"]==0].index)
+df_chicken = df_chicken.drop(df_chicken[df_chicken["Number_poultry"]==0].index)
+df_chicken = df_chicken.drop(df_chicken[df_chicken["Number_layer"]==0].index)
 df_chicken.to_csv("output/poultry_meat_eggs_emission_intake.csv")
 
 #Pigs

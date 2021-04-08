@@ -119,8 +119,8 @@ def weight_poultry_max():
 
     df_weight_poultry_gleam.dropna(inplace=True)
 
-    df_weight_poultry_gleam["Meat yield"]=df_weight_poultry_gleam["Meat"]/df_weight_poultry_gleam["Number"]
-    df_weight_poultry_gleam["Grain_intake_poultry_rate"]=df_weight_poultry_gleam["Grain_intake_poultry"]/df_weight_poultry_gleam["Number"]
+    df_weight_poultry_gleam["Meat yield"]=df_weight_poultry_gleam["Meat"]/df_weight_poultry_gleam["Number_poultry"]
+    df_weight_poultry_gleam["Grain_intake_poultry_rate"]=df_weight_poultry_gleam["Grain_intake_poultry"]/df_weight_poultry_gleam["Number_poultry"]
 
     df_weight_poultry_gleam = df_weight_poultry_gleam.query("Grain_intake_poultry_rate <= 0.06")
 
@@ -145,10 +145,10 @@ def eggs_poultry_max():
 
     df_eggs_poultry.dropna(inplace=True)
 
-    df_eggs_poultry["Eggs yield"] = df_eggs_poultry["Eggs"]/df_eggs_poultry["Number"]
-    df_eggs_poultry["Grain_intake_poultry_rate"]=df_eggs_poultry["Grain_intake_poultry"]/df_eggs_poultry["Number"]
+    df_eggs_poultry["Eggs yield"] = df_eggs_poultry["Eggs"]/df_eggs_poultry["Number_layer"]
+    df_eggs_poultry["Grain_intake_poultry_rate"]=df_eggs_poultry["Grain_intake_poultry"]/df_eggs_poultry["Number_layer"]
 
-    df_eggs_poultry = df_eggs_poultry.query("Grain_intake_poultry_rate <= 0.06")
+    #df_eggs_poultry = df_eggs_poultry.query("Grain_intake_poultry_rate <= 0.06")
 
     total_production_nineth_quantile = df_eggs_poultry["Eggs yield"].quantile([0.9], interpolation='nearest').values[0]
 
@@ -174,7 +174,7 @@ def weight_swine_max():
     df_weight_swine["Meat yield"]=df_weight_swine["Meat"]/df_weight_swine["Number"]
 
     total_production_nineth_quantile = df_weight_swine["Meat yield"].quantile([0.9], interpolation='nearest').values[0]
-
+    
     return total_production_nineth_quantile
 
 def intake_for_weight_swine_max(current_yield):
@@ -241,13 +241,13 @@ def compute_yield_change(country,item,production,yields_df):
         if production=='Eggs Primary':
             yield_max=eggs_poultry_max()
             yield_current_df=pd.read_csv("output/poultry_meat_eggs_emission_intake.csv",delimiter=",")
-            yield_current = yield_current_df.loc[(yield_current_df['Area']==country),'Eggs'].values[0]/yield_current_df.loc[(yield_current_df['Area']==country),'Number'].values[0]
+            yield_current = yield_current_df.loc[(yield_current_df['Area']==country),'Eggs'].values[0]/yield_current_df.loc[(yield_current_df['Area']==country),'Number_layer'].values[0]
             #yield_max=eggs_poultry(concentrate_for_production_max,country)
         elif production=='Meat, Poultry':
             yield_max=weight_poultry_max()
             #yield_max=eggs_poultry(concentrate_for_production_max,country)
             yield_current_df=pd.read_csv("output/poultry_meat_eggs_emission_intake.csv",delimiter=",")
-            yield_current = yield_current_df.loc[(yield_current_df['Area']==country),'Meat'].values[0]/yield_current_df.loc[(yield_current_df['Area']==country),'Number'].values[0]
+            yield_current = yield_current_df.loc[(yield_current_df['Area']==country),'Meat'].values[0]/yield_current_df.loc[(yield_current_df['Area']==country),'Number_poultry'].values[0]
         yield_change = np.max([yield_max/yield_current,1])
     elif production=='Meat, pig':
         # concentrate_for_meat_yield_max=intake_for_weight_swine_max(animal_yield_current)
@@ -291,18 +291,22 @@ def compute_intake_change(country,item,production,yields_df):
             intake_change=1
     elif (production=='Eggs Primary') | (production=='Meat, Poultry'):
         if production=='Eggs Primary':
-            concentrate_for_production_max=intake_for_eggs_poultry_max(animal_yield_current)
             intake_current_df=pd.read_csv("output/poultry_meat_eggs_emission_intake.csv",delimiter=",")
-            intake_rate_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Grain_intake_poultry"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number"].values[0]
+            intake_rate_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Grain_intake_poultry"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number_layer"].values[0]
+            yield_current_df=pd.read_csv("output/poultry_meat_eggs_emission_intake.csv",delimiter=",")
+            yield_current = yield_current_df.loc[(yield_current_df['Area']==country),'Eggs'].values[0]/yield_current_df.loc[(yield_current_df['Area']==country),'Number_layer'].values[0]
+            concentrate_for_production_max=intake_for_eggs_poultry_max(yield_current)+intake_rate_current
             # eggs_yield_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Eggs"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number"].values[0]
-            output_ratio=eggs_poultry_max()/animal_yield_current
+            output_ratio=eggs_poultry_max()/yield_current
             # yield_max=eggs_poultry(concentrate_for_production_max,country)
         elif production=='Meat, Poultry':
-            concentrate_for_production_max=intake_for_weight_poultry_max(animal_yield_current)
             intake_current_df=pd.read_csv("output/poultry_meat_eggs_emission_intake.csv",delimiter=",")
-            intake_rate_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Grain_intake_poultry"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number"].values[0]
+            intake_rate_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Grain_intake_poultry"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number_poultry"].values[0]
+            yield_current_df=pd.read_csv("output/poultry_meat_eggs_emission_intake.csv",delimiter=",")
+            yield_current = yield_current_df.loc[(yield_current_df['Area']==country),'Meat'].values[0]/yield_current_df.loc[(yield_current_df['Area']==country),'Number_poultry'].values[0]
+            concentrate_for_production_max=intake_for_weight_poultry_max(yield_current)+intake_rate_current
             # meat_yield_current=intake_current_df.loc[(intake_current_df["Area"]==country),"Meat"].values[0]/intake_current_df.loc[(intake_current_df["Area"]==country),"Number"].values[0]
-            output_ratio=weight_poultry_max()/animal_yield_current
+            output_ratio=weight_poultry_max()/yield_current
         #Some countries have smaller intake and higher meat yield than the maximum computed here
         if output_ratio>1:
             intake_change = np.max([concentrate_for_production_max/intake_rate_current,1])

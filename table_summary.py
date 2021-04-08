@@ -55,7 +55,7 @@ for production in production_list:
         activity_df["Person fed in energy"]+=activity_df[production]*food_content["energy"].loc[0,production]*bfm_fraction.loc[0,production]/food_requirement["energy"]
         activity_df["Person fed in protein"]+=activity_df[production]*food_content["protein"].loc[0,production]*bfm_fraction.loc[0,production]/food_requirement["protein"]
 
-#table with all scenarios    
+#table with all scenarios
 df_with_all_prod_to_plot=activity_df[["Person fed in energy","Person fed in protein","Intensification","Country",'Allocation rule']]
 table = pd.pivot_table(df_with_all_prod_to_plot, values=["Person fed in energy","Person fed in protein"], index=['Country','Allocation rule'],columns=["Intensification"],aggfunc=np.mean)
 table.index.name=None
@@ -75,7 +75,7 @@ third_quantile=activity_df.groupby("Country")["AFOLU balance (with eGWP*)"].quan
 activity_df["Quantile"]=np.nan
 activity_df["Percent mitigation"]=np.nan
 activity_df["Percent mitigation"]=np.nan
-for country in country_list:  
+for country in country_list:
     activity_df.loc[(activity_df['Country']==country) & (activity_df['AFOLU balance (with eGWP*)']<first_quantile[country]),"Quantile"]="First"
     activity_df.loc[(activity_df['Country']==country) & (activity_df['AFOLU balance (with eGWP*)']>=first_quantile[country]) & (activity_df['AFOLU balance (with eGWP*)']<second_quantile[country]),"Quantile"]="Second"
     activity_df.loc[(activity_df['Country']==country) & (activity_df['AFOLU balance (with eGWP*)']>=second_quantile[country]) & (activity_df['AFOLU balance (with eGWP*)']<third_quantile[country]),"Quantile"]="Third"
@@ -89,13 +89,15 @@ activity_df["Methane emissions (MtCH4)"]=activity_df["National quota"]*1E-6
 activity_df["CO2 offset (MtCO2)"]=-activity_df["Total CO2 emissions"]*1E-6
 activity_df["Person fed in energy (Mio heads)"]=activity_df["Person fed in energy"]*1E-3
 activity_df["Person fed in protein (Mio heads)"]=activity_df["Person fed in protein"]*1E-3
+activity_df["AFOLU balance (with eGWP*)"]=activity_df["AFOLU balance (with eGWP*)"]/1E-6
+activity_df.to_csv("output/table_AFOLU_balance_impact_person_fed.csv")
 
 table_mean = pd.pivot_table(activity_df, values=["Person fed in energy (Mio heads)","Person fed in protein (Mio heads)","Methane emissions (MtCH4)","CO2 offset (MtCO2)","AFOLU balance (with eGWP*)"], index=['Country','Quantile'],aggfunc=np.median)
 table_count_SI = pd.pivot_table(activity_df, values=["Person fed in energy (Mio heads)"],columns="Intensification", index=['Country','Quantile'],aggfunc="count")
 table_count_population = pd.pivot_table(activity_df, values=["Person fed in energy (Mio heads)"],columns="Allocation rule",index=['Country',"Quantile"],aggfunc=len)
 table_count_test = pd.pivot_table(activity_df, values=["Intensification"],index=['Country',"Quantile"],aggfunc="count")
-table_count_SI = np.divide(table_count_SI,table_count_test)*100 
-table_count_population=table_count_population/136*100        
+table_count_SI = np.divide(table_count_SI,table_count_test)*100
+table_count_population=table_count_population/136*100
 table = pd.concat([table_mean,table_count_SI,table_count_population],axis=1)
 table.index.name=None
 
@@ -104,9 +106,15 @@ table_t.style.background_gradient(cmap="coolwarm",axis=1,subset="Brazil")\
     .background_gradient(cmap="coolwarm",axis=1,subset="France")\
     .background_gradient(cmap="coolwarm",axis=1,subset="India")\
     .background_gradient(cmap="coolwarm",axis=1,subset="Ireland").to_excel("output/table_AFOLU_balance_impact.xlsx",index_label=None,float_format = "%0.1f")
-   
+
 
 import seaborn as sns
 #labels, index = np.unique(activity_df.loc[activity_df["Country"]=="Ireland","Intensification"], return_inverse=True)
-sns.lmplot(x="Methane emissions (MtCH4)", y="AFOLU balance (with eGWP*)", data=activity_df.loc[activity_df["Country"]=="Ireland",:], hue="Intensification", fit_reg=False)
+g = sns.relplot(x="Methane emissions (MtCH4)", y="AFOLU balance (with eGWP*)", data=activity_df.loc[activity_df["Country"]=="Ireland",:], hue="Intensification",style="Allocation rule",kind='scatter')
+g.savefig("Figs/Ireland_AFOLU_balance_methane_emissions.png")
+
+df_to_plot=activity_df[["Country","Methane emissions (MtCH4)","AFOLU balance (with GWP*)","AFOLU balance (with GWP100)","Intensification","Allocation rule"]]
+df_to_plot=df_to_plot.melt(["Country","Methane emissions (MtCH4)","Intensification","Allocation rule"],var_name="Equivalent metrics",value_name='AFOLU balance')
+g=sns.relplot(x="Methane emissions (MtCH4)", y="AFOLU balance", data=df_to_plot.loc[df_to_plot["Country"]=="Ireland",:], hue="Equivalent metrics",style="Allocation rule",kind='scatter')
+g.savefig("Figs/Ireland_comparison_AFOLU_balance_methane_emissions_with_GWP100_GWPstar.png")
 #activity_df.loc[activity_df["Country"]=="Ireland",:].plot.scatter(x="Person fed in protein (Mio heads)",y="AFOLU balance (with eGWP*)",c="Intensification")

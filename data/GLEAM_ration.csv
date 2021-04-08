@@ -1,0 +1,9 @@
+Country,Feed,Item,Value,Unit
+Ireland,Grains,"Cattle, dairy",0.05,kg/kg
+Ireland,Grass,"Cattle, dairy",0.89,kg/kg
+Brazil,Grains,"Cattle, dairy",0.10,kg/kg
+Brazil,Grass,"Cattle, dairy",0.65,kg/kg
+France,Grains,"Cattle, dairy",0.10,kg/kg
+France,Grass,"Cattle, dairy",0.81,kg/kg
+India,Grass,"Cattle, dairy",0.65,kg/kg
+India,Grains,"Cattle, dairy",0.07,kg/kg

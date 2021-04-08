@@ -36,7 +36,8 @@ convert_unit_dict={'1000 Head':1E3, #in Head
                     "heads/year":1,
                     "kg CO2-eq/year":1E-3,
                     "kg CW/year":1E-3,
-                    "kg eggs/year":1E-3
+                    "kg eggs/year":1E-3,
+                    "kg/kg":1
                     }
 
 new_unit_dict={'1000 Head':'Head', #in Head
@@ -69,7 +70,9 @@ new_unit_dict={'1000 Head':'Head', #in Head
                     "heads/year":"Head",
                     "kg CO2-eq/year":"tCO2/year",
                     "kg CW/year":"t CW/year",
-                    "kg eggs/year":"t eggs/year"
+                    "kg eggs/year":"t eggs/year",
+                    "kg/kg":'t/t',
+                    't/Head':'t/Head'
                     }
 
 def read_FAOSTAT_df(file_name,convert_unit_dict=convert_unit_dict,delimiter=",",index_col=None):

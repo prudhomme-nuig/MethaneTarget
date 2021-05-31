@@ -52,7 +52,7 @@ methane_emissions_pd=read_FAOSTAT_df('data/FAOSTAT_methane.csv')
 for country in country_list:
     methane_emissions_pd.loc[methane_emissions_pd['Area']==country,'Value']=methane_emissions_pd.loc[methane_emissions_pd['Area']==country,'Value'].values[0]
 
-sns.set(font_scale=1.5)
+sns.set(font_scale=1.7)
 sns.set_style("whitegrid")
 
 #Load impacts for different scenarios
@@ -78,7 +78,7 @@ df_to_plot.loc[:,"Methane 2050 (ktCH4)"]=df_to_plot.loc[:,"National quota"].valu
 df_to_plot=df_to_plot.rename(columns = {'National methane index':'Methane index'})
 g = sns.catplot(x="Country", y="Methane index", hue="Allocation rule",
                 height=3.5, aspect=1.5,
-                kind="box", legend=False, data=df_to_plot);#,join=False
+                kind="box", legend=False, data=df_to_plot,row_order=country_list);#,join=False
 g.add_legend(title="Allocation rule")
 g.set_axis_labels("", "Methane index\n(in 2050 relative to 2010)")
 #plt.show()+
@@ -121,7 +121,9 @@ df_with_all_prod_to_plot=df_with_all_prod_to_plot.reset_index()
 g = sns.catplot(x="Item", y="Production index (relative to 2010)", hue="Intensification",col="Allocation rule",
                 height=3.5, aspect=1.5,sharey="row",legend=False, #col_wrap=2,
                 row="Country", ci="sd",
-                kind="box", data=df_with_all_prod_to_plot,margin_titles=True,showfliers=False) #,join=False
+                kind="box", data=df_with_all_prod_to_plot,
+                margin_titles=True,showfliers=False,
+                row_order=country_list) #,join=False
 g.add_legend(title="Intensification pathways")
 g.set_xticklabels(rotation=45)#g.facet_axis(2,2).get_xticklabels(),
 #g.set(xticks=[])
@@ -178,7 +180,7 @@ df_with_all_prod_to_plot["Item and allocation"]=df_with_all_prod_to_plot[["Alloc
 g = sns.catplot(x="Allocation rule", y="UP index", hue="Intensification",col="Item",
                 height=3.5, aspect=1.5,sharey="row",legend=False, #col_wrap=2,
                 row="Country", ci="sd",
-                kind="box", data=df_with_all_prod_to_plot,margin_titles=True,showfliers=False) #,join=False
+                kind="box", data=df_with_all_prod_to_plot,margin_titles=True,showfliers=False,row_order=country_list) #,join=False
 g.add_legend(title="Intensification pathways")
 g.set_xticklabels(rotation=45)#g.facet_axis(2,2).get_xticklabels(),
 #g.set(xticks=[])
@@ -210,7 +212,7 @@ df_to_plot["Item and allocation"]=df_to_plot[["Allocation rule","Item"]].agg('-'
 g = sns.catplot(x="Item", y="Area index", hue="Intensification",col="Allocation rule",
                 height=3.5, aspect=1.5,sharey="row",legend=False, #col_wrap=2,
                 row="Country", ci="sd",
-                kind="box", data=df_to_plot,margin_titles=True,showfliers=False) #,join=False
+                kind="box", data=df_to_plot,margin_titles=True,showfliers=False,row_order=country_list) #,join=False
 g.add_legend(title="Intensification pathways")
 g.set_xticklabels(rotation=45)#g.facet_axis(2,2).get_xticklabels(),
 #g.set(xticks=[])
@@ -241,7 +243,7 @@ df_to_plot["Item and allocation"]=df_to_plot[["Allocation rule","Item"]].agg('-'
 g = sns.catplot(x="Item", y="N2O index (2050 relative to 2010)", hue="Intensification",col="Allocation rule",
                 height=3.5, aspect=1.5,sharey="row",legend=False, #col_wrap=2,
                 row="Country", ci="sd",
-                kind="box", data=df_to_plot,margin_titles=True,showfliers=False) #,join=False
+                kind="box", data=df_to_plot,margin_titles=True,showfliers=False,row_order=country_list) #,join=False
 g.add_legend(title="Intensification pathways")
 g.set_xticklabels(rotation=45)#g.facet_axis(2,2).get_xticklabels(),
 #g.set(xticks=[])
@@ -271,7 +273,7 @@ df_to_plot["Item and allocation"]=df_to_plot[["Allocation rule","Item"]].agg('-'
 g = sns.catplot(x="Item", y="CO2 offset (MtCO2)", hue="Intensification",col="Allocation rule",
                 height=3.5, aspect=1.5,sharey="row",legend=False, #col_wrap=2,
                 row="Country", ci="sd",
-                kind="box", data=df_to_plot,margin_titles=True,showfliers=False) #,join=False
+                kind="box", data=df_to_plot,margin_titles=True,showfliers=False,row_order=country_list) #,join=False
 g.add_legend(title="Intensification pathways")
 g.set_xticklabels(rotation=45)#g.facet_axis(2,2).get_xticklabels(),
 #g.set(xticks=[])
@@ -314,7 +316,7 @@ df_to_plot["Item and allocation"]=df_to_plot[["Allocation rule","Item"]].agg('-'
 g = sns.catplot(x="Item", y="GWP (MtCO2eq)", hue="Intensification",col="Allocation rule",
                 height=3.5, aspect=1.5,sharey="row",legend=False, #col_wrap=2,
                 row="Country", ci="sd",
-                kind="box", data=df_to_plot,margin_titles=True,showfliers=False) #,join=False
+                kind="box", data=df_to_plot,margin_titles=True,showfliers=False,row_order=country_list) #,join=False
 g.add_legend(title="Intensification pathways")
 g.set_xticklabels(rotation=45)#g.facet_axis(2,2).get_xticklabels(),
 #g.set(xticks=[])
@@ -336,12 +338,12 @@ for item in ['eGWP*','GWP100']:
 g = sns.catplot(x="Item", y="GWP (MtCO2eq)", hue="Item",col="Allocation rule",
                 height=3.5, aspect=1.5,sharey="row",legend=False, #col_wrap=2,
                 row="Country", ci="sd",
-                kind="box", data=df_to_plot,margin_titles=True,showfliers=False)
+                kind="box", data=df_to_plot,margin_titles=True,showfliers=False,row_order=country_list)
 # g = sns.catplot(x="Item", y="GWP (MtCO2eq)", hue="Allocation rule",col="Country",
 #                 height=3.5, aspect=1.5,sharey=False,col_wrap=2,
 #                 kind="box", legend=False, data=df_to_plot,join=False);
-g.add_legend(title="Allocation rule")
-g.set_axis_labels("Methane metrics", "GWP AFOLU (MtCO2eq)")
+g.add_legend(title="Methane equivalent metrics")
+g.set_axis_labels("Global warming aggregation metrics", "GWP AFOLU (MtCO2eq)")
 g.set_xticklabels(g.facet_axis(2,2).get_xticklabels(), rotation=45, horizontalalignment='right')
 g.set_titles("{col_name}")
 g.fig.savefig('Figs/AFOLU_metrics_bar_plot.png', dpi=100)

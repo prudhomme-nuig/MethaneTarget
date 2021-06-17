@@ -241,7 +241,7 @@ server <- function(input, output) {
     dataBac2kDF <- countryDF[column_list]
     measure_name_list<-column_list[-1]
 
-    dataBack2<-melt(dataBackDF,id.vars=c('Country'), measure.vars=measure_name_list)
+    dataBack2<-melt(dataBac2kDF,id.vars=c('Country'), measure.vars=measure_name_list)
     
     dataBack2
     
@@ -429,10 +429,18 @@ server <- function(input, output) {
     
     p(
       
-      p(h3("Cette application Shiny a été développée par Rémi Prudhomme")),
+      p(h3("This Shiny application was developed by Rémi Prudhomme")),
       
-      p(h4("Les données de rendement, les facteurs d'émissions, le surfaces herbagère et de culture, les niveaux de productions sont extrait de la base de données FAOSTAT:",
-           a(href = "http://www.fao.org/faostat/en", title = "Aller sur le site FAOSTAT", target = "_blank", "FAOSTAT")))
+      p(h4("This Shiny application is based on the scientific article 'Defining national biogenic methane targets: implications for national food production & climate neutrality objectives' from Prudhomme et al. (2021)")),
+      
+      p(h4("Yield data, emission factors, grassland and crop areas, and production levels are taken from the FAOSTAT database:",
+           a(href = "http://www.fao.org/faostat/en", title = "Aller sur le site FAOSTAT", target = "_blank", "FAOSTAT"))),
+      
+      p(h4("Mitigation measures are taken for each country presented here from the following published article:",
+           a(href = "https://www.sciencedirect.com/science/article/pii/S0022030212000859", title = "Brazil", target = "_blank", "Brazil"),
+           a(href = "https://www.sciencedirect.com/science/article/pii/S1462901117304288?casa_token=FHdOdQusF8QAAAAA:J7NS8imcTCUD1q5RVBJysFfHsZZTpZCLiI7vt_QCqqilNBCEeQOh_rnTb2BrIp3FcbeXSkk_eg", title = "France", target = "_blank", "France"),
+           a(href = "https://www.sciencedirect.com/science/article/pii/S0048969718345819", title = "India", target = "_blank", "India"),
+           a(href = "https://t-stor.teagasc.ie/handle/11019/2092", title = "Ireland", target = "_blank", "Ireland")))
       
       
       

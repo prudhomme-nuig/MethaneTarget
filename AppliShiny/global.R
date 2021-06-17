@@ -36,6 +36,7 @@ library(plotly)
 # On l'utilise ici pour la fonction count
 # https://dplyr.tidyverse.org/reference/index.html
 
+library(plyr)
 library(dplyr)
 
 # Le package leaflet est une implémentation dans R de la librairie JavaScript leaflet
@@ -46,15 +47,13 @@ library(leaflet)
 
 library(reshape)
 
-library(plyr)
-
 #### Chargement du fichier de données ####
 
 # Fichier de données Empres-i sur les foyers de Peste Porcine Africaine (African Swine Fever en anglais)
 # en Europe du 1er janvier 2020 au 30 septembre 2020
 # Obtenu librement sur le site Empres-i : http://empres-i.fao.org/eipws3g/
 
-asfDF <- read.csv(file = "../output/table_AFOLU_balance_impact_person_fed.csv", 
+asfDF <- read.csv(file = "data/table_AFOLU_balance_impact_person_fed.csv", 
                   sep = ",", 
                   #dec = ".",
                   quote = "\"",
@@ -89,6 +88,13 @@ asfDF$Rice<-asfDF$Production.Rice..paddy.change+asfDF$Production.Rice..paddy.201
 
 asfDF$Methane.Quartile = asfDF$Country
 asfDF$AFOLU.Quartile = asfDF$Country
+
+#### Récupération des noms de pays ####
+
+# Colonne "country"
+# Les noms de pays vont servir à paramétrer les cases à cocher dans ui
+countries <- sort(unique(asfDF$Country))
+
 for (country in countries)
 {
   asfDF[asfDF$Country==country,]$Methane.Quartile = cut(asfDF[asfDF$Country==country,]$National.quota, 
@@ -107,12 +113,6 @@ asfDF$Activity.manure.Poultry.Birds<-asfDF$Activity.Poultry.Birds
 asfDF$Quota.manure.Chickens..layers<-asfDF$Quota.Chickens..layers
 asfDF$Quota.manure.Swine<-asfDF$Quota.Swine
 asfDF$Quota.manure.Poultry.Birds<-asfDF$Quota.Poultry.Birds
-
-#### Récupération des noms de pays ####
-
-# Colonne "country"
-# Les noms de pays vont servir à paramétrer les cases à cocher dans ui
-countries <- sort(unique(asfDF$Country))
 
 #Colour palet for leaflet
 pal <- colorNumeric("viridis", NULL)

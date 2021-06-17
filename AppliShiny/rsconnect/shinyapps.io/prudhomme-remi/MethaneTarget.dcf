@@ -1,0 +1,13 @@
+name: MethaneTarget
+title: MethaneTarget
+username:
+account: prudhomme-remi
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4268849
+bundleId: 4714259
+url: https://prudhomme-remi.shinyapps.io/MethaneTarget/
+when: 1623670829.97168
+lastSyncTime: 1623670829.97168
+asMultiple: FALSE
+asStatic: FALSE

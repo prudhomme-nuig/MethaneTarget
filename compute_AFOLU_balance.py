@@ -69,6 +69,7 @@ activity_df['Total CO2 emissions 2010']=0
 activity_df['International Feed offset 2010']=0
 activity_df['National quota eGWP*']=np.nan
 activity_df['National quota GWP*']=np.nan
+activity_df['National quota newGWP*']=np.nan
 activity_df['National quota GWP100']=np.nan
 for country in country_list:
     for rule in np.unique(activity_df['Allocation rule']):
@@ -76,6 +77,7 @@ for country in country_list:
         activity_df.loc[country_rule_mak,'National quota eGWP*']=compute_CO2_equivalent(activity_df.loc[country_rule_mak,'National quota'],rule,activity_df.loc[country_rule_mak,'2010']*activity_df.loc[country_rule_mak,'Share'],country,ponderation_in_GWP_star=ponderation_dict[rule],methane_debt=methane_debt_df)
         activity_df.loc[country_rule_mak,'National quota GWP*']=compute_CO2_equivalent(activity_df.loc[country_rule_mak,'National quota'],'Grand-parenting',activity_df.loc[country_rule_mak,'National 2010'],country,ponderation_in_GWP_star=ponderation_dict[rule],methane_debt=methane_debt_df)
         activity_df.loc[country_rule_mak,'National quota GWP100']=compute_CO2_equivalent(activity_df.loc[country_rule_mak,'National quota'],'GWP100',activity_df.loc[country_rule_mak,'National 2010'],country,ponderation_in_GWP_star=ponderation_dict[rule],methane_debt=methane_debt_df)
+        activity_df.loc[country_rule_mak,'National quota newGWP*']=compute_CO2_equivalent(activity_df.loc[country_rule_mak,'National quota'],'NewGWP*',activity_df.loc[country_rule_mak,'National 2010'],country,ponderation_in_GWP_star=ponderation_dict[rule],methane_debt=methane_debt_df)
         activity_df.loc[country_rule_mak,'National quota GWP* 2010']=0
         activity_df.loc[country_rule_mak,'National quota eGWP* 2010']=compute_CO2_equivalent(activity_df.loc[country_rule_mak,'National 2010'],rule,activity_df.loc[country_rule_mak,'2010'],country,ponderation_in_GWP_star=ponderation_dict[rule],methane_debt=methane_debt_df)
         activity_df.loc[country_rule_mak,'National quota GWP100 2010']=activity_df.loc[country_rule_mak,'National 2010']*GWP100_CH4
@@ -97,6 +99,7 @@ table_ref.to_excel("output/table_methane_reference.xlsx")
 
 activity_df['AFOLU balance (with eGWP*)']=activity_df['National quota eGWP*']+activity_df['GWP N2O fert']+activity_df['GWP N2O manure']+activity_df['Total CO2 emissions']
 activity_df['AFOLU balance (with GWP*)']=activity_df['National quota GWP*']+activity_df['GWP N2O fert']+activity_df['GWP N2O manure']+activity_df['Total CO2 emissions']
+activity_df['AFOLU balance (with new GWP*)']=activity_df['National quota newGWP*']+activity_df['GWP N2O fert']+activity_df['GWP N2O manure']+activity_df['Total CO2 emissions']
 activity_df['AFOLU balance (with GWP100)']=activity_df['National quota GWP100']+activity_df['GWP N2O fert']+activity_df['GWP N2O manure']+activity_df['Total CO2 emissions']
 activity_df['AFOLU balance 2010']=activity_df['National quota GWP* 2010']+activity_df['GWP N2O fert 2010']+activity_df['GWP N2O manure 2010']+activity_df['Total CO2 emissions 2010']
 activity_df['AFOLU balance (with eGWP*) 2010']=activity_df['National quota eGWP* 2010']+activity_df['GWP N2O fert 2010']+activity_df['GWP N2O manure 2010']+activity_df['Total CO2 emissions 2010']

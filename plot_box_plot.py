@@ -286,7 +286,7 @@ table.index.name=None
 table.to_excel("output/table_CO2.xlsx",index_label=None,float_format = "%0.1f")
 print("Plot CO2 offset with different metrics...")
 
-#Plot AFOLU balance
+#Plot AFOLU balance for different allocation rule
 GWP100_N2O=298
 df_to_plot=pd.DataFrame(columns=['GWP (MtCO2eq)','Allocation rule','Country','Item','Intensification'])
 N2O_emissions=activity_df.loc[:,'N2O']*t_2_Mt*GWP100_N2O
@@ -330,7 +330,7 @@ table.to_excel("output/table_GWP.xlsx",index_label=None,float_format = "%0.1f")
 print("Plot net AFOLU balance...")
 
 df_to_plot=pd.DataFrame(columns=['GWP (MtCO2eq)','Allocation rule','Country','Item'])
-for item in ['eGWP*','GWP100']:
+for item in ['eGWP*','GWP100','new GWP*','GWP*']:
     activity_df[item]=activity_df["AFOLU balance (with "+item+")"]
     df_to_concat=pd.concat([activity_df[['Country',item,"Allocation rule"]],pd.DataFrame([item]*len(activity_df['Country']),columns=['Item'])],axis=1,sort=True)
     df_to_concat=df_to_concat.rename(columns = {item:'GWP (MtCO2eq)'})

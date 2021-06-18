@@ -65,6 +65,7 @@ def print_table_results(activity_df,country_list,column_name_to_variable_name_di
 def compute_CO2_equivalent(input_df,rule,emission_ref_year,country,ponderation_in_GWP_star=None,methane_debt=None):
     output_df=deepcopy(input_df)
     is_GWP100=False
+    is_New_GWP_star=False
     Horizon=100.
     if rule=='Grand-parenting':
         emission_ref=emission_ref_year
@@ -78,10 +79,16 @@ def compute_CO2_equivalent(input_df,rule,emission_ref_year,country,ponderation_i
         emission_ref=emission_ref_year*ponderation_in_GWP_star[country].values[0]
     elif rule=='GWP100':
         is_GWP100=True
+    elif rule=='NewGWP*':
+        is_New_GWP_star=True
+        emission_ref=emission_ref_year
     else:
         print('Unknown method. Code it!')
     if is_GWP100:
         output_df=input_df*GWP100_CH4
+    elif is_New_GWP_star:
+        output_df=(0.75*(input_df.values-emission_ref)*100./40.+0.25*input_df.values)*GWP100_CH4 #Here we took H=100, deltat=40 between 2010 and 2050
+        import pdb;pdb.set_trace()
     else:
         output_df=(input_df.values-emission_ref)*(GWP100_CH4*100.)/40.
     return output_df

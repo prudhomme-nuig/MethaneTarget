@@ -63,7 +63,7 @@ server <- function(input, output) {
     
     countryDF<-countryDF[countryDF$Scenario %in% input$MethaneScenario, ]
     
-    countryDF["Methane reduction"] <- 100 - countryDF["X2050"]/countryDF["X2010"]*100
+    countryDF["Methane reduction (in %)"] <- 100 - countryDF["X2050"]/countryDF["X2010"]*100
     
     countryDF["World"]<-"World"
     
@@ -92,8 +92,46 @@ server <- function(input, output) {
       }
 
     dataEIDF <- countryDF[c("Country","Intensification",header_emission,header_activity)]
-    dataEIDF["EI"]<-dataEIDF[header_emission]/dataEIDF[header_activity]
-    dataEIDF <- dataEIDF[c("Country","Intensification","EI")]
+    dataEIDF["Emission factor (kg/head)"]<-dataEIDF[header_emission]/dataEIDF[header_activity]*1000
+    dataEIDF <- dataEIDF[c("Country","Intensification","Emission factor (kg/head)")]
+    dataEIDF<-dataEIDF[!duplicated(dataEIDF[c("Country","Intensification")]),]
+    dataEIDF
+  })
+  
+  dataEIDF_rice<- reactive({
+    
+    # input$sliderPeriod[1] : date renvoyée par le bouton gauche du slider temporel
+    # input$sliderPeriod[2] : date renvoyée par le bouton droit du slider temporel
+    # input$cbCountry : vecteur avec les noms de pays sélectionnés
+    
+    countryDF<-asfDF[asfDF$Model %in% input$MethaneIAM, ]
+    
+    countryDF<-countryDF[countryDF$Scenario %in% input$MethaneScenario, ]
+    
+    countryDF["Methane reduction (in %)"] <- 100 - countryDF["X2050"]/countryDF["X2010"]*100
+    
+    countryDF["World"]<-"World"
+    
+    countryDF
+    
+  })
+  
+  dataEIDF_rice <- reactive({
+    
+    # input$sliderPeriod[1] : date renvoyée par le bouton gauche du slider temporel
+    # input$sliderPeriod[2] : date renvoyée par le bouton droit du slider temporel
+    # input$cbCountry : vecteur avec les noms de pays sélectionnés
+    
+    countryDF<-asfDF[asfDF$Country %in% input$EI_rice_Country, ]
+    
+    countryDF<-countryDF[countryDF$Intensification %in% input$EI_rice_Pathway, ]
+    
+    header_emission<-paste("Quota",'rice','Rice..paddy',sep=".")
+    header_activity<-paste("Activity",'rice','Rice..paddy',sep=".")
+    
+    dataEIDF <- countryDF[c("Country","Intensification",header_emission,header_activity)]
+    dataEIDF["Emission factor (kg/ha)"]<-dataEIDF[header_emission]/dataEIDF[header_activity]*1000
+    dataEIDF <- dataEIDF[c("Country","Intensification","Emission factor (kg/ha)")]
     dataEIDF<-dataEIDF[!duplicated(dataEIDF[c("Country","Intensification")]),]
     dataEIDF
   })
@@ -187,7 +225,7 @@ server <- function(input, output) {
     dataAnimDF<-melt(dataAnimDF,id.vars=c('Country','Pathway'), measure.vars=measure_name_list)
     
     dataAnimDF<-dataAnimDF[!duplicated(dataAnimDF),]
-    colnames(dataAnimDF)<-c("Country","Pathway","Yields","Yield (t/ha)")
+    colnames(dataAnimDF)<-c("Country","Pathway","Yields","Yield (t/head)")
     dataAnimDF
     
   })
@@ -279,7 +317,7 @@ server <- function(input, output) {
     # Le render observe le data frame renvoyé par l'expression réactive tempDF
     # NE PAS OUBLIER LES PARENTHESES de tempDF()
     
-    ggplot(dataMethaneDF(), aes(x = World, y = `Methane reduction`))+
+    ggplot(dataMethaneDF(), aes(x = World, y = `Methane reduction (in %)`))+
       geom_boxplot(outline=FALSE)+ 
       #facet_wrap(~Country, scales = "free") + 
       theme(axis.text.x = element_text(angle = 30, hjust = 1),
@@ -305,7 +343,7 @@ server <- function(input, output) {
     # Le render observe le data frame renvoyé par l'expression réactive tempDF
     # NE PAS OUBLIER LES PARENTHESES de tempDF()
     
-    ggplot(dataAnimDF(), aes(x = Country, y = `Yield (t/ha)`,fill=Pathway))+
+    ggplot(dataAnimDF(), aes(x = Country, y = `Yield (t/head)`,fill=Pathway))+
       geom_bar(stat="identity",position=position_dodge())+ 
       #facet_wrap(~Country, scales = "free") + 
       theme(axis.text.x = element_text(angle = 30, hjust = 1),
@@ -318,7 +356,20 @@ server <- function(input, output) {
     # Le render observe le data frame renvoyé par l'expression réactive tempDF
     # NE PAS OUBLIER LES PARENTHESES de tempDF()
     
-    ggplot(dataEIDF(), aes(x = Country, y = EI,fill=Intensification))+
+    ggplot(dataEIDF(), aes(x = Country, y = `Emission factor (kg/head)`,fill=Intensification))+
+      geom_bar(stat="identity",position=position_dodge())+ 
+      #facet_wrap(~Country, scales = "free") + 
+      theme(axis.text.x = element_text(angle = 30, hjust = 1),
+            axis.title.x=element_blank())
+    
+  })
+  
+  output$plotEI_rice <- renderPlot({
+    
+    # Le render observe le data frame renvoyé par l'expression réactive tempDF
+    # NE PAS OUBLIER LES PARENTHESES de tempDF()
+    
+    ggplot(dataEIDF_rice(), aes(x = Country, y = `Emission factor (kg/ha)`,fill=Intensification))+
       geom_bar(stat="identity",position=position_dodge())+ 
       #facet_wrap(~Country, scales = "free") + 
       theme(axis.text.x = element_text(angle = 30, hjust = 1),
@@ -447,7 +498,6 @@ server <- function(input, output) {
     )
     
   })
-  
   
 }
 

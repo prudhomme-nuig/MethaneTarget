@@ -61,11 +61,20 @@ asfDF <- read.csv(file = "data/table_AFOLU_balance_impact_person_fed.csv",
                   row.names = 1, 
                   stringsAsFactors = FALSE,
                   fill=TRUE)
+AfoluBalanceDF <- read.csv(file = "data/AFOLU_balance_2050.csv", 
+                  sep = ",", 
+                  #dec = ".",
+                  quote = "\"",
+                  header = TRUE, 
+                  row.names = 1, 
+                  stringsAsFactors = FALSE,
+                  fill=TRUE)
 colnames(asfDF)[193]<-"Rice"
 colnames(asfDF)[194]<-"Rice.2010"
 asfDF$Rice[asfDF$Rice<0]<-NA
 production_list<-c('Milk','Beef.and.Buffalo.Meat','Monogastric.Meat','Eggs','Rice')
 variables<-c("Production","Methane target")
+metrics<-c("GWP100","new GWP*","GWP*","eGWP*")
 asfDF["National methane index"]=asfDF["National.quota"]/asfDF["National.2010"]
 allocations<-sort(unique(asfDF$Allocation.rule))
 IAMs<-sort(unique(asfDF$Model))

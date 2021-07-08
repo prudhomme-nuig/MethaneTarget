@@ -46,6 +46,7 @@ sidebar <- dashboardSidebar(
     menuItem(text = "Results",
              menuSubItem(text = "Direct impacts",tabName = "resultsTab"),
              menuSubItem(text = "Back-casting",tabName = "BackTab"),
+             menuSubItem(text = "Impact on Global Warming",tabName = "GWTab"),
              menuSubItem(text = "Define your methane target",tabName = "BackTab2")
              ),
 
@@ -519,6 +520,58 @@ body <- dashboardBody(
               )
             )
 
+    ),
+    
+    tabItem(tabName = "GWTab",
+            
+            fluidRow(
+              
+              column(width = 2,
+                     
+                     box(title = "variables",
+                         status = "danger", # couleur rouge
+                         solidHeader = TRUE,
+                         width = NULL,
+                         
+                         # Tableau du nombre de cas par zone administrative
+                         
+                         #dataTableOutput(outputId = "tableAdmin")
+                         
+                         #Cases à cocher avec les noms des pays définis dans global.R
+                         
+                         checkboxGroupInput(inputId = "GWCountry",
+                                            label = "Select the country",
+                                            choices = countries, # countries = noms des pays définis dans global.R
+                                            selected = countries # tous les pays sont sélectionnés
+                         ),
+                         
+                         checkboxGroupInput(inputId = "metric",
+                                      label = "Select the metrics",
+                                      choices = metrics, 
+                                      selected = metrics # toutes les métriques sont sélectionnés
+                         )
+                         
+                     )
+                     
+              ),
+              
+              column(width =10, # largeur que prend la colonne sur la ligne, sur une échelle de 12
+                     
+                     # Définition d'une boite
+                     
+                     box(title = "Results", # en-tête titre
+                         status = "primary", # couleur pour l'en-tête et le cadre de la boite, ici bleu foncé
+                         solidHeader = TRUE, # colorie l'en-tête et le cadre avec la couleur status
+                         width = NULL, # prend toute la largeur de la colonne
+                         
+                         # Affichage de l'histogramme du nombre de cas par mois
+                         
+                         plotOutput(outputId = "plotGW")
+                         
+                     )
+              )
+            )
+            
     ),
 
     tabItem(tabName = "BackTab2",

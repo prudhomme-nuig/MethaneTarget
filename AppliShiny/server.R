@@ -53,6 +53,25 @@ server <- function(input, output) {
     }
   })
   
+  GWDF <- reactive({
+    
+    # input$sliderPeriod[1] : date renvoyée par le bouton gauche du slider temporel
+    # input$sliderPeriod[2] : date renvoyée par le bouton droit du slider temporel
+    # input$cbCountry : vecteur avec les noms de pays sélectionnés
+    
+    countryDF <- AfoluBalanceDF[AfoluBalanceDF$Country %in% input$GWCountry, ]
+    
+    #countryDF <- countryDF[countryDF$Allocation.rule %in% input$allocation,]
+    metric_list <- sprintf("National.quota.%s", input$metric)
+    metric_list <- gsub("\\*",".",metric_list)
+    metric_list <- gsub(" ","",metric_list)
+    metric_list <- c("Total.CO2.emissions",metric_list)
+    GWDF<-melt(countryDF,id.vars=c('Country'), measure.vars=metric_list)
+    
+    GWDF
+  })
+  
+  
   dataMethaneDF <- reactive({
     
     # input$sliderPeriod[1] : date renvoyée par le bouton gauche du slider temporel
@@ -309,6 +328,21 @@ server <- function(input, output) {
               axis.title.x=element_blank())
       #scale_y_continuous(limits = quantile(df_with_all_prod_to_plot$`Production index`, c(0.1, 0.9)))
     }
+    
+  })
+  
+  output$plotGW <- renderPlot({
+    
+    # Le render observe le data frame renvoyé par l'expression réactive tempDF
+    # NE PAS OUBLIER LES PARENTHESES de tempDF()
+    
+      ggplot(GWDF(), aes(x = variable, y = value,fill=variable))+
+        geom_boxplot(outline=FALSE)+ 
+        facet_wrap(~input$GWCountry, scales = "free") +
+        theme(axis.text.x = element_text(angle = 30, hjust = 1),
+              axis.title.x=element_blank())+
+      ylab("Global warming (tCO2eq)")
+      #scale_y_continuous(limits = quantile(df_with_all_prod_to_plot$`Production index`, c(0.1, 0.9)))
     
   })
   

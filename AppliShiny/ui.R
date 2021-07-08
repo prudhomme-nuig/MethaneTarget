@@ -45,9 +45,9 @@ sidebar <- dashboardSidebar(
 
     menuItem(text = "Results",
              menuSubItem(text = "Direct impacts",tabName = "resultsTab"),
-             menuSubItem(text = "Back-casting",tabName = "BackTab"),
-             menuSubItem(text = "Impact on Global Warming",tabName = "GWTab"),
-             menuSubItem(text = "Define your methane target",tabName = "BackTab2")
+             #menuSubItem(text = "Back-casting",tabName = "BackTab"),
+             menuSubItem(text = "Impact of metrics",tabName = "GWTab"),
+             menuSubItem(text = "Define your target",tabName = "BackTab2")
              ),
 
     menuItem(text = "About", tabName = "aboutTab")
@@ -454,73 +454,73 @@ body <- dashboardBody(
 
     ),
 
-    tabItem(tabName = "BackTab",
-
-            fluidRow(
-
-              column(width = 2,
-
-                     box(title = "variables",
-                         status = "danger", # couleur rouge
-                         solidHeader = TRUE,
-                         width = NULL,
-
-                         # Tableau du nombre de cas par zone administrative
-
-                         #dataTableOutput(outputId = "tableAdmin")
-
-                         #Cases à cocher avec les noms des pays définis dans global.R
-
-                         radioButtons(inputId = "BackCountry",
-                                            label = "Select the country",
-                                            choices = countries, # countries = noms des pays définis dans global.R
-                                            selected = countries[1] # tous les pays sont sélectionnés
-                         ),
-
-                         radioButtons(inputId = "BackSelect",
-                                      label = "Select the target",
-                                      choices = targets, # countries = noms des pays définis dans global.R
-                                      selected = targets[1] # tous les pays sont sélectionnés
-                         )
-
-                     )
-
-              ),
-
-              column(width = 10, # largeur que prend la colonne sur la ligne, sur une échelle de 12
-
-                     # Définition d'une boite
-
-                     box(title = "Results", # en-tête titre
-                         status = "primary", # couleur pour l'en-tête et le cadre de la boite, ici bleu foncé
-                         solidHeader = TRUE, # colorie l'en-tête et le cadre avec la couleur status
-                         width = NULL, # prend toute la largeur de la colonne
-
-                         # Affichage de l'histogramme du nombre de cas par mois
-
-                         plotOutput(outputId = "plotback")
-
-                     )
-              ),
-              column(width = 12, # largeur que prend la colonne sur la ligne, sur une échelle de 12
-
-                     # Définition d'une boite
-
-                     box(title = "Tableau de valeurs", # en-tête titre
-                         status = "primary", # couleur pour l'en-tête et le cadre de la boite, ici bleu foncé
-                         solidHeader = TRUE, # colorie l'en-tête et le cadre avec la couleur status
-                         width = NULL, # prend toute la largeur de la colonne
-                         #tags$head(tags$style(HTML(".tab-pane { height: 70vh; overflow-y: auto; }" ))),
-
-                         # Affichage de l'histogramme du nombre de cas par mois
-
-                         #dataTableOutput(outputId = "tableAdmin")
-
-                     )
-              )
-            )
-
-    ),
+    # tabItem(tabName = "BackTab",
+    # 
+    #         fluidRow(
+    # 
+    #           column(width = 2,
+    # 
+    #                  box(title = "variables",
+    #                      status = "danger", # couleur rouge
+    #                      solidHeader = TRUE,
+    #                      width = NULL,
+    # 
+    #                      # Tableau du nombre de cas par zone administrative
+    # 
+    #                      #dataTableOutput(outputId = "tableAdmin")
+    # 
+    #                      #Cases à cocher avec les noms des pays définis dans global.R
+    # 
+    #                      radioButtons(inputId = "BackCountry",
+    #                                         label = "Select the country",
+    #                                         choices = countries, # countries = noms des pays définis dans global.R
+    #                                         selected = countries[1] # tous les pays sont sélectionnés
+    #                      ),
+    # 
+    #                      radioButtons(inputId = "BackSelect",
+    #                                   label = "Select the target",
+    #                                   choices = targets, # countries = noms des pays définis dans global.R
+    #                                   selected = targets[1] # tous les pays sont sélectionnés
+    #                      )
+    # 
+    #                  )
+    # 
+    #           ),
+    # 
+    #           column(width = 10, # largeur que prend la colonne sur la ligne, sur une échelle de 12
+    # 
+    #                  # Définition d'une boite
+    # 
+    #                  box(title = "Results", # en-tête titre
+    #                      status = "primary", # couleur pour l'en-tête et le cadre de la boite, ici bleu foncé
+    #                      solidHeader = TRUE, # colorie l'en-tête et le cadre avec la couleur status
+    #                      width = NULL, # prend toute la largeur de la colonne
+    # 
+    #                      # Affichage de l'histogramme du nombre de cas par mois
+    # 
+    #                      plotOutput(outputId = "plotback")
+    # 
+    #                  )
+    #           ),
+    #           column(width = 12, # largeur que prend la colonne sur la ligne, sur une échelle de 12
+    # 
+    #                  # Définition d'une boite
+    # 
+    #                  box(title = "Tableau de valeurs", # en-tête titre
+    #                      status = "primary", # couleur pour l'en-tête et le cadre de la boite, ici bleu foncé
+    #                      solidHeader = TRUE, # colorie l'en-tête et le cadre avec la couleur status
+    #                      width = NULL, # prend toute la largeur de la colonne
+    #                      #tags$head(tags$style(HTML(".tab-pane { height: 70vh; overflow-y: auto; }" ))),
+    # 
+    #                      # Affichage de l'histogramme du nombre de cas par mois
+    # 
+    #                      #dataTableOutput(outputId = "tableAdmin")
+    # 
+    #                  )
+    #           )
+    #         )
+    # 
+    # ),
     
     tabItem(tabName = "GWTab",
             
@@ -590,12 +590,18 @@ body <- dashboardBody(
                                       choices = countries, # countries = noms des pays définis dans global.R
                                       selected = countries[1] # tous les pays sont sélectionnés
                          ),
+                         
+                         radioButtons(inputId = "BackSelect",
+                                      label = "Select the target",
+                                      choices = targets, # countries = noms des pays définis dans global.R
+                                      selected = targets[1] # tous les pays sont sélectionnés
+                         ),
 
                          numericInput(inputId="MethaneTargetInput",
-                                      label="Methane target in tCH4/yr",
+                                      label="Emission target in tCH4/yr or in tCO2/yr",
                                       value=550000,
                                       min = NA, max = NA, step = NA),
-                         actionButton(inputId = "EnterTarget", label = "Enter CH4 Target")
+                         actionButton(inputId = "EnterTarget", label = "Enter the Target")
 
                      )
 
@@ -612,7 +618,7 @@ body <- dashboardBody(
 
                          # Affichage de l'histogramme du nombre de cas par mois
 
-                         plotOutput(outputId = "plotback2")
+                         uiOutput(outputId = "plotback2")
 
                      )
               ),

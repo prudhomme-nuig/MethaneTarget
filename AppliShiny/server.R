@@ -249,60 +249,100 @@ server <- function(input, output) {
     
   })
   
-  dataBack <- reactive({
-    
-    # input$sliderPeriod[1] : date renvoyée par le bouton gauche du slider temporel
-    # input$sliderPeriod[2] : date renvoyée par le bouton droit du slider temporel
-    # input$cbCountry : vecteur avec les noms de pays sélectionnés
-    
-    countryDF<-asfDF[asfDF$Country %in% input$BackCountry, ]
-    
-    if (input$BackSelect == "Methane target") {
-      column_list<-c("Country","Methane.Quartile","National.quota","AFOLU.balance..with.GWP100.","CO2.offset..MtCO2.","Person.fed.in.energy..Mio.heads.","Person.fed.in.protein..Mio.heads.")
-    }
-    
-    else if (input$BackSelect == "AFOLU balance") {
-      column_list<-c("Country","AFOLU.Quartile","National.quota","AFOLU.balance..with.GWP100.","CO2.offset..MtCO2.","Person.fed.in.energy..Mio.heads.","Person.fed.in.protein..Mio.heads.")
-    }
-    
-    dataBackDF <- countryDF[column_list]
-    measure_name_list<-column_list[-1]
-    measure_name_list<-measure_name_list[-1]
-
-    colnames(dataBackDF)[2]<-"Quartiles"
-    
-    dataBack<-melt(dataBackDF,id.vars=c('Country',colnames(dataBackDF)[2]), measure.vars=measure_name_list)
-    
-    dataBack
-    
-  })
+  # dataBack <- reactive({
+  #   
+  #   # input$sliderPeriod[1] : date renvoyée par le bouton gauche du slider temporel
+  #   # input$sliderPeriod[2] : date renvoyée par le bouton droit du slider temporel
+  #   # input$cbCountry : vecteur avec les noms de pays sélectionnés
+  #   
+  #   countryDF<-asfDF[asfDF$Country %in% input$BackCountry, ]
+  #   
+  #   if (input$BackSelect == "Methane target") {
+  #     column_list<-c("Country","Methane.Quartile","National.quota","AFOLU.balance..with.GWP100.","CO2.offset..MtCO2.","Person.fed.in.energy..Mio.heads.","Person.fed.in.protein..Mio.heads.")
+  #   }
+  #   
+  #   else if (input$BackSelect == "AFOLU balance") {
+  #     column_list<-c("Country","AFOLU.Quartile","National.quota","AFOLU.balance..with.GWP100.","CO2.offset..MtCO2.","Person.fed.in.energy..Mio.heads.","Person.fed.in.protein..Mio.heads.")
+  #   }
+  #   
+  #   dataBackDF <- countryDF[column_list]
+  #   measure_name_list<-column_list[-1]
+  #   measure_name_list<-measure_name_list[-1]
+  # 
+  #   colnames(dataBackDF)[2]<-"Quartiles"
+  #   
+  #   dataBack<-melt(dataBackDF,id.vars=c('Country',colnames(dataBackDF)[2]), measure.vars=measure_name_list)
+  #   
+  #   dataBack
+  #   
+  # })
   
   dataBack2 <- reactive({
     
     # input$sliderPeriod[1] : date renvoyée par le bouton gauche du slider temporel
     # input$sliderPeriod[2] : date renvoyée par le bouton droit du slider temporel
     # input$cbCountry : vecteur avec les noms de pays sélectionnés
-    
+    input$BackSelect
     input$EnterTarget
-    
     input$Back2Country
-    
+    input$MethaneTargetInput
     countryDF<-asfDF[asfDF$Country == input$Back2Country, ]
     
-    countryDF<-countryDF[countryDF$National.quota <= input$MethaneTargetInput+0.05*input$MethaneTargetInput, ]
+    if (input$BackSelect == "Methane target") {
+      column_list<-c("Country","National.quota","AFOLU.balance..with.GWP100.","CO2.offset..MtCO2.","Person.fed.in.energy..Mio.heads.","Person.fed.in.protein..Mio.heads.")
+      column_header <- "National.quota"
+    }
     
-    countryDF<-countryDF[countryDF$National.quota >= input$MethaneTargetInput-0.05*input$MethaneTargetInput, ]
+    else {
+      column_list<-c("Country","National.quota","AFOLU.balance..with.GWP100.","CO2.offset..MtCO2.","Person.fed.in.energy..Mio.heads.","Person.fed.in.protein..Mio.heads.")
+      column_header <- "AFOLU.balance..with.GWP100."
+    }
     
-    column_list<-c("Country","National.quota","AFOLU.balance..with.GWP100.","CO2.offset..MtCO2.","Person.fed.in.energy..Mio.heads.","Person.fed.in.protein..Mio.heads.")
+    countryDF<-countryDF[countryDF[column_header] <= input$MethaneTargetInput+0.05*input$MethaneTargetInput, ]
+    
+    countryDF<-countryDF[countryDF[column_header] >= input$MethaneTargetInput-0.05*input$MethaneTargetInput, ]
+    
+    #column_list<-c("Country","National.quota","AFOLU.balance..with.GWP100.","CO2.offset..MtCO2.","Person.fed.in.energy..Mio.heads.","Person.fed.in.protein..Mio.heads.")
     
     dataBac2kDF <- countryDF[column_list]
     measure_name_list<-column_list[-1]
-
-    dataBack2<-melt(dataBac2kDF,id.vars=c('Country'), measure.vars=measure_name_list)
     
+    dataBack2<-melt(dataBac2kDF,id.vars=c('Country'), measure.vars=measure_name_list)
+      
+    dataBack2$value <- as.numeric(dataBack2$value)      
+
     dataBack2
     
   })
+  
+  test_dataBack2<- function(Back2Country,BackSelect,MethaneTargetInput){
+    
+    countryDF<-asfDF[asfDF$Country == Back2Country, ]
+    
+    if (BackSelect == "Methane target") {
+      column_list<-c("Country","National.quota","AFOLU.balance..with.GWP100.","CO2.offset..MtCO2.","Person.fed.in.energy..Mio.heads.","Person.fed.in.protein..Mio.heads.")
+      column_header <- "National.quota"
+    }
+    
+    else {
+      column_list<-c("Country","National.quota","AFOLU.balance..with.GWP100.","CO2.offset..MtCO2.","Person.fed.in.energy..Mio.heads.","Person.fed.in.protein..Mio.heads.")
+      column_header <- "AFOLU.balance..with.GWP100."
+    }
+    
+    countryDF<-countryDF[countryDF[column_header] <= MethaneTargetInput+0.05*MethaneTargetInput, ]
+    
+    countryDF<-countryDF[countryDF[column_header] >= MethaneTargetInput-0.05*MethaneTargetInput, ]
+    
+    if (nrow(countryDF)>0) {
+      test_dataBack2<-TRUE      
+    }
+    
+    else{test_dataBack2<-FALSE}
+    
+    
+    test_dataBack2
+    
+  }
   
   #### Affichage interactif avec plotly de l'histogramme du nombre de cas par mois ####
   
@@ -427,8 +467,23 @@ server <- function(input, output) {
     
   })
   
-  output$plotback2 <- renderPlot({
+  output$plotback2 <- renderUI({
     input$EnterTarget
+    input$Back2Country
+    input$BackSelect
+    input$MethaneTargetInput
+    if(test_dataBack2(input$Back2Country,input$BackSelect,input$MethaneTargetInput) == TRUE){
+      plotOutput("myplotback2")
+    } else {
+      p("Take another target, yours is out of the scope of the study.")
+    }
+  })
+  
+  output$myplotback2 <- renderPlot({
+    input$BackSelect
+    input$EnterTarget
+    input$Back2Country
+    input$MethaneTargetInput
     ggplot(dataBack2(), aes(x = variable, y = value,fill=variable))+
       geom_boxplot(outline=FALSE)+
       facet_wrap(~variable, scales = "free")+
